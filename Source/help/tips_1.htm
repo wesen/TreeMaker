@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Tips 1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h1 align="center"><em>Tips</em></h1>
+<p>
+This section contains several shorter tutorials that illustrate additional
+features of <em>TreeMaker</em>. The tips tutorials are:
+</p>
+<ul>
+  <li>
+    <a href="#tips_1">Tips 1: Adding Nodes</a>
+  </li>
+  <li>
+    <a href="tips_2.htm">Tips 2: Making a Plan View Design</a>
+  </li>
+  <li>
+    <a href="tips_3.htm">Tips 3: Forcing Edge Flaps</a>
+  </li>
+  <li>
+    <a href="tips_4.htm">Tips 4: Fracturing Polygons</a>
+  </li>
+  <li>
+    <a href="tips_5.htm">Tips 5: Forcing Symmetric Angles</a>
+  </li>
+</ul>
+
+<h2><a name="tips_1">Tips 1: Adding Nodes</a></h2>
+<p>
+Once you have defined a tree and found an optimum configuration of nodes, you
+have several options for filling in the remaining creases. In this section,
+I'll demonstrate several different treatments of the same tree. Construct a
+"generic mammal" tree with equal-length head, tail, four legs, and a body 
+--- that is, with all edges of unit length --- as shown in Figure
+Ti-1-1.
+</p>
+<p align="center">
+  <img src="tips_1_1.png" alt=""><br>
+  <b>Figure Ti-1-1.</b>
+</p>
+<p>
+Select command <b>Action->Scale Everything</b>; you should arrive at a
+distribution of leaf nodes as shown in Figure Ti-1-2.
+</p>
+<p align="center">
+  <img src="tips_1_2.png" alt=""><br>
+  <b>Figure Ti-1-2.</b>
+</p>
+<p>
+This crease pattern gives a single active polygon, which is a hexagon. Now, as
+I said, there are several ways to add creases to this pattern to complete the
+base. The simplest is the one we have already learned; simply select
+<b>Action->Build Crease Pattern</b>, then <b>View->Creases View</b>. This
+selection fills in the active polygon with the "universal molecule" crease
+pattern. This is the simplest pattern and produces the least total crease
+length of all possible molecules for a given polygon.
+</p>
+<p align="center">
+  <img src="tips_1_3.png" alt=""><br>
+  <b>Figure Ti-1-3.</b>
+</p>
+<p>
+Although the universal molecule is the simplest molecule, it produces a base
+with wide flaps; that is, the hinges at each flap are relatively long. In some
+cases, the flaps in a universal molecule are actually wider than they are long!
+To obtain long, skinny flaps (as in insect legs), the universal molecule
+must be repeatedly sunk in and out to narrow its flaps. The folded form of this
+molecule can be seen by making the Folded Form window visible (<b>View->Folded
+Form</b>).
+</p>
+<p align="center">
+  <img src="tips_1_4.png" alt=""><br>
+  <b>Figure Ti-1-4.</b>
+</p>
+<p>
+It is possible to narrow flaps by adding new nodes to the tree and inflating
+them to break up the active polygon into smaller pieces. For example, in the
+tree shown above, kill the crease pattern (<b>Action->Kill Crease Pattern</b>),
+then add a node and edge to node 2, as shown in Figure Ti-1-5.
+</p>
+<p align="center">
+  <img src="tips_1_5.png" alt=""><br>
+  <b>Figure Ti-1-5.</b>
+</p>
+<p>
+Observe that this new node has created some infeasible paths (indicated by
+their red coloration). That's OK; we'll let <em>TreeMaker</em> find the right
+length and position. Select both the new node and its incident edge and choose
+<b>Action->Scale Selection</b>. This will expand the new edge to its maximum
+possible size, creating new active paths that effectively break up the hexagon
+into smaller active polygons --- in this case, two triangles and two
+quadrilaterals, as shown in Figure Ti-1-6.
+</p>
+<p align="center">
+  <img src="tips_1_6.png" alt=""><br>
+  <b>Figure Ti-1-6.</b>
+</p>
+<p>
+Building creases gives the crease pattern shown in Figure Ti-1-7, which has the
+folded form shown in Figure Ti-1-8.
+</p>
+<p align="center">
+  <img src="tips_1_7.png" alt=""><br>
+  <b>Figure Ti-1-7.</b>
+</p>
+<p align="center">
+  <img src="tips_1_8.png" alt=""><br>
+  <b>Figure Ti-1-8.</b>
+</p>
+<p>
+This new folded base has all the flaps of the original base, plus one extra
+one. The paper for the new flap had to come from somewhere; and since it
+couldn't come from the length of the existing flaps, it had to come from their
+width. And, as you see, the upper flaps are now not as wide as the lower flaps.
+</p>
+<p>
+Alternatively, you could have added the new edge to node 5, which would give
+you the same crease pattern flopped end-for-end.
+</p>
+<p>
+With either of these two patterns, you get a crease pattern in which the "head"
+and "tail" are folded differently. For reasons of symmetry, you might want the
+head and tail to be symmetric, in which case, if you add a new edge, you need
+to put it in the middle of edge 4. Let's try that now. Go back to Design View,
+and delete node 9 (which will also remove edge 8).
+</p>
+<p>
+Select edge 4, and choose <b>Edit->Split->Selected Edge...</b>. This brings up
+a small dialog:
+</p>
+<p align="center">
+  <img src="tips_1_9.png" alt=""><br>
+  <b>Figure Ti-1-9.</b>
+</p>
+<p>
+This command will break the edge into two edges, adding a new node at the
+break, from where you can add a new edge. To make the base symmetric, you
+should split the edge exactly in half. Since its current length is 1.0, the
+split location should be halfway from node 2 to node 5, i.e., 0.5. Enter that
+value and click OK. The resulting tree is shown in Figure Ti-1-10.
+</p>
+<p align="center">
+  <img src="tips_1_10.png" alt=""><br>
+  <b>Figure Ti-1-10.</b>
+</p>
+<p>
+Now you can add the new edge. Click on node 9, then click elsewhere to create a
+new node and edge, as shown in Figure Ti-1-11.
+</p>
+<p align="center">
+  <img src="tips_1_11.png" alt=""><br>
+  <b>Figure Ti-1-11.</b>
+</p>
+<p>
+Select the new node and edge and choose <b>Action->Scale Selection</b>. After
+optimization, the new node will be pinned with four active paths, but will now
+be located in the middle of the paper, as shown in Figure Ti-1-12.
+</p>
+<p align="center">
+  <img src="tips_1_12.png" alt=""><br>
+  <b>Figure Ti-1-12.</b>
+</p>
+<p>
+Build creases and convert to Creases View to see the new crease pattern.
+</p>
+<p align="center">
+  <img src="tips_1_13.png" alt=""><br>
+  <b>Figure Ti-1-13.</b>
+</p>
+<p>
+And the folded form is shown here. This time, all four flaps have had their
+width reduced to some degree to accommodate the new flap.
+</p>
+<p align="center">
+  <img src="tips_1_14.png" alt=""><br>
+  <b>Figure Ti-1-14.</b>
+</p>
+<p>
+Suppose after seeing the result, we didn't want to do this after all. You can
+remove the node by deleting node 10. But you will still be left with an extra
+node in the middle of the model. A node with only two edges connected is called
+a "redundant node." You can remove a single redundant node by selecting it and
+choosing the command <b>Edit->Absorb->Selected Nodes</b>. This command is only
+enabled if you only have redundant nodes in the selection. If you don't want to
+track down all redundant nodes, you can choose <b>Edit->Absorb->Redundant
+Nodes</b> to remove all redundant nodes from the tree.
+</p>
+
+<p align="center">
+<b>Previous: <a href="tutorial_3.htm">Tutorial 3: Working with Strain</a>
+&nbsp;&nbsp;&nbsp; 
+Next: <a href="tips_2.htm">Tips 2: Making a Plan View Design</a></b>
+</p>
+
+</body>
+</html>

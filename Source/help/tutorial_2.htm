@@ -1,0 +1,403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Tutorial 2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h2><a name="tutorial_2">Tutorial 2: Imposing Symmetry</a></h2>
+<p>
+In this tutorial, you will learn how to use some more of the settings in
+TreeMaker and how to incorporate bilateral symmetry into your design.
+</p>
+<p>
+Open the <em>TreeMaker</em> application if it is not already open and create a new
+square. Make a five-limbed stick figure as shown in Figure Tu-2-1. 
+</p>
+<p align="center">
+  <img src="tutorial_2_1.png" alt=""><br>
+  <b>Figure Tu-2-1.</b> Create a new, 5-limbed stick figure.
+</p>
+<p>
+Now, we're going to change one of the edge lengths. Click once on the "body"
+segment (edge 4 in the example above) to select it. You will see its properties
+in the Inspector window, which should look like this:
+</p>
+<p align="center">
+  <img src="tutorial_2_2.png" alt=""><br>
+  <b>Figure Tu-2-2.</b> Inspector window for an edge.
+</p>
+
+<ul><li>
+Note: if the Inspector is not visible, you should look in the View menu to
+verify that it is checked; if not, select <b>View->Show Inspector</b> to reveal
+it.
+</li></ul>
+
+<p>
+Enter "0.8" for the length and hit <em>Enter</em> (or click the Apply button).
+This will change the length of this edge, and you will see the value updated in
+the Design window.
+</p>
+<p align="center">
+  <img src="tutorial_2_3.png" alt=""><br>
+  <b>Figure Tu-2-3.</b>
+</p>
+<p>
+Now select <b>Action->Scale Everything</b> to optimize the distribution of
+nodes. You should see the nodes move around as before, and then suddenly the
+two bottom nodes will shift over toward one side or the other. When the
+optimization stops, the pattern of nodes will be asymmetric, as shown in Figure
+Tu-2-4.
+</p>
+<p align="center">
+  <img src="tutorial_2_4.png" alt=""><br>
+  <b>Figure Tu-2-4.</b>
+</p>
+<p>
+This is rather surprising; the node pattern is less symmetric than the tree
+from which it is derived. The tree has bilateral symmetry --- that is, the left
+side is the mirror image of the right side. However, the node pattern does not
+have bilateral symmetry. We'll see this in the crease pattern as well. Select
+<b>Action->Build Crease Pattern</b>. Then convert to Creases Only view
+(<b>View->Creases View</b>). You will see that the resulting crease pattern has
+no line of symmetry at all (Figure Tu-2-5).
+</p>
+<p align="center">
+  <img src="tutorial_2_5.png" alt=""><br>
+  <b>Figure Tu-2-5.</b>
+</p>
+<p>
+This is an example of a phenomenon called "spontaneous symmetry-breaking," in
+which a system that is fundamentally symmetric at high energy settles into an
+asymmetric state at lower energy. (In the analogy, a larger scaling factor
+corresponds to a lower energy.) In this case, a slightly larger base is
+obtained for an asymmetric distribution of nodes than is obtained for a
+symmetric distribution of nodes. While symmetry-breaking is a wonderful
+phenomenon for generating Ph.D. theses, it can be very undesirable in origami
+design. This crease pattern can indeed be folded into the tree we started with
+and left and right flaps will have the same lengths, but they will have
+different widths and different distributions of layers, so the base will not
+have mirror symmetry.
+</p>
+<p>
+An asymmetric base is not necessarily a bad thing. It depends on the position
+of the subject. If you were making a running human, for example, in which the
+left and right arms and legs were in different positions, it might not matter
+if paired flaps had different numbers of layers. But in a lot of models, it
+does matter, and in this case at least, we would like the folded base and
+therefore the underlying crease pattern to have the same bilateral
+mirror-symmetry as the subject.
+</p>
+<p>
+Fortunately, <em>TreeMaker</em> offers us this option. The first thing to do is
+to define a line of the symmetry for the square. Clear the selection, which you
+can do be choosing <b>Edit->Select->None</b>, or by hitting the <em>Tab</em> key. When
+nothing is selected, the Inspector shows information about the entire tree, as
+shown in Figure Tu-2-6.
+</p>
+<p align="center">
+  <img src="tutorial_2_6.png" alt=""><br>
+  <b>Figure Tu-2-6.</b>
+</p>
+<p>
+The Inspector shows several settings that affect the entire design. First comes
+the paper dimensions: width and length. (The default values are for a square.
+Change one or the other to define a rectangle. But with <em>TreeMaker</em>'s
+capabilities for design, why would you ever want to use anything but a square?)
+The third number is the scale, which is the ratio between one unit on the tree
+and the size of the paper. (This is the same number that appears at the bottom
+of the design window.) In this example, we see that the scale is 0.2851, which
+means that a 1-unit edge on the tree will turn into a flap whose length is
+0.2851 times the side of the square from which it is folded.
+</p>
+<ul><li>
+Note: when we select the command <b>Action->Scale Everything</b>,
+<em>TreeMaker</em> tries to make the scale as large as possible.
+</li></ul>
+<p>
+The next set of controls is the set that interests us. The "Symmetry" check
+box lets us define a line of symmetry on the square. A line of symmetry is
+defined by the <em>x</em> and <em>y</em> coordinates of any point on the
+symmetry line and by the angle of the symmetry line with respect to the paper.
+A square has two natural lines of symmetry, that is, two different ways of
+dividing it into mirror-symmetric halves. If you crease the square along the
+diagonal, you get two mirror-symmetric triangles and the diagonal is the line
+of symmetry. If you book-fold the square, you get two mirror-symmetric
+rectangles and the book fold is the line of symmetry. The two buttons named
+"diag" and "book" are presets for these two symmetries. Click on the "book"
+button. You'll see that the "Symmetry" check box is turned on, and we now have
+values entered for <em>x</em>, <em>y</em>, and the angle of the symmetry line
+as shown in Figure Tu-2-7; these define a symmetry line running through the
+point (0.5,0.5) at an angle of 90 degrees (vertically).
+</p>
+<p align="center">
+  <img src="tutorial_2_7.png" alt=""><br>
+  <b>Figure Tu-2-7.</b>
+</p>
+<ul><li>
+Note: you can, if you like, enter your own values for <em>x</em>, <em>y</em>, or
+angle, to either offset the line of symmetry from the center of the paper or to
+create a line of symmetry for a rectangle.
+</li></ul>
+<p>
+Go back to Design View (<b>View->Design View</b>). You'll see that the paper
+now contains a vertical gray line, which indicates the line of symmetry. The
+line is almost hidden by the clutter of the creases, so we'll get rid of the
+crease pattern by selecting <b>Action->Kill Crease Pattern</b>. The result is
+shown in Figure Tu-2-8.
+</p>
+<p align="center">
+  <img src="tutorial_2_8.png" alt=""><br>
+  <b>Figure Tu-2-8.</b>
+</p>
+<p>
+Now we need to establish a relationship between individual nodes and the line
+of symmetry. A node can have one of two possible relationships with the line of
+symmetry. It can actually lie on the line of symmetry (for example, the head or
+tail of an animal) or it can be one of a pair of nodes arranged symmetrically
+about the line. In our model, the "head" lies on the symmetry line of the tree.
+Thus, we need to force the node that corresponds to the head (node 1) to lie on
+the symmetry line of the square.
+</p>
+<p>
+When we want to impose additional requirements on a tree, we are imposing
+<em>conditions</em> on the various parts of the tree. We can impose conditions
+in several ways. The easiest is to simply select node 1, and from the
+<b>Condition</b> menu, select the command <b>Condition->Node(s) Fixed
+to Symmetry Line</b>.
+</p>
+<p>
+Two things happened: First, a new Condition object has appeared in the design
+window, which shows up as a small purple tag attached to node 1.
+</p>
+<p align="center">
+  <img src="tutorial_2_9.png" alt=""><br>
+  <b>Figure Tu-2-9.</b>
+</p>
+<p>
+Second, the previously-empty Conditions box in the Inspector now contains an
+entry, which is the condition that we just created.
+</p>
+<p align="center">
+  <img src="tutorial_2_10.png" alt=""><br>
+  <b>Figure Tu-2-10.</b>
+</p>
+<p>
+A "Node constrained" (or "node combination" condition) is a general condition
+that can constrain the position of a single node in one or more ways.
+Initially, the condition sets a single constraint, but it is possible to
+combine several constraints on a node within this single condition, by editing
+the attributes of the condition.
+<ul><li>
+Note: we make a technical distinction between a <em>condition</em> and a
+<em>constraint</em>. A <em>condition</em> is an object that attaches to one or
+nodes, edges, and/or paths to modify its properties; a <em>constraint</em> is
+the required modification itself.
+</li></ul>
+<p>
+Once we have created a condition, we can edit <em>its</em> properties. As with
+all <em>TreeMaker</em> objects, we edit its properties in the Inspector, by
+selecting the condition --- which we can do in one of two ways: we can
+double-click its listing in the Node Inspector, or we can select it by clicking
+on the dot at the end of the  leader connecting it to the node in the Design
+window. Whichever way we select the condition for editing, once we have
+selected it, the Inspector will change to display the properties of this
+condition, as shown in Figure Tu-2-11.
+</p>
+<p align="center">
+  <img src="tutorial_2_11.png" alt=""><br>
+  <b>Figure Tu-2-11.</b>
+</p>
+<p>
+The Condition panel of the Inspector shows several properties of the condition.
+At the top of the panel is the condition type, which in this case, is a "Node
+Fixed" condition. (There are other types, which we will encounter later.)
+Next comes its index (which doesn't have any significant effect other than the
+order that conditions are listed --- but you might want to renumber them in
+order to group similar conditions together). The third entry is the index of
+the node to which it applies; you can move the condition to another node by
+editing this value.
+</p>
+<p>
+Then comes a column of checkboxes that define the possible position constraints
+that can be placed on a single node. The one we want, the first one ("Fixed to
+symmetry line"), is already on. This condition will force node 1 to lie on the
+line of symmetry. Note, however, that node 1 doesn't move when you turn on the
+checkbox; conditions don't take effect until you perform another optimization.
+That is, a condition specifies what <em>should</em> be, but it requires an
+optimization to make it happen.
+</p>
+<p>
+Condition Inspector panels, like many others, contain an "Apply" button. If you
+change a value in an edit field, the value does not take effect until you click
+the apply button or a control like a checkbox or radio button. In this way, you
+can make several edits and apply them (or at least validate them) all at once.
+</p>
+<p>
+The last entry in the box describes whether the condition is <em>feasible</em>
+or not. A feasible condition is one that is satisfied. Usually, when you first
+create a condition, it will not be feasible until you have optimized. This is
+the situation with this condition.
+</p>
+<p>
+We're done with this condition, so we'll go on to the next. The next thing we
+need to do is to tell <em>TreeMaker</em> that pairs of flaps should be
+mirror-symmetric. For example, nodes 4 and 3 correspond to the left and right
+arms of the figure. Thus, each of nodes 4 and 3 should be the mirror image of
+the other. To set up this condition, click on node 4 and shift-click on node 3
+to select them both. Then go to the <b>Condition</b> menu and select
+<b>Condition->2 Nodes Paired About Symmetry Line</b>. A new object appears in
+the Design window.
+</p>
+<p align="center">
+  <img src="tutorial_2_12.png" alt=""><br>
+  <b>Figure Tu-2-12.</b>
+</p>
+<p>
+A "nodes paired" condition is displayed by a dot connected to both of the
+affected nodes. If you select the condition (click on the dot between the two
+nodes, or double-click on the condition in the Node Inspector panel), the
+Inspector switches over to display the condition's panel, as shown in Figure
+Tu-2-13.
+</p>
+<p align="center">
+  <img src="tutorial_2_13.png" alt=""><br>
+  <b>Figure Tu-2-13.</b>
+</p>
+<p>
+We also need to pair nodes 6 and 7. Do this the same way --- select nodes 6 and
+7 and then select the <b>Condition->2 Nodes Paired About Symmetry Line</b>
+command.
+</p>
+<p align="center">
+  <img src="tutorial_2_14.png" alt=""><br>
+  <b>Figure Tu-2-14.</b>
+</p>
+<p>
+You have now defined all the conditions on the nodes. Clear the selection (hit
+<em>Tab</em>, or choose <b>Edit->Select->None</b>). The Inspector again shows
+the tree panel. Note that the Conditions list now lists the three conditions we
+have created. The Tree Inspector panel always shows all conditions in the tree.
+Individual Node, Edge, or Path Inspector panels only show the conditions that
+apply to the selected part.
+</p>
+<p align="center">
+  <img src="tutorial_2_15.png" alt=""><br>
+  <b>Figure Tu-2-15.</b>
+</p>
+<p>
+You can delete any condition at any time by selecting it in the Inspector's
+condition list and hitting the <em>Delete</em> key. You can also delete it by
+selecting it in the Design window and hitting <em>Delete</em>. You can examine
+the attributes of any condition by double-clicking on it in the condition list
+within the Inspector, or selecting it within the Design window. 
+</p>
+<p>
+At this point, all the conditions we need are now defined.
+</p>
+<ul><li>
+Note: if you haven't defined a line of symmetry, the symmetry-related
+conditions will have no effect.
+</li><!-- </ul>
+<ul>--><li>
+Note: leaf nodes are the only nodes you can set conditions on. You don't have
+to set up any conditions on branch nodes (and in fact any conditions you might
+set up on them are ignored) since the positions of branch nodes in the tree are
+irrelevant to the final crease pattern.
+</li></ul>
+<p>
+Now we have set up the conditions that enforce symmetry. As mentioned above,
+the conditions don't take effect until we re-optimize the pattern. Select
+<b>Action->Scale Everything</b> to re-optimize the tree taking the
+new conditions into account. Figure Tu-2-16 shows the result.
+</p>
+<p align="center">
+  <img src="tutorial_2_16.png" alt=""><br>
+  <b>Figure Tu-2-16.</b>
+</p>
+<p>
+When you ran the optimization, you saw that the figure almost instantly became
+symmetric and the final pattern of leaf nodes is now symmetric. (Observe,
+though, that the branch nodes are right where we left them.) A subtler change
+is that the conditions have changed color: they are now purple. Infeasible
+conditions are displayed in red. When a condition is satisfied, it is said to
+be feasible, and feasible conditions are shown in purple.
+</p>
+<p>
+Now that the conditions are feasible, select <b>Action->Build Crease
+Pattern</b> and <b>View->Creases View</b>. You will see the full crease
+pattern, which is now mirror-symmetric, as shown in Figure Tu-2-17.
+</p>
+<p align="center">
+  <img src="tutorial_2_17.png" alt=""><br>
+  <b>Figure Tu-2-17.</b>
+</p>
+<p>
+Note the scale of the model (shown at the bottom of the window) is now 0.2794
+(it was 0.2851 with the asymmetric structure). The scale has dropped, meaning
+that the base folded from this pattern is slightly smaller than the asymmetric
+base. In general, when you add constraints to a pattern, you will reduce the
+scale and thus the size of the finished model.
+</p>
+<p>
+We can also try the other line of symmetry. Deselect everything, which puts the
+tree panel back into the Inspector. Click on the "diag" button, which sets up a
+line of symmetry along one of the diagonals of the square and click OK. Also,
+put the square back into Design View if it wasn't there already.
+</p>
+<p align="center">
+  <img src="tutorial_2_18.png" alt=""><br>
+  <b>Figure Tu-2-18.</b>
+</p>
+<p>
+Now the node pattern is still symmetric about the book fold and the conditions
+on the nodes relating to symmetry haven't changed, but we have moved the line
+of symmetry; observe that the gray line of symmetry now runs along the
+diagonal. Therefore, the conditions we imposed are no longer satisfied (and
+they have changed from purple back to red). Nothing has moved because
+conditions aren't enforced until we re-optimize. Again select the command
+<b>Action->Scale Everything</b>.
+</p>
+<p>
+Observe that, as shown in Figure Tu-2-19, the nodes have moved to new positions
+consistent with the new symmetry conditions. Also, the polygons and creases
+have disappeared. Whenever you change the node configuration by moving a node,
+the polygons that used to include that node are destroyed, as are any creases
+that may have been associated with the polygons.
+</p>
+<p align="center">
+  <img src="tutorial_2_19.png" alt=""><br>
+  <b>Figure Tu-2-19.</b>
+</p>
+<p>
+You'll have to rebuild the crease pattern, which you can do by <b>Action->Build
+Crease Pattern</b>. Then put the model back into Creases view (<b>View->Creases
+View</b>). The new crease pattern, shown in Figure Tu-2-20, is mirror-symmetric
+about the new symmetry line and is completely different from the crease pattern
+that had book symmetry.
+</p>
+<p align="center">
+  <img src="tutorial_2_20.png" alt=""><br>
+  <b>Figure Tu-2-20.</b>
+</p>
+<p>
+Also, if you check the scale (at the top of the window), you'll see that the
+scale has fallen once again to 0.2728. So the diagonal symmetry in this example
+is less efficient than book symmetry. In general, you can orient a model along
+either symmetry line and will have very different crease patterns for both
+configurations. Sometimes book symmetry will be more efficient, sometimes
+diagonal symmetry will be more efficient. With <em>TreeMaker</em>, you can
+easily try them both.
+</p>
+
+<p align="center">
+<b>Previous: <a href="tutorial_1.htm">Tutorial 1: Designing a
+Base</a>&nbsp;&nbsp;&nbsp; 
+Next: <a href="tutorial_3.htm">Tutorial 3: Working with Strain</a></b>
+</p>
+
+</body>
+</html>

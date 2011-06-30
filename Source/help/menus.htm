@@ -1,0 +1,814 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Menus</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h1 align="center"><em>Menus</em></h1>
+
+<p>
+This section describes each of the menu commands in <em>TreeMaker</em>. The
+menus (and submenus) are:
+</p>
+<ul>
+  <li>
+    <a href="#App">Application</a> Menu
+  </li>
+  <li>
+    <a href="#File">File</a> Menu
+  </li>
+  <li>
+    <a href="#Edit">Edit</a> Menu
+    <ul>
+      <li>
+        <a href="#Select">Select</a> Submenu
+      </li>
+      <li>
+        <a href="#Nodes">Nodes</a> Submenu
+      </li>
+      <li>
+        <a href="#Edges">Edges</a> Submenu
+      </li>
+      <li>
+        <a href="#Absorb">Absorb</a> Submenu
+      </li>
+      <li>
+        <a href="#Split">Split</a> Submenu
+      </li>
+      <li>
+        <a href="#Strain">Strain</a> Submenu
+      </li>
+      <li>
+        <a href="#Stub">Stub</a> Submenu
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="#View">View</a> Menu
+  </li>
+  <li>
+    <a href="#Action">Action</a> Menu
+  </li>
+  <li>
+    <a href="#Condition">Condition</a> Menu
+  </li>
+  <li>
+    <a href="#Window">Window</a> Menu
+  </li>
+  <li>
+    <a href="#Help">Help</a> Menu
+  </li>
+</ul>
+
+<p>
+The commands in each menu and their descriptions follow.
+</p>
+
+
+
+<!--========================================================================-->
+<h2><a name="App">Application Menu</a></h2>
+
+<h3>Application->About TreeMaker...</h3>
+<p>
+Puts up a dialog box that displays brief information about the program, the
+detailed version, and the terms of usage.
+</p>
+<p align="center">
+  <img src="menus_app_about.png" alt=""><br>
+  <b>Figure M-1.</b> The About... box for the application.
+</p>
+<p>
+This box shows up the first time you run the application after the splash
+screen; a checkbox lets you turn off its display thereafter.
+</p>
+<p>
+The <b>About TreeMaker...</b> command shows up under the <b>Help</b> menu on
+non-Mac platforms.
+</p>
+<h3>Application->Preferences</h3>
+<p>
+Sets application-wide preferences for <em>TreeMaker</em>. 
+</p>
+<p align="center">
+  <img src="menus_app_prefs.png" alt=""><br>
+  <b>Figure M-2.</b> The Preferences dialog for setting application-wide
+  preferences.
+</p>
+<p>
+The preferences are:
+</p>
+<ul>
+  <li>
+    Optimization --- this popup menu lets you choose the optimization algorithm
+    used by the program. At present, only a single algorithm is supported,
+    called ALM (Augmented Lagrangian Multiplier); it is slow, but robust.
+    Future versions of <em>TreeMaker</em> may include more algorithms.
+  </li>
+  <li>
+    Show About Box on startup --- when checked, this puts up the About box every
+    time the program starts.
+  </li>
+</ul>
+
+<p>
+The <b>Preferences</b> command shows up under the <b>File</b> menu on non-Mac
+platforms.
+</p>
+
+
+
+
+<!-- ========================================================================= -->
+<h2><a name="File">File Menu</a></h2>
+
+<h3>File->New...</h3>
+<p>
+Creates a new, untitled <em>TreeMaker</em> document using a square sheet of
+paper.
+</p>
+
+<h3>File->Open...</h3>
+<p>
+Open a previously-saved <em>TreeMaker</em> document, which should have a .tmd5
+extension. Macintosh users can also open version 4 and version 3 files, which
+have no file extension.
+</p>
+
+<h3>File->Close</h3>
+<p>
+Close the frontmost <em>TreeMaker</em> document. When you close the last
+document, the behavior is platform-specific:
+</p>
+<ul>
+  <li>
+    On Mac (which has a global menu bar), the application remains open until
+    you choose the <b>File->Quit</b> menu item.
+  </li>
+  <li>
+    On Windows and Linux, closing the last document also exits the
+    application. 
+  </li>
+</ul>
+
+<h3>File->Save</h3>
+<p>
+Save the frontmost <em>TreeMaker</em> document.
+</p>
+
+<h3>File->Save As...</h3>
+<p>
+Save the frontmost <em>TreeMaker</em> document under a new name.
+</p>
+
+<h3>File->Revert</h3>
+<p>
+Revert the frontmost <em>TreeMaker</em> document to the last saved version.
+</p>
+
+<h3>File->Print...</h3>
+<p>
+Print the frontmost <em>TreeMaker</em> document. Page 1 of the printout will be
+the current view in the design window. If the folded form has been computed, it
+will be shown in the second page of the printout (whether or not the Folded
+Form window is visible).
+</p>
+
+<h3>File->Print Setup...</h3>
+<p>
+Set up the page for printing.
+</p>
+
+<h3>File->Print Preview...</h3>
+<p>
+Preview the print image before printing.
+</p>
+
+
+
+
+<!-- ========================================================================= -->
+<h2><a name="Edit">Edit Menu</a></h2>
+
+<h3>Edit->Undo</h3>
+<p>
+Undo the last modification to the frontmost document.
+</p>
+
+<h3>Edit->Redo</h3>
+<p>
+Redo the last undone modification to the frontmost document.
+</p>
+
+<h3>Edit->Cut</h3>
+<p>
+Cut the current selection. Selected tree parts are simply deleted (see
+<b>Edit->Clear</b> below). There is no support for a Clipboard (Paste) for tree
+editing.
+</p>
+
+<h3>Edit->Copy</h3>
+<p>
+Copy the current selection (for text). In the main window, this command copies
+an image to the Clipboard.
+</p>
+
+<h3>Edit->Paste</h3>
+<p>
+Paste the current text selection. This has no effect on tree editing.
+</p>
+
+<h3>Edit->Clear</h3>
+<p>
+Delete the current selection. If tree parts are selected, they are deleted,
+unless the deletion would break the tree into two or more parts, in which case
+a warning is given. If you are deleting several edges of a tree, you don't have
+to select the nodes between the selected edges; the affected nodes will be
+deleted automatically. 
+</p>
+<p>
+If you attempt to delete all edges (or attempt to delete all-but-one nodes of a
+tree, which implies the deletion of all edges), this will cause the deletion of
+<em>all</em> nodes, i.e., it will leave a blank tree. You can't delete
+something in such a way as to leave exactly one node behind (although you can
+<em>absorb</em> (see below) the single edge of a 2-node tree, leaving a single
+node).
+</p>
+
+<h3><a name="Select">Edit->Select Submenu</a></h3>
+<p>
+The <b>Edit->Select</b> submenu contains several commands that let you select
+different combinations of parts in ways other than simply clicking on them.
+</p>
+
+<h4>Edit->Select->Part by Index...</h4>
+<p>
+Select a part by specifying its index. This can be useful if the part is not
+currently shown or is difficult to click on because other parts are covering it
+up.
+</p>
+
+<h4>Edit->Select->All</h4>
+<p>
+Select all nodes and edges in the tree. This command works whether or not the
+nodes and edges are visible.
+</p>
+
+<h4>Edit->Select->None</h4>
+<p>
+Clear the current selection.
+</p>
+
+<h4>Edit->Select->Movable Parts</h4>
+<p>
+Select all tree nodes and edges that are not pinned. This is useful for
+performing a strain optimization.
+</p>
+
+<h4>Edit->Select->Path from Nodes</h4>
+<p>
+Select the path that connects the two selected nodes.
+</p>
+
+<h4>Edit->Select->Corridor from Edge</h4>
+<p>
+Select all the facets that belong to corridors that correspond to the selected
+edges.
+</p>
+
+<h3><a name="Nodes">Edit->Nodes Submenu</a></h3>
+<p>
+The <b>Edit->Nodes</b> submenu contains several commands that let you change
+the position or index of a node.
+</p>
+
+<h4>Edit->Nodes->Make Root</h4>
+<p>
+Make the selected node the root node, i.e., the node with index 1. In the
+computation of creases and the folded form, the flaps will be arranged as if
+you held the base by this node and let the flaps dangle downward under the
+force of gravity.
+</p>
+
+<h4>Edit->Nodes->Perturb Selected</h4>
+<p>
+Perturb the position of the selected nodes from their current locations. This
+can sometimes be used when re-starting an optimization to escape points that
+the optimizer can't get started from.
+</p>
+
+<h4>Edit->Nodes->Perturb All</h4>
+<p>
+Perturb the position of all nodes from their current locations.
+</p>
+
+<h3><a name="Edges">Edit->Edges Submenu</a></h3>
+<p>
+The <b>Edit->Edges</b> submenu contains several commands that let you change
+the length of one or more edges.
+</p>
+
+<h4>Edit->Edges->Set Lengths...</h4>
+<p>
+Set the lengths of all edges in the current selection to a common value.
+</p>
+
+<h4>Edit->Edges->Scale Lengths...</h4>
+<p>
+Scale the lengths of all edges in the current selection by a common factor.
+</p>
+
+<h4>Edit->Edges->Renormalize to Selection</h4>
+<p>
+Rescale all edges in the tree and the tree scale proportionately so that the
+selected edge ends up with unit length.
+</p>
+
+<h4>Edit->Edges->Renormalize to Unit Scale</h4>
+<p>
+Rescale all edges in the tree and the tree scale so that the tree scale becomes
+1.0.
+</p>
+
+<h3><a name="Absorb">Edit->Absorb Submenu</a></h3>
+<p>
+The <b>Edit->Absorb</b> submenu contains several commands that let you absorb
+nodes or edges into the tree. Leaf nodes and edges can simply be deleted;
+absorption is what you use when you want to coalesce the nodes or edges
+surrounding an edge or node.
+</p>
+
+<h4>Edit->Absorb->Selected Node</h4>
+<p>
+Absorb the selected node (which must be of degree 2) into the tree, merging the
+edges on either side of the node into a single edge.
+</p>
+
+<h4>Edit->Absorb->Redundant Nodes</h4>
+<p>
+Absorb all nodes of degree 2, i.e., all nodes that have exactly 2 incident
+edges.
+</p>
+
+<h4>Edit->Absorb->Selected Edge</h4>
+<p>
+Absorb the selected edge into the tree, merging the nodes on either side of the
+edge into a single node.
+</p>
+
+<h3><a name="Split">Edit->Split Submenu</a></h3>
+<p>
+The <b>Edit->Split</b> submenu contains a single command that lets you split an
+edge into two edges.
+</p>
+
+<h4>Edit->Split->Selected Edge...</h4>
+<p>
+Add a node along the selected edge, splitting it into two edges. A dialog will
+be presented in which you specify the distance from an endpoint at which the
+split should occur.
+</p>
+
+<h3><a name="Strain">Edit->Strain Submenu</a></h3>
+<p>
+The <b>Edit->Strain</b> submenu contains several commands that let you change
+the strain on one or more edges at once.
+</p>
+
+<h4>Edit->Strain->Remove All</h4>
+<p>
+Reset the strain of every edge to 0.0.
+</p>
+
+<h4>Edit->Strain->Remove Selection</h4>
+<p>
+Reset the strain of every edge in the current selection to 0.0.
+</p>
+
+<h4>Edit->Strain->Relieve All</h4>
+<p>
+Absorb the strain of every edge into its length, so that the new length
+accommodates the strain and the new strain is 0.0.
+</p>
+
+<h4>Edit->Strain->Relieve Selection</h4>
+<p>
+Absorb the strain of every edge in the current selection into its length, so
+that the new length accommodates the strain and the new strain is 0.0.
+</p>
+
+<h3><a name="Stub">Edit->Stub Submenu</a></h3>
+<p>
+The <b>Edit->Stub</b> submenu contains several commands that let you add or
+remove stubs --- additional edges that create 4 or more active paths between the
+added leaf node and surrounding leaf nodes.
+</p>
+
+<h4>Edit->Stub->Pick for Nodes...</h4>
+<p>
+Add a stub to the selected nodes, i.e., add a node and edge to the tree so that
+the node forms active paths with four or more of the selected nodes. The user
+will be presented with a dialog to choose among the possibilities. 
+</p>
+
+<h4>Edit->Stub->Pick for Poly...</h4>
+<p>
+Add a stub to the selected poly, i.e., add a node and edge to the tree so that
+the node forms active paths with four or more of the nodes at the corners of
+the selected poly.
+</p>
+
+<h4>Edit->Stub->Add Largest to Nodes</h4>
+<p>
+Add the largest possible stub to the selected nodes. In the event that there
+are two possible stubs of the same length, <em>TreeMaker</em> will pick one of
+them arbitrarily.
+</p>
+
+<h4>Edit->Stub->Add Largest to Poly</h4>
+<p>
+Add the longest possible stub to the selected poly. In the event that there are
+two possible stubs of the same length, <em>TreeMaker</em> will pick one of them
+arbitrarily.
+</p>
+
+<h4>Edit->Stub->Triangulate Tree</h4>
+<p>
+Repeatedly add stubs to polys until every poly in the design is a triangle, and
+thus every molecule will be a rabbit-ear molecule.
+</p>
+<p>
+It should be noted that there are some polygons of order 4 or larger that cannot
+be triangulated by placing stubs because the required stub would land outside
+of the square; these will typically be found along the edges of the paper. In
+such cases, <em>TreeMaker</em> will triangulate the crease pattern to the
+maximum extent.
+</p>
+
+
+
+
+<!--=========================================================================-->
+<h2><a name="View">View Menu</a></h2>
+
+<h3>View->Show/Hide Inspector</h3>
+<p>
+Toggle visibility of the Inspector window.
+</p>
+
+<h3>View->Show/Hide View Settings</h3>
+<p>
+Toggle visibility of the View Settings window.
+</p>
+
+<h3>View->Show/Hide Folded Form</h3>
+<p>
+Toggle visibility of the Folded Form window.
+</p>
+
+<h3>View->Tree View</h3>
+<p>
+Set the main window to <b>Tree View</b>, in which only nodes, edges, and
+conditions are shown. This is the best view for editing the attributes of the
+tree.
+</p>
+
+<h3>View->Design View</h3>
+<p>
+Set the main window to <b>Design View</b>, in which both the tree and the
+crease pattern are shown. Although it can get busy, this view lets you see both
+the tree and the crease pattern. It is the default view when you first open or
+create a <em>TreeMaker</em> document.
+</p>
+
+<h3>View->Creases View</h3>
+<p>
+Set the main window to <b>Creases View</b>, which shows the crease pattern with
+mountain/valley assignment. This is the best view for printing out a crease
+pattern and folding up the printout.
+</p>
+
+<h3>View->Plan View</h3>
+<p>
+Set the main window to <b>Plan View</b>, which is the same as <b>Creases
+View</b> but also shows the coordinates of the major vertices. This is the most
+useful view if you are planning to construct folding sequences for important
+lines using a tool like <em>ReferenceFinder</em> or if you are transferring the
+crease pattern to a different sheet of paper by measuring and marking the lines.
+</p>
+
+<h3>View->Fit to Screen</h3>
+<p>
+This resizes the paper in the main window to fit the available screen area.
+</p>
+
+<h3>View->Fit to Width</h3>
+<p>
+This resizes the paper in the main window to fit the available screen width.
+For portrait orientation of screen its same as <b>Fit to Screen</b>.
+</p>
+
+<h3>View->Fit to Height</h3>
+<p>
+This resizes the paper in the main window to fit the available screen height.
+For landscape orientation of screen its same as <b>Fit to Screen</b>.
+</p>
+
+<h3>View->Set Paper Size...</h3>
+<p>
+This lets you specify the paper size on-screen in inches, assuming a 72 dpi
+display. Note that the printout will always be resized to exactly fit the
+available area on a single sheet, independent of the screen size.
+</p>
+
+
+
+
+<!--=========================================================================-->
+<h2><a name="Action">Action Menu</a></h2>
+<p>
+The Action menu contains the heart of <em>TreeMaker</em>: the commands that
+construct the base and its crease pattern. Construction is a two-step process.
+First comes <em>optimization</em>, in which the positions of the leaf nodes
+(and in some cases, the strain in the tree edges) is solved to give the largest
+possible tree for a given sheet of paper. Second comes the computation of the
+crease pattern itself. <em>TreeMaker</em> computes the locations of creases and
+vertices based on the leaf node positions, and then, when possible, computes
+the mountain/valley crease assignment for a particular arrangement of flaps on
+the base.
+</p>
+
+<h3>Action->Scale Everything</h3>
+<p>
+Perform a scale optimization. This is the basic optimization step and in some
+cases may be the only one necessary. With this command, <em>TreeMaker</em>
+maximizes the scale (the ratio between tree units and the paper size) while
+moving around all of the leaf nodes in such a way that all paths remain
+feasible. This gives the largest possible base for a given size sheet of paper,
+although it should be noted that only a local optimum is found, not a global
+optimum. This means that you might be able to find a more (or less) efficient
+pattern by starting from a different initial arrangement of the leaf nodes.
+</p>
+<p>
+During the calculation, <em>TreeMaker</em> shows the positions of the nodes
+move around as the search proceeds. When an optimum node arrangement is found,
+it stops. (During the end stages of the search, you won't see much movement
+while <em>TreeMaker</em> refines the node positions to an accuracy finer than
+what you see on the screen.) You can interrupt the calculation by clicking on
+the Cancel button or hitting command-period (on Mac) or control-C (on other
+platforms) during the analysis.
+</p>
+<p>
+Once the calculation is complete, any paths that are <em>active</em> --- meaning
+their length is equal to the minimum allowed length --- will be highlighted in
+green. These paths will become axial creases of the base. The convex hull of
+all the leaf nodes is called the <em>useful area</em> of the paper. If the
+active paths plus the border paths partition the useful area into convex
+polygons with no leftover nodes or active paths, then the node pattern is
+well-formed and you can go on to compute the crease pattern by selecting the
+<b>Action->Build Crease Pattern</b> command, see below.
+</p>
+<p>
+If a node cannot move in any direction without violating a path condition or
+moving outside the square, it is said to be <em>pinned</em>. If there are
+unpinned nodes (for example, the active paths create a polygon with a reflex
+vertex or concavity), you will need to perform further optimization in order to
+construct the base, using one or both of the next two commands.
+</p>
+
+<h3>Action->Scale Selection</h3>
+<p>
+Maximize the strain in the selected edges by moving around the selected nodes.
+This is the primary command for dealing with unpinned nodes. This command
+lengthens selected edges (by increasing their strain) while moving around
+unpinned nodes until the nodes are pinned. All of the selected edges are
+strained by the same amount, so that a single round of optimization will not
+necessarily pin all nodes. But by repeated applications of this optimization,
+you can eventually get all nodes to be pinned and thus make the crease pattern
+computable.
+</p>
+<p>
+You can choose which nodes are movable and which edges are strainable by
+selecting only a subset of the nodes or edges. Alternatively, you can simply
+select all nodes and edges: any pinned nodes or edges will be removed from the
+selection before optimization.
+</p>
+<p>
+At the end of the optimization, any nodes or edges that have become pinned will
+be removed from the selection, so that by repeatedly applying this command, you
+can remove all "slack" from the crease pattern and obtain a pattern in which
+all nodes and edges are pinned --- which is a requirement for constructing the
+crease pattern.
+</p>
+
+<h3>Action->Minimize Strain</h3>
+<p>
+Minimize the RMS strain in the selected edges by moving around the selected
+nodes. This is the primary command to use when one has created a large number
+of symmetry conditions and/or path active conditions. It is very easy
+(particularly with path active conditions) to create a scenario that has no
+solution for the given tree edge lengths, but by allowing the edges to be
+distorted by strain, it may be possible to find a solution that satisfies all
+of the conditions. In this command, <em>TreeMaker</em> minimizes the strain
+over all edges while attempting to satisfy all the conditions you have created.
+Note that it is of course possible to create combinations of conditions that
+cannot be satisfied by any amount of distortion.
+</p>
+<p>
+Unlike the preceding two commands that try to make things as large as possible
+(either the overall scale or the lengths of subsets of edges), this command
+tries to keep the scaled edge lengths as close to their current value as
+possible. For this reason, you will rarely start with this command. More
+commonly, you will perform a scale optimization to start with, then set a range
+of conditions on nodes, edges, and paths, and then perform this strain
+optimization.
+</p>
+
+<h3>Action->Build Crease Pattern</h3>
+<p>
+Attempt to construct the crease pattern. Once you have found a configuration of
+leaf nodes in which all edges are pinned and the active paths divide the useful
+area up into convex polygons, this command computes the entire crease pattern
+in the base. Each polygon gets filled in with the <em>universal molecule</em>
+crease pattern, which gives the crease locations; then <em>TreeMaker</em>
+computes (or attempts to compute) the mountain/valley crease assignment
+corresponding to a particular arrangement of the flaps of the base.
+</p>
+<p>
+This is a rather complex computation (although it goes very fast), and
+<em>TreeMaker</em> can encounter a variety of situations that can derail the
+computation along the way. If it fails, <em>TreeMaker</em> will warn you and
+give some hints about what you can due to fix the situation. In some cases, a
+partial crease pattern may be sufficient; for example, if <em>TreeMaker</em>
+can calculate all creases and their AGRH assignment but not the MV assignment,
+that should be sufficient for you to fold the base from the AGRH crease pattern.
+</p>
+<p>
+There are two crease color schemes. AGRH coloring (Axial, Gusset, Ridge, Hinge)
+conveys structural information about the creases, but not their crease
+direction. AGRH coloring is used in Design View (the default view). The second
+color scheme, MVF coloring (Mountain, Valley, Flat) conveys the crease
+direction. This (or a similar variation) is the color scheme most often used in
+origami crease patterns. The Creases View and Plan View both use MVF coloring.
+</p>
+<p>
+Both color schemes have their value. MVF coloring is useful if you want to
+actually fold up the crease pattern; AGRH coloring is useful if you want to
+understand the role that each crease plays in the overall base. The AGRH
+coloring is unique for a given base and can always be computed if the polygons
+are complex. The MVF coloring, however, depends on the particular arrangement
+of flaps in the flattened base, and so there are many possible MVF colorings.
+Furthermore, there are crease patterns whose properties prevent simple
+computation of the MVF coloring; for such patterns, <em>TreeMaker</em> will
+inform you that there is a problem and will not produce a MVF coloring.
+However, you still might be able to fold a usable base from the AGRH crease
+pattern, but you will have to find the crease assignment by hand.
+</p>
+<p>
+The particular MVF coloring comes in large part from the arrangement of flaps.
+<em>TreeMaker</em> chooses the flap arrangement from an algorithm called the
+"dangle" algorithm, in which (figuratively) one node of the tree is picked up
+and the remainder of the tree is allowed to dangle under the force of gravity;
+this provides an unambiguous assignment of flap directions that avoids any
+possibility of self-intersection. <em>TreeMaker</em> uses this assignment along
+with several other rules to construct a complete assignment of each crease as
+mountain, valley, or flat (unfolded).
+</p>
+<p>
+In fact, <em>TreeMaker</em> constructs a total ordering on the facets in the
+folded form, and it is this ordering that allows the computation of crease
+direction. The ordering between facets can be expressed as a directed graph,
+called the "facet ordering graph." If you would like to see this graph, turn on
+facet display and arrow display in the View Settings window.
+</p>
+
+<h3>Action->Kill Crease Pattern</h3>
+<p>
+Remove all vertices, creases, and facets, leaving just the original tree.
+</p>
+
+
+
+
+<!--=========================================================================-->
+<h2><a name="Condition">Condition Menu</a></h2>
+
+<h3>Condition->Node(s) position constrained</h3>
+<p>
+Add conditions that constrain the <em>x</em> and/or <em>y</em> coordinates of
+all the nodes in the current selection. Details of how the position is
+constrained are specified in the <b>Inspector</b> panel for the condition.
+</p>
+
+<h3>Condition->Nodes paired about symmetry line</h3>
+<p>
+Add a condition that forces the two selected nodes to be mirror-symmetric about
+the line of symmetry.
+</p>
+
+<h3>Condition->Nodes collinear</h3>
+<p>
+Add a condition that forces the three selected nodes to lie on a common line.
+</p>
+
+<h3>Condition->Remove all node conditions</h3>
+<p>
+Remove the conditions on all nodes in the tree.
+</p>
+
+<h3>Condition->Edge(s) no strain</h3>
+<p>
+Add conditions that force the selected edges to have zero strain in a strain
+optimization.
+</p>
+
+<h3>Condition->Edge(s) same strain</h3>
+<p>
+Add conditions that force the selected edges to have the same strain in a
+strain optimization.
+</p>
+
+<h3>Condition->Remove all edge conditions</h3>
+<p>
+Remove the conditions on all edges in the tree.
+</p>
+
+<h3>Condition->Path active</h3>
+<p>
+Add a condition that forces this path to be active.
+</p>
+
+<h3>Condition->Path angle fixed</h3>
+<p>
+Add a condition that forces this path to be active and fixes its angle to a
+constant value.
+</p>
+
+<h3>Condition->Path angle quantized</h3>
+<p>
+Add a condition that forces this path to be active and quantizes its angle to
+an integral division of the circle with a specified offset.
+</p>
+
+<h3>Condition->Remove all path conditions</h3>
+<p>
+Remove the conditions on all paths in the tree.
+</p>
+
+<h3>Condition->Remove all conditions</h3>
+<p>
+Remove all node, edge, and path conditions.
+</p>
+
+
+
+
+<!===========================================================================-->
+<h2><a name="Window">Window Menu</a></h2>
+
+
+<ul><li>
+Note: this menu is only present on Mac platforms.
+</li></ul>
+
+
+<h3>Window->Minimize</h3>
+<p>
+Minimize the frontmost window.
+</p>
+
+<h3>Window->Zoom</h3>
+<p>
+Zoom out the frontmost window.
+</p>
+
+<h3>Window->Bring All to Front</h3>
+<p>
+Bring all windows to the front of the computer display.
+</p>
+
+<p>
+Subsequent entries in the Window menu list the current document windows.
+</p>
+
+
+
+
+<!===========================================================================-->
+<h2><a name="Help">Help Menu</a></h2>
+
+<h3>Help->Help</h3>
+<p>
+Show these help pages.
+</p>
+
+<p align="center">
+<b>Previous: <a href="windows.htm">Windows</a>&nbsp;&nbsp;&nbsp; 
+Next: <a href="tutorial_1.htm">Tutorials</a></b>
+</p>
+
+</body>
+</html>

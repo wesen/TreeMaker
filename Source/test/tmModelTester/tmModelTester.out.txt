@@ -1,0 +1,196 @@
+
+[Session started at 2005-11-08 17:25:02 -0800.]
+**************************************************
+TreeMaker Model Test Program
+**************************************************
+
+Using ALM optimizer
+Reading in file /users/rjlang/C++Projects/TreeMaker_5/Source/test/tmModelTester/tmModelTester_1.tmd5
+Optimizing scale of tmModelTester_1.tmd5...
+i_outer=1, i_inner=51, feas=0.0129409, objective = -0.53581
+x[0] = 0.53581
+
+i_outer=2, i_inner=67, feas=0.00231404, objective = -0.518009
+x[0] = 0.518009
+
+i_outer=3, i_inner=59, feas=0.00021973, objective = -0.509896
+x[0] = 0.509896
+
+i_outer=4, i_inner=83, feas=5.5375e-05, objective = -0.51763
+x[0] = 0.51763
+
+i_outer=5, i_inner=65, feas=1.38743e-05, objective = -0.517493
+x[0] = 0.517493
+
+i_outer=6, i_inner=86, feas=6.42752e-07, objective = -0.517636
+x[0] = 0.517636
+
+i_outer=7, i_inner=47, feas=8.00667e-08, objective = -0.517637
+x[0] = 0.517637
+
+tmModelTester_1.tmd5 objective calls = (3603, 459)
+tmModelTester_1.tmd5 constraint calls = (20310, 626)
+New scale is 0.517637
+Feasibility after optimization is true 
+Elapsed time = 33 ticks
+
+Reading in file /users/rjlang/C++Projects/TreeMaker_5/Source/test/tmModelTester/tmModelTester_2.tmd5
+Optimizing scale of tmModelTester_2.tmd5...
+i_outer=1, i_inner=200, feas=0.00302859, objective = -0.0746446
+x[0] = 0.0746446
+
+i_outer=2, i_inner=48, feas=0.00115115, objective = -0.0732945
+x[0] = 0.0732945
+
+i_outer=3, i_inner=102, feas=9.51137e-05, objective = -0.0746005
+x[0] = 0.0746005
+
+i_outer=4, i_inner=54, feas=3.17124e-05, objective = -0.0745596
+x[0] = 0.0745596
+
+i_outer=5, i_inner=78, feas=8.36556e-06, objective = -0.0745527
+x[0] = 0.0745527
+
+i_outer=6, i_inner=188, feas=4.93746e-07, objective = -0.074661
+x[0] = 0.074661
+
+i_outer=7, i_inner=55, feas=1.61167e-07, objective = -0.074658
+x[0] = 0.074658
+
+tmModelTester_2.tmd5 objective calls = (4869, 726)
+tmModelTester_2.tmd5 constraint calls = (1426725, 6308)
+New scale is 0.074658
+Feasibility after optimization is true 
+Elapsed time = 1345 ticks
+
+Reading in file /users/rjlang/C++Projects/TreeMaker_5/Source/test/tmModelTester/tmModelTester_3.tmd5
+Optimizing scale of tmModelTester_3.tmd5...
+i_outer=1, i_inner=200, feas=0.00133541, objective = -0.0497814
+x[0] = 0.0497814
+
+i_outer=2, i_inner=56, feas=0.000944221, objective = -0.0489741
+x[0] = 0.0489741
+
+i_outer=3, i_inner=105, feas=9.08777e-05, objective = -0.0509391
+x[0] = 0.0509391
+
+i_outer=4, i_inner=164, feas=1.778e-05, objective = -0.0528048
+x[0] = 0.0528048
+
+i_outer=5, i_inner=200, feas=1.25398e-05, objective = -0.0563713
+x[0] = 0.0563713
+
+i_outer=6, i_inner=7, feas=1.39432e-06, objective = -0.05638
+x[0] = 0.05638
+
+i_outer=7, i_inner=9, feas=2.72794e-07, objective = -0.0563815
+x[0] = 0.0563815
+
+tmModelTester_3.tmd5 objective calls = (3496, 743)
+tmModelTester_3.tmd5 constraint calls = (1178442, 20002)
+New scale is 0.056381
+Feasibility after optimization is true 
+Elapsed time = 1489 ticks
+
+Reading in file /users/rjlang/C++Projects/TreeMaker_5/Source/test/tmModelTester/tmModelTester_4.tmd5
+Maximizing edge strain of tmModelTester_4.tmd5...
+i_outer=1, i_inner=30, feas=0.073006, objective = -2.43475
+x[0] = 2.43475
+
+i_outer=2, i_inner=50, feas=0.0131476, objective = -0.85638
+x[0] = 0.85638
+
+i_outer=3, i_inner=47, feas=0.00313546, objective = -0.649101
+x[0] = 0.649101
+
+i_outer=4, i_inner=19, feas=2.45692e-05, objective = -0.573746
+x[0] = 0.573746
+
+i_outer=5, i_inner=9, feas=2.47665e-09, objective = -0.573142
+x[0] = 0.573142
+
+i_outer=6, i_inner=17, feas=9.1543e-12, objective = -0.573142
+x[0] = 0.573142
+
+Feasibility after optimization is true 
+Elapsed time = 504941 ticks
+
+Reading in file /users/rjlang/C++Projects/TreeMaker_5/Source/test/tmModelTester/tmModelTester_5.tmd5
+Minimizing strain of tmModelTester_5.tmd5...
+i_outer=1, i_inner=56, feas=0.00605343, objective = 0.00035639
+x[0] = 0.499125
+
+i_outer=2, i_inner=55, feas=0.00283258, objective = 0.00379599
+x[0] = 0.499747
+
+i_outer=3, i_inner=61, feas=0.000667314, objective = 0.0175284
+x[0] = 0.499962
+
+i_outer=4, i_inner=66, feas=1.51638e-05, objective = 0.0254438
+x[0] = 0.5
+
+i_outer=5, i_inner=83, feas=6.5157e-07, objective = 0.0256369
+x[0] = 0.5
+
+i_outer=6, i_inner=60, feas=1.58316e-07, objective = 0.0256366
+x[0] = 0.5
+
+tmModelTester_5.tmd5 objective calls = (1789, 386)
+tmModelTester_5.tmd5 constraint calls = (271875, 19514)
+Optimized over 14 nodes and 20 edges. 
+Stiffness-weighted RMS strain is 3.580266%
+Feasibility after optimization is true 
+Elapsed time = 821 ticks
+
+
+Using WNLIB optimizer
+Reading in file /users/rjlang/C++Projects/TreeMaker_5/Source/test/tmModelTester/tmModelTester_1.tmd5
+Optimizing scale of tmModelTester_1.tmd5...
+Scale optimization failed with result code 1
+tmModelTester_1.tmd5 objective calls = (473, 453)
+tmModelTester_1.tmd5 constraint calls = (4630, 1168)
+New scale is 0.100000
+Feasibility after optimization is true 
+Elapsed time = 12 ticks
+
+Reading in file /users/rjlang/C++Projects/TreeMaker_5/Source/test/tmModelTester/tmModelTester_2.tmd5
+Optimizing scale of tmModelTester_2.tmd5...
+Scale optimization failed with result code 1
+tmModelTester_2.tmd5 objective calls = (558, 538)
+tmModelTester_2.tmd5 constraint calls = (279480, 11804)
+New scale is 0.100000
+Feasibility after optimization is false
+Elapsed time = 848 ticks
+
+Reading in file /users/rjlang/C++Projects/TreeMaker_5/Source/test/tmModelTester/tmModelTester_3.tmd5
+Optimizing scale of tmModelTester_3.tmd5...
+Scale optimization failed with result code 1
+tmModelTester_3.tmd5 objective calls = (585, 565)
+tmModelTester_3.tmd5 constraint calls = (319700, 21529)
+New scale is 0.056098
+Feasibility after optimization is false
+Elapsed time = 1014 ticks
+
+Reading in file /users/rjlang/C++Projects/TreeMaker_5/Source/test/tmModelTester/tmModelTester_4.tmd5
+Maximizing edge strain of tmModelTester_4.tmd5...
+Edge optimization failed with result code 1
+tmModelTester_4.tmd5 objective calls = (349, 329)
+tmModelTester_4.tmd5 constraint calls = (105768, 18174)
+Optimized over 8 nodes and 8 edges. 
+Edge strain is 0.000000
+Feasibility after optimization is true 
+Elapsed time = 193 ticks
+
+Reading in file /users/rjlang/C++Projects/TreeMaker_5/Source/test/tmModelTester/tmModelTester_5.tmd5
+Minimizing strain of tmModelTester_5.tmd5...
+Strain optimization failed with result code 1
+tmModelTester_5.tmd5 objective calls = (315, 295)
+tmModelTester_5.tmd5 constraint calls = (76250, 15113)
+Optimized over 14 nodes and 20 edges. 
+Stiffness-weighted RMS strain is 3.578098%
+Feasibility after optimization is false
+Elapsed time = 343 ticks
+
+
+
+tmModelTester has exited with status 0.

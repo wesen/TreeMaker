@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Tips 2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h2>Tips 2: Making a Plan View Model</h2>
+
+<p>
+Flat origami models come in two distinct types, which correspond to two
+different views of the subject. The most common is a "side view" model, which
+resembles the silhouette of the subject viewed from the side. (You can often
+make a side view model three-dimensional by opening out the body from the
+underside, but the base is still fundamentally side view.)
+Using<em>TreeMaker</em>, it is very easy to make side view models; side view is
+the natural orientation of a uniaxial base.
+</p>
+<p>
+However, many models --- especially insects --- look better in "plan view," that
+is, viewed as if you were looking down on them from above. Some of the time,
+you can make a plan view model out of a side view base by spreading the layers
+of the model to the left and right and flattening the result. But oftentimes,
+the base has an odd number of layers, or the layers don't spread sufficiently
+far apart, or it is necessary to spread-sink one or more corners in a way that
+ends up reducing the length of the attached points. For example, let's take the
+regular human tree (equal-length head, arms, legs, and body) oriented along the
+book direction.
+</p>
+<p align="center">
+  <img src="tips_2_1.png" alt=""><br>
+  <b>Figure Ti-2-1.</b> A tree for a human figure. Note the symmetry conditions
+  on all leaf nodes.
+</p>
+<p>
+If you set up the tree and symmetry line and run an optimization, you will
+arrive at the arrangement of nodes shown in Figure Ti-2-2, with crease pattern
+as shown in Figure Ti-2-3 and folded form shown in Figure Ti-2-4.
+</p>
+<p align="center">
+  <img src="tips_2_2.png" alt=""><br>
+  <b>Figure Ti-2-2.</b> The optimized pattern of nodes.
+</p>
+<p align="center">
+  <img src="tips_2_3.png" alt=""><br>
+  <b>Figure Ti-2-3.</b> The crease pattern.
+</p>
+<p align="center">
+  <img src="tips_2_4.png" alt=""><br>
+  <b>Figure Ti-2-4.</b> The folded form.
+</p>
+<p>
+Now the problem with this crease pattern is that if you fold it up into a side
+view base, there is only one layer on the top, and if you try to squash-fold
+the layer to spread the arms and legs to either side and make a plan view base,
+you'll find that the base of the squash fold reduces the effective length of
+the legs considerably.
+</p>
+<p>
+That's because we have overlooked an important requirement for making a plan
+view base. The way you make a side view base into a plan view base is to open
+the model along the line of symmetry, which means that all of the paper along
+the line of symmetry must run along the fold line by which you open flat the
+base. That is, all of the paper along the symmetry line must run along the axis
+of the base. In the interior of a base, axial paths are active paths. So, to
+make a plan view base, the line of symmetry must be entirely covered with
+active paths.
+</p>
+<p>
+So we need to get active paths running along the line of symmetry. But since
+active paths only run between leaf nodes of the tree and there is currently
+only one leaf node on the line of symmetry (the head), we need to add more
+nodes to the tree --- solely for the purpose of creating active paths. These
+nodes don't correspond to features of the model; they're only there to make the
+base a plan view base. In particular, we need to add a node to the bottom of
+the square so that there is a terminus on the bottom edge of the square for the
+active paths that are to run along the line of symmetry.
+</p>
+<p>
+So, we need to add a node along the bottom edge of the paper, i.e., between
+nodes 6 and 7. But the path between nodes 6 and 7 is already active; there's no
+room along it to add any other nodes. We will have to add a new node and
+re-optimize in order to make room for the new node. This is a very important
+point: there is no way to modify the original configuration of nodes to make a
+plan view base without rearranging the entire pattern of nodes!
+</p>
+<p>
+We'll add a new node attached to node 5. We'll want the node to be located on
+the centerline between nodes 6 and 7. We'll make this forcing using conditions.
+There are a couple of ways we could do this. We could simultaneously fix the
+node to the symmetry line and to the edge of the paper,  but since we know
+exactly where the node should lie, we can just use a Node fixed to position
+condition.
+</p>
+<p>
+Create a new node attached to node 5 as shown in Figure Ti-2-5, and add a
+"Node(s) Fixed to Position..." condition.
+</p>
+<p align="center">
+  <img src="tips_2_5.png" alt=""><br>
+  <b>Figure Ti-2-5.</b> The folded form.
+</p>
+<p>
+In the Inspector for this condition, turn on both of the "X position fixed" and
+"Y position fixed" checkboxes and enter "0.5" for the <em>x</em> position and "0.0" for
+the <em>y</em> position as in Figure Ti-2-6. 
+</p>
+<p align="center">
+  <img src="tips_2_6.png" alt=""><br>
+  <b>Figure Ti-2-6.</b>
+</p>
+<p>
+Then hit Enter.
+</p>
+<p>
+There is still the question of how long to make the associated edge. For now,
+give it a length of 0.4 --- we'll discuss how length matters in a moment. After
+you re-run the optimization (<b>Action->Scale Everything</b>), you should get a
+modified arrangement of nodes as shown in Figure Ti-2-7.
+</p>
+<p align="center">
+  <img src="tips_2_7.png" alt=""><br>
+  <b>Figure Ti-2-7.</b>
+</p>
+<p>
+Now we have nodes at the top and bottom of the paper along the symmetry line,
+but the path between them is not active --- yet. We must add one more node along
+the symmetry line, which will "sop up" the excess paper. As we did in the
+previous tip, there are several places to add a new node and edge. We could add
+the new edge to node 2; we could add it to node 5; or we could break edge 4
+somewhere and add the new node in the middle.
+</p>
+<p>
+Let's first try adding the new edge to node 2. Select node 2, click elsewhere
+to create the new node, select the new node and edge, and choose
+<b>Action->Scale Selection</b> to maximize the length of the edge. The result is
+shown in Figure Ti-2-8.
+</p>
+<p align="center">
+  <img src="tips_2_8.png" alt=""><br>
+  <b>Figure Ti-2-8.</b>
+</p>
+<p>
+This new node has created active paths with nodes 1, 6, and 7. The path above
+lies on the symmetry line, but there is no active path with node 8.
+</p>
+<p>
+So, let's add another node. Add a new node and edge to node 5 and optimize via
+<b>Action->Scale Selection...</b> again. The result is  shown in Figure Ti-2-9.
+</p>
+<p align="center">
+  <img src="tips_2_9.png" alt=""><br>
+  <b>Figure Ti-2-9.</b>
+</p>
+<p>
+This didn't work, because the optimization forced the new node off to one side.
+We can fix that by putting another symmetry constraint on the node,
+re-selecting and re-optimizing. The node is currently pinned, so
+<em>TreeMaker</em> won't recognize it as moveable. Option-click on the node and
+drag it out of position (Alt-click on Windows, Control- or Alt-click on Linux).
+Fix the node to the symmetry line (<b>Condition->Node(s) Fixed to Symmetry Line</b>).
+Then select the node and its edge and re-optimize the edge length
+(<b>Action->Scale Selection...</b>).
+</p>
+<p align="center">
+  <img src="tips_2_10.png" alt=""><br>
+  <b>Figure Ti-2-10.</b>
+</p>
+<p>
+This node pattern now has active paths running all along the symmetry line,
+which means that its base can be opened out into plan view, so now we can build
+the creases.
+</p>
+<p align="center">
+  <img src="tips_2_11.png" alt=""><br>
+  <b>Figure Ti-2-11.</b> The crease pattern for a plan view base.
+</p>
+<p align="center">
+  <img src="tips_2_12.png" alt=""><br>
+  <b>Figure Ti-2-12.</b> Folded form for the plan view base.
+</p>
+<p>
+The base shown in the Folded Form window will of course still be shown in side
+view. But because this base has axial creases running all along the line of
+symmetry, it will be openable into plan view, with right and left sides of the
+flap base mirror-symmetric with respect to one another.
+</p>
+
+<p align="center">
+<b>Previous: <a href="tips_1.htm">Tips 1: Adding Nodes</a>
+&nbsp;&nbsp;&nbsp; 
+Next: <a href="tips_3.htm">Tips 3: Forcing Edge Flaps</a></b>
+</p>
+
+</body>
+</html>

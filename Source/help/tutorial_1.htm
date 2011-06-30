@@ -1,0 +1,485 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Tutorial 1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h1 align="center"><em>Tutorials</em></h1>
+<p>
+This section contains tutorial introductions to the capabilities of
+<em>TreeMaker</em>. I will walk you through the basic process of setting of a
+<em>TreeMaker</em> design and constructing a crease pattern. The tutorials are:
+</p>
+<ul>
+  <li>
+    <a href="#tutorial_1">Tutorial 1: Designing a Base</a>
+  </li>
+  <li>
+    <a href="tutorial_2.htm">Tutorial 2: Imposing Symmetry</a>
+  </li>
+  <li>
+    <a href="tutorial_3.htm">Tutorial 3: Working with Strain</a>
+  </li>
+</ul>
+
+<h2><a name="tutorial_1">Tutorial 1: Designing a Base</a></h2>
+<p>
+In this tutorial, you will work through the design of a 4-legged animal with a
+head and tail and will learn the fundamentals of designing a model with
+<em>TreeMaker</em>. Before starting it, you should understand the fundamentals
+of origami design, such as the difference between corner, edge, and middle
+flaps and be familiar with the basic origami procedures and terms such as
+valley fold, mountain fold, reverse fold, rabbit ear, et cetera.
+</p>
+<p>
+TreeMaker designs an origami base that can be represented by a stick figure.
+You specify the desired proportions of your base by drawing a stick figure in
+the square and specifying its dimensions. If you have ever used a vector
+drawing program like Macromedia Freehand, Adobe Illustrator, Deneba Canvas,
+Corel Draw, etc., you should have no trouble in figuring out how to draw a
+figure, but if you haven't, we'll walk you through it.
+</p>
+<p>
+Begin by double-clicking on the <em>TreeMaker</em> icon to launch it. This will
+create a new, untitled window that displays a square --- the default shape of
+paper. Later, you will see how to change the size and shape of the paper (you
+can even design for a rectangle if you like) but for now we'll use a square.
+</p>
+<p>
+If <em>TreeMaker</em> is already running, you can create a new, untitled
+document by selecting the <b>File->New</b> menu command.
+</p>
+<p align="center">
+  <img src="tutorial_1_1.png" alt=""><br>
+  <b>Figure Tu-1-1.</b> A new, untitled <em>TreeMaker</em> document shows a
+  blank square.
+</p>
+<p>
+Initially, the square is blank. We will define the tree by drawing on the
+square, but the tree is really an abstract concept. Several points on the tree
+correspond to distinct, identifiable points on the square, so as a matter of
+convenience we will draw the tree on the square.
+</p>
+<p>
+Even before we've drawn anything, there is one important attribute of the
+design: the <em>scale</em>, which is always displayed in the bottom of the
+design window. The scale is the ratio between the characteristic size of the
+base and the size of the square, so larger is better: a larger scale gives a
+larger base in the end. The scale always starts out with a value of 0.1, but
+over the course of the design, we will find a better value for this quantity.
+</p>
+<p>
+Click once in the middle of the square. You will see a dot appear with a number
+above it and a circle around it as in Figure Tu-1-2. This dot is a
+<em>node</em>; the number is the index of the node, which is used to identify
+the node later on. Each node is assigned a unique index. You can ignore the
+index for now. If you clicked just once, the node is a big dot, which means
+that it is <em>selected</em>. If the node is a small dot, it is
+<em>deselected</em>. A node represents either the tip of a flap or a point
+where multiple flaps come together. The circle represents the amount of paper
+required to form the flap whose tip is represented by a node.
+</p>
+<p align="center">
+  <img src="tutorial_1_2.png" alt=""><br>
+  <b>Figure Tu-1-2.</b> A single node in the new tree.
+</p>
+<p>
+If exactly one node is selected and you click somewhere else, a new node will
+be placed at the click location with a line connecting the nodes. The line
+between the two nodes is called an <em>edge</em>. We'll do this now. Make sure
+the node is selected (click once on it so that it is highlighted) and then
+click once above the node; you have now created an edge connecting the two
+nodes. Note that the new node is now selected (highlighted), as is the edge, as
+shown in Figure Tu-1-3.
+</p>
+<p align="center">
+  <img src="tutorial_1_3.png" alt=""><br>
+  <b>Figure Tu-1-3.</b> Two nodes and an edge in the tree.
+</p>
+<p>
+The edge displays two numbers near its midpoint: the index, which serves to
+identify the edge, and another number below it, which is the desired length of
+the edge. The length of the edge is proportional to the length of the
+corresponding flap on the base. The proportionality constant is the
+aforementioned scale.
+</p>
+<ul><li>
+Note: all lengths on the tree are defined relative to each other, not relative
+to the size of the square. All flaps use the same scale, so for any flap, the
+product of its tree length and the scale gives the length of its corresponding
+flap relative to the size of the paper.
+</li></ul>
+<p>
+All edges start out with a length of 1.000 by default; later you'll learn how
+to change the length of an edge. Note too that the displayed length of the edge
+doesn't change when you drag nodes and edges around. This is an important
+point: <em>the displayed length is not the actual length of the drawn line;
+it's the desired length of the corresponding flap</em>.
+</p>
+<p>
+There are two types of nodes in a tree. <em>Leaf nodes</em> are nodes that have
+only one edge incident upon them. <em>Branch nodes</em> have two or more edges
+incident upon them. Leaf nodes correspond to the tips of flaps; branch nodes
+correspond to points where multiple flaps come together. Leaf nodes (and only
+leaf nodes) are drawn with circles around them; the radius of the circle is the
+scaled length (edge length times tree scale) of the incident edge. The size of
+the circle indicates the minimum area of the paper needed fr the flap that
+corresponds to the incident edge; longer edges mean larger circles. Larger
+circles consume more paper, leaving less paper for other parts of the tree. The
+process of designing a uniaxial origami base amounts to laying out the nodes in
+a way that insures that every flap gets the right amount of  paper; the node
+circles provide some visual feedback of how much paper is needed by the leaf
+nodes --- or rather, by the edges that are incident to the leaf nodes.
+</p>
+<ul><li>
+Note: branch nodes don't have circles around them, but flaps that correspond to
+edges that are only incident to branch nodes also require paper; however, the
+shapes they require, called <em>rivers</em>, are more complex than circles and
+so are not drawn in <em>TreeMaker</em>.
+<<p>
+As mentioned earlier, if you click on an existing node, it becomes selected. If
+you hold down the mouse button after clicking you can drag the node around on
+the square. If exactly one node is already selected and you click elsewhere in
+the square, you create a new node at the click location and create a new edge
+connected to the selected node. (If zero or two or more nodes are selected and
+you click elsewhere, everything gets deselected.) You can also click on edges
+and drag them; dragging an edge drags the nodes at each end. You can select
+more than one node or edge at a time by holding down the Shift key when you
+click on nodes or edges. The collection of selected nodes and edges is called
+the <em>selection</em>.
+</p>
+<p>
+The following are all the things you do with clicks:
+</p>
+
+<ul>
+  <li>
+    Click on a node or edge to select it and deselect everything else.
+  </li>
+  <li>
+    Shift-click on a deselected node or edge to add it to the selection
+  </li>
+  <li>
+    Shift-click on a selected node or edge to remove it from the selection
+  </li>
+</ul>
+
+<p>
+By clicking and dragging, you can change the position of a node or edge. As you
+build up constraints on the position of a node, a node can become "pinned" and
+you won't be able to drag it around any more. However, if you hold down the
+appropriate modifier key (Option on Mac, Alt on Windows, Alt or Control on Linux)
+while clicking, you can override this behavior and drag a pinned node. 
+</p>
+<p>
+To delete a node or edge, you can either hit the <em>Backspace</em> or
+<em>Delete</em> key or select <b>Edit->Clear</b>. Although you can't drag a
+pinned node without holding down a modifier key, you can delete any node at any
+time.
+</p>
+<p>
+Keyboard commands for editing are:
+</p>
+  <ul>
+    <li>
+      <em>Delete</em> or <em>forward Delete</em> to delete selected nodes or
+      edges
+    </li>
+    <li>
+      Command-A (Control-A in non-Macintosh platforms) to select everything
+    </li>
+    <li>
+      <em>Tab</em> or Shift-Command-A to deselect everything
+    </li>
+  </ul>
+<p>
+Deleting a leaf node also removes the attached edge. Similarly, deleting an
+edge also deletes any nodes that would otherwise be orphaned.
+</p>
+<ul><li>
+Note: you can't delete a node or edge if it would break the tree into two
+pieces. You'll get an error message if you try.
+</li></ul>
+<p>
+Now we will build a tree. Choose <b>Edit->Select->All</b> and then choose
+<b>Edit->Clear</b> (or hit <em>Delete</em>) to get rid of what's currently on
+the square. Now, starting near the bottom of the square, click once to place a
+node; then click once about 1/3 of the way up; click once again about 2/3 of
+the way up; and click once near the top of the square. You will have created a
+line of four nodes and three edges as shown in Figure Tu-1-4.
+</p>
+<p align="center">
+  <img src="tutorial_1_4.png" alt=""><br>
+  <b>Figure Tu-1-4.</b>
+</p>
+<p>
+This line of nodes represents the head (top), body (middle) and tail (bottom)
+of the animal. Note that only the two leaf nodes have node circles drawn around
+them.
+</p>
+<p>
+Now we will add side branches to the tree. Click once on node 2 to select it,
+then click once to the left of node 2; this adds a leg. Click again on node 2
+to select it and click once to the right of node 2; this adds another leg, as
+shown in Figure Tu-1-5.
+</p>
+<p align="center">
+  <img src="tutorial_1_5.png" alt=""><br>
+  <b>Figure Tu-1-5.</b>
+</p>
+<p>
+Got the hang of it? Now try to add two more legs to node 3, so that you wind up
+with something that looks like Figure Tu-1-6.
+</p>
+<p align="center">
+  <img src="tutorial_1_6.png" alt=""><br>
+  <b>Figure Tu-1-6.</b>
+</p>
+<p>
+This stick figure represents an animal with a head, two front legs, a body, two
+rear legs, and a tail. It will be used to define a base with flaps for the
+head, legs, body, and tail. Since all of the edges of the stick figure have the
+same relative length, each of the flaps of the base (and the body) will be the
+same length in this example.
+</p>
+<p>
+Note that the nodes are outlined by amber lines. These lines are called
+<em>border paths</em>; they'll define the usable region of the square when
+we're done.
+</p>
+<p>
+At this stage of the game, you can click on nodes and edges and move them about
+rather easily because none of them are pinned. Click on nodes 7 and 8 and drag
+them upward so that they lie above node 4, as shown in Figure Tu-1-7.
+</p>
+<p align="center">
+  <img src="tutorial_1_7.png" alt=""><br>
+  <b>Figure Tu-1-7.</b>
+</p>
+<p>
+When you have defined the stick figure, it's time to start computing the crease
+pattern. Go to the Action menu and select the command <b>Action->Scale
+Everything</b>. This starts the computation of the crease pattern. You can tell
+that the calculation is running from two things: first, a small window will pop
+up as the calculation proceeds; second, the positions of the nodes will change
+and move around. Depending on the power of your machine, the calculation can
+take anywhere from a few seconds to a few minutes.
+</p>
+<ul><li>
+Note: if you get tired of waiting during a calculation, you can always
+interrupt it by pressing Control-C or Command-Period, or by clicking on the
+Cancel button.
+</li></ul>
+<p>
+Let this calculation run until the progress window disappears and things stop
+moving around. You should see a pattern something like Figure Tu-1-8. (Your
+example might look like the figure turned upside-down; if it does, don't worry
+about it.)
+</p>
+<p align="center">
+  <img src="tutorial_1_8.png" alt=""><br>
+  <b>Figure Tu-1-8.</b>
+</p>
+<p>
+There is a lot of information in this figure, so let me spend a few minutes
+describing what we're seeing. Several green lines have appeared that connect
+leaf nodes and they have dots and numbers along them. The stick figure has been
+distorted because the leaf nodes have moved. The node circles have expanded
+until some of them touch each other. And last, the scale displayed at the
+bottom of the window has changed from 0.10000 to 0.2669.
+</p>
+<p>
+Here's what this all means. The green lines between them indicate fold lines in
+the base. (They will be mountain folds most of the time). They are called
+active paths (for reasons that will come later). 
+</p>
+<p>
+The tree as drawn has been distorted because the leaf nodes have been moved.
+Note, however, that the numbers along each edge that specify the desired flap
+length have not changed. Each leaf node corresponds to a unique identifiable
+vertex in the crease pattern (which is the vertex at the tip of the
+corresponding flap); we draw the leaf nodes at the positions of their
+corresponding vertices. That is, when you fold the base, the tip of the head
+flap will come from the point on the paper where the leaf node that corresponds
+to the head is located.
+</p>
+<p>
+The scale, too, has changed; it is now larger, with a value of 0.2669. That
+means that a flap that is 1.0 units long on the tree will actually be 0.2669
+units long on the paper. The scale thus specifies the overall size of the base.
+Since the scale has gotten larger, the circle sizes (which, recall, are the
+product of the tree scale and the length of the edge incident to the node at
+the circle center) are also correspondingly larger. The circles have expanded
+until they touch, but they don't overlap. Recall that each circle encloses the
+minimum paper needed for its corresponding flap. If two circles overlapped, the
+paper in the overlap would belong to two different flaps.
+</p>
+<p>
+What <b>Action->Scale Everything</b> actually does is to move around the leaf
+nodes to try to find an arrangement that gives the largest possible base,
+subject to the proviso that all of the edges maintain the same lengths relative
+to each other and all of the paper in the tree ends up in at most one flap. In
+Figure Tu-1-8, there is a large region of paper that doesn't seem to belong to
+any circle, but it still belongs to a flap: in this case, the flap
+corresponding to edge 2. Since edge 2 isn't incident to any leaf nodes, it
+doesn't have a circle --- but it still requires a certain amount of paper.
+</p>
+<p>
+Although all of the edges are enlarged by the same amount, at the optimum
+configuration, at least some of the edges cannot be enlarged any more by any
+node movement whatsoever. Such edges are called "pinned" edges. In this
+optimization, all of the edges are pinned. In general, for small trees, after
+you have run the Scale Everything command, all or nearly all of the edges will
+be in this state. Pinned edges are shown in a lighter shade of blue than
+unpinned edges.
+</p>
+<p>
+Most of these dots, lines, circles, and numbers are here for illustrative
+purposes and you will learn later how to turn on and off their display. The
+green lines, however, correspond to actual creases in the base; the folds are
+(usually) mountain folds. The folds along these lines will run along the
+<em>axis</em> of the folded base, and they are called <em>axial</em> folds.
+</p>
+<p>
+The green lines are not themselves creases; rather, they are visual
+representations of relationships between nodes, called <em>paths</em>. For any
+two leaf nodes on the tree, there is a path, which relates two distances: the
+distance between the two nodes on the paper (or rather, between the vertices
+that correspond to the two nodes); and the distance between the two nodes as
+measured along the tree and scaled to the paper. If the distance between the
+nodes on the paper is greater than or equal to the scaled distance between the
+two nodes on the tree, the path is said to be <em>feasible</em>. If not, it is
+<em>infeasible</em>. if the two distances are exactly equal, the path is said
+to be <em>active</em>. Paths are color-coded in the Design window. Infeasible
+paths are shown in red, active paths in green, merely feasible paths in amber.
+Active paths give rise to creases in the base. They divide the paper up into a
+network of <em>polygons</em>, each of which can be filled in with a pattern of
+creases known as a <em>molecule</em>. The network of polygons and molecules
+gives rise to the full crease pattern.
+</p>
+<p>
+Bases are built in two stages. First, you optimize, which places the nodes
+within the square and identifies the active paths of the crease pattern that
+form a network of polygons. This explicitly defines the overall structure of
+the base and actually implicitly defines the entire crease pattern. Once you
+have found a configuration of nodes for which (a) all paths are feasible, (b)
+every node in the interior of the paper is pinned, the crease pattern can be
+constructed in a second stage.
+</p>
+<p>
+We'll do this second stage now. Go to the Action menu and select
+<b>Action->Build Crease Pattern</b>. You will see a bunch of new lines and
+polygons appear, as shown in Figure Tu-1-9.
+</p>
+<p align="center">
+  <img src="tutorial_1_9.png" alt=""><br>
+  <b>Figure Tu-1-9.</b>
+</p>
+<p>
+That's it: we have now computed the full crease pattern, although it's not
+completely obvious from the Design window. In fact, you are seeing several
+different sets of information overlaid on one another. The tree (shades of
+blue) displays the abstract structure of the tree. The yellow polygons display
+the underlying structure of the crease pattern. The crease lines display the
+creases themselves. In this view, the creases are colored according to their
+structural role in the base, rather than by their fold direction. This color
+scheme is called AGRH coloring.
+</p>
+<ul>
+  <li>
+    Creases that lie along the axis of the base are called <em>axial
+    creases</em> and are shown in black. They are usually, but not always,
+    mountain folds.
+  </li>
+  <li>
+    Certain creases that lie parallel to the axis of the base are called
+    <em>gusset creases</em> and are shown in gray. They are always mountain
+    folds.
+  </li>
+  <li>
+    Creases that emanate from the corners of molecules are called <em>ridge
+    creases</em> and are shown in red. They are always valley folds.
+  </li>
+  <li>
+    Creases that run perpendicular to the axis of the base and separate
+    distinct flaps are called <em>hinge creases</em> and are shown in dark blue
+    (if folded) or light blue (if unfolded).
+  </li>
+  <li>
+    Creases that run perpendicular to the axis of the base that lie within a
+    flap are called <em>pseudohinge creases</em> and are shown in cyan.
+  </li>
+  <li>
+    Creases that run around the outside of the useful area are called
+    <em>border creases</em> and are shown in black. The paper outside the
+    useful area is unused; in practice, you would just fold this material out
+    of the way.
+  </li>
+</ul>
+<p>
+Because the creases are overlaid on top of everything else, the display gets
+rather busy when all of the creases are present. You can choose to display just
+the creases by choosing the <b>View->Creases View</b> command, getting the
+result shown in Figure Tu-1-10. This turns off the display of everything but
+creases, and also uses a different color scheme for the creases, called MVF
+coloring.
+</p>
+<p align="center">
+  <img src="tutorial_1_10.png" alt=""><br>
+  <b>Figure Tu-1-10.</b>
+</p>
+<p>
+MVF coloring is closer to the color scheme you might be familiar with from
+published origami patterns. In this scheme, creases are colored not according
+to their structural role, but according to their fold direction:
+</p>
+<ul>
+  <li>
+    Mountain folds are solid black lines.
+  </li>
+  <li>
+    Valley folds are magenta dashed lines.
+  </li>
+  <li>
+    Flat (unfolded) folds are light gray lines.
+  </li>
+  <li>
+    Border creases are also shown in black.
+  </li>
+</ul>
+<p>
+You might wonder why I don't use dashed and chain lines for valley and mountain
+folds, since they are standard origami usage for step-by-step folding
+sequences. The reason is that in large complex crease patterns, the traditional
+line patterns are difficult to distinguish, and it is more illuminating to use
+both color and pattern to distinguish mountain and valley folds.
+</p>
+<p>
+Finally, we have the crease pattern for the base --- the thing we were looking
+for all along. There are two ways to get the crease pattern from the screen
+onto a piece of paper. First, you can simply print it using the
+<b>File->Print</b> command and fold up the printout. You can also choose
+<b>View->Plan View</b>, which displays the crease pattern along with the
+coordinates of key vertices. You can print this out and use the coordinates to
+plot vertices on another sheet of paper to fold it by hand, or use a program
+like <em>ReferenceFinder</em> to find folding sequences for the key reference
+points.
+</p>
+<p>
+That's all for this example. You have learned the basics of <em>TreeMaker</em>:
+how to define a stick figure using the point-and-click interface and how to
+construct a basic crease pattern. In the next example, you'll learn how to
+modify the stick figure to alter proportions, how to incorporate symmetry, and
+how to customize the screen and printed image.
+</p>
+
+<p align="center">
+<b>Previous: <a href="menus.htm">Menus</a>&nbsp;&nbsp;&nbsp; 
+Next: <a href="tutorial_2.htm">Tutorial 2: Imposing Symmetry</a></b>
+</p>
+
+</body>
+</html>

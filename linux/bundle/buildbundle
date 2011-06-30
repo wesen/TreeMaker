@@ -1,0 +1,103 @@
+#!/bin/sh
+# Builds a distribution bundle for TreeMaker 5 for Unix/Linux
+# Mandatory parameters:
+# - name of bundle (usually program name, version and build date)
+# - build configuration (release, debug, devel, profile)
+# - binary name
+# - path prefix to source directory
+# - path prefix to installation directory
+# - application name as registered by TM5
+#
+# By C.A. Furuti
+
+echo Building bundle "$1" for configuration "<"$2">"
+
+treemaker="$1"
+config="$2"
+program="$3"
+toSource="$4"
+installprefix="$5"
+appname="$6"
+bundle=`echo "$1" | tr ' ' '_'`
+
+cd "build/$2"
+# Build a temporary directory with all relevant files
+rm -rf "$bundle"
+mkdir -p "$bundle"
+
+# Assumes binary and all auxiliary files are built ok
+if [ "$2" = "release" ]; then
+  strip "$program"
+fi
+# Link binary and all auxiliary files so we don't waste disk space
+ln "$program" "$bundle"
+ln ../help.zip "$bundle"
+
+ln ../../../LICENSE.txt "$bundle"
+ln ../../../change_log.txt "$bundle"
+ln ../../"$toSource"/about/* "$bundle"
+ln ../../"$toSource"/images/* "$bundle"
+ln ../../resources/Icon_doc_48.png ../../resources/Icon_app_48.png "$bundle"
+ln ../../resources/Icon_app.ppm "$bundle"
+ln ../../bundle/installer "$bundle"
+ln ../../bundle/tclInstaller "$bundle"
+ln ../../bundle/mkuninstall "$bundle"
+ln ../../bundle/copyfiles "$bundle"
+
+# Save files with parameters to be used by actual installer
+echo $appname > "$bundle"/appname
+echo $installprefix > "$bundle"/appprefix
+echo $program > "$bundle"/appbinary
+# Create a reminder just in case installer does not clean temp dir
+cat << __END_README__ > "$bundle"/README
+Temporary directory self-extracted from a binary bundle of
+$treemaker for Linux/Unix.
+May be safely removed after installation.
+To continue installing, run "installer" or "tclInstaller"
+__END_README__
+
+# Prepare a self-extracting installer script embedding compressed contents
+sed '/^#/d' ../../bundle/stub >> "$bundle".tar.gz
+# Transfer directory contents to a tar file, then saves its CRC
+tar cf - "$bundle" | gzip -c >> "$bundle".tar.gz
+cksum=`cksum "$bundle".tar.gz | cut -d" " -f1,2`
+rm -rf "$bundle"
+
+bundlesh="$bundle.sh"
+
+cat << __END_HEADER__ > "$bundlesh"
+#!/bin/sh
+# Extraction/installation script for TreeMaker 5.0 for Linux
+# Please execute me, like in "sh $bundlesh"
+#   If the graphical installer runs into trouble, try the -nox option
+__END_HEADER__
+
+n1=`cat $bundlesh | wc -l`
+skipLinesSum=`expr $n1 + 7`
+n2=`sed '/^#/d' ../../bundle/stub | wc -l`
+# skip one line, plus one per variable below
+skipLines=`expr $n1 + $n2 + 7`
+# Variables:
+#  skipLinesSum - number of lines to skip before calculating checksum
+#  skipLines - number of lines to skip before extracting tar file
+#  cksum - checksum of stub + tar file
+#  treemaker - TreeMaker version
+#  config - build configuration
+#  bundle - name of bundle
+cat << __END_VARS__ >> "$bundlesh"
+skipLinesSum=$skipLinesSum
+skipLines=$skipLines
+checksum="$cksum"
+treemaker="$treemaker"
+config="$config"
+bundle="$bundle"
+__END_VARS__
+# Unfortunately, the previous lines aren't checked by the CRC
+
+# Finally append bundle contents, then remove the tar file
+cat "$bundle".tar.gz >> "$bundlesh"
+rm "$bundle".tar.gz
+
+chmod a+x "$bundle.sh"
+echo Binary distribution bundle "build/$2/$bundlesh" ready.
+exit 0

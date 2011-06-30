@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Tips 5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h2>Tips 5: Forcing Symmetric Angles</h2>
+
+<p>
+One of the uses for conditions in <em>TreeMaker</em> is to force active paths
+to lie at specific angles. Why would you want to do this?
+</p>
+<p>
+Once you have computed and folded a number of<em>TreeMaker</em> designs, you'll
+discover that while all the axial edges are aligned (that's the nature of a
+uniaxial base), only rarely will the ridges of each flap line up with each
+other. That's because a flap is composed of a bunch of triangles coming
+together and when<em>TreeMaker</em> optimizes a base, there's no particular
+reason for it to make the angles of one triangle equal to those of the adjacent
+layers. This has the effect of making the crease pattern rather irregular,
+which then makes it difficult to fold without measuring the locations of
+points, lines, and their associated angles.
+</p>
+<p>
+However, if you could force all angles to be the same, or one of a small set of
+similar angles, then you'd get a base in which more layers tend to line up.
+Angle-forcing conditions allow you to do exactly this. If all the major creases
+run along fairly standard angles, you run a better chance of being able to
+construct reference points by folding and/or a sequential folding sequence,
+rather than measuring for reference points and a folding sequence that consists
+of a single "bring all these creases together at once."
+</p>
+<p>
+If we are to force major creases to lie at "standard" angles, which angles
+should we choose? A natural set of angles are those that are obtained by
+dividing a circle into an integral number of equal divisions: for example, the
+common 22.5&deg; angle found in the Bird Base is obtained by dividing a circle
+into 16 parts. While this is the most common division, several others provide
+useful and interesting bases: division into 12 parts gives multiples of 30&deg;
+and crease patterns with many equilateral triangles in them.
+</p>
+<p>
+Let's work through an example. Create a new document and construct the
+six-legged tree as shown in Figure Ti-5-1.
+</p>
+<p align="center">
+  <img src="tips_5_1.png" alt=""><br>
+  <b>Figure Ti-5-1.</b>
+</p>
+<p>
+Now, select <b>Action->Scale Everything</b> to create the first iteration of
+the design.
+</p>
+<p align="center">
+  <img src="tips_5_2.png" alt=""><br>
+  <b>Figure Ti-5-2.</b>
+</p>
+<p>
+Choose <b>Action->Build Crease Pattern</b> and <b>View->Creases View</b> to get
+the crease pattern shown in Figure Ti-5-3.
+</p>
+<p align="center">
+  <img src="tips_5_3.png" alt=""><br>
+  <b>Figure Ti-5-3.</b>
+</p>
+<p>
+The creases in this design don't precisely fall on standard angles. We'll
+modify it so that they do. We do this by putting a "Path angle quantized"
+condition on all of the paths that correspond to major creases.
+</p>
+<p>
+Put the model back into Design view (<b>View->Design View</b>) and kill the
+crease pattern (<b>Action->Kill Crease Pattern</b>) to put in back into the
+configuration shown in Figure Ti-5-2. Once again, only the polygon paths are
+shown. 
+</p>
+<p>
+Now we'll pick the paths to be angle-quantized. What we're really after is
+quantizing the angle of the creases associated with certain paths. Since paths
+only have creases if they are active paths, only the currently-active paths 
+--- the green lines in the figure --- should be quantized. Select all
+of the active paths by clicking on the first, then shift-clicking on each path,
+until all six active paths are selected as shown in Figure Ti-5-4.
+</p>
+<p align="center">
+  <img src="tips_5_4.png" alt=""><br>
+  <b>Figure Ti-5-4.</b>
+</p>
+<p>
+Then select <b>Condition->Path Angle Quantized</b>. This puts up the dialog
+shown in Figure Ti-5-5.
+</p>
+<p align="center">
+  <img src="tips_5_5.png" alt=""><br>
+  <b>Figure Ti-5-5.</b>
+</p>
+<p>
+Path angle quantization forces the crease associated with the path to lie at
+some angle of the form
+</p>
+<ul>
+  <li>
+    180&deg;/<em>N</em> + <em>offset</em>
+  </li>
+</ul>
+<p>
+with respect to the <em>x</em> axis, where <em>N</em> is an integer and
+<em>offset</em> is some fixed angle. In order to insure that the path does have
+a crease associated with it, the path is also forced to be active. In fact, the
+quantization condition is actually just an additional condition placed on an
+ordinary path active condition.
+</p>
+<p>
+The quantization value <em>N</em> can be any positive integer, but the most
+common values are <em>N</em>=4, which is common in box-pleated patterns (axial
+creases at multiples of 90&deg;, ridge creases at odd multiples of 45&deg;);
+<em>N</em>=6, which gives hexagonal symmetry; and <em>N</em>=8, which
+corresponds to the angles you find in a Bird Base. But you might try others for
+fun; there are many other useful possibilities to be found in the other angles,
+and I have found interesting structures for <em>N</em>=10 as well. We'll work
+with <em>N</em>=8 for now. Type in 8 for the quantization and 0 for
+the offset and click OK.
+</p>
+<p>
+As shown in Figure Ti-5-6, each of the paths now has a condition attached to
+it, which will force the condition to be active and quantized.
+</p>
+<p align="center">
+  <img src="tips_5_6.png" alt=""><br>
+  <b>Figure Ti-5-6.</b>
+</p>
+<p>
+In principle, you should be able to re-optimize directly; however, due to a
+quirk in this condition (which is the most mathematically complex condition),
+<em>TreeMaker</em> has a tendency to settle onto a spurious solution in which
+the entire crease pattern has shrunk into oblivion. (Try it and see. You can
+always <b>Edit->Undo</b>.) To prevent this tendency, we'll need to stitch some
+of the nodes to the edges of the square with additional conditions to keep the
+node pattern (and corresponding crease pattern) stretched out.
+</p>
+<p>
+Select nodes 5 and 6 and choose <b>Condition->Node(s) Fixed to Paper Edge</b>. Then
+select nodes 7 and 8 and choose <b>Condition->Node(s) Fixed to Corner</b>. This
+will force these nodes to the edges of the paper, but will allow nodes 5 and 6
+them to "slide around" on the edges during optimization to accommodate the
+angle constraints.
+</p>
+<p>
+Now, time to optimize. Select <b>Action->Scale Everything</b>. You will see the
+dialog shown in Figure Ti-5-7.
+</p>
+<p align="center">
+  <img src="tips_5_7.png" alt=""><br>
+  <b>Figure Ti-5-7.</b>
+</p>
+<p>
+The fact that the number of equations exceeds the number of degrees of freedom
+means that we are highly unlikely to find a solution simply by varying the
+scale. Click "No" to dismiss the dialog. We are going to have to perform a
+strain optimization --- allowing the strains of the individual edges to vary in
+order to satisfy all of the path angle constraints. This is typically the case
+once you start adding path conditions: strain optimization is the only way to
+satisfy all of the path conditions.
+</p>
+<p>
+Select all of the nodes and edges (<b>Edit->Select->All</b>) and choose
+<b>Action->Minimize Strain</b>. You should end up with the pattern shown in
+Figure Ti-5-8.
+</p>
+<p align="center">
+  <img src="tips_5_8.png" alt=""><br>
+  <b>Figure Ti-5-8.</b>
+</p>
+<p>
+This is very close to the original pattern, but all the paths now run at
+multiples of 22.5&deg;. If you now build the crease pattern (<b>Action->Build
+Crease Pattern</b>), you will see that all the creases also run at multiples of
+11.25&deg;. This would be a very easy pattern to construct purely by folding.
+</p>
+<p align="center">
+  <img src="tips_5_9.png" alt=""><br>
+  <b>Figure Ti-5-9.</b>
+</p>
+<p>
+If you know the angle you want the crease to run along, you can also fix the
+angle to a specific value using <b>Condition->Path Angle Fixed...</b>. Since
+path angle quantization and path angle fixation both involve forcing the path
+to be active, they are all variants of the same basic Path Angle Fixed
+condition. Once you have placed one type of condition, you can turn it into
+either of the other two by selecting the appropriate radio button in the
+Inspector, as shown in Figure Ti-5-10.
+</p>
+<p align="center">
+  <img src="tips_5_10.png" alt=""><br>
+  <b>Figure Ti-5-10.</b>
+</p>
+<p>
+You'll note that we didn't place a condition on the path between nodes 7 and 8.
+That's because it wasn't active, and placing an angle quantized condition would
+have necessarily forced it to be active. That might not be a problem, but
+forcing too many paths to be active can cause problems with convergence if
+you've set up a set of mutually inconsistent conditions. If, during the
+optimization, the pattern starts jumping about wildly, it's likely that you
+have set up inconsistent conditions, and the best thing to do is halt the
+optimization and remove one or two conditions until the optimization settles
+down.
+</p>
+<p>
+I mentioned that the <em>N</em>=4 angle quantization condition makes the axial
+creases run at multiples of 90&deg;, which makes the ridge angles at the
+corners of polygons run at odd multiples of 45&deg;. This is a characteristic
+of box-pleated patterns, and it is tempting to think that this might be a way
+to construct box-pleated crease patterns with <em>TreeMaker</em>. Alas, you'll
+find that even if you force the axial paths to run at multiples of 90&deg;, in
+general, creases constructed by the universal molecule inside each polygon will
+not, in general, stick to these angles. The creation of box-pleated patterns
+(and their analogs with other symmetries) in which <em>all</em> creases run at
+multiples of some fixed angle require a different set of algorithms: a set that
+will have to wait, perhaps, until <em>TreeMaker 6</em>. 
+</p>
+
+<p align="center">
+<b>Previous: <a href="tips_4.htm">Tips 4: Fracturing Polygons</a></b>
+</p>
+
+</body>
+</html>

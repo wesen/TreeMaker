@@ -1,0 +1,1150 @@
+/*******************************************************************************
+
+5.0.1.20060413
+- No changes, but now is release candidate.
+
+20060325
+- [RJL, all] Fixed more typos in the help docs.
+- [CAF, linux] Updated wxWidgets patches and installation instructions.
+
+20060323
+- [RJL, all] Changed default symmetry angle for empty trees to 90 degrees.
+- [RJL, all] Added discussion of color scheme to the View Settings window docs
+and fixed a few typographical errors.
+- [RJL, all] Changed RADIAN and DEGREES constants to be declared as constant
+values rather than computed expressions, which fixed a problem in Intel Mac
+builds (and only there) in which these constants were being given a value of 0.
+- [RJL, all] Renamed Pi to PI, Two_Pi to TWO_PI for consistency and eliminated
+const-ness of some return values for consistency.
+
+5.0.0.20060309
+- [RJL, all] Fixed a bug in the Path Combo inspector in which changing the
+condition type wasn't always getting applied.
+- [CAF, linux] - window fitting commands require WM hinting in some desktops;
+make doc windows slightly less tall so bottom isn't hidden in some desktops.
+- [CAF, all] Number pad delete key now deletes conditions in inspector (along
+with backspace and fwd delete).
+- [CAF, linux] Fixed missing double-click events in wxGTK list boxes
+- [ABX, MSW] Printing dashing fixed.
+
+20060308
+- [CAF, Linux] Restored quit-on-close to match MSW behavior.
+
+20060307
+- [CAF, linux] invoke updating of user interface events in UpdateAllViews -
+should patch the "unresponsive key after menu" issue in wxGTK
+- [CAF, linux] like we did before in tmwxDocManager.cpp::OnFileClose (for closing
+doc via menu/C-W), in tmwxDesignFrame::OnClose explicitly call base's method
+instead of event.Skip(); [possibly a wxGTK, not Linux, issue]. Otherwise, when
+a document window is killed via title bar button, the doc is not actually
+closed, orphaning the inspector windows without creating a new empty doc.
+- [RJL, all] Holding down modifier key when creating a new node by clicking
+keeps the current selection.
+
+20060304
+- [ABX, MSW] Inspector and View Settings in on top when needed and on
+background when unneeded. 
+- [ABX, all] Added wrappers for range selection so it not influence existing
+quality but is available for further development (just define
+TM_WITH_RANGE_SELECTION macro in IDE/build). 
+- [ABX, all] Assert during menu creation fixed.
+
+20060228
+- [RJL, all] Fixed a bug in tmConditionNodesCollinear in which deleting one of
+the nodes could cause a crash.
+- [RJL, all] Fixed an incorrect label in display of edges same strain condition.
+- [RJL, all] In tmwxDesignCanvas::UpdatePaperSize, changed order of resizing
+virtual image and resizing frame (frame now resized first) to avoid flicker
+(that was only a problem on linux).
+
+20060227
+- [RJL, all] Rewrote Fit-to-[something] routines in tmwxDesignCanvas and
+related supporting routines. Now supports user changes in monitor size and menu
+items are enabled iff the command would alter the window position or size. Also
+fixed several uninitialized members in tmwxDesignCanvas. Renamed several
+tmwxDesignCanvas variables and routines.
+- [RJL, all] Set paper size dialog is now initialized with current paper size.
+- [RJL, all] Replaced a bunch of public member framework-related variables with
+private members and public getters (to separate read/write access).
+- [ABX, MSW+linux] Standard menu items are decorated with icons. (not on Mac.)
+- [ABX, all] Drag & drop is supported.
+
+20060226
+- [RJL, all] Fixed a bug in the Node Fixed to Position dialog, in which checkbox
+values were being ignored.
+- [RJL, all] replacement of assorted ".size() == 0" with ".empty()" calls.
+- [RJL, all] Eliminated superfluous arguments in tmwxTextCtrl::ValidateSizeT.
+- [RJL, all] Fixed a bug in tmTree::AbsorbNode() in which mIsLeafNode and
+mIsLeafPath flags were not getting updated properly in tmTree::AbsorbEdge.
+- [ABX, all] Added check to Fit... commands so that they're not doubly executed
+if the paper is already fit to the screen in one or the other direction.
+
+20060224
+- [ABX, all] Implemented View->Fit to Width and View->Fit to Height, added docs.
+- [ABX, MSW] Added modified setup0.h (wxWidgets file) to turn off unnneeded
+parts of wxW to reduce file size.
+- [RJL, all] Replaced static arrays sCalcLocFns, sAddConditionFns, sSelectionFns
+with singleton functions to delay initialization (resolving potential
+intialization order issues). Also reimplemented debugging stringstreams with
+initialize-on-usage.
+- [RJL, all] Fixed an issue in node absorption that could cause a crash if a
+crease pattern was present.
+
+20060223
+- [RJL, all] Fixed a bug in tmStubFinder::TriangulateTree in which encountering
+of a non-splittable order-4+ tree (yes, it happens) caused a crash. Updated the
+docs to note the possibility.
+- [RJL, all] Fixed a bug in the display of a group selection (edges improperly
+displayed). As part of that, implemented copy ctors and assignments in class
+tmDpptrArray<T> to eliminate the underlying weakness (shallow default
+ctor/assignment) that led to the bug.
+- [RJL, all] Disabled Edit->Paste command (not used by any of our classes).
+Framework still enables/handles for text controls.
+- [ABX, all] Mouse event handler doesn't eat unused events to enable receiving
+context menu event.
+- [ABX, all] Context menu implemented; works both using keyboard context key
+and right click from mouse. It just duplicates content of edit menu which is
+handy in case of large space.
+
+20060222
+- [ABX, all] Fixed some typos and glitches in tmwxApp that were preventing
+build on MSW.
+- [RJL, all] Added some discussion of deletion (under Edit->Clear) to the help
+docs.
+
+20060221
+- [CAF, linux] simplified code for small widgets; improved wxWidgets's circle
+rendering for GNOME printing
+- [RJL, all] Splash screen is now in its own routine, which happens at different
+places in OnInit() depending on platform (later on Mac, earlier on Lin/Win).
+- [ABX, MSW] fixed sometimes broken copying of data between new instance and
+master instance
+- [RJL, all] Renamed overloaded tmwxDocManager::GetCurrentDocument() and
+GetCurrentView() to GetCurrentDocumentLocal() and GetCurrentViewLocal() to more
+clearly distinguish from the non-virtual versions that will still be called by
+the framework. Also, fixed a bug in which our parallel copy of the current
+document (tmwxDocManager::mDoc) wasn't getting cleared immediately, which
+allowed idle menu update events to get sent to a dangling pointer if the
+timing was right.
+- [RJL, all] Fixed a model bug in which tmConditionPathCombo's were not getting
+deleted from non-leaf paths.
+
+20060220a
+- [RJL, all] Number formatting is consistent: scale, tree coordinates, strain, 
+stiffness formatted as %.4f; angles formatted as %.2f.
+- [RJL, all] "Set Edge Length" dialog initializes with current edge length if
+selection consists of a single edge.
+- [RJL, all] Dropped wxSTAY_ON_TOP from TMWX_MODAL_DIALOG_STYLE because it was
+staying on top of wxMessageBox error alerts within the dialog (wxWidgets bad).
+- [RJL, all] Changed all calls of wxMessageBox to one of three twmxAlertXXX
+routines to enforce consistency.
+- [RJL, all] Cleaned up dialog validation routines to use tmwxCtrl validation
+routines as much as possible (again, to enforce consistency).
+- [RJL, all] Fixed outline levels in help docs contents
+- [ABX, MSW]
+  1. fixed crash in tmwxApp::ProcessEvent() - app event should work without any
+  window (as it happens at the end of application running).
+  2. added single instance checker so new documents are launched instead of new
+  instance of application
+  3. folded form frame after opening is first not last in window hierarchy.
+
+20060220
+- [RJL, all] Minor cleanup of class tmwxTextCtrl.
+- [ABX, all] Minor fixes to #includes to address build issues.
+- [CAF, linux] Patched wxWidgets (GNOME printing interface): circles don't
+print 3/4 as tall as they should. Still must fix clipping bug.
+- [CAF, all?] Patched wxWidgets (docview.cpp) preventing crashes when opening
+files at command line not named *.tmd5
+
+20060219
+- [RJL, all] Cleaned up various dialogs in tmwxDoc_Edit.cpp to use
+tmwxGetUserInputDialog methods.
+- [RJL, all] Expanded discussion of path quantization condition in docs. Fixed
+incorrect figure Ti-5-10.
+- [RJL, all] Major change to event processing; overrode tmwxApp::ProcessEvent
+to route events to doc manager and/or help frame. Added print-from-menu to help
+frame.
+- [RJL, all] Replaced global accessor routines with pointers (e.g., replace
+tmwxGetInspectorFrame()-> with gInspectorFrame->). Also added checks for NULL
+pointers in several places that could have an effect during initialization and 
+exit.
+- [RJL, all] Moved splash screen even later in OnInit(); AppleEvent processing
+during wxYield needs the inspector frame to exist.
+
+20060218
+- [RJL, Mac] Moved splash screen to later in OnInit(), which on Mac, was
+getting in the way of AppleEvent processing for opening files on application
+launch. This fixed the problem whereby double-clicking on a document launched
+the application but failed to open the document.
+
+20060217
+-[ABX, all] minor fixes to new dialogs in tmwxDoc_Edit.cpp.
+- [RJL, all] Fixed a bug in node absorption that sometimes led to corrupted
+data structure (superfluous paths).
+- [RJL, all] Turned off wnlib optimizer since it can't easily be made exception-
+friendly.
+
+20060216
+- [ABX, all] Assorted changes to frame activation code to fix problem with
+command destination with multiple documents present.
+- [RJL, all] Altered constraints so that certain ill-set-up strain minimizations
+(e.g., 3-tree, one strained edge, no active paths) will not hang, will merely
+fail to converge.
+- CAF, linux] Changed behavior so that closing the last document reopens a
+blank document (requires wxGTK-specific code)
+- CAF, linux] installation copies compressed change_log.txt. Graphical
+installer has a button for showing it before installing
+- [CAF, all] experimental code in edge splitter dialog - see symbol NO_CAF in
+tmwxDoc_Edit.cpp
+- [RJL, all] Fixed a bug in which symmetry conditions were being applied during
+optimization even if the symmetry line was not turned on.
+
+20060215
+- [RJL, all] Fixed a bug in Split Edge dialog in which node index wasn't
+correctly reported.
+- [RJL, all] Fixed a bug in the calculation of path feasibility for path active
+and path combo constraints.
+- [RJL, all] Reverted the convergence check in ALM to the check used in 20060211
+and before. This still leaves a bug: 3-legged tree, strain one edge, C-3 sends
+into infinite loop.
+- [ABX, mostly MSW] Assorted UI changes:
+  1. More native palettes as requested by Marc (tmwxPaletteFrame.cpp)
+  2. Close box for user input dialog.
+  3. In user input dialog there was Center() in flags for buttons. It is not
+  consistent with other dialogs by wxWidgets.
+  5. In user input dialog with more input fields labels are top aligned with
+  text fields which doesn't look nice. Sorry, had no time yet to modify this
+  myself.
+  6. In user input dialogs focus (at least on MSW) needs to be applied when
+  dialog content is completed.
+  7. I added accelerators which work regardless which of the frames is active
+  (see changes in tmwxApp.* + palette and folded form frame source)
+- [RJL, all] Removed static line separator between fields and buttons
+(compatibility w/ Apple HIG) (thx ABX for pointing out). (Alas, changes some
+help doc images which need updating).
+  
+20060214
+- [ABX+RJL, all] RJL's changes to OnActive broke MSW; reverted to ABX's addition
+of tmwxDesignFrame::ProcessEvent(), which still doesn't fix Mac but at least
+doesn't break MSW.
+- [ABX] Fixed a bug in tmwxDesignCanvas::TreeToDC that broke MSW printing.
+
+20060213
+- [RJL, all] Fixed a bug in ALM optimizer that led to hang when all constraints
+are feasible (e.g., strain minimization with no active paths).
+- [RJL, all] Fixed a bug in tmwxConditionListBox in which the node index was
+being improperly reported for tmwxConditionCombo when one constraint applied.
+- [ABX, msw] Updated README.txt
+- [CAF, linux] Updated README.txt
+- [CAF+RJL, linux] Modified behavior on closing last doc to reopen a new empty
+doc (only under linux).
+- [RJL, all] Updated help docs to reflect platform-specific behavior when last
+doc is closed.
+- [RJL, all] Added NaN detection macros and sprinkled a few throughout the ALM
+optimizer to aid in debugging.
+- [RJL, all] Added call to tmwxDocManager::ActivateView() to tmwxDoc::OnActivate
+so that doc manager can properly keep track of which view currently has the 
+focus. (Doesn't completely fix the problem; more investigation needed.)
+- [RJL, all] Added check to Strain Optimization menu item enabling so that item
+is not enabled if the pattern is feasible and there is no strain.
+- [CAF+RJL, all] Added warning dialogs within tmwxDoc::OnOptimize* routines
+(although they shouldn't be needed if menu enabling works properly).
+- [CAF, all] Added exception in tmPart::GetPOD() for corrupted numerical data.
+
+20060211
+- [RJL, all] Finished updating Tips figures; all doc figs should be up to date.
+- [RJL, Mac] Updated XCode project to build Universal Binary for Release build.
+Adjusted optimization and symbol generation settings throughout targets.
+- [ABX, Win] Updated MSW build files. Delivered beta installer build (20060210).
+- [RJL, all] Small tweaks to class tmwxGetUserInputDialog appearance.
+
+20060210
+- [ABX, all] Further minor typos in help docs.
+- [ABX, MSW] Updated .bkl in build files.
+- [CAF, all]
+  - keypad Del works as ordinary Delete key
+  - [linux] shrink mini/small buttons, checkboxes and radio buttons
+  - for moving pinned items, the Control key modifier may be used as an
+  alternative to Alt
+  - [linux] Makefile doesn't leave empty help.zip if "zip" is not installed
+- [RJL, all] Tutorials 1, 2, and 3 have new figures and additional text that
+talks about node circles & conditions versus constraints
+- [RJL, all] Fixed a bug introduced in 20060209 that would cause a crash if you
+created a condition of one type on a node that already had a condition of
+another type on it.
+
+20060209
+- [RJL, all] Fixed a bunch of bad links in the Help table of contents.
+- [RJL, all] Changed node condition menu item behavior so that selecting a node
+condition when one already exists changes the existing condition. Added lots of
+new tmTree methods (for creating conditions) that check for redundancy.
+- [RJL, all] Folded form frame is only printed if it's visible.
+- [RJL, Linux] Force-dragging of pinned nodes uses Control key as modifier; Mac
+and Win remain Option (Alt) click to force drag. Updated docs accordingly.
+- [RJL, all] Made node combo inspector more forgiving of user setting
+inconsistent constraints within a condition.
+- [RJL, all] Added "show border paths" to view settings, which is on in design
+view; this makes they always visible, so that the presence of a single invalid
+path on the boundary doesn't radically change what's shown on-screen.
+
+20060208
+- [RJL, all] Added an assertion check to tmTree::CleanupAfterEdit() to quickly
+identify inconsistencies involving numbers of owned nodes and paths.
+- [RJL, all] Added close box to Folded Form frame.
+- [ABX, all & MSW]
+  1. URLs in About window are clickable (apart html code, it needs additional
+  class derived from wxHtmlWindow)
+  2. Changed order in Help menu creation. It should not affect Mac because it
+  takes About item into menu bar but I wonder if it is not important (in terms
+  of "native") for GTK applications. On Windows About is below Help access, not
+  above.
+  3. On Windows keyboard accelerators are presented as "Ctrl+C" while we had
+  "Ctrl-C". I guess it's because it's how Macs do it. I made it work in both
+  models.
+  4. Inspector and view settings dialog should be on top of design frame; added
+  wxSTAY_ON_TOP flag for palettes in MSW (it's automatic in Mac).
+  5. Other minor corrections in About page text.
+  6. Changes in script for windows installer .
+- [RJL, all] Gave tmwxGetUserInputDialog a minimum width of 300 px just because
+it looks better that way.
+
+20060207
+- [RJL, all] Fixed a bug in which closing the last doc frame by clicking on the
+close box did NOT quit the app on non-Mac platforms. Added new method,
+tmwxDocManager::CheckLastDoc(), which takes care of the platform-dependent
+check.
+- [RJL, all] Fixed some bugs in the checking of writeability of the help cache
+file.
+- [RJL, all] Added close boxes (and close handlers) to all utility windows, 
+removed them from all modal dialogs.
+- [RJL, all] Changed toggle window visibility commands to Show/Hide rather than
+check/uncheck.
+- [RJL, mac] Updated WX_2_6_BRANCH from CVS, which fixes a wxW bug in 
+wxGetSingleChoiceIndex() that manifested in the stub picker dialog.
+
+20060206
+- [ABX, all] class tmwxDoc now opens ifstream in binary mode; fixes stream input
+problems on Windows.
+- [RJL, all] class tmwxDoc also opens ofstream in binary mode for consistency.
+- [ABX, all] Handling of new EX_IO_* classes is now unicode-friendly.
+- [RJL, all] Added graceful handling of the situation when the help
+cache file is located on a read-only volume (e.g., a person tries to
+run the app from a Mac disk image).
+- [CAF, all] Assorted cleanups of HTML help files.
+- [RJL, all] Put build code in lower right corner of About box in release build.
+
+20060203
+- [CAF, linux] Updated build structure:
+  - updated Makefile/installer/uninstaller copy a compressed LICENSE.txt to the
+  data directory
+  - directory wxwidgets has a README, customized build-wxw.sh and patched
+  sources for dash/thin lines
+  - README_linux has a "Known Bugs" section
+- [RJL, all] Removed superfluous ConsumeTrailingSpace call from 
+void tmPart::GetPOD(istream& is, tmArray<tmPoint>& aArray).
+
+20060202
+- [RJL, all] Added mToken member to all I/O exception classes so that they can
+report the offending token when they throw an exception. Similarly modified
+tmwxDoc::LoadObject() to report the bad token in the message box.
+
+20060201
+- [ABX, all] More fixes for unicode compatibility.
+- [RJL, all] Bugfix in file I/O, in which conditions were being improperly
+written to the file. This affected v5 files that contained conditions, but not
+v4 files or condition-less files.
+
+20060131
+- [ABX, all] Assorted fixes for consistency with unicode builds.
+
+20060130
+- [CAF, Linux] Updated linux build system. Killed undead 32x32 icon.
+
+20060126
+- [RJL, all] Fixed bug in dialogs; now modal dialogs stay on top.
+- [RJL, all] File I/O: In tmwxDoc::LoadObject(), the old tree is not overwritten
+until the new one has been successfully and fully read in.
+- [RJL, all] File I/O: Replaced a few remaining get(ch) with ConsumeTrailing
+Space() for cross-platform uniformity.
+- [RJL, all] Version 4 export doesn't store poly, vertices, creases, or facets
+at all due to unresolvable model changes between v4 & v5.
+
+20060104
+- [CAF, Linux] restored icon handling code that got dropped in last update
+- [RJL, model] tmPart::Endl is now friend of tmPart for C++ compliance.
+- [RJL, GUI] Call to SetWindowVariant is now only on Mac; variant windows need 
+explicit font & height setting on other platforms.
+
+20060103a
+- [ABX, MSW] added code for window icons under MSW.
+- [ABX, MSW] implemnted tmwxOptimizerDialog_msw.cpp
+
+20060103
+- [CAF, Linux] now load two icons dynamically instead of embedding a .xpm. The
+two fullscale Icon files are copied in linux/resources for customizer
+convenience, but are not actually used at either build or runtime
+- [CAF, Linux] assign icons to all toplevel windows
+- [CAF, Linux] polished build/install procedure
+
+20060101
+--Accepted UI edit from ABX (although I changed tmwxStaticBoxBorder to
+tmwxSTATIC_BOX_BORDER since it's a constant)
+--Added msw-specific files from ABX
+--Added script for building a Mac disk image for distribution
+
+20051231
+--Added ABX's files to the msw directory.
+--Redesigned mac build structure and rewrote scripts to allow one-step build
+directly from the TreeMaker distribution by running the script build-all.sh
+from within the mac directory.
+--Updates to some of the help docs.
+--Fixed capitalization inconsistencies in command names, menu entries, and
+inspector panels.
+--When exporting to v4 on Mac, set the creator and type properly for TM4 to
+read.
+--Fixed a bug in which TM4 files that contained NAN(017) weren't read properly
+(previously fixed, but adding tmPart::ConsumeTrailingSpace() broke it).
+--Added static member tmPart::sEndl, class tmPart::Endl, and modified assorted
+PutPOD routines so that line ending character could be changed dynamically, so
+that version 4 exporting uses Mac '\r' line ending.
+
+20051228
+--Fixed a bug in which tmConditionEdgesSameStrain::CalcFeasibility() wasn't
+properly calculated.
+--Updated the help file treemaker.hhc (help table of contents)
+--Fixed a bug in the display of discrete depth in the Vertex inspector panel.
+--Accepted Carlos's edits re command-line arguments & icons under linux
+--Reorganized distribution directory structure to separate platform-specific
+files
+--Changed paths in TreeMaker.xcodeproj and modified associated scripts to
+reflect new directory structure
+--Added Carlos's files for linux directory
+--Accepted ABX's edit to tmwxRadioBoxSmall (replace Node w/
+compatibility_iterator).
+
+20051221
+--Further help doc changes.
+--Added tmwxDoc::Revert(), which implements the File->Revert command.
+--Moved some global routines from tmwxCommon.h/cpp into tmwxApp.h. Renamed
+tmwxCommon.h/cpp to tmwxStr.h/cpp, since that's all that's left.
+
+20051219
+--Renamed panel OnTextEnter() method to OnApply() and added Apply buttons to all
+such panels because some users might want to use the mouse.
+--Further fixes to tmVersion.h to remove errors introduced in hasty previous
+iteration.
+--Small edits on the help docs. Added treemaker.css for standalone web viewing.
+--Turned "show node circles" back on as the default.
+--Fixed a bug in tmTree::SplitEdge(..) in which splitting an edge with a crease
+pattern present would cause a crash.
+--Redesigned and recoded the "connectedness" check in facet graph construction;
+TM now can do full crease assignment for many more crease patterns, even with
+disconnected corridors. Changed tmTree::mIsCorridorConnected to
+tmTree::mIsLocalRootConnectable.
+--In inspector panel "extra" info in debugging builds, put array data on their
+own line (single-element data is still doubled up).
+--Wrote help/tips_4.htm.
+--Lightened the splash screen artwork & brought contents up to date.
+--Implemented delayed initialization for all static vectors and strings in the
+tmModel dynamic type system to eliminate possible static initialization order
+problems.
+
+20051215
+--Rewrote panel OnTextEnter() methods to fully validate before updating the
+model.
+--A few more changes to tmVersion.h, to adopt ABX's macros.
+
+20051214
+--Added Carlos's 12/07 edits to the help docs.
+--Added ABX's 12/12 cleanup of code.
+--Changed serialization format again; version 5 conditions store their index
+(like all other parts) and their feasibility. This fixes a bug in which read-in
+objects didn't have condition feasibility properly set.
+--Rewrote tmVersion.h to clean up the generation of application name strings.
+--Rewrote assertion code in tmHeader.h/cpp to streamline it and enable both
+Debug and Development builds to dump tree state on assertion failure.
+--Fixed a really annoying bug in tmwxCommand in which 
+DoSomething-Undo-Redo-Undo-Redo would cause a crash.
+--Added ABX's 12/12a cleanup and implementation of MDI under Windows.
+
+20051212
+--Wrote help/tips_3.htm.
+--Added letter codes to node combo condition display in tmwxDesignCanvas to
+show what's been applied.
+--Added classes tmConditionPathCombo.h/cpp and tmConditionPathComboPanel.h/cpp.
+--Defined new Condition menu commands to use tmConditionPathCombo for path
+constraints. Distinguish v4 conditions in all command names.
+--Changed CalcFeasibility() for symmetry conditions to be *infeasible* if the
+symmetry line is not defined.
+--Rewrote feasibility checks for all constraints to use the same functions that
+are used in the optimization.
+--Reordered all validation/updating code in Inspector panels' OnTextEnter()
+methods to insure that everything is validated before anything is updated.
+--Shattered tmwxDoc::OnUpdateUIOrCommand() into a million individual command
+handlers and split them among files: tmwxDoc_File.cpp, tmwxDoc_Edit.cpp,
+tmwxDoc_View.cpp, tmwxDoc_Action.cpp, tmwxDoc_Condition.cpp, tmwxDoc_Debug.cpp
+--Cleaned up tmwxApp command handlers in the same way (but they're still in
+twmxApp.cpp).
+--Added class twmxGetUserInputDialog.h/cpp.
+--Added tmwxCheckBox.h/.cpp.
+--Tweaked names of condition menu items.
+--Added command handlers to tmwxApp to reroute commands that should have gone
+to the document manager (including File->Revert).
+--Added some debug code so that in a Development build, an assertion failure
+dumps the state of the tree at the beginning of (a) BuildPolysAndCreases() and
+(b) CleanupAfterEdit, as an aid to debugging.
+--Fixed a bug in tmFacet::GetSelfv5() which caused a spurious "file corrupted"
+error if the stored value of tmFacet::mCorridorEdge was 0 (NULL ptr).
+--Added ClearCleanupData() methods to several model objects to insure that
+cleanup fields are always cleared for partial crease patterns.
+--Added a tolerance within tmPoly::CalcPolyIsValid() so that
+numerical-roundoff-sized movement of a node is no longer grounds to kill a
+poly. Also fixed a bug in tmTree::CalcPolygonNetwork() that was occasionally
+skipping over polys that, by rights, should have been killed.
+--Added tmTreeCleaners to several tmTree setters so that cleanup gets invoked
+when symmetry is turned on or off or symmetry parameters are changed.
+
+20051209
+--Factored creation code for Inspector panel contents into a new class,
+tmwxInspectorPanel & rewrote panel constructors accordingly. Tweaked various
+panels.
+--Fixed a bug introduced with wxString::FromAscii, in which edge labels were not
+being properly drawn.
+--Loosened tmVertex::VerticesSameLoc() tolerance from .001 to .003.
+--Wrote help/tips_1.htm, help/tips_2.htm. Assorted small edits throughout the
+docs.
+--Fixed a bug in tmFacet::CalcContents(), in which 90-degree ridges were
+incorrectly resulting in facets being flagged as not well-formed.
+--Added tmwxViewSettings.mShowFacetCorridorEdge field and appropriate control
+in view settings and behavior in tmwxDesignCanvas.
+--Rearranged the view settings panel.
+--Assorted casts and (-1)->(wxID_ANY) from ABX, also other small fixes.
+--Added file Source/tmVersion.h, which #defines some preprocessor constants that
+are used for version information. Incorporated this into SetAppName(), and it
+is now displayed in the About box.
+
+20051207
+--Zeroed uninitialized ptr member variables in wxApp (e.g., mPrintData).
+--Removed tmwxDesignCanvas wxFocusEvent handlers because wxMac was actually at
+fault for focus problems.
+--Fixed an assert in wnlib. Rewrote parts of tmNLCO_wnlib to remove wnlib files
+from #include hierarchy in tmModel.
+--Eliminated tmwxMessageBox, no longer needed.
+--Assorted small fixes from ABX for unicode compatibility.
+--Renamed tmwxHtmlHelpFrame::SetPrinter() to SetHtmlHelpPrinter() to avoid name
+collision.
+
+20051206
+--Finished help/tutorial_3.htm, small edits throughout help files.
+--Restored a feature from TM4, that pinned edges are shown lighter in Design
+view.
+--Fixed a serious bug in condition serialization; the index wasn't getting
+created on read-in, which affected not only file I/O but also Undo/Redo.
+--Made a number of small changes from ABX for Windows and unicode compatibility.
+
+20051205
+--Reimplemented several dialogs in tmwxDoc: Split Edge, Scale Edge Lengths,
+Set Paper Size, Set Edge Lengths. They now look better and validate properly.
+--Assorted small cleanups; removed unused commands for tmwxID_NODES_WATERBOMB
+and tmwxID_INFER_SYMMETRY.
+--Fully implemented Carlos's new GetPOD/PutPOD routines (mistakenly hadn't done
+that previously).
+--Wrote more help material (part of tutorial #2).
+
+20051130
+--Rearranged the drawing order so that facets are on top of polygons.
+--Added more help material (tutorial #1).
+--Note that to build the help cache from the zip file, you need to modify
+hhp2cached code to add the wxZipFSHandler to handle the zip file.
+--Fixed a bug in which orphan vertices owned by leaf nodes weren't getting
+killed if the leaf node becomes a branch node.
+--Enabled Action->Build Crease Pattern only when we have at least 3 leaf nodes.
+--Added new class tmwxDocManager, whose members seem to be the proper place
+to catch document closure so that Win/Lin can close the app when the last
+document closes.
+
+20051126
+--Wrote more help documentation.
+--Replaced GetPOD/PutPOD with Carlos's new versions.
+--Moved "about.htm" to Source/about/about.htm.
+--Removed "help.zip" from source distribution; you should build the zip file
+during build from the contents of Source/help. Also, you should build the
+help cache using hhp2cache (wxWidgets utility, see /utils).
+
+20051124
+--Moved all application support files to the application data directory. (You
+will need to modify some build locations.)
+--Added many help files and figures to the help file.
+--Added help file caching.
+--Modified facet and crease inspector panels to show more useful information in
+release builds.
+--Added a check for multiple inactive paths within a single molecule to the
+model and a corresponding tmTree::CPStatus entry, POLYS_MULTIPLE_IBPS. This 
+fixes a couple potential sources of failed assertions.
+--Added Edit->Select->Corridor Facets command and supporting routines.
+--Added Carlos's fix for spaces in label names (but maybe we'll change format
+instead for v5?)
+--Added another text element to the tmwxOptimizerDialog to give another way to
+show that something is happening during long calculations.
+--Added new classes tmwxHtmlHelpController and tmwxHtmlHelpFrame to get access
+to setting header/footer and print size for printing help documentation.
+
+20051121
+--Added "Absorb Edge" to model and GUI. Needed now that EDGE_TOO_SHORT is a
+possible failure mode.
+--Added member tmFacet::mCorridorEdge and tmTree::mIsCorridorConnected. Added
+check for corridor connectedness.
+Unfortunately this changes serialization format again, breaking v5 files.
+--Changed the export function to use the proper file type and to append 
+"_v4.tmd5" to the name to make it clear from the filename that it's v4 format.
+--Removed all "static_cast<unsigned long>" by adding routines tmwxStr(..) for
+string conversion throughout the GUI.
+--Reorganized edit menu to user hierarchical submenus to reduce its size.
+--Fixed some bugs related to item enabling in the edit menu.
+--Fixed a bug in tmArray::union_with() and added tmArray::replace_with.
+
+20051118
+--Updated some of the help files. They're still under construction and are 
+very incomplete.
+--Fixed a bug in which spurious pseudohinge creases could be created if a
+junction vertex was in the ridgeline above an inactive axial path.
+--Fixed a bug in which if a regular hinge had pseudohinges on both sides, facet
+ordering crashed. The fix replaces the single tmVertex::mPseudohingeMate with
+mLeftPseudohingeMate and mRightPseudohingeMate, but unfortunately this changes
+the format of serialization.
+--Added ability in debug builds to quit the tmTree::CleanupAfterEdit() routine
+before calculation of facet order, which lets me examine crease patterns and
+also debug the facet order without having to rebuild the app in between. This
+setting is toggled by the new Debug menu, which is only present when TMDEBUG
+is defined.
+--Found a weakness in the model that led to failed assertions when edges got
+too short (which prevented proper assignment of tree nodes). Now there's a check
+in the model and a warning is provided to the user.
+
+20051114
+--Added tmwxApp::OnPrint and tmwxApp::OnPrintPreview per Carlos.
+--Added handling of command-line arguments.
+--Fixed a bug in which TMLOG(..) messages were being lost in Development builds.
+--Added a close handler to tmwxInspectorFrame that ignores clicks on the close
+box but still allows the application to quit via the tmwxApp::OnExit() handler.
+--Gave all floating windows a common style across all platforms.
+--Fixed a bug in which certain axial vertices weren't getting deleted when the
+crease pattern became invalidated.
+
+20051113
+--Added File->Export version 4... command to debug builds so that problematic
+configurations can be saved in a way that persists across version 5 format
+changes.
+--Added close handler to twmxViewSettingsFrame.
+--Added static tmPart::GetIndex() and tmPart::GetStr() methods, used in 
+debugging.
+
+20051108
+--Added assorted casts to size_t formatted as %lu per Carlos (kept in CAF
+#defines).
+--Added close handler in tmwxFoldedFormFrame in case window manager stuck a
+close button into the window frame.
+--Fixed a bug in which vertex validity wasn't getting set when there were no
+vertices at all; it (and related flags) are now cleared at the beginning of
+tmTree::CleanupAfterEdit().
+--Added "polygon filled" info to Tree panel in debugging builds.
+--In tmwxFoldedFormFrame, more descriptive text is shown when folded form can't
+be displayed.
+--Gathered palette installation into a single routine, tmwxApp::SetPalettes().
+
+20051102
+--Fixed a bug in tree triangulation that would cause the program to hang or
+crash with large structures.
+--Added a new bool field to tmTree that clarifies one of the reasons crease
+pattern building might fail. Unfortunately, this changes the version 5 serial
+format so you'll have to delete any v5 files you've saved.
+--Added dummy file tmPrec.cpp that's needed under MSW to precompile headers.
+--Added tmStubInfo::operator!=() so STL works on MSW (even though it's not
+needed).
+--Added more guard macros in cfsqp and rfsqp-related files so they won't be
+compiled if tmUSE_CFSQP &/or tmUSE_RFSQP are not defined.
+
+20051008
+--Fixed some bugs that affected setting the global menu bar in the Mac version.
+--Added creation of a new untitled document on startup in non-Mac versions (Mac
+users can just use File->New in the global menu bar).
+--Tweaked the documentation; noted distribution conditions for wnlib (not GPL).
+--Added code to handle wxDocParentFrame and/or wxDocManager events that make it
+to the app.
+--Created version 5 serialization routines (Putv5Self(), Getv5Self()). Version
+5 format is now standard output format; input can be 3, 4, or 5.
+--Implemented Undo/Redo in class tmwxCommand
+--Changed class tmwxOptimizer so that reversion happens from a serialized copy
+of the tree, rather than a copy of the state vector. This allows cancelled
+optimizations to be fully reverted, even if they've destroyed the crease 
+pattern.
+--If the splash screen or help files are not present, a warning message is
+given to the user at runtime, even in Release builds.
+--Guard #ifdef's added to tmNLCO_xxxxx.cpp files so that they're not compiled
+if the corresponding symbols aren't turned on in tmNLCO.h.
+
+20051001
+--Began implementation of version 5 file format I/O. Still needs work.
+--Began implementation of help system; HTML Help window is up and running, but
+many pages need writing.
+--If an edge is selected in design view, its corresponding facets are
+highlighted in the folded form.
+--Added a second page to printout, consisting of the folded form.
+--For the About... command, implemented tmwxAboutDialog that displays an
+HTML window with About information. About window is now always shown on first
+run, and user can turn on/off its display in Preferences.
+--Dropped class tmwxMainFrame, which was superfluous. Assorted changes to
+other classes. twmxInspectorFrame is now the wxDocParentFrame. Class 
+tmwxPersistentFrame is now a template class based on the underlying wxFrame
+class so that twmxPersistentFrame<Frame> inherits from class Frame.
+
+20050928
+--Reworked the optimizers (again) so that tmOptimizer classes are no longer
+descended from tmNLCO classes; instead, they take a ptr to a tmNLCO object.
+Similarly, tmwxOptimizerDialog no longer inherits from tmOptimizer but simply
+takes a ptr to a tmOptimizer. This approach also lets us choose the desired
+type of NLCO for each optimizer at run time rather than at compile-time but has
+the additional advantage of eliminating a lot of messy template code and
+flattening the inheritance hierarchy.
+--Created targets for test code in the TreeMaker XCode project and a script to
+build all targets from the command line.
+--Fixed a compatibility issue when building TreeMaker with C library code; the
+wxWidgets headers (which are not C compatible) are now not included when
+compiling C files.
+--Added preferences command to select the desired optimization algorithm.
+--Changed printing so that printed images are now drawn at the full resolution
+of the printer (e.g., 300 dpi for a laser printer). This makes the images more
+accurate (for print-and-fold) and lines are drawn thinner in printout than on
+screen.
+--Created new splash screen artwork and icons based on actual TM-generated
+crease patterns.
+
+20050911
+--Cleanup of previous version; eliminated unused routines, renamed some query
+routines to keep style consistent.
+--tmFacets now start their vertices and creases with an axial/gusset crease and
+proceed clockwise. This makes finding left/bottom/right creases more efficient
+since we no longer need to search through lists to find those 3 types of crease.
+--Removed "build polys" cmds from GUI; one command now builds everything.
+--Added position check to window memory so palettes can't get lost offscreen.
+--Rewrote parts of the facet ordering graph algorithm to reduce the number of
+cases and simplify the algorithm; also has the effect of reducing the number of
+superfluous links in the facet ordering graph.
+--Revised (simpler) facet ordering algorithm fully implemented. Smaller code,
+runs faster, works on most test cases.
+--Added tmTree::mIsFacetDataValid and associated routines to catch crease
+patterns for which facet ordering won't work, typically due to sliver facets.
+User still gets AGRH crease pattern, which ought to be enough to fold the base.
+--Reworked the optimizers so that the tmOptimizer-derived classes are now
+templated on the tnNLCO_xxxx classes; this makes it possible to choose which
+optimization engine to use at run-time, rather than at compile-time, and to
+do more extensive parallel benchmarking of the individual optimization engines.
+
+20050907
+--Added sources and sinks to tmFacet class, in preparation for construction of
+facet ordering. Added assorted supporting routines to tmFacet, tmCrease, and
+tmTree classes. Added view options to view settings.
+--Eliminated VertexBend and CreaseBend classes, and added new Kinds to tmCrease
+that includes bend information: UNFOLDED_HINGE, FOLDED_HINGE, and PSEUDOHINGE.
+--Added assorted routines to implement construction of the facet ordering
+graph within molecules.
+--Split tmTree facet ordering code into its own file.
+--Cleaned up preprocessor symbols; dropped double-underscores from TMWX,
+TMDEBUG, and TMPROFILE. Put all description into README.txt.
+--Renamed enum types tmFacet::Orientation-->tmFacet::Color and
+tmCrease::Assignment-->tmCrease::Fold. Renamed associated variables and
+routines.
+--CREASE ASSIGNMENT WORKS!!!! Oh happy day, oh frabjous joy. Facet ordering,
+facet coloration, and finally crease assignment algorithms are all working and
+playing together nicely. Time to do a code snapshot.
+
+20050830
+  After an even longer hiatus...
+--Migrated project from CodeWarrior to Apple XCode and gcc 4.0. Numerous small
+code changes for compatibility, particularly in the area of partial template
+specialization. Eliminated the last #ifdef EXPLICIT_TEMPLATES.
+--Upgraded wxW to 2.6.1 stable release.
+--Defined __TMWX__, __TMDEBUG__, __TMPROFILE__, and TMASSERT() macros; behavior
+controlled by preprocessor definitions to support Debug, Development, Profile, 
+and Release builds.
+--Eliminated triangulation and TTL (Template Triangulation Library). It really
+wasn't contributing anything to user understanding to draw sorta-rivers.
+--Rewrote parts of subpolygon generation and completely rewrote crease pattern
+generation. There are no more 2-valent vertices, which reduces the number of
+vertices, creases, and facets, relative to all previous versions. Numerous
+changes to tmPoly, tmPath, and tmNode classes. Crease pattern is now generated
+during tmPoly::BuildPolyContents() (formerly BuildSubPolys()).
+--Now tmPoly, not tmTree, inherits from tmFacetOwner. This way, each major
+polygon owns the facets it encloses, which lets us build some polys in a tree
+without having to have them all defined.
+--Depth generation is now much simpler. Eliminated many unneeded functions. New
+approach uses the "ridgeline" machinery introduced in crease pattern generation.
+--Replaced many usages of boolean combinations of member flags with calls to
+member functions.
+--Fixed a bug in which inspector panels and view settings panels would vanish
+after the first open document.
+--After all this, the current version now generates crease patterns and folded
+forms with maximally simplified crease patterns. To do: generate full MV
+assigment.
+
+20050502
+  After a long hiatus...
+--Added a log window in debugging builds.
+--Added a check to make sure we're building with wxW 2.5.3 or higher.
+--Fixed a bug in which screen image was redrawn incorrectly at the end of a
+drag.
+--Rewrote window position/size persistence code to use MOVE and SIZE events
+properly and put behavior in a common frame class, tmwxPersistentFrame.
+--Fixed a bug in which the folded form image was not getting redrawn after
+resize.
+--Fixed a bug in which redrawing after commands was happening before the tree
+got fully cleaned up. (Need to pay attention to tmTreeCleaner scope.)
+--Made ALM optimization perform screen updating only at the end of each
+iteration of the outer loop of optimization, rather than at fixed periodic
+intervals (as in other optimizers).
+--Changed dots in rendering from zero-length lines (non-standard for wxWindows)
+to circles. This is better supported by Mac Core Graphics rendering.
+--Replaced "About" box with splash screen artwork. (TBD: redraw artwork.)
+
+20040817
+--Added "Select non-two-colorable vertices" command in debug builds.
+--Changed "Range" to "Depth" in model to conform to the usual graph theoretic
+terminology.
+--Added wxHSCROLL, wxVSCROLL to tmwxDesignCanvas ctor, which insures Mac version
+gets scroll bars.
+--Fixed a bug in computation of tmPath::mMinDepth, tmPath::mMinDepthDist that
+affected paths incident on the root node.
+
+20040802
+--Switched the optimizer over to ALM to give it some exercise.
+--Added Perturb Nodes command to model and GUI.
+--Added tmFacetOwner::CalcHasPlanarCreases(..), which allows a more graceful
+failure in the (not uncommon) event that the crease pattern contains crossing
+creases.
+--Added new member variables to support the concept of "feasibility", as
+distinct from "validity". "Feasible" means a pattern satisfies (a) the path
+equations, (b) any conditions that have been created. The term "valid" will be
+used only to indicate when a data structure has been fully built and/or in
+connection with corruption issues. Changes to tmPath, tmCondition, tmTree.
+--Infeasible conditions are now displayed in red (like infeasible paths) in
+twmxDesignCanvas.
+--Added reporting of feasibility in tmNLCOTester.cpp and tmModelTester.cpp
+projects.
+--Added two more files for testing edge and strain optimization in
+tmModelTester project.
+--Fixed a bug in poly construction in which inset paths were getting their
+mOutsetPath instances pointing to the wrong outset path.
+--Fixed a bug in segment reversal that arose when the root node was an interior
+leaf.
+--In stub finder, stubs are now sorted by length, longest first so it appears
+at the top of the list (usually it's the first choice).
+--Fixed a bug in the stub finder so that zero-length stubs are not suggested.
+--Added Resources folder containing Mac icons and property list.
+--Added class tmwxButtonSmall and tmwxButtonMini. Adjusted font sizes in
+dialogs.
+--Removed unused windowID argument from ctors from my window classes derived
+from wxW window classes.
+
+20040708
+--Added class tmwxPrintout. Will use this to implement a friendlier printout.
+--Added tmwxDesignCanvas::MaximizePaperSize() and implemented "Fit to Screen"
+command.
+--tmwxPrintout now sets the mPrinting flag of twmxDesignCanvas directly so it's
+no longer necessary to check the type of the wxDC.
+--tmwxDesignCanvas always fits its image into the DC when we're printing so
+that the crease pattern exactly fills up the printed page.
+--Scale and filename appear in the printout (also in Print Preview).
+--There is a residual bug in crease construction; building creases with the
+file edge_optimization/centipede_after_edge_opt.tmd5 will cause a failed
+assertion. This will need to be addressed.
+
+20040620
+--Fixed a bug in tmwxConditionNodeFixedPanel that wasn't accepting edited
+values.
+--Turned off tmwxScopeTimer in all calculations (it was getting irritating).
+--Added key combination to "Edit>Set Edge Lengths...".
+--Condition lists now let you make multiple selections and delete them by
+keystroke or Edit menu command.
+--Tweaked what gets displayed in tmwxCreasePanel.
+--Added class tmConditionOwner. Not really needed, but now every part class has
+a corresponding owner class.
+--Facets are now built at the same time as creases, are visible in design view,
+and can be turned on/off in view settings.
+--Facets are shown in the folded form view and are highlighted if selected.
+--Added tmFacet::mOrientation and associated enum values and getters.
+--Facet orientations are now computed in tmTree::CleanupAfterEdit().
+--Moved KindExtra out of tmPart and into tmVertex and tmCrease, renaming to
+VertexBend and CreaseBend, respectively. Changed the names of the associated
+enums.
+--More new fields needed for crease computation:
+  tmTree::mIsTwoColorable
+  tmFacet::mFromFacet
+  tmVertex::mIsBorderVertex
+--Made tmTree::BuildTriangles() & tmTree::KillTriangles() private.
+--Added lots more view settings, and re-laid-out the view settings panel.
+
+20040603
+--Modified tmPath::GetOrMakeVertex(..) so that all path-owned vertices stay
+ordered in distance from the front node of the path. This is needed to
+correctly compute range.
+--Fixed the computation of range for vertices owned by paths.
+--Added type tmPart::Bend with 3 values.
+--Changed bool tmVertex::misBendVertex to Bend tmVertex::mBend. Added a getter.
+--Added tmCrease::mBend, so that creases can also have a bend assigned. Added a
+getter.
+--Rewrote bend computation and propagation. Bend vertices and creases are now
+properly identified and are (temporarily) color-coded in the design view.
+--Added private declarations in tmDpptrArray<T> to hide some mutating ancestor
+methods that aren't yet supported properly.
+--Added "Edit>Make Node Root" command.
+--Lots of small tweaks and improvements to range/bend calculations. Began
+implementing analysis of segment reversals.
+--Folded form is now always aligned to the upper left corner of its window.
+--Added handler for special case of unranged border vertex, which allows the
+computation of the folded form for some incompletely optimized patterns.
+--Modified the time-splitting between GUI and math in tmwxOptimizerDialog<T> to
+insure that a full screen update happens during a GUI slice. Made the GUI/math
+split a const definable quantity.
+--Got rid of a bunch of GetParts<P> calls outside of tmCluster by replacing
+them with the appropriate tmCluster methods. Eliminated all but one "#ifdef
+EXPLICIT_TEMPLATES".
+--Added some static lines to inspector panels.
+--Added tmwxMessageBox(..) as a replacement for ::wxMessageBox(..) that
+word-wraps its text. Behavior defaults to ::wxMessageBox(..) on Mac. Icons are
+not yet supported on other platforms.
+--Added display of individual part indices to inspector group panel for small
+selections.
+--Changed field "Bend mBend" to "KindExtra mKindExtra" to reflect the fact that
+I'm using this field to denote bend (for hinge creases & vertices) and axial
+reversal (for axial creases).
+--Action>Build Creases immediately puts you into Creases View. Action>Kill
+Creases puts you back in Design View.
+
+20040531
+--Major changes to the model:
+  new members in tmTree: mIsPolygonValid, mIsVertexRangeValid
+  new members in tmNode: mRange, mElevation
+  new members in tmPath: mMinRange, mMinRangeDist, mFrontReduction, mOutsetPath
+  new members in tmVertex: mRange, mElevation, mIsBendVertex
+  new Kind enum within tmCrease: GUSSET
+  Added assorted member functions within model for purpose of computing range
+  and bend data.
+--Because of all the model changes, when reading version 4 files, all polys,
+vertices and creases are killed immediately and will have to be rebuilt.
+--Add display of owners for all objects in their inspector panels and
+supporting fns within tmwxStaticText.
+--Any time any polygons are killed, all creases now get killed automatically.
+--Added "Edit>Select Part...", which makes it possible to browse any part in
+inspector if you know its index; can be used to select among overlapping parts,
+and is helpful for debugging.
+--Added tmwxFoldedFormFrame, which displays the folded form if the crease
+pattern exists and has valid vertex range data.
+--Added View menu to main frame so it's present even with no documents around.
+--Moved View menu construction and event handling into tmwxApp so it can be
+shared by tmwxApp, tmwxMainFrame, and tmwxDoc.
+--Restructured tmwxInspectorFrame to eliminate many overloaded
+SetSelection(..), replacing with the template function SetSelectionP<P>, using
+new traits class PanelTraits<P>.
+--Reorganized the directories within tmwxGUI, grouping all document-related
+classes in their own folder.
+--Added tmCluster::Contains<P>(P*) and moved specializations of
+tmCluster::GetParts<P>() into header as inline functions. NOTE TO CARLOS: check
+to see if this fixes the problem gcc had with GetParts<P>; that is, try
+compiling with the definition of EXPLICIT_TEMPLATES commented out.
+--Added some explanation alerts when "Build Polygons" and "Build Creases" is
+unsuccessful.
+--Altered tmNLCOTester to optionally use symmetry constraints in the circle
+packing test problem, so that it has both equality and inequality constraints.
+--Added tmwxOptimizerDialogBase::mReason and associated routines that support
+providing reason for abnormal termination of an optimization to the user.
+--Added many alert functions to tmwxDoc giving more explanation for abnormal
+termination of an optimization.
+--Added support for the "mode" flag in CFSQP; instead of using 100 for all
+cases, it can now be set for different optimizers, and scale optimization now
+uses 110, which matches the value used in TM4. Previously, mode=100 was giving
+poor convergence even for fairly simple problems with equality constraints in
+scale optimization. However, mode=110 gives poor convergence for edge
+optimization, hence the need to allow different settings for different
+optimizers.
+--FINALLY figured out how to implement keystroke cancellation in the progress
+dialog! (Override tmwxOptimizerDialogBase::AcceptsFocus() to return true.) Did
+it. It works.
+--Implemented class tmNLCO_rfsqp, which uses the latest optimization software
+from AEM Design. Added it to tmNLCOTester.h/.cpp.
+--Sample files that used to be in Source/Test/Test_docs are now in folder
+Samples.
+--tmModelTester.cpp has been expanded to test the model in console mode,
+reading its own test files. Both test code and files are now in their own
+folder, Source/Test/tmModelTester/. tmModelTester also reports the type of
+optimizer, so it can be used to profile the various optimizers against each
+other on real TreeMaker problems.
+--Other test files (Test_docs) are now moved out of the Source tree and into
+their own folder, renamed Samples.
+--class tmNLCO_alm is thoroughly rewritten with many bugs removed. Lower and
+upper bounds are now handled explicitly, rather than being treated as
+additional constraints, which improves the efficiency considerably.
+--implemented wxStopWatches within tmwxOptimizerDialog<T> that insure that time
+is split evenly between doing calculation and doing screen updates. This speeds
+up perceived calculation because the screen isn't unnecessarily updated.
+
+20040525
+--Fixed a bug in click processing that was invoking tmTree::CleanupAfterEdit()
+after any mouse click, resulting in the complete reconstruction of triangles
+after every click, and hence the impossibility of selecting a triangle (because
+it would be immediately deleted and replaced).
+--Fixed a bug in ConditionNodesCollinearPanel, crash on display of third node.
+--Fixed bugs in all ConditionPath...Panels, in the display of the path index.
+--Upgraded wxWidgets to CVS HEAD 20040522. Discovered that (on Mac, at least)
+there's a problem with setting focus. CVS HEAD 20040315 still works, but
+doesn't support variant window sizes.
+--Added routine tmwxViewSettingsPanel::AddAllNoneBtn(..), enforces commonality
+in view settings panel.
+--Added class tmwxCheckBoxSmall, used in tmwxViewSettingsPanel, which makes use
+of variant window sizes. Checks wxWidgets version before using
+SetWindowVariant(). --Tweaked GUI values in tmwxViewSettingsPanel.
+--Made tmVertexOwner::GetOrMakeVertex(..) virtual; added
+tmNode::GetOrMakeVertex(..) and tmPath::GetOrMakeVertex(..) overrides, giving
+the latter behavior that a newly-created vertex splits any crease that it lies
+on top of. This will allow the construction of tmFacets from the network of
+creases and vertices, which I'll be adding shortly.
+--Fixed a bug in tmwxDoc in which EX_BAD_SPLIT_PARTS was not getting caught
+sometimes when nodes and/or edges are deleted.
+--Fixed a bug in tmTree::KillSomeNodesAndEdges() in which EX_BAD_SPLIT_PARTS
+was getting erroneously thrown if the selection contained sub nodes.
+--Added mRange and mElevation fields to tmNode and tmVertex along with getters,
+view settings, and display of same. At the moment, they aren't used for
+anything critical and are not put/get to streams. I'll be filling out the
+implemention of these quantities over the coming weeks.
+
+20040520
+--Rewrote tmTree::GetConvexHullNodes(), renamed to CalcBorderNodesAndPaths(),
+to fix a bug in which it was not properly constructing the convex hull.
+--Rewrote portions of tmPolyOwner::BuildPolysFromPaths(), tmTree::BuildPolys(),
+and tmPoly::BuildSubPolys() to properly handle the situation where a nonconvex
+polygon is constructed.
+--Altered palette updating to reduce flicker; panels are only swapped within
+palettes if the type of displayed object changes.
+--Added template specialized GetPanel<P>() to tmwxInspectorFrame in preparation
+for eventually replacing many overloaded SetSelection() routines with a single
+templated version.
+--Added "Edit>Select Unpinned Parts" command.
+
+20040511
+--Put in lots of "#include <iostream>" and "using namespace std;", both those
+identified by Carlos and others I found when I went back and built some test
+projects.
+--Restored two rows of three buttons each in view settings (reduces palette
+size).
+--Added Split Selected Edge command (though this should be rewritten to
+validate the dialog before closing).
+--Fixed tmModelTester, which hadn't been updated to reflect other changes in
+the model.
+
+20040509
+--Realized Carlos was right to give his gcc-based workarounds their own
+preprocessor symbol, so that we can turn on and off individual fixes. Restored
+EXPLICIT_TEMPLATES. (BTW, this will have to be gcc-specific, because CW doesn't
+support "export template" yet.)
+--Hooked up more menu commands in tmwxDoc, added a few more query fns to the
+model to reduce code within the huge twmxDoc::UpdateUIorCommand().
+--Added tmPath::TestIsActive() and tmPath::TestIsValid() to improve consistency
+in those tests througout the model (and reduce the number of
+sometimes-inconsistent floating-point literal constants). More needs to be done
+in tracking down literals and replacing them with common constants or
+higher-level functions.
+--Modified classes tmStubFinder and tmStubInfo to eliminate duplicate stub sets
+and to allow one to identify stubs with more than 4 active paths before calling
+tmTree::AddStub(..).
+--Hooked up the new and improved tmStubFinder to menu items, added a 
+::wxSingleChoiceIndex() dialog for picking among the candidates, added more
+::information
+on each choice: the lengths of the two pieces of the split edge and all nodes
+with which active paths are formed. Much friendlier than the pop-up menu in TM4!
+--Tweaked colors in tmwxDesignCanvas and placement/size of scale.
+--Delaunay triangles (tmTriangles) are now always built as part of cleanup and 
+their rivers are visible in Tree view.
+--If rivers are visible, we also draw the border paths in the same color
+(whether or not border paths are selected to be shown).
+--Started adding tmFacet to model (in preparation for full M/V assignment).
+This doesn't (yet) change the file structure.
+--Eliminated mConditionID and CONDITION_ID macro in favor of new tag system for
+dynamic type, which is implemented in tmPart. There are LOTS of changes
+throughout the model and GUI, notably a complete elimination of switch()
+statements to resolve condition type. The new system is also more simply
+extendible for adding new types.
+--More extensive use of std::string in I/O, which offers some protection
+against buffer overflow if an improperly formatted stream is encountered.
+--Eliminated tmPart::PutPOD() and GetPOD() functions for shorts and longs;
+integral types are either int or size_t.
+--Added more checks for corrupted streams in stream I/O in model and added
+exception handling on file open in tmwxDoc. If a file is corrupted, you will
+now get one of several dialogs giving some indication of the possible cause.
+--Unrecognized conditions are ignored as before, but now you get a dialog
+letting you know how many were ignored if that happened.
+--Collected common behaviors of tmwxInspectorFrame and tmwxViewSettingsFrame
+into a common ancestor class, tmwxPaletteFrame.
+--Added command-key combinations for view settings in menus
+--Changed tmwxViewSettingsPanel to 3 columns. This reduced the height of the
+palette and thus reduced the need for collapsibility so I removed all of
+Carlos's additions to support collapsible subpanels.
+
+20040423
+--Reimplemented the calculation dialog through classes tmwxOptimizerDialogBase
+and tmwxOptimizerDialog. Works well on Mac.
+--Merged in Carlos's version of tmwxOptimizerDialogBase for GTK.
+--Added compiler switch so that extra information in inspector panels doesn't
+show up in release builds.
+--Implemented tmwxDoc::SubmitCommand(..) within inspector panels when nodes,
+edges, or the tree get edited from the inspector panel.
+--Added tmConditionNodeCombo to model, tmwxConditionNodeComboPanel to GUI, and
+menu commands to create them.
+--Added class tmwxScopeTimer to report on the time required for optimizations.
+--Time is reported only in debug builds.
+--Fixed a bug in file writing that used '\r' instead of '\n' for line endings
+sometimes.
+
+20040421
+--Fixed a bug in window activation in which the Mac menu bar was not being
+properly set.
+--Added queries for major and minor-ness of vertices and creases in model.
+--Added view options for major and minor vertices.
+--Redefined preset view settings.
+--Added menu commands for preset view settings.
+--Moved the main window offscreen (Mac only).
+--Discovered, but haven't fixed, a problem in the calculation progress dialog:
+it doesn't grab program control like a modal dialog so if you click on
+something else while a calculation is going on, things get screwed up. Needs
+work!
+
+20040420
+--Fixed bug in responding to Clear command that left a node panel visible.
+--Properly handled clicking on a blank document (to create a new node).
+--Fixed a crashing bug in drawing node circle for exactly one node.
+--Removed class tmwxTreeViewFrame. Will reimplement in the future if needed.
+--Rearranged a lot of menu commands.
+--Turned on a few more menu commands.
+--Added twmxGroupPanel so that group selections gets their own inspector panel.
+--Implemented tmwxCommand and tmwxDoc::SubmitCommand(..). Commands are not yet
+undoable, but this lays the ground work to make them so.
+--Turned inspector panel part pointers back into ordinary pointers, because I
+want to keep tmDpptr<> for use only inside the model.
+--Added a timer to the twmxOptimizerDialog::UpdateScreen() method to insure
+that the overhead imposed by screen updating is a fixed fraction of the
+calculation time.
+
+20040419
+--Added Show/Hide capability to inspector and view settings palettes, added
+View menu commands to do the same. Added Close handler for platforms that put a
+close box in the window title bar.
+--Changed part references in inspector panels to tmDpptr<P> to eliminate
+dangling pointers after deletion.
+
+20040418
+--Fixed a significant model bug in the computation of the universal molecule
+(tmPolyOwner::BuildPolysFromPaths(..)), that caused a repeatable crash in
+TreeMaker 4.x. Added separate view settings for Node and Edge conditions.
+
+20040416
+--Implemented changes suggested by CAF to permit compilation under gcc.
+
+*******************************************************************************/

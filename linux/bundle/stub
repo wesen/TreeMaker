@@ -1,0 +1,159 @@
+# Installer stub. Will be appended to installation script, with code
+# for extracting bundle and optionally starting actual installer.
+# By C.A.Furuti
+
+trap exit int quit 
+myName="$treemaker Installer for Linux/Unix"
+case "$config" in
+  "release") ed="(release edition for end users)"
+	;;
+  "debug") ed="(debug edition for developers)"
+	;;
+  "devel") ed="(development edition for testers)"
+	;;
+  "profile") ed="(profiling version for performance evaluation)"
+	;;
+esac
+
+if [ $# -le 0 -o "X$1" != "X-nox" ]; then
+
+xhost> /dev/null 2>&1 && \
+  (cat << __END_TCL__ | \
+   wish -name "TreeMaker 5 Extractor" - ) 2> /dev/null && exit 0
+
+set mWidth 400
+set mHeight 180
+wm geometry . "\${mWidth}x\$mHeight+[expr ([winfo screenwidth .] - \$mWidth) / 2\
+]+[expr ([winfo screenheight .] - \$mHeight) / 2]"
+
+set tmpDir "/tmp"
+
+label .lbTitle -text "TreeMaker 5" -font {times 30 bold} -fg "#0000c0"
+label .lbEdition -text "$treemaker $ed"
+label .lbTmpDir -text "Temporary directory: "
+entry .enTmpDir -width 25 -bg white -textvariable tmpDir 
+button .btTmpDir -text "..." -command chooseTmpDir
+
+frame .frB
+button .frB.btInstall -text "Install" -command install
+button .frB.btExtract -text "Extract only" -command { extract
+  .frB.btExit configure -text "Exit" }
+
+button .frB.btExit -text "Cancel" -command exit
+pack .frB.btInstall .frB.btExtract .frB.btExit -side left -expand true
+
+proc chooseTmpDir {} {
+  global tmpDir
+  set dir [tk_chooseDirectory -initialdir "\$tmpDir" \
+           -title "Choose temporary directory" \
+           -mustexist true ]
+  if {[string compare "\$dir" ""] != 0} {
+    if ![file isdirectory "\$dir"] {
+      tk_messageBox -icon error -message "\$dir is not a dir" \
+                    -title "Invalid directory" -type ok
+    } else {
+      if ![ file writable "\$dir"] {
+        tk_messageBox -icon error -message "\$dir is not writable" \
+                      -title "Invalid directory" -type ok
+      } else {
+        set tmpDir \$dir
+      }
+    }
+  }
+}
+
+proc extract {} {
+  global tmpDir
+  if [catch {exec sh -c \
+    "tail +$skipLines $0 | (cd \$tmpDir && gunzip -c | tar xf -)" \
+    } res] {
+    tk_messageBox -icon error -message "\$res" \
+                  -title "Error in command" -type ok
+  }
+}
+proc install {} {
+  global tmpDir
+  extract
+  wm withdraw .
+  cd \$tmpDir/$bundle
+  exec wish tclInstaller
+  cd ..
+  exec rm -r $bundle
+  exit
+}
+
+grid .lbTitle -columnspan 3 -padx 5 -pady 10 -sticky w
+grid .lbEdition -columnspan 3 -padx 5 -sticky w
+grid .lbTmpDir .enTmpDir .btTmpDir -padx 5 -pady 5 -sticky w
+grid columnconfigure . 1 -weight 1
+grid .frB -columnspan 3 -sticky ews -pady 10
+grid rowconfigure . 3 -weight 1
+
+if [catch {exec tail +$skipLinesSum $0 | cksum} calcSum] {
+    tk_messageBox -icon error -message "\$calcSum" \
+                  -title "Cannot check integrity" -type ok
+} else {
+  if { "\$calcSum" != "$checksum" } {
+    tk_messageBox -icon error -message \
+    "Please download another copy. 
+If you used FTP, please check the binary/ASCII setting." \
+                  -title "Package is corrupted" -type ok
+    exit
+  }
+}
+__END_TCL__
+
+fi
+
+echo $myName
+echo "  $ed"
+echo "Testing package integrity..."
+if [ "$checksum" = "`tail +$skipLinesSum $0 | cksum`" ]; then
+  echo "  package ok"
+else
+  echo "  ERROR - package not ok. Please download another copy"
+  echo "          If you use FTP, check your binary/ascii setting"
+  exit 1
+fi
+
+instdir=/tmp
+
+while [ true ]
+do
+  cat << __ENDPROMPT__
+Please type:
+  i  for installing TreeMaker using "$instdir"
+     as a temporary directory
+  x  for extracting package in "$instdir"
+     without installing
+  t  for changing the installation temporary directory
+     (currently "$instdir")
+  q  for quitting
+__ENDPROMPT__
+
+  read option
+  case $option in
+    "i" | "I")
+      echo "If extraction fails, check for directory and file permissions"
+      echo "or become a privileged user, then try again."
+      echo
+      tail +$skipLines $0 | (cd $instdir && \
+	 gunzip -c | tar xf -) && \
+	cd $instdir/$bundle && sh ./installer \
+	&& cd .. && exec rm -r $bundle
+        exit 0
+      ;;
+    "x" | "X")
+      tail +$skipLines $0 | (cd $installdir && gunzip -c | tar xf -)
+      ;;
+    "t" | "T")
+      echo "Type the temporary installation directory:"
+      read instdir
+      ;;
+    "q" | "Q")
+     exit 0
+	;;
+    *) echo "Unknown option - ignored"
+  esac
+done
+exit 0

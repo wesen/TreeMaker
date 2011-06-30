@@ -1,0 +1,70 @@
+#!/bin/sh
+
+# Second-stage text installer for TreeMaker for Linux.
+
+more LICENSE.txt
+echo
+ok=0
+while [ $ok == 0 ]
+do
+  echo "Type y for accepting the user license, n to cancel:"
+  read option
+  case $option in 
+    "y" | "Y") 
+       ok=1
+       ;;
+    "n" | "N") echo "Installation cancelled"
+       exit 0
+  esac
+done
+prefix=`cat appprefix`
+appname=`cat appname`
+appbinary=`cat appbinary`
+realprefix=$prefix
+
+while [ true ]
+do
+  cat << __END_PROMPT__
+Please type:
+  i  for installing TreeMaker 5 on subdirectories of "$realprefix"
+  p  to change this directory prefix
+  q  to quit without installing
+__END_PROMPT__
+
+  read option
+  case $option in
+    "p" | "P")
+      echo "Type new directory prefix (like /usr or /opt)":
+      read realprefix
+      ;;
+    "q" | "Q")
+      exit 0
+      ;;
+    "I" | "i")
+      sh mkuninstall uninstall "$realprefix" "$appbinary" "$appname"
+      if [ $prefix != $realprefix ]; then
+        wrapper="$appbinary.sh"
+        echo "$realprefix/bin/$appbinary -d $realprefix" > $wrapper
+      else
+        wrapper=""
+      fi
+      sh copyfiles "$realprefix" "$appbinary" "$appname" "$wrapper"
+      
+      if [ $? != 0 ]; then
+        echo "Installation failed, please check directory permissions."
+      else
+        echo "Installation successful."
+        if [ $prefix != $realprefix ]; then
+          echo 'Use "'$realprefix/bin/$wrapper'" to run TreeMaker'
+        else
+          echo 'Use "'$realprefix/bin/$appbinary'" to run TreeMaker'
+        fi
+        echo 'Use "'$realprefix/share/$appname/uninstall'" to uninstall Treemaker'
+      fi
+      exit 0
+      ;;
+    *) echo "Unknown option \"$option\""
+      ;;
+  esac
+done
+

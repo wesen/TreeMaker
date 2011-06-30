@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Background</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h1 align="center"><em>Background</em></h1>
+
+<h2>Origami and Bases</h2>
+<p>
+Origami is the Japanese name for the art of paper-folding. The purest form of
+origami stipulates that you fold one sheet of paper, which must be square, and
+no cutting is allowed. These rules might seem restrictive, but over the
+hundreds of years that origami has been practiced, tens of thousands of origami
+designs have been developed for birds, flowers, animals, fish, cars, planes,
+and almost everything else under creation. Despite the age of the art, the vast
+majority of origami models have been designed within the last fifty years. The
+works of Japanese master Akira Yoshizawa in the early twentieth century led to
+a worldwide origami renaissance in the latter half of the century, but a
+contributing factor to the growth in number, quality, and sophistication of
+modern origami was the development of a body of systematic techniques for the
+design of origami models. Notable among these developments is the concept of a
+generalized base. Growing out of the four classic bases of origami --- the bird,
+fish, frog, and kite bases --- the concept of a base forms the foundation for
+nearly all sophisticated origami designs.
+</p>
+<p align="center">
+  <img src="background_1.png" alt=""><br>
+  <b>Figure B-1.</b> The four classic bases of origami.
+</p>
+<p>
+What, exactly, do we mean by "a base?" A base is a geometric shape that
+contains flaps corresponding to all of the appendages of the origami subject.
+For example, the base for a dog would have six flaps, corresponding to four
+legs, a head, and a tail. The base for a beetle would have nine flaps,
+corresponding to six legs, two antenna, and an abdomen. As origami subject
+matter has moved from relatively simple birds to complex insects with legs,
+wings, horns, and antennae, the advances that enabled this transition were the
+development of geometric and other mathematical techniques for the design of
+the underlying origami base.
+</p>
+<p>
+All origami bases are general abstract, geometrical shapes. What makes many of
+them useful is that each base is a collection of more fundamental structures,
+called "flaps." A flap is loose bit of paper that can be transformed into an
+appendage of the subject: an arm, leg, or wing, for example. The Classic Bases
+of origami had different numbers and arrangements of flaps, which made each
+base particularly well-suited for certain types of subject. As origami design
+expanded worldwide through the 1960s and 1970s, origami artists designed and/or
+discovered new bases with new arrangements of flaps, or other features that
+made them suitable as building blocks for origami compositions.
+</p>
+<p>
+The Classic Bases of origami are <em>uniaxial</em> bases, a property that they
+share with many other origami bases. All uniaxial bases share the following
+attributes:
+</p>
+<ul>
+  <li>
+    They fold flat;
+  </li>
+  <li>
+    All flaps lie along a common line, called the <em>axis</em> of the base;
+  </li>
+  <li>
+    The joints between flaps, called <em>hinges</em>, are perpendicular to the
+    axis.
+  </li>
+</ul>
+<p>
+In the figure above, the axis of each base runs vertically through the center
+line of the base.
+</p>
+<p>
+In the early 1990s, several origami artists/scientists developed a body of
+techniques that allowed the systematic design of arbitrarily complex origami
+uniaxial bases. Two of us, Japanese biochemist Toshiyuki Meguro and myself,
+independently developed a particularly versatile theory known variously as the
+"circle/river/molecule method," or "tree theory." This theory allowed one to
+draw a simple stick figure of a desired shape, then construct a crease pattern
+that, when folded up, gave a uniaxial base whose projection (or shadow) was
+precisely the given stick figure. The advent of tree theory and its widespread
+adoption has led to an explosion of complexity and realism in origami.
+</p>
+<p>
+While tree theory can be practiced with no more equipment than a pencil and
+paper, it can be described mathematically in a way that makes it suitable for
+computer implementation. Beginning in the early 1990s, I began writing a
+computer program that implemented the algorithms of origami tree theory. I
+called this program <em>TreeMaker</em>.
+</p>
+<h2><em>TreeMaker</em></h2>
+<p>
+Fundamentally, <em>TreeMaker</em> is a program for designing uniaxial bases. It
+calculates the crease pattern for a base that has any  number of flaps of
+arbitrary size and distribution. <em>TreeMaker</em> specializes in bases that
+can be represented by a tree graph, i.e., a simple (one piece) acyclic (no
+loops) graph (stick figure) in which each segment is characterized by a
+specified length. Each segment of the tree corresponds to a flap of the base,
+so the graph serves to describe the lengths and connections between the flap of
+the desired base. <em>TreeMaker</em> will compute a crease pattern showing how
+to fold a square (or rectangle, for non-purists) into a multi-pointed base
+whose distribution of flaps match the lengths and connections of the tree.
+</p>
+<p>
+While I envisioned <em>TreeMaker</em> primarily as an intellectual exercise
+that gave me a vehicle to explore the underlying theory, over the years I
+regularly rewrote it to take advantage of advances in the algorithms as I
+discovered them (and advances in my own programming ability). This program is
+now version 5, and it offers several new capabilities compared to previous
+versions.
+</p>
+<p>
+To use <em>TreeMaker</em>, you represent the subject as a tree, or stick
+figure, that defines all of its appendages and their relative lengths. You
+construct the tree using a simple graphical point-and-click interface to define
+the segments of the tree and to specify the lengths of the flaps. You can also
+include constraints that enforce symmetry requirements among the appendages
+--- for example, forcing the model to be bilaterally symmetric, or forcing
+particular points to come from a corner or edge of the square (to control
+thickness or to allow color-changes). After you have defined the stick figure,
+<em>TreeMaker</em> will find an optimally efficient arrangement of points on a
+square that correspond to the nodes of the tree and will have all the creases
+of the base, including the direction of folding (mountain versus valley fold).
+The crease pattern so computed is guaranteed to be foldable into a flat base
+with the proper proportions and is in fact a locally optimum solution for the
+base. "Locally optimum" means that for a given starting configuration, you get
+the largest possible base for a given square, but an entirely different
+starting configuration might give a different base. You can subsequently add
+points to the tree to simplify the crease pattern (I'll explain more about this
+later); when you have sufficiently simplified the pattern, a single command
+computes all of the creases. The full pattern can be printed (and cut out and
+folded) at arbitrary size or (if your OS supports it) printed to a file for
+further editing.
+</p>
+
+<p align="center">
+<b>Previous: <a href="index.htm">Introduction</a>&nbsp;&nbsp;&nbsp; 
+Next: <a href="overview.htm">Overview</a></b>
+</p>
+
+</body>
+</html>

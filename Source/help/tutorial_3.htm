@@ -1,0 +1,439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Tutorial 3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h2><a name="tutorial_3">Tutorial 3: Working with Strain</a></h2>
+<p>
+In this tutorial, you will work through the design of a base that could be used
+for a human figure. In the process, you will learn how to change the lengths of
+flaps in several ways (and why you might want to do so) during the course of
+the design.
+</p>
+
+<p>
+Select <b>File->New</b> to create a new square. We will be making a human
+figure, so using the techniques described in the previous tutorial, draw a
+stick figure of a human as shown in Figure Tu-3-1.
+</p>
+<p align="center">
+  <img src="tutorial_3_1.png" alt=""><br>
+  <b>Figure Tu-3-1.</b> Create a new, 5-limbed stick figure.
+</p>
+<p>
+Initially, all of the edges of the tree graph have the same length, which is
+defined to be 1 unit. In Design View, the length of the edge appears near the
+middle of the edge. For many designs, it is desirable to change the lengths of
+some of the edges to make their corresponding flaps longer or shorter than
+other flaps. For example, if you were making a grasshopper, you'd want the back
+legs to be much longer than the front legs. In <em>TreeMaker</em>, you can
+choose the length of any flap relative to the others by setting the length of
+the corresponding edge.
+</p>
+<p>
+In the previous tutorial, you saw that we can change the length of an edge by
+selecting the edge and changing the length in the Inspector. Do this now for
+the "head" (edge 1). Select it; the Inspector will switch to the Edge panel.
+</p>
+<p align="center">
+  <img src="tutorial_3_2.png" alt=""><br>
+  <b>Figure Tu-3-2.</b>
+</p>
+<p>
+We'll change the length of the "head" flap by giving it a new length. Enter
+"0.6" in the "length" field, which will make the head flap a bit over half the
+length of the arms and legs. If you like, you can also enter a label such as
+"head" in the "label" field as well. Then hit <em>Enter</em> or click the
+"Apply" button. You will see the edge length change to its new value in the
+Design window.
+</p>
+<p align="center">
+  <img src="tutorial_3_3.png" alt=""><br>
+  <b>Figure Tu-3-3.</b>
+</p>
+<p>
+You can see that the length of the edge (the number near the middle of the
+edge) is now 0.6. The label, if you entered one, also appears below the index
+of the edge. 
+</p>
+<p>
+It's probably worth a reminder that the on-screen length of the blue line
+segment that represents the edge hasn't changed a whit; what matters is the
+numerical length value that appears next to it. However, note that the node
+circle (whose radius is given by the scaled length of the incident edge) has
+become smaller.
+</p>
+<p>
+Now we'll also shrink the torso a bit. Click on the torso and enter a length of
+0.8 in the length field. Then hit <em>Enter</em>. The result is shown in Figure
+Tu-3-4.
+</p>
+<p align="center">
+  <img src="tutorial_3_4.png" alt=""><br>
+  <b>Figure Tu-3-4.</b>
+</p>
+<p>
+There's another way to change the length of a flap, which is through the Edit
+menu. <b>The Edit->Edges</b> submenu lets you alter properties of one or more
+edges at a time. Thus, to change the lengths of both legs in our model, you
+select edges 5 and 6, then choose <b>Edit->Edges->Set Lengths...</b>. This will
+bring up a dialog box.
+</p>
+<p align="center">
+  <img src="tutorial_3_5.png" alt=""><br>
+  <b>Figure Tu-3-5.</b>
+</p>
+<p>
+Enter "1.2" in the text field and click OK. You'll see that now both edges have
+a length of 1.2, as shown in Figure Tu-3-6.
+</p>
+<p align="center">
+  <img src="tutorial_3_6.png" alt=""><br>
+  <b>Figure Tu-3-6.</b>
+</p>
+<p>
+Instead of specifying the lengths of a group of edges, you can also scale a
+group of edges by a common factor, by selecting the edges and then choosing
+<b>Edit->Edges->Scale Lengths...</b>.
+</p>
+<p>
+We'll now make this model symmetric. Turn on book symmetry as you did in the
+previous tutorial. In the Tree Inspector panel, click the "Book" button; then
+create symmetry conditions on the leaf nodes, forcing node 1 to lie on the line
+of symmetry and pairing nodes 3 and 4 and nodes 6 and 7 about the line of
+symmetry.
+</p>
+<p align="center">
+  <img src="tutorial_3_7.png" alt=""><br>
+  <b>Figure Tu-3-7.</b>
+</p>
+<p>
+Now we'll optimize to find a base. Select <b>Action->Scale Everything</b>. When
+the run is complete, you should have something that looks like Figure Tu-3-8.
+</p>
+<p align="center">
+  <img src="tutorial_3_8.png" alt=""><br>
+  <b>Figure Tu-3-8.</b>
+</p>
+<p>
+The scale of this is 0.3150 and you can generate the crease pattern if you like
+by selecting <b>Action->Build Crease Pattern</b>. However, it's often possible
+to find a different crease pattern with possibly a larger scale (which gives a
+larger base) for exactly the same tree and conditions. Sometimes you can find
+these other patterns simply  by starting from a different initial configuration
+of nodes.
+</p>
+<ul><li>
+Note: depending on your initial node configuration, you might have arrived at
+an arrangement with a scale value of something like 0.3349. In this case just
+keep reading.
+</li></ul>
+<p>
+In particular, whenever you have a large, many-sided polygon as we do here,
+it's often possible to get a larger crease pattern if you drag one of the nodes
+inside the polygon. In this case, node 1 is the obvious candidate. If you try
+to click and drag directly, node 1 won't move because it's pinned, but you can
+drag a pinned node by holding down the appropriate modified key while clicking:
+Option on Mac, Alt on Windows, Alt or Control on Linux. So, holding down the
+modifier key, click on node 1 and drag it down into the middle of the crease
+pattern, as shown in Figure Tu-3-9. In addition, drag nodes 3 and 4 to the
+upper right and left corners, respectively.
+</p>
+<p align="center">
+  <img src="tutorial_3_9.png" alt=""><br>
+  <b>Figure Tu-3-9.</b>
+</p>
+<p>
+Your figure should look something like this but it probably won't look exactly
+the same. You should see some red lines, however. The red lines are paths that
+are not valid, meaning that their actual length is less than their minimum
+length. They are a sign that no valid crease pattern is possible with this
+arrangement of nodes.
+</p>
+<p>
+Again, select <b>Action->Scale Everything</b> to find a new configuration. The
+result should look like Figure Tu-3-10.
+</p>
+<p align="center">
+  <img src="tutorial_3_10.png" alt=""><br>
+  <b>Figure Tu-3-10.</b>
+</p>
+<p>
+The new scale is 0.3349 (or thereabouts), which is somewhat larger than the
+previous value. This configuration is more efficient than the last. At this
+point, you might wish to see what the crease pattern would look like by
+selection <b>Action->Build Crease Pattern</b>, so go ahead a try it.
+</p>
+<p>
+You will find that <em>TreeMaker</em> can't build the pattern just yet; it
+gives you the following warning:
+</p>
+<p align="center">
+  <img src="tutorial_3_11.png" alt=""><br>
+  <b>Figure Tu-3-11.</b>
+</p>
+<p>
+What's wrong?
+</p>
+<p>
+TreeMaker cannot build polygons or creases if there are unpinned, or movable,
+leaf nodes that are inside what would be a polygon. What do we mean by pinned?
+A pinned node is one that cannot be moved in any direction without either
+violating a path constraint or going outside the paper.
+</p>
+<p>
+Nodes aren't the only things that are pinned. An edge whose length cannot be
+made larger without causing some path to be violated is also said to be pinned.
+Initially, all edges are unpinned. When you maximize the scale, most of the
+edges will end up pinned, but not necessarily all. In Figure Tu-3-10, all edges
+except edge number 1, and all leaf nodes except node 1, are pinned.
+</p>
+<p>
+An edge that isn't pinned can be made longer without reducing the lengths of
+other edges, which means that the flap in the base that corresponds to the edge
+can be made longer. Sometimes lengthening a flap of the base is aesthetically
+acceptable; sometimes it isn't. For this example, if we lengthen the head flap,
+we'll just have a bit more paper with which to make hair, facial features, et
+cetera. So we can, and will, lengthen edge number 1.
+</p>
+<p>
+But how long should we make edge 1? <em>TreeMaker</em> will find that out for
+you. Click once on edge 1 and shift-click on node 1 to select them both. Then
+go to the Action menu and select the command <b>Action->Scale Selection</b>,
+which is a second form of optimization. This command will move any unpinned
+selected nodes in order to maximize the length of the selected edge or edges.
+(If you have selected more than one edge, they will all be lengthened
+proportionally.) When the optimization ends, you should have something like
+Figure Tu-3-12.
+</p>
+<p align="center">
+  <img src="tutorial_3_12.png" alt=""><br>
+  <b>Figure Tu-3-12.</b>
+</p>
+<ul><li>
+  Note: you must select both some unpinned nodes to move and some unpinned
+  edges to enlarge; otherwise, nothing happens because in this command,
+  <em>TreeMaker</em> simply ignores pinned nodes and edges. If you want all
+  unpinned nodes and unpinned edges to be considered, choose
+  <b>Edit->Select->All</b> to select everything; <em>TreeMaker</em> will weed
+  out the pinned nodes and edges before running the optimization.
+</li></ul>
+<p>
+In this optimization, <em>TreeMaker</em> moved node 1 around while lengthening
+edge 1 (while respecting the symmetry condition we placed on node 1) until edge
+1 reached its maximum value, at which point the 4 paths from node 1 to nodes 3,
+4, 6, and 7 all became active. Those newly-active paths are shown in green.
+Since node 1 is surrounded by active paths, it is now pinned, and since edge 1
+is now contained in an active path, it, too, is now pinned.
+<p>
+Now, look closely at the length of edge 1: its length appears as "0.600+5%".
+This edge is said to be <em>strained</em>. Strain is a deviation of an edge
+from its original desired value. This edge has been strained by 5%, which means
+it behaves as if it were an edge of length 0.6275, rather than its original
+length of 0.6.
+</p>
+<p>
+Strain is an important concept, particularly when we start imposing symmetry
+conditions on a base. A strained edge behaves as if it were actually longer or
+shorter than its original value. However, an edge "remembers" its original
+("unstrained") length, a behavior that we utilize elsewhere.
+</p>
+<p>
+There is a set of strain-related commands in the <b>Edit</b> menu.
+<b>Edit->Strain->Remove Selection/All</b> sets all strain to zero; it undoes
+any strain changes. <b>Edit->Strain->Relieve Selection/All</b> does something
+quite different: it absorbs length changes due to strain into the edge itself
+and resets the strain to zero. Select <b>Edit->Strain->Relieve All</b> now.
+You'll see that the length of edge 1 has now changed from 0.6 to 0.6275.
+</p>
+<p align="center">
+  <img src="tutorial_3_13.png" alt=""><br>
+  <b>Figure Tu-3-13.</b>
+</p>
+<p>
+Now, all edges are pinned and we can proceed with the construction of the
+crease pattern. Select <b>Action->Build Crease Pattern</b> to construct the
+crease pattern and select <b>View->Creases View</b> to show just the creases,
+as shown in Figure Tu-3-14.
+</p>
+<p align="center">
+  <img src="tutorial_3_14.png" alt=""><br>
+  <b>Figure Tu-3-14.</b>
+</p>
+<p>
+There is one more type of optimization that involves strain that can be useful.
+The base above is not as elegant as it could be, because nodes 6 and 7 are
+close to a corner but are not precisely in the corner. We'll now modify the
+base so that four of the flaps come from the corners of the paper.
+</p>
+<p>
+We can force nodes 6 and 7 to land on the corner by creating another condition.
+First, select <b>Action->Kill Crease Pattern</b> and <b>View->Design View</b>
+to get rid of the creases and go back to the Design view. Then select node 7
+and choose <b>Condition->Node(s) Fixed to Corner</b>. The result is shown in
+Figure Tu-3-15.
+</p>
+<p align="center">
+  <img src="tutorial_3_15.png" alt=""><br>
+  <b>Figure Tu-3-15.</b>
+</p>
+
+<ul><li>
+Note: You don't need to create a similar condition on node 6, because you've
+already set a condition that forces mirror-symmetry between nodes 6 and 7. With
+this condition, if node 7 is on the corner, node 6 will be forced to the
+mirror-image corner. A condition that is implied by the interaction of other
+conditions is said to be <em>redundant</em>; you should avoid creating
+redundant conditions, because they will slow down --- or even prevent --- finding
+a solution during optimization.
+</li></ul>
+
+<p>
+Choose <b>Action->Scale Everything</b>. The result is shown in Figure Tu-3-16.
+</p>
+<p align="center">
+  <img src="tutorial_3_16.png" alt=""><br>
+  <b>Figure Tu-3-16.</b>
+</p>
+<p>
+Nodes 6 and 7 are now on corners, but nodes 3 and 4 got dragged away from the
+corners. So apply that same condition to node 4 (node 3's position is
+implied by the mirror symmetry condition) and try optimizing again.
+</p>
+<p align="center">
+  <img src="tutorial_3_17.png" alt=""><br>
+  <b>Figure Tu-3-17.</b>
+</p>
+<p>
+Now, all four nodes are on the corners, but we've lost the four active paths
+that forced node 1 to be pinned. There is still another type of condition that
+can remedy this; we can force a path to be active. A path is identified by the
+nodes at each end, so select nodes 1 and 4, then choose <b>Edit->Select->Path
+from Nodes</b>. This selects the path (which is path 3), and makes it visible
+(selected parts are always visible, independent of other settings). As shown in
+Figure Tu-3-18, the path is shown in amber, which means that it is feasible,
+but not active.
+</p>
+<p align="center">
+  <img src="tutorial_3_18.png" alt=""><br>
+  <b>Figure Tu-3-18.</b>
+</p>
+<p>
+Now choose <b>Condition->Path Active</b>; you will see a condition appear that
+is attached to the path. We will put a similar condition between nodes 1 and 7.
+But we'll do it a bit more efficiently. Select nodes 1 and 7, then choose
+<b>Condition->Path Active</b>. <em>TreeMaker</em> will apply the desired
+condition to the path that runs between the two selected nodes, as shown in
+Figure Tu-3-19.
+</p>
+<p align="center">
+  <img src="tutorial_3_19.png" alt=""><br>
+  <b>Figure Tu-3-19.</b>
+</p>
+<p>
+As with the "node on corner" conditions, we only need to create conditions on
+half of the model if we've made it symmetry. It's a good idea to keep all such
+conditions on the same side of the symmetry line to avoid inadvertantly
+duplicating (or missing) one.
+</p>
+<p>
+Now, we should be ready for optimization. Choose <b>Action->Scale
+Everything</b>. <em>TreeMaker</em> puts up a warning, shown in Figure Tu-3-20.
+</p>
+<p align="center">
+  <img src="tutorial_3_20.png" alt=""><br>
+  <b>Figure Tu-3-20.</b>
+</p>
+<p>
+Once you start creating conditions, it is to possible create more conditions than
+there are degrees of freedom in the problem. <em>TreeMaker</em> will warn you
+when you are getting close. Click "yes" to proceed.
+<p>
+<em>TreeMaker</em> will work a bit, and then will put up another warning.
+</p>
+<p align="center">
+  <img src="tutorial_3_21.png" alt=""><br>
+  <b>Figure Tu-3-21.</b>
+</p>
+<p>
+Click "Yes" to revert to the configuration before optimization. This warning
+says that <em>TreeMaker</em> was unable to find a solution, which suggests that
+this problem is, indeed, overconstrained. In other words, it is not possible to
+make the four paths active <em>and</em> have the four nodes in the four
+corners. At least, it's not possible for this set of edge lengths.
+</p>
+<p>
+However, it might be possible for a different set of edge lengths. The question
+is, what should they be, and how can we keep the tree close to what we've
+started with? The solution lies in the third type of optimization: strain
+optimization. In strain optimization, we allow some or all of the edges to be
+strained, but instead of trying to maximize the strain of a subset of the
+edges, in strain optimization, we try to minimize the total strain.
+</p>
+<p>
+Since we will be allowing all of the edges to be strained, we need to set up
+additional conditions that enforce mirror symmetry. We have already set mirror
+symmetry on the positions of the nodes. We will now set mirror symmetry on the
+strain in the edges. That is, if two edges are mirror-symmetric, we would like
+them to have the same strain so that we don't end up with one longer than the
+other. Select edges 2 and 3, then choose <b>Condition->2 Edges Same Strain</b>.
+Do the same for edges 5 and 6. The result is shown in Figure Tu-3-22.
+</p>
+<p align="center">
+  <img src="tutorial_3_22.png" alt=""><br>
+  <b>Figure Tu-3-22.</b>
+</p>
+<p>
+Now we are ready to optimize. Select all nodes and edges, by choosing
+<b>Edit->Select->All</b>. Then choose <b>Action->Minimize Strain</b>.
+<em>TreeMaker</em> will vary the positions of all nodes and the lengths of all
+edges to find a feasible configuration that satisfies all of the conditions we
+have created, while minimizing the RMS value of the strain, summed over all
+edges. Finally, <em>TreeMaker</em> can find the solution, which is shown in
+Figure Tu-3-23.
+</p>
+<p align="center">
+  <img src="tutorial_3_23.png" alt=""><br>
+  <b>Figure Tu-3-23.</b>
+</p>
+<p>
+Now, you can see that all the edges are strained slightly, but all by
+relatively small amounts. All nodes and edges are pinned, so you can now build
+the crease pattern, by choosing <b>Action->Build Crease Pattern</b>.
+</p>
+<p align="center">
+  <img src="tutorial_3_24.png" alt=""><br>
+  <b>Figure Tu-3-24.</b>
+</p>
+<p>
+Strain optimization is a powerful tool; it lets you create cleaner, more
+symmetric crease patterns and bases, while keeping the flap lengths close to
+what you originally desired.
+</p>
+<p>
+You now know how to set up a crease pattern for a base with an arbitrary number
+of flaps and how to change the lengths of the flaps. You've also seen in this
+tutorial how to vary the lengths of flaps by maximizing and/or optimizing the
+strain in the tree edges. This gives you 90% of what you need to know to
+compute crease patterns with <em>TreeMaker</em>, and I encourage you at this
+point to go off and experiment. To keep things simple (and to keep the
+optimization times down), I have kept to small examples with a small number of
+flaps. But you can try much more complicated bases with much more complicated
+assemblies of flaps with <em>TreeMaker</em>; you are limited only by the
+computer's memory and speed (and of course, your own patience!). The next section
+will address some of the subtler issues of origami design using
+<em>TreeMaker</em>. You can continue working through it, or go off, experiment,
+and then come back when you're ready.
+
+<p align="center">
+<b>Previous: <a href="tutorial_2.htm">Tutorial 2: Imposing Symmetry</a>
+&nbsp;&nbsp;&nbsp; 
+Next: <a href="tips_1.htm">Tips 1: Adding Nodes</a></b>
+</p>
+
+</body>
+</html>

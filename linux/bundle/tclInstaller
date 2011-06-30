@@ -1,0 +1,226 @@
+# Second-stage graphical installer for TreeMaker for Linux.
+# C.A. Furuti
+
+# Load a variable's value from a file
+proc loadVar {varFile varName} {
+  upvar $varName var
+  set s [read [open $varFile r]]
+  regsub {\n$} $s "" var
+}
+proc phase1 {state} {
+  if { "$state" == "on" } {
+    pack .frBt1 -side bottom
+    pack .frLicense -fill both -expand y
+    focus .frBt1.btA
+  } else {
+    pack forget .frBt1
+    pack forget .frLicense
+  }
+}
+
+proc phase2 {state} {
+  if { "$state" == "on" } {
+    pack .frBt2 -side bottom
+    pack .frDir -fill both -expand y
+    focus .frBt2.btA
+  } else {
+    pack forget .frDir .frBt2
+  }
+}
+
+proc phase3 {state} {
+  if { "$state" == "on" } {
+    global appbinary appname instDir wrapper
+    if { "$wrapper" != "" } {
+      set app "$appbinary.sh"
+    } else {
+      set app "$appbinary"
+    }
+
+    regsub {/*$} $instDir "" dir
+    .frDone.msg configure -state normal
+    .frDone.msg delete 1.0 end
+    .frDone.msg insert insert "Installation is complete.\n\nRun\
+TreeMaker with '$dir/bin/$app'.\nYou may uninstall TreeMaker with\
+'$dir/share/$appname/uninstall'."
+    .frDone.msg configure -state disabled
+    pack .frDone -fill both -expand y
+    focus .frDone.bt
+  } else {
+    pack forget .frDone .frBt3
+  }
+}
+
+# Run when the installation directory is changed by the user
+proc updDirExp {} {
+  global instDir instDir0 wrapper appbinary
+  regsub {/*$} $instDir "" dir
+  set s "TreeMaker 5 will be installed\
+in subdirectories of the installation prefix, like $dir/bin\
+and $dir/share."
+
+  if {"$dir" != "$instDir0"} {
+    append s "\nTreeMaker may be run with '$dir/bin/$appbinary.sh'."
+    set wrapper "\"$dir/bin/$appbinary\" -d \"$dir\""
+  } else {
+    set wrapper ""
+  }
+  .frDir.msg configure -state normal
+  .frDir.msg delete 1.0 end
+  .frDir.msg insert insert "$s"
+  .frDir.msg configure -state disabled
+}
+# Run and process a file chooser for the installation directory
+proc chooseInstDir {} {
+  global instDir
+  set dir [tk_chooseDirectory -initialdir "$instDir" \
+           -title "Choose Installation directory" \
+           -mustexist false ]
+  if {[string compare "$dir" ""] != 0} {
+    if ![file isdirectory "$dir"] {
+      tk_messageBox -icon error -message "$dir is not a dir" \
+                    -title "Invalid directory" -type ok
+    } else {
+        set instDir $dir
+    }
+  }
+}
+
+wm title . "TreeMaker 5 Installer"
+set mWidth 500
+set mHeight 400
+wm geometry . "${mWidth}x$mHeight+[expr ([winfo screenwidth .] - $mWidth) / 2\
+]+[expr ([winfo screenheight .] - $mHeight) / 2]"
+set icon [image create photo -file "Icon_app.ppm"]
+pack propagate . false
+
+# Fixed frame for title
+frame .frHead
+label .frHead.lbTM -text "TreeMaker 5" -font {times 30 bold} -fg "#0000c0"
+label .frHead.lbVer -text "Installer for Linux/Unix"
+label .frHead.lbIcon -image $icon
+grid .frHead.lbTM -padx 15
+grid .frHead.lbVer -padx 15
+grid .frHead.lbIcon -row 0 -column 1 -rowspan 2
+
+# Frame for user license
+frame .frLicense
+scrollbar .frLicense.scY -command { .frLicense.ta yview} -orient vertical
+scrollbar .frLicense.scX -command { .frLicense.ta xview} -orient horizontal
+text .frLicense.ta -bg white -wrap none \
+  -xscrollcommand { .frLicense.scX set } \
+  -yscrollcommand { .frLicense.scY set }
+set flLic [open "LICENSE.txt" r]
+.frLicense.ta insert insert [read $flLic]
+.frLicense.ta configure -state disabled
+grid .frLicense.ta -sticky news
+grid .frLicense.scY -row 0 -column 1 -sticky ns
+grid .frLicense.scX -sticky ew
+grid rowconfigure .frLicense 0 -weight 1
+grid columnconfigure .frLicense 0 -weight 1
+
+frame .frBt1
+
+# Button raising a modal dialog with change log
+button .frBt1.btC -text "See change log..." -command {
+  global .frChange
+  if [winfo exists .frChange] {
+    wm deiconify .frChange
+  } else {
+    toplevel .frChange
+    wm title .frChange "TreeMaker 5 Change Log"
+ 
+    scrollbar .frChange.scY -command { .frChange.ta yview} -orient vertical
+    scrollbar .frChange.scX -command { .frChange.ta xview} -orient horizontal
+    text .frChange.ta -bg white -wrap none \
+      -xscrollcommand { .frChange.scX set } \
+      -yscrollcommand { .frChange.scY set }
+    button .frChange.btC -text "Close" -command {
+        grab release .frChange
+        wm withdraw .frChange
+    }
+    set flCL [open "change_log.txt" r]
+    .frChange.ta insert insert [read $flCL]
+    .frChange.ta configure -state disabled
+    grid .frChange.ta -sticky news
+    grid .frChange.scY -row 0 -column 1 -sticky ns
+    grid .frChange.scX -sticky ew
+    grid rowconfigure .frChange 0 -weight 1
+    grid columnconfigure .frChange 0 -weight 1
+    grid .frChange.btC -pady 10
+  }
+  focus .frChange.btC
+  grab .frChange
+  tkwait visibility .frChange
+  puts Ok
+}
+button .frBt1.btA -text "Accept license" -command {
+  phase1 off
+  phase2 on
+}
+button .frBt1.btR -text "Cancel installation" -command { exit }
+grid .frBt1.btC .frBt1.btA .frBt1.btR -padx 10 -pady 10
+
+# Frame for choosing installation directory
+frame .frDir
+label .frDir.lb -text "Installation directory prefix:"
+entry .frDir.en -width 25 -bg white -textvariable instDir 
+button .frDir.bt -text "..." -command chooseInstDir
+text .frDir.msg -wrap word -state disabled -relief flat
+grid .frDir.lb -row 1 -padx 5 -pady 5
+grid .frDir.en -row 1 -column 1 -sticky ew -padx 5 -pady 5
+grid .frDir.bt -row 1 -column 2 -padx 5 -pady 5
+grid .frDir.msg -columnspan 3 -padx 5 -sticky nsew
+grid columnconfigure .frDir 1 -weight 1
+
+frame .frBt2
+button .frBt2.btB -text "Back" -command { phase2 off
+  phase1 on
+}
+button .frBt2.btA -text "Install" -command {
+  global instDir wrapper appbinary appname
+  exec sh mkuninstall uninstall "$instDir" "$appbinary" "$appname"
+
+  if { "$wrapper" != "" } {
+    set wrapsh [open "$appbinary.sh" w]
+    puts $wrapsh $wrapper
+    close $wrapsh
+    set wrapsh "$appbinary.sh"
+  } else {
+    set wrapsh ""
+  }
+  if [catch {exec sh copyfiles "$instDir" "$appbinary" "$appname" "$wrapsh" } res] {
+    tk_messageBox -icon error -message "$res" \
+                  -title "Error - check directory permissions" -type ok
+  } else {
+    phase2 off
+    phase3 on
+  }
+}
+button .frBt2.btR -text "Cancel" -command { exit }
+grid .frBt2.btB .frBt2.btA .frBt2.btR -padx 10 -pady 10
+
+# Frame for final messages
+frame .frDone
+text .frDone.msg -wrap word -state disabled -relief flat
+button .frDone.bt -text "Ok" -command { exit }
+grid .frDone.msg -sticky ew  -padx 5 -pady 5
+grid rowconfigure .frDone 0 -weight 1
+grid columnconfigure .frDone 0 -weight 1
+grid .frDone.bt -pady 5
+
+loadVar "appname" appname
+loadVar "appbinary" appbinary
+loadVar "appprefix" instDir
+regsub {/*$} $instDir "" instDir0
+
+updDirExp
+
+trace variable instDir w updDirTrace
+
+proc updDirTrace {var index op} {
+  updDirExp
+}
+
+pack .frHead
+phase1 on

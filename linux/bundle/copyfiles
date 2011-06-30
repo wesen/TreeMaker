@@ -1,0 +1,18 @@
+# Copy TreeMaker files to installation directory
+# Mandatory parameters:
+#   - instalation prefix (like /usr/ or /usr/local)
+#   - TreeMaker binary file
+#   - TreeMaker data directory
+#   - if nonempty, name of wrapper script
+
+gzip LICENSE.txt
+gzip change_log.txt
+install -d "$1/bin" "$1/share/$3" &&
+  install $2 "$1/bin" &&
+  install -m 644 help.zip about.htm SplashScreen.png Icon_doc_48.png \
+    Icon_app_48.png Icon_app.ppm LICENSE.txt.gz change_log.txt.gz \
+    "$1/share/$3" &&
+  install uninstall "$1/share/$3"
+if [ "X$4" != "X" ]; then
+  install "$4" "$1/bin"
+fi

@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Tips 3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h2>Tips 3: Forcing Edge Flaps</h2>
+
+<p>
+In origami bases, flaps can be categorized as <em>corner</em>, <em>edge</em>,
+or <em>middle</em> flaps, depending on whether the tip of the flap is located
+at a corner of the paper, along an edge, or somewhere in the interior. It is
+fairly easy to see that for a given length and width of flap, corner flaps have
+the fewest layers; edge flaps have an intermediate number of layers; and middle
+flaps have the most. Thus, corner flaps are the best choice for flaps that must
+be thinned a lot; edge flaps are a second choice; and middle flaps should be
+avoided.
+</p>
+<p>
+There are other differences, too. After you have run several <em>TreeMaker</em>
+designs and folded them, you will start to notice that some crease patterns are
+easy to collapse into bases while others are incredibly difficult to fold up.
+Closer examination of this phenomenon reveals a common thread: the more middle
+points a base has, the harder it is to fold up. While edge points can almost
+always be separated from the rest of the base by simply being folded out to the
+side (perpendicular to the plane of the the base), middle points are often
+surrounded by layers of paper and can only be separated out by being
+reverse-folded up and out of the model (lying in the plane of the base). 
+</p>
+<p>
+The more flaps there are in a base, the more likely it is to have middle flaps,
+and the greater the relative proportion of middle flaps. With only 3 or 4 flaps
+in the tree, they will almost inevitably be edge flaps. However, even with as
+few as 5 flaps, you will find that one or more flaps will tend to move into the
+middle. For example, suppose we want a base with five equal-length flaps.
+Construct a tree as shown in Figure Ti-3-1.
+</p>
+<p align="center">
+  <img src="tips_3_1.png" alt=""><br>
+  <b>Figure Ti-3-1.</b>
+</p>
+<p>
+Depending on the initial configuration of nodes, there are two locally optimum
+arrangements of nodes. If you start with the initial configuration above, then
+you will probably wind up with the solution shown in Figure Ti-3-2, which has a
+scale of 0.3236.
+</p>
+<p align="center">
+  <img src="tips_3_2.png" alt=""><br>
+  <b>Figure Ti-3-2.</b>
+</p>
+<p>
+If you start with one of the nodes in the middle of the square and the others
+near the four corners, you will probably arrive at the solution in Figure
+Ti-3-3, which is significantly larger with a scale of 0.3536.
+</p>
+<p align="center">
+  <img src="tips_3_3.png" alt=""><br>
+  <b>Figure Ti-3-3.</b>
+</p>
+<p>
+In general, for 5 or more flaps, the most efficient crease pattern will have at
+least one middle flap. In this example, we were able to force all of the flaps
+to be edge flaps simply by starting from an initial configuration in which all
+of the leaf nodes were on the edges. This is not always possible, however. For
+example, if you try the same problem for seven equal-length flaps, most initial
+configurations will place a node in the middle of the paper, creating a middle
+flap. A typical circle pattern (with a scale of 0.2657) is shown in Ti-3-4.
+</p>
+<p align="center">
+  <img src="tips_3_4.png" alt=""><br>
+  <b>Figure Ti-3-4.</b>
+</p>
+<p>
+However, we can force nodes to lie on the edge of the paper, thereby turning
+the associated flaps into edge flaps, by setting conditions on them. Select all
+the nodes, either by shift-clicking on each in turn, or by choosing
+<b>Edit->Select->All</b>. Then choose <b>Condition->Node(s) fixed to Paper Edge</b>. This will set a position constrained condition on each of the
+leaf nodes in the selection (but not the branch nodes; such a condition would
+have no effect anyhow). The conditions are identified in the Design window as
+small flags on each node, as shown in Figure Ti-3-5.
+</p>
+<p align="center">
+  <img src="tips_3_5.png" alt=""><br>
+  <b>Figure Ti-3-5.</b>
+</p>
+<p>
+This will force each leaf
+node to stay on the edge of the paper.
+Then re-run the optimizer. When you do, you will find that all the nodes now
+lie on the edge of the paper, essentially forming one giant polygon, as shown
+in Figure Ti-3-6.
+</p>
+<p align="center">
+  <img src="tips_3_6.png" alt=""><br>
+  <b>Figure Ti-3-6.</b>
+</p>
+<p>
+Choose <b>Action->Build Crease Pattern</b> and <b>View->Creases View</b>. This
+node arrangement results in the crease pattern shown in Figure Ti-3-7.
+</p>
+<p align="center">
+  <img src="tips_3_7.png" alt=""><br>
+  <b>Figure Ti-3-7.</b>
+</p>
+<p>
+This crease pattern gives the folded form shown in Figure Ti-3-8.
+</p>
+<p align="center">
+  <img src="tips_3_8.png" alt=""><br>
+  <b>Figure Ti-3-8.</b>
+</p>
+<p>
+Ease of collapsing the crease pattern into a base is a good reason to force
+flaps to be edge flaps; another good reason is the number of layers. For a
+given width flap, edge flaps have only half the number of layers of middle
+flaps, and so if a flap is to be folded further, it may be desirable to make it
+be an edge flap so that it will be easier to fold.
+</p>
+<p>
+Another reason to make a flap be an edge flap is for color-changing. The bases
+produced by <em>TreeMaker</em> are inherently single-color. If you are making a
+model that exploits the colors of both sides of the paper --- a bald eagle, for
+example, which would have white head, tail, and feet --- then you will need to
+make sure that the flaps to be color-changed are edge flaps, so that they may
+be turned inside-out around the raw edges of the flap. (It is extremely
+difficult to turn a middle flap inside-out!) Of course, color-changing
+individual flaps is only the most rudimentary way of exploiting two-tone models
+and is insufficient for models with stripes or spots, for example. For zebras,
+tigers, and giraffes, you'll have to use different techniques than those
+provided by <em>TreeMaker</em>.
+</p>
+<p>
+All bases designed by <em>TreeMaker</em> are of a type known as
+<em>uniaxial</em> bases. A uniaxial base is one in which all the flaps lie
+along a single line. A base in which all of the flaps are edge flaps has the
+very useful property that the layers can be arranged so that with all of the
+layers in the same half-plane, no major flap is enclosed inside of another
+flap. I call a base with this latter property a <em>simple</em> uniaxial base.
+Simple bases can also be designed by Fumiaki Kawahata's "string-of-beads"
+algorithm. It is fairly easy to prove that the perimeter of an edge-flap-only
+base cannot exceed the perimeter of the square; conversely, one can also show
+that by allowing middle flaps, it is possible to construct a flat origami shape
+with arbitrarily large perimeter from a finite size sheet of paper!
+</p>
+<p>
+It is tempting to suppose that any simple uniaxial base must be an
+edge-flap-only base, but it is often possible to add auxiliary nodes to a base
+with middle points to make them "quasi-edge-like". An example will make this
+clear.
+</p>
+<p>
+An eight-pointed base in which all of the flaps are forced to be edge flaps is
+shown in Figure Ti-3-9. It has a scale of 0.2500. 
+</p>
+<p align="center">
+  <img src="tips_3_9.png" alt=""><br>
+  <b>Figure Ti-3-9.</b>
+</p>
+<p>
+If we remove the conditions and re-optimize, we'll find the arrangement shown
+in Figure Ti-3-10, in which four of the points have become middle flaps. This
+has a scale of 0.2588, just a bit larger than the all-edge-flap base.
+</p>
+<p align="center">
+  <img src="tips_3_10.png" alt=""><br>
+  <b>Figure Ti-3-10.</b>
+</p>
+<p>
+Although four of the flaps are middle flaps and will be trapped inside layers,
+it's possible to squash-fold the raw-edged flaps attached to each node in such
+a way that a simple uniaxial base is obtained. And clearly, the perimeter of
+this base exceeds the perimeter of the square by the factor (sec(15&deg;)), or
+by about 3.5%.
+</p>
+
+<p align="center">
+<b>Previous: <a href="tips_2.htm">Tips 2: Making a Plan View Model</a>
+&nbsp;&nbsp;&nbsp; 
+Next: <a href="tips_4.htm">Tips 4: Fracturing Polygons</a></b>
+</p>
+
+</body>
+</html>

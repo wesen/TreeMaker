@@ -1,0 +1,2044 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Windows</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h1 align="center">Windows</h1>
+
+<p>
+There are five main types of window in <em>TreeMaker</em> (as well as assorted
+dialog boxes). They are:
+<ul>
+  <li>
+    The <a href="#Design">Design</a> window, in which you construct your
+    design and <em>TreeMaker</em> constructs the crease pattern. There is one
+    of these windows for each document.
+  </li>
+  <li>
+    The <a href="#Inspector">Inspector</a> window, which displays attributes of
+    your design and the various objects that make up a <em>TreeMaker</em>
+    pattern. The Inspector shows information about the active (usually
+    frontmost) document.
+  </li>
+  <li>
+    The <a href="#Folded Form">Folded Form</a> window, which displays a
+    silhouette of the folded base after it is designed. The Folded Form window
+    shows information about the active document.
+  </li>
+  <li>
+    The <a href="#View Settings">View Settings</a> window, which lets you
+    change how <em>TreeMaker</em> displays and prints the design and crease
+    pattern. The View Settings window shows the settings for the active
+    document.
+  </li>
+  <li>
+    The <a href="#Help">Help</a> window, which displays this documentation,
+    which can also be printed out.
+  </li>
+</ul>
+<p>
+The following sections describe these windows.
+</p>
+<ul>
+  <li>
+    Note: all of the screen images are taken from the Macintosh version of
+    <em>TreeMaker</em>. Windows on other platforms should look similar in
+    their content, but may have differences in title bars, borders, and/or
+    size controls.
+  </li>
+</ul>
+
+
+<h2><a name="Design">Design Window</a></h2>
+<p>
+Each origami design is its own document and is displayed within a single
+window. An origami design is composed of a number of interrelated "parts". The
+different types of parts are called: 
+<ul>
+  <li> 
+    node --- represents the endpoint of a flap or a junction between flaps in
+    the desired base.
+  </li>
+  <li> 
+    edge --- represents a flap in the desired base.
+  </li>
+  <li> 
+    path --- represents a distance relationship between any two nodes. The
+    vertices corresponding to any two leaf nodes must have a separation on the
+    paper greater than or equal to their separation on the tree; a path
+    captures this requirement.
+  </li>
+  <li> 
+    poly --- a polygon, whose corners are nodes and whose edges are (certain)
+    paths. Polygons get filled with the crease patterns known as
+    <em>molecules</em>.
+  </li>
+  <li> 
+    vertex --- a point in the crease pattern where two or more creases come
+    together.
+  </li>
+  <li> 
+    crease --- a fold line within the crease pattern. Creases can be folded or
+    unfolded; folded creases can be mountain or valley.
+  </li>
+  <li> 
+    facet --- a polygonal region within the crease pattern. The corners of
+    facets are vertices; the sides of facets are creases.
+  </li>
+  <li> 
+    condition --- represents a user-specified relationship among nodes, edges,
+    and/or paths to impose symmetry or other requirements on the crease pattern
+    and/or the tree.
+  </li>
+</ul>
+<p>
+Each type of part has a graphical representation in the Design window that can
+be turned on or off and otherwise altered in various ways through the <a
+href="#View Settings">View Settings</a> window. Each type of part has a
+characteristic color scheme as well. The color scheme and possibilities for
+graphical display of each type of part are described below in the <a
+href="#View Settings">View Settings</a> window section.
+</p>
+<p>
+Figures W-1 to W-4 show four views of a typical window that display all of the
+different parts. These images are taken from the Mac version of
+<em>TreeMaker</em>, but other platforms should look similar.
+</p>
+<p>
+Figure W-1 shows a design window after a tree has been defined in Design View.
+The visible objects include the nodes and edges of the tree; the paths that
+form the convex hull of the leaf nodes of the tree; and circles around each
+leaf node that indicate the minimum amount of paper needed to fold the flaps
+corresponding to the edges incident on each leaf node. (These are the circles
+used in "circle packing" origami design.)
+</p>
+<p align="center">
+  <img src="windows_design_1.png" alt=""><br>
+  <b>Figure W-1.</b>
+</p>
+<p>
+Figure W-2 shows a design window after the tree has been optimized, also in
+Design View. Optimization finds the positions of the nodes (and their
+corresponding crease pattern vertices) that maximizes the size of the resulting
+base.
+</p>
+<p align="center">
+  <img src="windows_design_2.png" alt=""><br>
+  <b>Figure W-2.</b> 
+</p>
+<p>
+Figure W-3 shows a design window after the crease pattern has been constructed,
+again in Design View. Visible are nodes, edges, paths, vertices, and creases,
+the latter drawn in "AGRH" style. The crease pattern is constructed from the
+node positions found in optimization.
+</p>
+<p align="center">
+  <img src="windows_design_3.png" alt=""><br>
+  <b>Figure W-3.</b> 
+</p>
+<p>
+Figure W-4 shows the same design window after the crease pattern has been
+constructed, now in Plan View. Visible are vertices and creases, with mountain,
+valley, and unfolded creases identified, and coordinates given for the vertices.
+</p>
+<p align="center">
+  <img src="windows_design_4.png" alt=""><br>
+  <b>Figure W-4.</b>
+</p>
+<p>
+These are many different ways of viewing the same design. As is shown in the
+next section, you can use the <b>View->Show View Settings/Hide View
+Settings</b> command to select which parts are shown and how they are shown.
+</p>
+<p>
+The bottom of the Design window shows the scale of the current design. The
+scale is the relationship between one edge unit and the size of the paper, and
+is a measure of how large the folded shape will be relative to the size of the
+paper. The rest of the window shows all the parts.
+</p>
+<p>
+The collection of nodes and edges, which specifies the structure of the desired
+base, is known as a <em>tree</em>. Lines between pairs of nodes on the paper
+are <em>paths</em>. There is a path between most pairs of nodes, but most paths
+are not shown most of the time (or in the windows above). Groups of certain
+paths form larger-scale structures called <em>polys</em> ("poly" is short for
+"polygon" and I'll use the two terms more or less interchangeably). Each poly
+contains a portion of the overall crease pattern. The crease pattern is made up
+of <em>vertices</em>, <em>creases</em>, and <em>facets</em>. The design of an
+origami base is accomplished in three steps:
+</p>
+<ol>
+  <li>
+    Construction of a tree and specification of the desired attributes of the
+    base. This is done by you using various editing tools.
+  </li>
+  <li>
+    Placement of the nodes in a valid configuration. This is computed by
+    <em>TreeMaker</em>, using a process of optimization, which you can control
+    by various settings and conditions. The node positions form the "skeleton"
+    of the crease pattern.
+  </li>
+  <li>
+    Construction of the polys, vertices, and creases, forming the crease
+    pattern for the base. This is also computed by <em>TreeMaker</em>.
+  </li>
+</ol>
+<p>
+What parts are shown and how they are shown in the main window can be altered
+with the <b>View->Show View Settings/Hide View Settings</b> menu command. There
+are four predefined combinations of view settings that may be set from the
+<b>View</b> menu:
+</p>
+<ul>
+  <li>
+    Tree View --- this view shows only the tree: nodes, edges, and conditions
+    upon them.
+  </li>
+  <li>
+    Design View --- this is the standard view, which is typically used when
+    constructing the tree. It shows the tree and conditions, and if a crease
+    pattern is present, overlays the crease pattern on top of the tree.
+  </li>
+  <li>
+    Creases View --- this shows just the crease pattern with creases shown as
+    mountain or valley folds.
+  </li>
+  <li>
+    Plan View --- this is the same as Creases View, but with the addition
+    that coordinates of some of the vertices are shown. This is particularly
+    useful for transferring a crease pattern to another sheet of paper by
+    measuring and marking and/or for constructing folding sequences using a
+    tool like <em>ReferenceFinder</em>.
+  </li>
+</ul>
+<p>
+Other combinations of settings are posible by going to the <a 
+href="#View Settings">View Settings</a> window, see below.
+</p>
+<p>
+When the document is printed, the first page of the printout will contain
+whatever is in the main design window: the tree, a partially-optimized tree, or
+the completed crease pattern.
+</p>
+
+<h3>Creating a new Tree</h3>
+<p>
+When a window is first opened, it will be in Default View showing a blank
+square, as shown in Figure W-5.
+</p>
+<p align="center">
+  <img src="windows_design_5.png" alt=""><br>
+  <b>Figure W-5.</b> Initial window for a newly-created document shows a blank
+  square.
+</p>
+<p>
+You define the tree by pointing and clicking in the square to draw a stick
+figure that defines the topology of the desired origami base. Clicking once in
+the square produces a node at the location of the click, as shown in Figure
+W-6. Leaf nodes (nodes with 0 or 1 incident edge) are shown by default
+surrounded by a circle. When a node is selected it (and its surrounding circle)
+is highlighted, that is, shown with a slightly larger dot/thicker line/darker
+fill than in the unhighlighted case.
+</p>
+<p align="center">
+  <img src="windows_design_6.png" alt=""><br>
+  <b>Figure W-6.</b> Clicking once in the blank square creates a new node.
+</p>
+<p>
+If a single node is highlighted, clicking in another location will add a node
+with an edge connecting the two, as shown in Figure W-7.
+</p>
+<p align="center">
+  <img src="windows_design_7.png" alt=""><br>
+  <b>Figure W-7.</b> When a node is highlighted, clicking somewhere else will
+  add an edge from the highlighted node to the location of the click.
+</p>
+<p>
+When an edge is first created, it will have a default length of 1 unit. As
+already noted, a node with only one edge attached is called a <em>leaf
+node</em>. A node with two or more edges attached is called a <em>branch
+node</em>.
+</p>
+<p>
+In this example, node 2 is selected, so clicking in a new location will create
+another new node and edge as shown in Figure W-8.
+</p>
+<p align="center">
+  <img src="windows_design_8.png" alt=""><br>
+  <b>Figure W-8.</b> Clicking again creates a new leaf node and turns node 2
+  into a branch node.
+</p>
+<p>
+You can add branches to the tree --- a branch is an edge that emanates from a
+branch node --- by selecting the branch node and then clicking elsewhere in the
+square, as shown in Figure W-9.
+</p>
+<p align="center">
+  <img src="windows_design_9.png" alt=""><br>
+  <b>Figure W-9.</b> A tree with three leaf nodes and one branch node.
+</p>
+<p>
+You can select any visible part in the design window by clicking on the part.
+You can select more than one part at a time and more than one type of part.
+By holding down the shift and/or modifier keys as you click, you can change
+the selection:
+</p>
+<ul>
+  <li>
+    Clicking on a part (with no modifiers) makes it the current selection;
+  </li>
+  <li>
+    Clicking on an unselected part while holding the shift key down adds it to
+    the current selection;
+  </li>
+  <li>
+    Clicking on a selected part while holding the shift key down removes it from
+    the current selection;
+  </li>
+</ul>
+<p>
+An exception to the above comes when you add a node by clicking: if you hold
+down the modifier key (Option on Mac, Alt on Windows, Alt or Control on Linux)
+while clicking to add a node, the currently selected node is left unchanged.
+In this way you can repeatedly add new nodes and edges to the same selected
+node.
+</p>
+<p>
+Between every two tree nodes is a line called a <em>path</em>. Most of the
+time, paths are invisible. However, once a third node has been created, the
+paths that form the convex hull of the nodes (called <em>border paths</em>)
+will be visibly outlined as shown in Figure W-9.
+</p>
+<p>
+Each edge of the tree corresponds to a flap of the base. The connections
+between edges specify the way the flaps are connected. By repeatedly selecting
+nodes and clicking, you can build up arbitrarily complex trees with any number
+and arrangement of edges, which will specify a tree of the same complexity.
+</p>
+<p>
+To remove a node or edge, simply select it  by clicking on it and do one of the
+following:
+</p>
+<ul>
+  <li>
+    Select the <b>Edit->Cut</b> command
+  </li>
+  <li>
+    Select the <b>Edit->Clear</b> command
+  </li>
+  <li>
+    Hit the backspace, delete or forward delete key
+  </li>
+</ul>
+<p>
+For information about how to edit attributes of nodes and edges, read on.
+Editing can happen in three ways: 
+</p>
+<ul>
+  <li>
+    Selecting commands from the menu (or their keyboard equivalents);
+  </li>
+  <li>
+    Clicking and dragging nodes and/or edges in the Design window;
+  </li>
+  <li>
+    Editing the attributes of parts in the Inspector window.
+  </li>
+</ul>
+<p>
+This last is the topic of the next section.
+</p>
+
+
+
+
+
+<h2><a name="Inspector">Inspector Window</a></h2>
+<p>
+The <b>Inspector</b> window is a floating window that displays attributes of
+the currently-selected part, or if no part is selected, attributes of the tree.
+If multiple parts are selected, the <b>Inspector</b> shows how many of each
+type of part there are in the selection. All parts (nodes, edges, paths, polys,
+vertices, and creases) have attributes associated with them. Some are numerical
+settings; some describe relationships to other parts. The <b>Inspector</b>
+window is toggled on and off with the <b>View->Show Inspector/Hide
+Inspector</b> command.
+</p>
+<p>
+There is only one <b>Inspector</b>; it always displays information for the
+active design window. The <b>Inspector</b> displays attributes of the tree or
+a part of the tree. Some of the part attributes are user-editable; others are
+computed by <em>TreeMaker</em>.
+</p>
+<p>
+The <b>Inspector</b> displays different panels depending on what object or
+objects are selected in the <b>Design View</b> window. The panels are:
+</p>
+<ul>
+  <li><a href="#Tree Panel">Tree Panel</a></li>
+  <li><a href="#Node Panel">Node Panel</a></li>
+  <li><a href="#Edge Panel">Edge Panel</a></li>
+  <li><a href="#Path Panel">Path Panel</a></li>
+  <li><a href="#Poly Panel">Poly Panel</a></li>
+  <li><a href="#Condition Panel">Condition Panel</a> (several types)</li>
+  <li><a href="#Vertex Panel">Vertex Panel</a></li>
+  <li><a href="#Crease Panel">Crease Panel</a></li>
+  <li><a href="#Facet Panel">Facet Panel</a></li>
+  <li><a href="#Group Panel">Group Panel</a></li>
+</ul>
+<p>
+The fields of the various inspector panels are described in the following
+sections.
+</p>
+
+<h3>Inspector: <a name="Tree Panel">Tree Panel</a></h3>
+<p align="center">
+  <img src="windows_inspector_tree.png" alt=""><br>
+  <b>Figure W-10.</b> The Tree panel displays settings that affect the entire
+  tree.
+</p>
+<p>
+The Tree panel is shown when nothing is selected. The settings are:
+</p>
+<ul>
+  <li>
+    Paper Width --- the desired width of the paper in dimensionless units. This
+    is typically 1.0.
+  </li>
+  <li>
+    Paper Height --- the desired height of the paper in dimensionless units.
+    This is typically 1.0. For rectangular paper, you can change either the
+    width or the height.
+  </li>
+  <li>
+    Scale --- the length of a tree unit on the square. That is, a 1-unit edge
+    will have this length relative to the paper. You can edit this value, but
+    it is usually found by <em>TreeMaker</em> as part of an optimization.
+  </li>
+  <li>
+    Symmetry --- Turns on mirror symmetry for the paper. There are two
+    predefined symmetry settings: "diag" symmetry makes a design symmetrical
+    along the diagonal of the square, while "book" symmetry creates a symmetry
+    line that runs vertically. You can also choose other symmetry lines by
+    editing the next three parameters, which set the symmetry angle and
+    identify a single point on the line of symmetry. Note that turning on this
+    setting this merely defines a line of symmetry; you must still create
+    conditions to force nodes or pairs of nodes to obey symmetric relationships.
+  <ul>
+    <li>
+      X --- Set the <em>x</em>-coordinate of a point on the line of
+      symmetry.
+    </li>
+    <li>
+      Y --- Set the <em>y</em>-coordinate of a point on the line of
+      symmetry.
+    </li>
+    <li>
+      Angle --- Set the angle of the line of symmetry (in degrees
+      counterclockwise from the <em>x</em>-axis).
+    </li>
+  </ul>
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+  <li>
+    Conditions --- This listbox displays all conditions that have been set on
+    nodes, edges, paths, or combinations thereof. A condition can be edited by
+    double-clicking on its entry in this list.
+  </li>
+</ul>
+
+<h3>Inspector: <a name="Node Panel">Node Panel</a></h3>
+<p align="center">
+  <img src="windows_inspector_node.png" alt=""><br>
+  <b>Figure W-11.</b> The Node panel displays attributes of a selected node.
+</p>
+<p>
+A node is identified by its index. The attributes shown in the Node panel are:
+</p>
+<ul>
+  <li>
+    Node Index --- Every part has an index; indices are numbered consecutively
+    from 1. Parts can be referenced by their index. The node with index 1 has a
+    special role: it is the <em>root node</em>, which defines the orientation
+    of the flaps in the folded base. (The root node corresponds to the tip of
+    the uppermost flap in the folded form.) If you change the index of a node
+    in this panel, other nodes will be renumbered accordingly.
+  </li>
+ <li>
+    X --- The <em>x</em> coordinate of the node. If this node is a leaf node,
+    its coordinates will be used for the coordinates of its corresponding
+    vertex. In other words, the tip of the flap that corresponds to the tree
+    edge incident to a leaf node comes from the point on the paper where that
+    node is located. Only leaf nodes' position is significant; the location of
+    a branch node has no effect, and you can move branch nodes around for best
+    visibility. <em>TreeMaker</em> optimization will usually find the positions
+    of the leaf nodes, but you can also set any node's position using this
+    panel or by clicking and dragging.
+  </li>
+  <li>
+    Y --- The <em>y</em> coordinate of the node.
+  </li>
+  <li>
+    Label --- This is an optional text label that you can put on a node to
+    indicate what part of the subject it represents, e.g., "head," "tail,"
+    "left leg," etc.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+  <li>
+    Conditions --- This listbox displays all conditions that have been set on
+    this node. A condition can be edited by double-clicking on its entry in
+    this list.
+  </li>
+</ul>
+
+<h3>Inspector: <a name="Edge Panel">Edge Panel</a></h3>
+<p align="center">
+  <img src="windows_inspector_edge.png" alt=""><br>
+  <b>Figure W-12.</b> The Edge panel displays attributes of a selected edge.
+</p>
+<p>
+An edge is identified by its index. The attributes shown in the Edge panel are:
+</p>
+<ul>
+  <li>
+    Edge Index --- the index of the edge. The value has no effect; it is only
+    for reference.
+  </li>
+  <li>
+    Length --- the desired length of the associated flap, in tree units. The
+    actual length of the flap relative to the paper will be the product of the
+    strained length (see below) with the tree scale.
+  </li>
+  <li>
+    Strain --- a deviation from the desired length. Zero strain makes the edge
+    (and its associated flap) length equal to the value set in the length box.
+    If the strain is greater than 1, the flap will be longer; if less than 1,
+    it will be shorter. Some forms of optimization vary the strain in order to
+    satisfy additional conditions you may put on the tree.
+  </li>
+  <li>
+    Stiffness --- a measure of the resistance of an edge to strain. Larger
+    values of stiffness will force the strain to be small relative to other
+    edges with lower stiffness.
+  </li>
+  <li>
+    Label --- This is an optional text label that you can put on an edge to
+    indicate what part of the subject it represents, e.g., "head," "tail,"
+    "left leg," etc.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+  <li>
+    Conditions --- This listbox displays all conditions that have been set on
+    this edge. A condition can be edited by double-clicking on its entry in
+    this list.
+  </li>
+</ul>
+
+<h3>Inspector: <a name="Path Panel">Path Panel</a></h3>
+<p align="center">
+  <img src="windows_inspector_path.png" alt=""><br>
+  <b>Figure W-13.</b> The Path panel displays attributes of a selected path.
+</p>
+<p>
+A path is identified by its index and by the two nodes that the path
+connects. The attributes shown in the Path panel are:
+</p>
+<ul>
+  <li>
+    Min Tree Length --- the minimum length of this path as measured on the tree.
+    This is the sum of the strained lengths of all edges in the path.
+  </li>
+  <li>
+    Act Tree Length --- the actual length of this path as measured on the paper,
+    scaled to the tree. If the actual length is greater than or equal to the
+    minimum length, the path is said to be <em>feasible</em>. If the two
+    lengths are equal, the path is said to be <em>active</em>.
+  </li>
+  <li>
+    Path Angle --- the angle that this path makes relative to the <em>x</em> axis.
+  </li>
+  <li>
+    Conditions --- This listbox displays all conditions that have been set on
+    this path. A condition can be edited by double-clicking on its entry in
+    this list.
+  </li>
+</ul>
+<p>
+None of the attributes of a path are editable; they are all set by
+<em>TreeMaker</em>.
+</p>
+  
+<h3>Inspector: <a name="Poly Panel">Poly Panel</a></h3>
+<p align="center">
+  <img src="windows_inspector_poly.png" alt=""><br>
+  <b>Figure W-14.</b>The Poly panel displays attributes of a selected poly.
+</p>
+<p>
+A poly is identified by its index. The attributes shown in the Poly panel are:
+</p>
+<ul>
+  <li>
+    Centroid --- the coordinates of the "center of mass" of this poly. This is
+    also where its dot is shown when that is enabled in the <a 
+    href="#View Settings">View Settings</a> window.
+  </li>
+  <li>
+    Ring Nodes --- the indices of the leaf nodes that are the corners of this
+    poly, given in counterclockwise order.
+  </li>
+  <li>
+    Ring Paths --- the indices of the paths that form the boundary of this
+    poly, given in counterclockwise order.
+  </li>
+</ul>
+<p>
+None of the attributes of a poly are editable; they are all set by
+<em>TreeMaker</em>.
+</p>
+
+<h3>Inspector: <a name="Condition Panel">Condition Panel</a></h3>
+<p>
+The Condition panel displays attributes of a selected condition. There are
+several different condition panels, one for each type of condition. They are:
+</p>
+  <ul>
+    <li>
+      <a href="#Condition Node Fixed Panel">
+        Condition Node Fixed Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Node Symmetric (v4) Panel">
+        Condition Node Symmetric (v4) Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Node On Edge (v4) Panel">
+        Condition Node On Edge (v4) Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Node On Corner (v4) Panel">
+        Condition Node On Corner (v4) Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Node Fixed (v4) Panel">
+        Condition Node Fixed (v4) Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Nodes Paired Panel">
+        Condition Nodes Paired Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Nodes Collinear Panel">
+        Condition Nodes Collinear Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Edge Length Fixed Panel">
+        Condition Edge Length Fixed Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Edges Same Strain Panel">
+        Condition Edges Same Strain Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Path Active Panel">
+        Condition Path Active Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Path Active (v4) Panel">
+        Condition Path Active (v4) Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Path Angle Fixed (v4) Panel">
+        Condition Path Angle Fixed (v4) Panel</a>
+    </li>
+    <li>
+      <a href="#Condition Path Angle Quantized (v4) Panel">
+    Condition Path Angle Quantized (v4) Panel</a>
+    </li>
+   </ul>
+<p>
+A condition is identified by its index. All condition panels display the index
+of the condition and whether or not the condition is currently feasible. The
+panels for the individual types of conditions display additional information
+specific to the type of condition, described below.
+</p>
+
+<h4>Inspector: <a name="Condition Node Fixed Panel">
+  Condition Node Fixed Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_node_combo.png" alt=""><br>
+  <b>Figure W-15.</b> The Condition Node Fixed Panel displays attributes
+  of a Node Fixed condition.
+</p>
+<p>
+The Node Fixed condition lets you constrain the position of a node in one
+of several different ways. The attributes shown in the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    Node --- the index of the node that this condition applies to. It will only
+    have an effect if the node is a leaf node.
+  </li>
+  <li>
+    fFixed to Symmetry Line --- check this box to constrain the node to lie on
+    the line of symmetry. It will only have an effect if you have checked the
+    "symmetry" checkbox in the tree inspector. Note that this condition puts
+    the node <em>on</em> the line of symmetry; to make the node symmetrically
+    paired with another node, use the Nodes Paired condition, see below.
+  </li>
+  <li>
+    Fixed to Paper Edge --- check this box to constrain the node to lie on any
+    of the four edges of the paper. The condition is satisfied no matter which
+    edge the node lies on. To constrain it to a particular edge, use the X or Y
+    coordinate fixed checkboxes.
+  </li>
+  <li>
+    Fixed to Paper Corner --- check this box to constrain the node to lie on any
+    of the four corners of the paper.
+  </li>
+  <li>
+    X Fixed to --- check this box to constrain the <em>x</em> coordinate
+    of the node. The box contains the value it is fixed to, which should lie
+    within the paper.
+  </li>
+  <li>
+    Y Fixed to --- check this box to constrain the <em>y</em> coordinate
+    of the node. The box contains the value it is fixed to, which should lie
+    within the paper.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+<p>
+The Node Fixed condition replaces the next 4 conditions in this list, which
+have been deprecated. <em>TreeMaker</em> will read version 4 files that contain
+the old conditions, but you can only create Node Fixed conditions, which
+combine the functionality of the version 4 conditions. 
+</p>
+<p>
+Note that it is quite possible to create inconsistent conditions: for example,
+checking "fixed to paper corner" and "x coordinate fixed" with a value of 0.5.
+If you set inconsistent conditions, <em>TreeMaker</em> will not find a solution.
+It is up to you to avoid creating combinations of conditions that
+are impossible to satisfy.
+</p>
+
+<h4>Inspector: <a name="Condition Node Symmetric (v4) Panel">
+  Condition Node Symmetric (v4) Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_node_symmetric_v4.png" alt=""><br>
+  <b>Figure W-16.</b> The Condition Node Symmetric Panel displays attributes of
+  a Node Symmetric condition.
+</p>
+<p>
+The Node Symmetric condition lets you constrain the position of a node to lie
+on the line of symmetry. The attributes shown in the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    Node --- the index of the node that this condition applies to. It will only
+    have an effect if the node is a leaf node.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+<p>
+This condition has been deprecated; you should use the Node Fixed
+condition in new designs.
+</p>
+
+<h4>Inspector: <a name="Condition Node On Edge (v4) Panel">
+  Condition Node On Edge (v4) Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_node_on_edge_v4.png" alt=""><br>
+  <b>Figure W-17.</b> The Condition Node On Edge Panel displays attributes of a
+  Node on Edge condition.
+</p>
+<p>
+The Node on Edge condition lets you constrain the position of a node to lie on
+the edge of the paper (any edge will do). The attributes shown in the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    Node --- the index of the node that this condition applies to. It will only
+    have an effect if the node is a leaf node.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+<p>
+This condition has been deprecated; you should use the Node Fixed
+condition in new designs.
+</p>
+
+<h4>Inspector: <a name="Condition Node On Corner (v4) Panel">
+  Condition Node On Corner (v4) Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_node_on_corner_v4.png" alt=""><br>
+  <b>Figure W-18.</b> The Condition Node On Corner (v4) Panel displays
+  attributes of a Node on Corner condition.
+</p>
+<p>
+The Node on Corner condition lets you constrain the position of a node to lie
+on one of the four corners of the paper. The attributes shown in the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    Node --- the index of the node that this condition applies to. It will only
+    have an effect if the node is a leaf node.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+<p>
+This condition has been deprecated; you should use the Node Fixed
+condition in new designs.
+</p>
+
+<h4>Inspector: <a name="Condition Node Fixed (v4) Panel">
+  Condition Node Fixed (v4) Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_node_fixed_v4.png" alt=""><br>
+  <b>Figure W-19.</b> The Condition Node Fixed (v4) Panel displays attributes
+  of a Node Position Fixed condition.
+</p>
+<p>
+The Node Position Fixed condition lets you constrain the X and/or Y coordinate
+of a node to a fixed value. The attributes shown in the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    Node --- the index of the node that this condition applies to. It will only
+    have an effect if the node is a leaf node.
+  </li>
+  <li>
+    X Fixed to --- check this box to constrain the <em>x</em> coordinate
+    of the node. The box contains the value it is fixed to.
+  </li>
+  <li>
+    Y Fixed to --- check this box to constrain the <em>y</em> coordinate
+    of the node. The box contains the value it is fixed to.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+<p>
+This condition has been deprecated; you should use the Node Fixed
+condition in new designs.
+</p>
+
+<h4>Inspector: <a name="Condition Nodes Paired Panel">
+  Condition Nodes Paired Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_nodes_paired.png" alt=""><br>
+  <b>Figure W-20.</b> The Condition Nodes Paired Panel displays attributes of a
+  Nodes Paired condition.
+</p>
+<p>
+The Nodes Paired condition lets you constrain two nodes to be mirror images of
+one another about the line of symmetry. This condition only takes effect if the
+"Symmetry" checkbox is checked in the tree inspector. The attributes shown in
+the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    Node 1 --- the index of one of the nodes that this condition applies to. It
+    will only have an effect if the node is a leaf node.
+  </li>
+  <li>
+    Node 2 --- the index of the other node that this condition applies to. It
+    will only have an effect if the node is a leaf node.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+
+<h4>Inspector: <a name="Condition Nodes Collinear Panel">
+  Condition Nodes Collinear Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_nodes_collinear.png" alt=""><br>
+  <b>Figure W-21.</b> The Condition Nodes Collinear Panel displays attributes
+  of a Nodes Collinear condition.
+</p>
+<p>
+The Nodes Collinear condition lets you constrain three nodes to lie in a
+straight line. The attributes shown in the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    Node 1 --- the index of one of the nodes that this condition applies to. It
+    will only have an effect if the node is a leaf node.
+  </li>
+  <li>
+    Node 2 --- the index of the second node that this condition applies to. It
+    will only have an effect if the node is a leaf node.
+  </li>
+  <li>
+    Node 3 --- the index of the third node that this condition applies to. It
+    will only have an effect if the node is a leaf node.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+<p>
+The three nodes must be distinct leaf nodes of the tree.
+</p>
+<p>
+By setting multiple such conditions, you can constrain more than three nodes to
+lie in a single line. 
+</p>
+
+<h4>Inspector: <a name="Condition Edge Length Fixed Panel">
+  Condition Edge Length Fixed Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_edge_length_fixed.png" alt=""><br>
+  <b>Figure W-22.</b> The Condition Edge Length Fixed Panel displays attributes
+  of an Edge Length Fixed condition.
+</p>
+<p>
+The Edge Length Fixed condition lets you constrain an edge to a fixed length,
+i.e., constrain its strain to be zero. The attributes shown in the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    Edge --- the index of the edge that this condition applies to.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+
+<h4>Inspector: <a name="Condition Edges Same Strain Panel">
+  Condition Edges Same Strain Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_edges_same_strain.png" alt=""><br>
+  <b>Figure W-23.</b> The Condition Edges Same Strain Panel displays attributes
+  of an edges same strain condition.
+</p>
+<p>
+The edges same strain condition lets you constrain two edges to have the same
+strain when performing a strain optimization. The attributes shown in the panel
+are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    Edge 1 --- the index of one of the edges that this condition applies to.
+  </li>
+  <li>
+    Edge 2 --- the index of the other edge that this condition applies to.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+
+<p>
+By setting multiple such conditions, you can constrain more than two edges to
+all have the same strain.
+</p>
+
+<h4>Inspector: <a name="Condition Path Active Panel">
+  Condition Path Active Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_path_combo.png" alt=""><br>
+  <b>Figure W-24.</b> The Condition Path Active Panel displays attributes of a
+  Path Active condition.
+</p>
+<p>
+The Path Active condition lets you constrain the positions of two nodes so that
+the path between them is active (and therefore forms an axial crease in the
+base). You can also specify additional constraints, forcing the path angle to
+be quantized (one of a set of discrete values) or a fixed value.
+</p>
+<p>
+The attributes shown in the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    From Node --- the index of one of the nodes that this condition applies to.
+  </li>
+  <li>
+    To Node --- the index of the other node that this condition applies to.
+  </li>
+  <li>
+    Path Constraints --- these radio buttons let you choose whether to apply
+    additional constraints on the path angle:
+    <ul>
+      <li>
+        Active Only --- forces the path to be active, but sets no constraint on
+        path angle.
+      </li>
+      <li>
+        Angle Fixed --- forces the path to be active and forces its angle to a
+        particular value, set in the Fix Angle text box.
+      </li>
+      <li>
+        Angle Quantized --- forces the path to be active and forces its angle
+        to take on a discrete value specified by the numbers in the
+        Quantization and Offset text boxes.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Fix Angle --- if the Angle Fixed button is selected, this specifies the
+    angle of the path, measured with respect to the <em>x</em> axis.
+  </li>
+  <li>
+    Quantization --- if the Angle Quantized button is selected, this specifies
+    the number of divisions of the full circle for angle quantization.
+  </li>
+  <li>
+    Offset --- if the Angle Quantized button is selected, this specifies
+    the offset angle of the angle quantization, measured with respect to the
+    <em>x</em> axis.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+<p>
+Fixing the path angle and angle quantization are useful in forcing the crease
+pattern to be more symmetric (and thus more easily foldable). The quantization
+is defined as an integral division of 360 degrees; for example, for a path with
+quantization of 4, the allowable angles would be separated by 90 degrees. The
+offset specifies how the entire pattern is offset from the <em>x</em> axis. For
+example, with an offset of 45 degrees, the allowed angles would be 45, 135,
+-135, and -45 degrees. 
+</p>
+<p>
+If you use very many of these conditions, it is likely that the problem
+will be over-constrained for simple optimization. More commonly, you will first
+perform a simple optimization, then set a range of path active conditions and
+perform a strain optimization to find the set of edge lengths that satisfies
+all of the path activity conditions. 
+</p>
+<p>
+The path quantization condition should be used carefully. If you set
+path quantization conditions on every active path in a pattern and don't use
+the same quantization number and offset for every path, it may be impossible
+to satisfy the conditions for any set of path angles, leading to a failure of
+convergence.
+</p>
+<p>
+In general, you should pick an even integer for the quantization. If you set
+the quantization to an odd value, then be aware that the angle of a path depends
+on which endpoint comes first in the definition of the path, so a path that
+satisfies an odd quantization condition will not if its endpoints are reversed.
+Make sure you really understand what you're doing before you try to apply an odd
+quantization.
+</p>
+<p>
+The Path Active condition replaces the next 3 conditions in this list, which
+have been deprecated. <em>TreeMaker</em> will read version 4 files that contain
+the old conditions, but you can only create Path Active conditions, which
+combine the functionality of the version 4 conditions.
+</p>
+
+<h4>Inspector: <a name="Condition Path Active (v4) Panel">
+  Condition Path Active (v4) Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_path_active_v4.png" alt=""><br>
+  <b>Figure W-24.</b> The Condition Path Active (v4) Panel displays attributes
+  of a Path Active (v4) condition.
+</p>
+<p>
+The Path Active (v4) condition lets you constrain the positions of two nodes so
+that the path between them is active (and therefore forms an axial crease in
+the base). It does not set any constraint on the path angle.
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    From Node --- the index of one of the nodes that this condition applies to.
+  </li>
+  <li>
+    To Node --- the index of the other node that this condition applies to.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+<p>
+This condition has been deprecated; you should use the Path Active
+condition in new designs.
+</p>
+
+<h4>Inspector: <a name="Condition Path Angle Fixed (v4) Panel">
+  Condition Path Angle Fixed (v4) Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_path_angle_fixed_v4.png" alt=""><br>
+  <b>Figure W-25.</b> The Condition Path Angle Fixed (v4) Panel displays attributes
+  of a Path Angle Fixed (v4) condition.
+</p>
+<p>
+The Path Angle Fixed (v4) condition lets you constrain the positions of two nodes so
+that the path between them is active <em>and</em> runs at a specified angle.
+This is useful in forcing the crease pattern to be more symmetric (and thus
+more easily foldable). The attributes shown in the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    From Node --- the index of one of the nodes that this condition applies to.
+  </li>
+  <li>
+    To Node --- the index of the other node that this condition applies to.
+  </li>
+  <li>
+    Angle --- the desired angle, measured with respect to the <em>x</em> axis.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+<p>
+This condition has been deprecated; you should use the Path Active
+condition in new designs.
+</p>
+
+<h4>Inspector: <a name="Condition Path Angle Quantized (v4) Panel">
+  Condition Path Angle Quantized (v4) Panel</a></h4>
+<p align="center">
+  <img src="windows_inspector_condition_path_angle_quantized_v4.png" alt=""><br>
+  <b>Figure W-26.</b> The Condition Path Quantized Fixed (v4) Panel displays
+  attributes of a Path Angle Quantized (v4) condition.
+</p>
+<p>
+The Path Angle Quantized (v4) condition lets you constrain the positions of two
+nodes so that the path between them is active <em>and</em> runs at some
+multiple of a specified angle. The attributes shown in the panel are:
+</p>
+<ul>
+  <li>
+    Condition Index --- the index of the condition.
+  </li>
+  <li>
+    From Node --- the index of one of the nodes that this condition applies to.
+  </li>
+  <li>
+    To Node --- the index of the other node that this condition applies to.
+  </li>
+  <li>
+    Quantization --- the number of discrete divisions of the circle.
+  </li>
+  <li>
+    Offset --- the offset of the quantization angle in degrees, measured with
+    respect to the <em>x</em> axis.
+  </li>
+  <li>
+    Apply --- This button applies any changes you have made in the panel to the
+    tree. Changes are also applied when you hit the Enter key.
+  </li>
+</ul>
+<p>
+This condition has been deprecated; you should use the Path Active
+condition in new designs.
+</p>
+
+<h3>Inspector: <a name="Vertex Panel">Vertex Panel</a></h3>
+<p align="center">
+  <img src="windows_inspector_vertex.png" alt=""><br>
+  <b>Figure W-27.</b> The Vertex panel displays attributes of a selected
+  vertex. 
+</p>
+<p>
+A vertex is identified by its index. The attributes shown in the Vertex panel
+are:
+</p>
+<ul>
+  <li>
+    Location --- the coordinates of the vertex.
+  </li>
+</ul>
+<p>
+None of the attributes of a vertex are editable; they are all set by
+<em>TreeMaker</em>.
+</p>
+
+<h3>Inspector: <a name="Crease Panel">Crease Panel</a></h3>
+<p align="center">
+  <img src="windows_inspector_crease.png" alt=""><br>
+  <b>Figure W-28.</b> The Crease panel displays attributes of a selected
+  crease. 
+</p>
+<p>
+A crease is identified by its index and by the indices of the two vertices
+at each end of the crease. The attributes shown in the Crease panel are:
+</p>
+<ul>
+  <li>
+    Kind --- the structural role played by the crease within the crease pattern:
+    one of axial, gusset, ridge, folded hinge, unfolded hinge, or pseudohinge.
+  </li>
+  <li>
+    Fold --- the fold status of the crease within the crease pattern: one of
+    mountain, valley, flat (unfolded), or border (on the boundary of the
+    creased region).
+  </li>
+  <li>
+    Crease Angle --- the angle of the crease in degrees relative to the
+    <em>x</em> axis.
+  </li>
+</ul>
+<p>
+None of the attributes of a crease are editable; they are all set by
+<em>TreeMaker</em>.
+</p>
+
+<h3>Inspector: <a name="Facet Panel">Facet Panel</a></h3>
+<p align="center">
+  <img src="windows_inspector_facet.png" alt=""><br>
+  <b>Figure W-29.</b> The Facet panel displays attributes of a selected facet.
+</p>
+<p>
+A facet is identified by its index. The attributes shown in the Facet panel
+are:
+</p>
+<ul>
+  <li>
+    Color --- whether the white or colored side of the paper is facing up in the
+    folded form.
+  </li>
+  <li>
+    Centroid --- the coordinates of the centroid (center of mass) of the facet.
+  </li>
+  <li>
+    Vertices --- the indices of the vertices that are the corners of this
+    facet, taken in counterclockwise order.
+  </li>
+  <li>
+    Creases --- the indices of the creases that are the sides of this facet,
+    taken in counterclockwise order.
+  </li>
+</ul>
+<p>
+None of the attributes of a facet are editable; they are all set by
+<em>TreeMaker</em>.
+</p>
+
+<h3>Inspector: <a name="Group Panel">Group Panel</a></h3>
+<p align="center">
+  <img src="windows_inspector_group.png" alt=""><br>
+  <b>Figure W-30.</b> The Group Panel is displayed when you have multiple parts
+  selected.
+</p>
+<p>
+The Group Panel is displayed when you have selected multiple parts. It shows
+the number of each type of part selected and the indices of the selected parts.
+</p>
+
+
+<h2><a name="Folded Form">Folded Form Window</a></h2>
+<p>
+The Folded Form window is a floating window that displays a silhouette of the
+folded form if a crease pattern has been fully computed. If the crease pattern
+is not fully computed, this window will show nothing. The Folded Form window is
+toggled on and off with the <b>View->Show Folded Form/Hide Folded Form</b> command.
+</p>
+<p align="center">
+  <img src="windows_folded_form.png" alt=""><br>
+  <b>Figure W-31.</b> The Folded Form window displays a silhouette of the
+  folded form of the base computed by <em>TreeMaker</em>.
+</p>
+<p>
+The Folded Form window shows the folded form as an x-ray view; that is, all
+creases are shown, even if they would be hidden by layers of paper. All creases
+are shown with AGRH coloring; that is, axial creases are shown in black, gusset
+creases in gray, ridge creases in red, and hinge creases in blue.
+</p>
+<p>
+It always shows the entire base; if you resize the window, the image scales to
+fill the window. So the size of the folded form image is generally not related
+to the size of the crease pattern image.
+</p>
+<p>
+The Folded Form window is for display only; clicking in it will do nothing.
+However, if you select a vertex, crease, or facet in the main window, it will
+be shown highlighted in the folded form window. Furthermore, if you select an
+edge of the tree in the main window, its corresponding flap (consisting of all
+associated facets) will be highlighted in the Folded Form window.
+</p>
+<p>
+When the document is printed, the second page of the printout will contain an
+image of the folded form, if the folded form exists and the Folded Form window
+is shown. If the Folded Form window is hidden, only the Design window will be
+printed.
+</p>
+
+<h2><a name="View Settings">View Settings Window</a></h2>
+<p>
+The <b>View Settings</b> window is a floating window that controls the display
+of parts in the main window. It lets you turn on and off which parts are
+displayed and affects how they are displayed.
+</p>
+<p align="center">
+  <img src="windows_view_settings.png" alt=""><br>
+  <b>Figure W-32.</b> The View Settings window displays various settings that
+  affect what is shown in the Design Window.
+</p>
+<p>
+The View Settings window contains six preset buttons that turn on and off
+various groups of settings, and nine groups of settings that affect how
+individual parts are displayed.
+</p>
+  <ul>
+    <li>
+      <a href="#View Settings Presets">Presets</a>
+    </li>
+    <li>
+      <a href="#View Settings Nodes">Nodes Group</a>
+    </li>
+    <li>
+      <a href="#View Settings Edges">Edges Group</a>
+    </li>
+    <li>
+      <a href="#View Settings Paths">Paths Group</a>
+    </li>
+    <li>
+      <a href="#View Settings Polys">Polys Group</a>
+    </li>
+    <li>
+      <a href="#View Settings Vertices">Vertices Group</a>
+    </li>
+    <li>
+      <a href="#View Settings Creases">Creases Group</a>
+    </li>
+    <li>
+      <a href="#View Settings Facets">Facets Group</a>
+    </li>
+    <li>
+      <a href="#View Settings Conditions">Conditions Group</a>
+    </li>
+    <li>
+      <a href="#View Settings Paper">Paper Group</a>
+    </li>
+  </ul>
+<h3>View Settings: <a name="View Settings Presets">Presets</a></h3>
+<p align="center">
+  <img src="windows_view_settings_presets.png" alt=""><br>
+  <b>Figure W-33.</b> There are six buttons for preset combinations of view
+  settings.
+</p>
+<p>
+There are six preset buttons at the top of the window that turn on and off
+various groups of settings. These presets, and their function, are as follows:
+</p>
+<ul>
+  <li>
+    All --- turns on all view settings. This is usually too busy for any but
+    the simplest of designs.
+  </li>
+  <li>
+    Tree --- turns on just those settings that affect the tree display: nodes,
+    edges, and their associated conditions. This is the most useful setting
+    when you are first putting the tree together.
+    <p align="center">
+      <img src="windows_view_settings_example_tree.png" alt=""><br>
+      <b>Figure W-34.</b> The Design Window with Tree preset view settings.
+    </p>
+  </li>
+  <li>
+    Design --- an all-purpose view, and the default view when the program starts
+    up. This will show selected information about the tree, polys, some paths,
+    and creases, when the crease pattern is constructed. Typically one will
+    work mostly with the design presets turned on, then switch over to crease
+    or plan presets once the crease pattern is fully constructed.
+    <p align="center">
+      <img src="windows_view_settings_example_design.png" alt=""><br>
+      <b>Figure W-35.</b> The Design Window with Design preset view settings.
+    </p>
+  </li>
+  <li>
+    Creases --- shows just the crease pattern.
+    <p align="center">
+      <img src="windows_view_settings_example_creases.png" alt=""><br>
+      <b>Figure W-36.</b> The Design Window with Creases preset view settings.
+    </p>
+  </li>
+  <li>
+    Plan --- shows the crease pattern, plus the coordinates of important
+    vertices. This is the most useful view for transferring a pattern to
+    another sheet by measuring and marking, or for keeping a physical record of
+    a crease pattern.
+    <p align="center">
+      <img src="windows_view_settings_example_plan.png" alt=""><br>
+      <b>Figure W-37.</b> The Design Window with Plan preset view settings.
+    </p>
+  </li>
+  <li>
+    None --- turns off all view settings. This is most useful when you only
+    want to see one or two types of information. Click the None button to turn
+    everything off, then turn on just the objects you want to examine.
+  </li>
+</ul>
+<p>
+Each type of part has a characteristic color scheme and graphical
+representation. The representation of each part and the individual groups of
+settings that affect that representation are described in the following
+sections.
+</p>
+
+<h3>View Settings: <a name="View Settings Nodes">Nodes Group</a></h3>
+<p align="center">
+  <img src="windows_view_settings_nodes.png" alt=""><br>
+  <b>Figure W-38.</b> The Nodes group in the View Settings window.
+</p>
+<p>
+A node represents an endpoint of the initial tree and is drawn as a black dot
+with optional text giving its coordinates and other characteristics.
+</p>
+<p>
+The Nodes group of settings affects how nodes are displayed in the Design
+window. The controls are:
+</p>
+<ul>
+  <li>
+    All --- turns on all settings.
+  </li>
+  <li>
+    None --- turns off all settings.
+  </li>
+  <li>
+    Leaf Nodes --- display leaf nodes, which are tree nodes with one incident
+    edge
+  </li>
+  <li>
+    Branch Nodes --- display branch nodes, which are tree nodes with two or more
+    incident edges
+  </li>
+  <li>
+    Sub Nodes --- display nodes that are not part of the tree but that are
+    constructed in the interior of polys as part of the universal molecule
+    construction, i.e., inset nodes.
+  </li>
+  <li>
+    Dots --- display a dot for each visible node.
+  </li>
+  <li>
+    Circles --- display a circle around each visible leaf node with a radius
+    given by the length of the incident edge. This is the circle that arises in
+    circle-packing.
+  </li>
+  <li>
+    Indices --- show the index of each visible node.
+  </li>
+  <li>
+    Coordinates --- show the <em>x</em> and <em>y</em> coordinates of each
+    visible node.
+  </li>
+  <li>
+    Elevation --- show the elevation of each visible node, which is the distance
+    from the axis in the folded form of its associated vertex.
+  </li>
+  <li>
+    Depth --- show the depth of each visible node, which is the distance along
+    the axis from the root node in the folded form of its associated vertex.
+  </li>
+  <li>
+    Labels --- show the label of each visible node.
+  </li>
+  <li>
+    Flags --- show various flags on each visible node. Each possible flag is
+    indicated by a letter; capital letters indicate a flag that is set, lower
+    case indicates a flag that is unset.
+  </li>
+</ul>
+
+<h3>View Settings: <a name="View Settings Edges">Edges Group</a></h3>
+<p align="center">
+  <img src="windows_view_settings_edges.png" alt=""><br>
+  <b>Figure W-39.</b> The Edges group in the View Settings window.
+</p>
+<p>
+An edge represents a flap in the base and is drawn as a light blue line
+connecting two nodes, along with a dot near its midpoint and optional text
+describing some of its attributes. If an edge is pinned (its length cannot be
+changed without causing a path constraint to be violated), it is drawn in a
+lighter shade of blue.
+</p>
+<p>
+The Edges group of settings affects how edges are displayed in the Design
+window. The controls are:
+</p>
+<ul>
+  <li>
+    All --- turns on all settings.
+  </li>
+  <li>
+    None --- turns off all settings.
+  </li>
+  <li>
+    All Edges --- turns on/off the display of all edges independently of the
+    other settings in this group.
+  </li>
+  <li>
+    Dots --- display a dot on each visible edge.
+  </li>
+  <li>
+    Lines --- display a line for each visible edge connecting its nodes.
+  </li>
+  <li>
+    Indices --- display the index of each visible edge.
+  </li>
+  <li>
+    Lengths --- display the length of each visible edge.
+  </li>
+  <li>
+    Strain --- display the strain and strained length of each visible edge.
+  </li>
+  <li>
+    Labels --- show the label of each visible edge.
+  </li>
+  <li>
+    Flags --- show various flags on each visible edge. Each possible flag is
+    indicated by a letter; capital letters indicate a flag that is set, lower
+    case indicates a flag that is unset.
+  </li>
+</ul>
+
+<h3>View Settings: <a name="View Settings Paths">Paths Group</a></h3>
+<p align="center">
+  <img src="windows_view_settings_paths.png" alt=""><br>
+  <b>Figure W-40.</b> The Paths group in the View Settings window.
+</p>
+<p>
+A path represents a distance relationship between two leaf nodes on the tree
+and their two corresponding vertices on the paper. A path is drawn as a
+straight line connecting the two relevant nodes. There are paths between all
+pairs of leaf and/or branch nodes, but only the leaf paths -- paths between
+leaf nodes -- correspond to meaningful distance relationships.
+</p>
+<p>
+Because there are so many paths, generally only a subset of paths will be
+shown. Paths are drawn in one of three colors:
+</p>
+<ul>
+  <li>
+    Red --- for invalid paths, paths for which the corresponding leaf nodes are
+    too close together;
+  </li>
+  <li>
+    Amber --- for valid paths, paths for which the corresponding leaf nodes are
+    sufficiently far apart;
+  </li>
+  <li>
+    Green --- for active paths, paths for which the corresponding leaf nodes
+    are exactly separated by their minimum distance.
+  </li>
+</ul>
+</p>
+Paths can also be displayed with optional text describing some of their
+attributes including their associated distance condition and various flags.
+<p>
+<p>
+The Paths group of settings affects how paths are displayed in the Design
+window. The controls are:
+</p>
+<ul>
+  <li>
+    All --- turns on all settings.
+  </li>
+  <li>
+    None --- turns off all settings.
+  </li>
+  <li>
+    Leaf Paths --- turns on/off the display of leaf paths, which are tree paths
+    that run between two leaf nodes.
+  </li>
+  <li>
+    Branch Paths --- turns on/off the display of branch paths, which are tree
+    paths that have a branch node at either end.
+  </li>
+  <li>
+    Sub Paths --- turns on/off the display of sub paths, which are paths that
+    have a subnode at either end, i.e., paths that are created as part of the
+    construction of the universal molecule.
+  </li>
+  <li>
+    Active Paths --- turns on the display of active (leaf) paths, independent of
+    other checkboxes.
+  </li>
+  <li>
+    Border Paths --- turns on the display of border paths, i.e., the paths that
+    make up the convex hull of the nodes.
+  </li>
+  <li>
+    Polygon Paths --- turns on the display of polygon paths, which are paths
+    that make up the polygon network (most active paths and border paths).
+  </li>
+  <li>
+    Invalid Paths --- turns on the display of invalid paths, paths whose tree
+    constraints are violated, independent of other checkboxes.
+  </li>
+  <li>
+    Dots --- display a dot on each visible path.
+  </li>
+  <li>
+    Lines --- display a line for each visible path connecting its nodes.
+  </li>
+  <li>
+    Indices --- display the index of each visible path.
+  </li>
+  <li>
+    Lengths --- display the lengths (both minimum and actual) of each visible
+    path.
+  </li>
+  <li>
+    Flags --- show various flags on each visible path. Each possible flag is
+    indicated by a letter; capital letters indicate a flag that is set, lower
+    case indicates a flag that is unset.
+  </li>
+</ul>
+
+<h3>View Settings: <a name="View Settings Polys">Polys Group</a></h3>
+<p align="center">
+  <img src="windows_view_settings_polys.png" alt=""><br>
+  <b>Figure W-41.</b> The Polys group in the View Settings window.
+</p>
+<p>
+A poly represents a universal molecule, i.e., a portion of the crease pattern
+that folds flat with its boundary lying on a single line: the axis, if it is
+a major polygon, or a line parallel to the axis, if it is a sub polygon. A poly
+is drawn as a pale orange polygon, outlined by slightly darker lines and with
+a dark dot at its centroid. The polygon, lines, and/or dot can be individually
+turned on and off with the settings described below.
+</p>
+<p>
+The Polys group of settings affects how polys are displayed in the Design
+window. The controls are:
+</p>
+<ul>
+  <li>
+    All --- turns on all settings.
+  </li>
+  <li>
+    None --- turns off all settings.
+  </li>
+  <li>
+    Tree Polys --- turns on/off the display of tree polygons, each of which
+    contains a single universal molecule.
+  </li>
+  <li>
+    Sub Polys --- turns on/off the display of subpolygons, which are reduced
+    polygons within universal molecules that are part of the recursive
+    construction of the universal molecule.
+  </li>
+  <li>
+    Dots --- display a dot on each visible polygon at its centroid.
+  </li>
+  <li>
+    Lines --- display an outline of each visible polygon.
+  </li>
+  <li>
+    Fills --- display a yellow fill for each visible polygon.
+  </li>
+  <li>
+    Indices --- display the index of each visible polygon.
+  </li>
+  <li>
+    Flags --- show various flags on each visible polygon. Each possible flag is
+    indicated by a letter; capital letters indicate a flag that is set, lower
+    case indicates a flag that is unset.
+  </li>
+</ul>
+
+<h3>View Settings: <a name="View Settings Vertices">Vertices Group</a></h3>
+<p align="center">
+  <img src="windows_view_settings_vertices.png" alt=""><br>
+  <b>Figure W-42.</b> The Vertices group in the View Settings window.
+</p>
+<p>
+A vertex is a point where creases come together within the crease pattern. A
+vertex is displayed as a black dot with optional text describing some of its
+attributes.
+</p>
+<p>
+The Vertices group of settings affects how vertices are displayed in the Design
+window. The controls are:
+</p>
+<ul>
+  <li>
+    All --- turns on all settings.
+  </li>
+  <li>
+    None --- turns off all settings.
+  </li>
+  <li>
+    Major Vertices --- turns on/off the display of vertices with 3 or more
+    incident creases.
+  </li>
+  <li>
+    Minor Vertices --- turns on/off the display of vertices with 2 or fewer
+    incident creases.
+  </li>
+  <li>
+    Dots --- display a dot on each visible vertex at its centroid.
+  </li>
+  <li>
+    Indices --- display the index of each vertex polygon.
+  </li>
+  <li>
+    Coordinates --- display the <em>x</em> and <em>y</em> coordinates of each
+    visible vertex.
+  </li>
+  <li>
+    Elevation --- display the elevation of each visible vertex, which is the
+    distance in the folded form from the axis of the base.
+  </li>
+  <li>
+    Depth --- display the depth of each visible vertex, which is the distance in
+    the folded form along the axis from the root node vertex.
+  </li>
+  <li>
+    Discrete Depth --- display the discrete depth of each visible vertex, which
+    is the number of hops along the tree from the root node to the tree node of
+    this vertex. If this vertex does not have a tree node (e.g., it is part of
+    a pseudohinge), (-1) is displayed instead.
+  </li>
+  <li>
+    Tree Nodes --- display the tree node (if any) that is the tree projection of
+    this vertex.
+  </li>
+  <li>
+    Flags --- show various flags on each visible vertex. Each possible flag is
+    indicated by a letter; capital letters indicate a flag that is set, lower
+    case indicates a flag that is unset.
+  </li>
+</ul>
+
+<h3>View Settings: <a name="View Settings Creases">Creases Group</a></h3>
+<p align="center">
+  <img src="windows_view_settings_creases.png" alt=""><br>
+  <b>Figure W-43.</b> The Creases group in the View Settings window.
+</p>
+<p>
+A crease represents a fold line in the crease pattern. (However, any given
+crease may be flat, i.e., unfolded.) A crease is drawn as a line connecting its
+two vertices, plus a dot near its midpoint along with optional text describing
+some of its attributes.
+</p>
+<p>
+Creases can be drawn with two different color schemes, described below.
+</p>
+<p>
+The Creases group of settings affects how creases are displayed in the Design
+window. The controls are:
+</p>
+<ul>
+  <li>
+    All --- turns on all settings.
+  </li>
+  <li>
+    None --- turns off all settings.
+  </li>
+  <li>
+    Major Creases --- turns on/off the display of major creases, which are
+    axial, gusset, and ridge creases.
+  </li>
+  <li>
+    Minor Creases --- turns on/off the display of minor creases, which are hinge
+    and pseudohinge creases.
+  </li>
+  <li>
+    Dots --- display a dot on each visible crease.
+  </li>
+  <li>
+    Lines --- display a line for each visible crease connecting its vertices.
+  </li>
+  <li>
+    Coloring --- select the color scheme used for creases. The two possible
+    schemes are:
+      <ul>
+        <li>
+          AGRH Coloring --- creases are distinguished by their structural role,
+          as follows:
+          <ul>
+            <li>
+              Axial Creases --- black
+            </li>
+            <li>
+              Gusset Creases --- gray
+            </li>
+            <li>
+              Ridge Creases --- red
+            </li>
+            <li>
+              Hinge Creases --- blue
+            </li>
+            <li>
+              Pseudohinge Creases --- cyan
+            </li>
+          </ul>
+        </li>
+        <li>
+          MVF Coloring --- creases are distinguished by their fold direction, as
+          follows:
+          <ul>
+            <li>
+              Mountain Creases --- black
+            </li>
+            <li>
+              Valley Creases --- magenta, dashed
+            </li>
+            <li>
+              Flat (unfolded) Creases --- light gray
+            </li>
+          </ul>
+        </li>
+      </ul>
+      Note that there are situations where <em>TreeMaker</em> cannot
+      compute the MVF crease assignment; in such cases, all creases will be
+      shown as Flat under MVF coloring. AGRH coloring is always available, and
+      in many cases you will still be able to find a valid crease assignment by
+      hand, using these rules of thumb:
+      <ul>
+        <li>
+          Ridge creases are always valley folds.
+        </li>
+        <li>
+          Gusset creases are always mountain folds.
+        </li>
+        <li>
+          Pseudohinge creases are always mountain folds.
+        </li>
+        <li>
+          Axial creases are almost always mountain folds.
+        </li>
+      </ul>
+      The exceptions to the "almost always" can usually be found by trial and
+      error.
+  </li>
+  <li>
+    Indices --- display the index of each visible crease.
+  </li>
+  <li>
+    Flags --- show various flags on each visible crease. Each possible flag is
+    indicated by a letter; capital letters indicate a flag that is set, lower
+    case indicates a flag that is unset.
+  </li>
+</ul>
+
+<h3>View Settings: <a name="View Settings Facets">Facets Group</a></h3>
+<p align="center">
+  <img src="windows_view_settings_facets.png" alt=""><br>
+  <b>Figure W-44.</b> The Facets group in the View Settings window.
+</p>
+<p>
+A facet is a polygonal region of the crease pattern outlined by creases. A
+facet is drawn as a filled polygon in one of two shades of purple with a dot
+at its centroid and optional text describing some of its attributes. It is also
+possible to overlay the facets with a representation of the facet ordering
+graph, which describes the overlap order between adjacent facets, and from which
+the relative order of any two overlapping facets may be inferred.
+</p>
+<p>
+The Facets group of settings affects how facets are displayed in the Design
+window. The controls are:
+</p>
+<ul>
+  <li>
+    All --- turns on all settings.
+  </li>
+  <li>
+    None --- turns off all settings.
+  </li>
+  <li>
+    All Facets --- turns on/off the display of facets, independent of other
+    checkboxes.
+  </li>
+  <li>
+    Dots --- display a dot on each visible facet at its centroid.
+  </li>
+  <li>
+    Arrows --- display the arrows that describe the ordering among facets.
+    These arrows constitute the "facet ordering graph." The order of any two
+    overlapping facets may be determined from the unique direction of any path
+    between the two facets in the facet ordering graph. If there is no directed
+    path between two facets in the facet ordering graph, then the two facets do
+    not overlap in the folded form.
+  </li>
+  <li>
+    Fills --- display a colored fill for each visible facet. The fill is one of
+    two shades of purple, which are relevant if the base is folded from
+    conventional two-colored origami paper (that has a white and a colored
+    side). The lighter shade indicates that the facet is white side up in the
+    folded form; the darker shade indicates that the facet is colored side up
+    in the folded form.
+  </li>
+  <li>
+    Indices --- display the index of each visible facet.
+  </li>
+  <li>
+    Order --- display the order index for each visible facet. In a well-formed
+    crease pattern, there is a total ordering on the facets, so that the
+    relative order between any two facets may be computed in constant time by
+    comparing their order indices.
+  </li>
+   <li>
+    Corridor Edge --- display the index of the edge whose flap this facet is a
+    part of.
+  </li>
+ <li>
+    Flags --- show various flags on each visible facet. Each possible flag is
+    indicated by a letter; capital letters indicate a flag that is set, lower
+    case indicates a flag that is unset.
+  </li>
+</ul>
+
+<h3>View Settings: <a name="View Settings Conditions">Conditions Group</a></h3>
+<p align="center">
+  <img src="windows_view_settings_conditions.png" alt=""><br>
+  <b>Figure W-45.</b> The Conditions group in the View Settings window.
+</p>
+<p>
+A condition represents a geometric relationship imposed on nodes, edges, and/or
+paths by the user above and beyond the requirements of the path conditions.
+Conditions are represented in different ways, depending on what objects they
+affect, but a common feature is a dot connected by a short flag to a node,
+edge, or group of nodes connected by lines. Conditions come in two colors:
+light red, if they are not currently feasible (i.e., not currently satisfied),
+or light purple if they are currently feasible.
+</p>
+<p>
+The Conditions group of settings affects how conditions are displayed in the
+Design window. The controls are:
+</p>
+<ul>
+  <li>
+    All --- turns on all settings.
+  </li>
+  <li>
+    None --- turns off all settings.
+  </li>
+  <li>
+    Node Conditions --- turns on/off the display of conditions that are set on
+    nodes.
+  </li>
+  <li>
+    Edge Conditions --- turns on/off the display of conditions that are set on
+    edges.
+  </li>
+  <li>
+    Path Conditions --- turns on/off the display of conditions that are set on
+    paths.
+  </li>
+  <li>
+    Dots --- display a dot for each visible condition. The dot is placed close
+    to the affected parts.
+  </li>
+  <li>
+    Lines --- display lines connecting the condition dot to the nodes,
+    edges, and/or paths that are affected by the condition.
+  </li>
+  <li>
+    Indices --- display the index of each visible condition.
+  </li>
+  <li>
+    Types --- display a word indicating the type of condition that is set on the
+    part.
+  </li>
+</ul>
+
+<h3>View Settings: <a name="View Settings Paper">Paper Group</a></h3>
+<p align="center">
+  <img src="windows_view_settings_paper.png" alt=""><br>
+  <b>Figure W-46.</b> The Paper group in the View Settings window.
+</p>
+<p>
+The Paper group of settings affects how the paper is displayed in the Design
+window. The controls are:
+</p>
+<ul>
+  <li>
+    Symmetry --- display the line of symmetry on the paper.
+  </li>
+</ul>
+
+
+
+
+<h2><a name="Help">Help Window</a></h2>
+<p align="center">
+  <img src="windows_help.png" alt=""><br>
+  <b>Figure W-47.</b> The Help window.
+</p>
+<p>
+The Help window is brought up if you click the <b>Help->Help</b> menu command.
+The window is resizeable and searchable, and there is a table of contents bar
+along the left side. You can also print each of the major help sections by
+clicking on the printer icon within the window, if you would like a hard copy
+of this documentation.
+</p>
+
+<p align="center">
+<b>Previous: <a href="overview.htm">Overview</a>&nbsp;&nbsp;&nbsp; 
+Next: <a href="menus.htm">Menus</a></b>
+</p>
+
+</body>
+</html>

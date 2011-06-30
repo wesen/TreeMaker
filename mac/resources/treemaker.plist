@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string></string>
+				<string>tmd5</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>Icon_doc</string>
+			<key>CFBundleTypeName</key>
+			<string>TreeMaker File</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>TEXT</string>
+				<string>tmd5</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Copyright ©1994-2006 Robert J. Lang.</string>
+	<key>CFBundleIconFile</key>
+	<string>Icon_app</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.langorigami.TreeMaker</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>TM_MAC_CFBUNDLE_SHORT_VERSION_STRING</string>
+	<key>CFBundleSignature</key>
+	<string>TrM5</string>
+	<key>CFBundleVersion</key>
+	<string>TM_MAC_CFBUNDLE_VERSION</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.4.2</string>
+	<key>LSRequiresCarbon</key>
+	<true/>
+</dict>
+</plist>

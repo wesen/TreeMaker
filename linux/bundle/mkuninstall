@@ -1,0 +1,23 @@
+# Creates an uninstaller script for TreeMaker
+# Mandatory parameters:
+#   - uninstaller name
+#   - instalation prefix (like /usr/ or /usr/local)
+#   - TreeMaker binary file
+#   - TreeMaker data directory
+
+cat << __END_UNINSTALL__ > $1
+## Uninstaller script for TreeMaker 5.0
+rm "$2/bin/$3"
+if [ -e "$2/bin/$3.sh" ]; then
+  rm "$2/bin/$3.sh"
+fi
+rm "$2/share/$4/help.zip" "$2/share/$4/about.htm"
+rm "$2/share/$4/SplashScreen.png" 
+rm "$2/share/$4/Icon_doc_48.png" 
+rm "$2/share/$4/Icon_app_48.png" 
+rm "$2/share/$4/Icon_app.ppm" 
+rm "$2/share/$4/LICENSE.txt.gz" || rm "$2/share/$4/LICENSE.txt" 
+rm "$2/share/$4/change_log.txt.gz" || rm "$2/share/$4/change_log.txt" 
+rm "$2/share/$4/uninstall"
+rmdir "$2/share/$4"
+__END_UNINSTALL__

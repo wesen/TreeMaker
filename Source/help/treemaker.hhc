@@ -1,0 +1,361 @@
+<html>
+<head>
+<title>TreeMaker 5.0 Help</title>
+<!-- Sitemap 1.0 -->
+</head>
+<body>
+<object type="text/site properties">
+  <param name="ImageType" value="Folder">
+</object>
+<ul>
+<!--=========================================================================-->
+  <li> <object type="text/sitemap">
+    <param name="Name" value="Background">
+    <param name="Local" value="background.htm">
+    </object>
+  </li> 
+<!--=========================================================================-->
+  <li> <object type="text/sitemap">
+    <param name="Name" value="Overview">
+    <param name="Local" value="overview.htm">
+    </object>
+  </li> 
+<!--=========================================================================-->
+  <li> <object type="text/sitemap">
+    <param name="Name" value="Windows">
+    <param name="Local" value="windows.htm">
+    </object>
+    <ul> 
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Design">
+        <param name="Local" value="windows.htm#Design">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Inspector">
+        <param name="Local" value="windows.htm#Inspector">
+        </object>
+        <ul>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Tree Panel">
+            <param name="Local" value="windows.htm#Tree Panel">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Node Panel">
+            <param name="Local" value="windows.htm#Node Panel">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Edge Panel">
+            <param name="Local" value="windows.htm#Edge Panel">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Path Panel">
+            <param name="Local" value="windows.htm#Path Panel">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Poly Panel">
+            <param name="Local" value="windows.htm#Poly Panel">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Condition Panel">
+            <param name="Local" value="windows.htm#Condition Panel">
+            </object>
+            <ul>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Node Fixed Panel">
+                <param name="Local" value="windows.htm#Condition Node Fixed Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Node Symmetric (v4) Panel">
+                <param name="Local" value="windows.htm#Condition Node Symmetric (v4) Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Node On Edge (v4) Panel">
+                <param name="Local" value="windows.htm#Condition Node On Edge (v4) Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Node On Corner (v4) Panel">
+                <param name="Local" value="windows.htm#Condition Node On Corner (v4) Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Nodes Paired Panel">
+                <param name="Local" value="windows.htm#Condition Nodes Paired Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Nodes Collinear Panel">
+                <param name="Local" value="windows.htm#Condition Nodes Collinear Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Edge Length Fixed Panel">
+                <param name="Local" value="windows.htm#Condition Edge Length Fixed Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Edges Same Strain Panel">
+                <param name="Local" value="windows.htm#Condition Edges Same Strain Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Path Active Panel">
+                <param name="Local" value="windows.htm#Condition Path Active Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Path Active (v4) Panel">
+                <param name="Local" value="windows.htm#Condition Path Active (v4) Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Path Angle Fixed (v4) Panel">
+                <param name="Local" value="windows.htm#Condition Path Angle Fixed (v4) Panel">
+                </object>
+              </li>
+              <li> <object type="text/sitemap">
+                <param name="Name" value="Condition Path Angle Quantized (v4) Panel">
+                <param name="Local" value="windows.htm#Condition Path Angle Quantized (v4) Panel">
+                </object>
+              </li>
+            </ul>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Vertex Panel">
+            <param name="Local" value="windows.htm#Vertex Panel">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Crease Panel">
+            <param name="Local" value="windows.htm#Crease Panel">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Facet Panel">
+            <param name="Local" value="windows.htm#Facet Panel">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Group Panel">
+            <param name="Local" value="windows.htm#Group Panel">
+            </object>
+          </li>
+        </ul>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Folded Form">
+        <param name="Local" value="windows.htm#Folded Form">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="View Settings">
+        <param name="Local" value="windows.htm#View Settings">
+        </object>
+        <ul>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="View Settings Presets">
+            <param name="Local" value="windows.htm#View Settings Presets">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="View Settings Nodes">
+            <param name="Local" value="windows.htm#View Settings Nodes">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="View Settings Edges">
+            <param name="Local" value="windows.htm#View Settings Edges">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="View Settings Paths">
+            <param name="Local" value="windows.htm#View Settings Paths">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="View Settings Polys">
+            <param name="Local" value="windows.htm#View Settings Polys">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="View Settings Vertices">
+            <param name="Local" value="windows.htm#View Settings Vertices">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="View Settings Creases">
+            <param name="Local" value="windows.htm#View Settings Creases">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="View Settings Facets">
+            <param name="Local" value="windows.htm#View Settings Facets">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="View Settings Conditions">
+            <param name="Local" value="windows.htm#View Settings Conditions">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="View Settings Paper">
+            <param name="Local" value="windows.htm#View Settings Paper">
+            </object>
+          </li>
+        </ul>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Help Window">
+        <param name="Local" value="windows.htm#Help">
+        </object>
+      </li>
+    </ul>
+  </li>
+<!--=========================================================================-->
+  <li> <object type="text/sitemap">
+    <param name="Name" value="Menus">
+    <param name="Local" value="menus.htm">
+    </object>
+    <ul> 
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Application Menu">
+        <param name="Local" value="menus.htm#App">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="File Menu">
+        <param name="Local" value="menus.htm#File">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Edit Menu">
+        <param name="Local" value="menus.htm#Edit">
+        </object>
+        <ul>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Edit->Nodes Submenu">
+            <param name="Local" value="menus.htm#Nodes">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Edit->Edges Submenu">
+            <param name="Local" value="menus.htm#Edges">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Edit->Absorb Submenu">
+            <param name="Local" value="menus.htm#Absorb">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Edit->Split Submenu">
+            <param name="Local" value="menus.htm#Split">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Edit->Strain Submenu">
+            <param name="Local" value="menus.htm#Strain">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Edit->Stub Submenu">
+            <param name="Local" value="menus.htm#Stub">
+            </object>
+          </li>
+        </ul>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="View Menu">
+        <param name="Local" value="menus.htm#View">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Action Menu">
+        <param name="Local" value="menus.htm#Action">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Condition Menu">
+        <param name="Local" value="menus.htm#Condition">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Window Menu">
+        <param name="Local" value="menus.htm#Window">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Help Menu">
+        <param name="Local" value="menus.htm#Help">
+        </object>
+      </li>
+    </ul>
+  </li>
+<!--=========================================================================-->
+  <li> <object type="text/sitemap">
+    <param name="Name" value="Tutorials">
+    <param name="Local" value="tutorial_1.htm">
+    </object>
+    <ul> 
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Tutorial 1: Designing a Base">
+        <param name="Local" value="tutorial_1.htm#tutorial_1">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Tutorial 2: Imposing Symmetry">
+        <param name="Local" value="tutorial_2.htm">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Tutorial 3: Working with Strain">
+        <param name="Local" value="tutorial_3.htm">
+        </object>
+      </li>
+    </ul>  
+  </li>
+<!--=========================================================================-->
+  <li> <object type="text/sitemap">
+    <param name="Name" value="Tips">
+    <param name="Local" value="tips_1.htm">
+    </object>
+    <ul> 
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Tips 1: Adding Nodes">
+        <param name="Local" value="tips_1.htm#tips_1">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Tips 2: Making a Plan View Design">
+        <param name="Local" value="tips_2.htm">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Tips 3: Forcing Edge Flaps">
+        <param name="Local" value="tips_3.htm">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Tips 4: Fracturing Polygons">
+        <param name="Local" value="tips_4.htm">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Tips 5: Forcing Symmetric Angles">
+        <param name="Local" value="tips_5.htm">
+        </object>
+      </li>
+    </ul>  
+  </li>
+<!--=========================================================================-->
+</ul>
+</body>
+</html>

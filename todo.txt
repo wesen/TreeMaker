@@ -1,0 +1,88 @@
+/**************************************
+IMMEDIATE
+**************************************/
+
+RJL:
+
+CAF:
+- (nonessential) pass more complex parameter to input routines for a
+  more sophisticated diagnosis of corrupted files
+- (nonessential) improve the bundle builder and graphical installer (in
+  particular, to cope with missing cksum)
+
+ABX:
+  
+Unassigned:
+
+/**************************************
+NEAR-TERM
+**************************************/
+
+RJL:
+- Edit macspecific setup.h to turn off unused settings (as in msw setup0.h).
+- Add "remove stiffness" commands
+
+CAF:
+
+ABX:
+  
+Unassigned:
+
+/**************************************
+WXWIDGETS PROBLEMS
+**************************************/
+
+A. Fixed for 2.6.3 and 2.7.X but missing in earlier releases
+
+ 1. dashed lines in gnome printing
+ 2. circles in gnome printing
+ 3. template filename validation if document/view code
+
+B. Not fixed in wxWidgets yet
+
+ 4. activation in document/view code
+ 5. built-in error messages sent from dialog are behind dialog when
+    wxSTAY_ON_TOP is on
+ 6. GNOME printing does not implement clipping
+ 7. GNOME printing uses 1"/72 as the unit measure [and I couldn't figure out
+    how to get higher resolution]
+ 8. wxMAC modal dialogs have the wrong title bar style (no 3 buttons, even
+    disabled, on left)
+
+/**************************************
+FEATURE REQUESTS (not necessarily approved)
+**************************************/
+
+A 'select all <part types>" command - it would be useful for path quantisation,
+so you don't have to pick the active paths one at a time. [RJL: but you rarely
+should select all paths; you would only select paths on one side. Perhaps a
+more useful command would be if symmetry is on, "select all paths with at least
+one leaf node on left."]
+
+A big feature request:  Creating mirror nodes on trees; ie being able to select
+a paticular set of nodes and automatically generating a paired set of nodes
+with the same attributes.  Again, it'll be nice for lazy users who want to draw
+symmetric trees, so all they'll have to do is to draw half the tree, and then
+mirror-image it.
+
+Change quantization dialog so that user enters "N" but program uses 2N
+internally. Change docs to explain why we're doing this.
+
+If we could decide which flaps are hingeable (is there a better word for those
+flaps which are not embedded inside other flaps?) we could optimize the hinge
+angles (maybe maxing the sum of tip distances while forbidding intersections)
+and present an OpenGL window with the folded base.
+
+Implement an optimizer based on the donlp2 optimization code of P. Spellucci.
+
+ABX: Monitoring and improving builds with more compilers (ie. bug in STL of VC)
+
+ABX: MetaFile export (by paste) area configurable.
+
+ABX: Single top-level-window-MDI architecture on Windows (low priority).
+[RJL: there is some wxW discussion of implementing MDI properly on Mac so that
+TM could use the standard wxW MDI implementation and get the proper behavior on
+all platforms.]
+
+ABX: Range (rectangle) selection by draging mouse pointer (basic implementation
+     done, needs rethinking in terms of UI consistency)

@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Tips 4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h2>Tips 4: Fracturing Polygons</h2>
+
+<p>
+Once you have completed an optimization, the simplest crease pattern that
+collapses into a base is produced by choosing <b>Action->Build Crease
+Pattern</b>, which creates all creases using the "universal molecule"
+algorithm. You can also break up high-order active polygons into lower-order
+active polygons by adding new edges to existing nodes. When you create a new
+edge and scale it using <b>Action->Scale Selection</b>, it will be expanded until
+it forms new active paths; typically 3 new paths are formed, although if the
+polygon is mirror-symmetric, sometimes 4 new paths will be formed.
+</p>
+<p>
+This process will break any polygon of order 5 or higher into polygons of lower
+order. In general, the lower the order of the active polygon, the simpler it is
+to fold, so this is often a desirable process. However, if you try to break up
+a polygon of order 4 (a quadrilateral), unless it happens to have a line of
+symmetry, you will form two triangles and another quadrilateral. Thus, you
+cannot in general reduce a crease pattern to all triangles simply by adding new
+edges to existing nodes.
+</p>
+<p>
+As an example, construct the tree shown in Figure Ti-4-1, which has four edges
+of all different lengths.
+</p>
+<p align="center">
+  <img src="tips_4_1.png" alt=""><br>
+  <b>Figure Ti-4-1.</b>
+</p>
+<p>
+When you optimize this tree, you will get an irregular quadrilateral, as shown
+in Figure Ti-4-2. 
+</p>
+<p align="center">
+  <img src="tips_4_2.png" alt=""><br>
+  <b>Figure Ti-4-2.</b>
+</p>
+<p>
+Building creases gives you a "gusset quadrilateral" as shown in Figure Ti-4-3.
+</p>
+<p align="center">
+  <img src="tips_4_3.png" alt=""><br>
+  <b>Figure Ti-4-3.</b>
+</p>
+<p>
+Supposed we want to break up this quadrilateral into triangles. Kill the crease
+pattern and add a new edge to node 2; then choose <b>Action->Scale Selection</b> to
+maximize the length of the new edge. You should get something like the polygon
+pattern shown in Figure Ti-4-4. Indeed, the quad has been broken into two
+triangles --- and another quad. 
+</p>
+<p align="center">
+  <img src="tips_4_4.png" alt=""><br>
+  <b>Figure Ti-4-4.</b>
+</p>
+<p>
+The process can be repeated essentially infinitely; you can make the quad
+smaller and smaller, but you'll never get rid of it! Figure Ti-4-5 continues
+the process, but there is still one quadrilateral.
+</p>
+<p align="center">
+  <img src="tips_4_5.png" alt=""><br>
+  <b>Figure Ti-4-5.</b>
+</p>
+<p>
+There is a fundamental reason for this limitation: breaking up an arbitrary
+quad into four triangles requires the formation of four active paths. But when
+you add a new edge to an existing node, you only have three degrees of freedom:
+the <em>x</em> and <em>y</em> coordinates of the new node and the length of the
+edge. To create four active paths, you need a fourth degree of freedom.
+</p>
+<p>
+If, instead of adding the new edge to an existing node, we add the new edge to
+a newly-created node formed by splitting an edge, we have a fourth degree of
+freedom: the location of the split along the edge. An edge that creates four
+active paths with the corners of its enclosing polygon is called a
+<em>stub</em>, and <em>TreeMaker</em> has an entire submenu devoted to their
+generation: the <b>Edit->Stub</b> submenu. These commands let you break up one
+or more polygons by splitting one of the edges of the subtree spanned by the
+nodes at the corners of the polygon.
+</p>
+<p>
+The simplest way to break up a polygon is when the crease pattern has been
+built: click near the border of the (yellow) polygon to which the stub is to be
+added. To see this in our example, delete the fifth node and edge we added
+and choose <b>Action->Build Crease Pattern</b>. Then click near the boundary of
+the big yellow polygon. The polygon will become selected, as shown in Figure Ti-4-6.
+</p>
+<p align="center">
+  <img src="tips_4_6.png" alt=""><br>
+  <b>Figure Ti-4-6.</b>
+</p>
+<p>
+Fully-constructed polygons can contain smaller polygons; this polygon contains
+two smaller triangles, which are not selected. Only "outermost" polygons 
+--- called <em>tree polygons</em> --- can be broken up by the addition
+of a stub. Now that the polygon is selected, choose <b>Edit->Stub->Pick For
+Poly...</b>. This brings up a dialog, shown in Figure Ti-4-7.
+</p>
+<p align="center">
+  <img src="tips_4_7.png" alt=""><br>
+  <b>Figure Ti-4-7.</b>
+</p>
+<p>
+This dialog lists information about the possible stub(s) that can be added: the
+edge that would be split; the lengths of the two parts of the edge; the nodes
+to which active paths will be formed; and the length of the new edge. In this
+case, there is only one possible stub, but in general, there can be multiple
+possibilities. Click OK.
+</p>
+<p>
+The edge is split, and a new node and edge added, which forms 4 active paths
+with surrounding nodes. A stub will always form at least 4 active paths, but it
+is sometimes possible that one forms 5 or more. This stub has now broken the
+quadrilateral up into four triangles, each of which can be filled with the
+rabbit ear molecule. 
+</p>
+<p align="center">
+  <img src="tips_4_8.png" alt=""><br>
+  <b>Figure Ti-4-8.</b>
+</p>
+<p>
+The resulting crease pattern looks like that of a distorted Bird Base, as shown
+in Figure Ti-4-9.
+</p>
+<p align="center">
+  <img src="tips_4_9.png" alt=""><br>
+  <b>Figure Ti-4-9.</b>
+</p>
+<p>
+And the folded form looks something like a distorted Bird Base as well.
+</p>
+<p align="center">
+  <img src="tips_4_10.png" alt=""><br>
+  <b>Figure Ti-4-10.</b>
+</p>
+<p>
+There are several commands accessible from the <b>Edit->Stub</b> submenu:
+</p>
+<ul>
+  <li>
+    <b>Edit->Stub->Pick for Nodes...</b> lets you pick the stub that makes four
+    active paths with any group of four or more selected nodes. In this way,
+    you can construct stubs without having had to construct the crease pattern
+    (which is necessary to be able to select a poly).
+  </li>
+  <li>
+    <b>Edit->Stub->Pick for Poly...</b> lets you pick which stub for a selected poly.
+  </li>
+  <li>
+    <b>Edit->Stub->Add Largest to Nodes</b> automatically chooses the largest
+    stub if there are multiple possibilities for a group of 4 or more selected
+    nodes.
+  </li>
+  <li>
+    <b>Edit->Stub->Add Largest to Poly</b> automatically chooses the largest
+    stub for the selected poly.
+  </li>
+  <li>
+    <b>Edit->Stub->Triangulate Tree</b> repeatedly adds stubs to a tree until
+    every polygon in the tree has been broken into triangles. This gives a
+    crease pattern composed entirely of rabbit ear molecules. If you have the
+    positions of all the nodes in such a tree, then in a triangulated tree, all
+    other creases can be folded with reference to the node positions; the same
+    cannot be said for general crease patterns consisting of universal
+    molecules.
+  </li>
+</ul>
+<p>
+Because of this property of triangulated trees, stub creation can be a useful
+technique for making a <em>TreeMaker</em> design more easily foldable without
+need to measure. A different set of techniques for making patterns more easily
+foldable will be described in the next section.
+</p>
+
+<p align="center">
+<b>Previous: <a href="tips_3.htm">Tips 3: Forcing Edge Flaps</a>
+&nbsp;&nbsp;&nbsp; 
+Next: <a href="tips_5.htm">Tips 5: Forcing Symmetric Angles</a></b>
+</p>
+
+</body>
+</html>

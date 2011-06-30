@@ -1,0 +1,82 @@
+BUILDING wxWidgets for TreeMaker 5.0 for Linux
+  by Carlos A. Furuti
+
+1. INTRODUCTION
+
+Several aspects of the wxWidgets library may be configured as
+compile-time options. Unfortunately, this means applications may
+depend on features not available on every binary distribution of
+wxWidgets. Therefore, if you want to compile TreeMaker 5.0 from
+source, you must also compile a properly configured wxWidgets source
+package, _even_ if you already have wxWidgets installed.
+
+2. GETTING wxWidgets
+
+Download the source code of wxWidgets from www.wxwidgets.org. You'll
+need the GTK package, wxGTK-<version at least 2.6.1>.tar.bz2. Unpack
+it in a suitable temporary directory (a full build, explained below,
+will require about 510 MB). From now on, we'll abbreviate the
+wxWidgets directory (containing, e.g., the "configure" file) as WXD.
+Take note of this directory path, we'll need it in TreeMaker 5.0's
+own Makefile.
+
+3. PATCHING
+
+wxWidgets (at least up to and including version 2.6.2) for GTK does
+not fully or correctly support some features required by TreeMaker 5,
+including:
+
+- thin lines with subpoint precision
+- user-defined dashes (fixed in 2.6.3 Release Candidate 2)
+- correctly scaled circles (GNOME print only; fixed in 2.6.3RC2)
+- clipping when printing
+- document files with no suffix or suffixes other than the default
+  .tmd5 (fixed in 2.6.3RC2)
+- double-clicking lists (scheduled to be fixed after 2.6.3RC2)
+
+Unless you downloaded a more recent version of wxWidgets fixing these
+issues, you're strongly advised to "cd" to WXD and extract the files
+which you'll find in this directory:
+
+- wxPatch2.6.2.tar.gz (for wxWidgets 2.6.2, 2.6.3RC1 or previous)
+- wxPatch2.6.3.tar.gz (for wxWidgets 2.6.3RC2 or greater) 
+
+4. COMPILING
+
+Copy the build-wxw.sh file from this directory to WXD, then cd to WXD.
+
+wxWidgets may be compiled in a "release" or "debug" version, or both.
+If you're developing or debugging TreeMaker 5.0, you'll probably need
+the debug version. If you're only compiling TreeMaker because the
+binary package does not suit you (maybe you don't have the required
+DLLs), you might create only the release version of wxWidgets and save
+some time and a lot of disk space.
+
+For building a static library (TreeMaker 5.0 uses a static library for
+portability reasons) in both versions, type:
+
+  sh build-wxw.sh
+
+If you don't want the debug version, type:
+
+  sh build-wxw.sh --nodebug
+
+If you don't want the release version, type:
+
+  sh build-wxw.sh --norelease
+
+If you slightly edited (without changing or creating new dependencies)
+wxWidgets or reapplied the patch, do as above adding "--noconfig",
+otherwise everything will be recompiled.
+
+Running build-wxw.sh will neither install wxWidgets nor disturb any
+existing installed wxWidgets. You may safely remove WXD after
+TreeMaker 5.0 is compiled and tested.
+
+You may now configure and compile TreeMaker.
+
+5. OPTIONAL NOTES
+
+If you have installed a dynamic version of wxWidgets configured
+according to TreeMaker 5.0's needs (inspect the build-wxw.sh), you
+might try adapting the latter's Makefile to use it.

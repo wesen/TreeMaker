@@ -1,0 +1,2953 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C01B013E094808F3000C489E /* tmwxInspectorPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C01B013C094808F3000C489E /* tmwxInspectorPanel.cpp */; };
+		C01BFEF708E6B2AE00D2B685 /* cfsqp_noprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A5290B08E6937D004D958F /* cfsqp_noprint.cpp */; };
+		C01BFEF808E6B2AE00D2B685 /* rfsqp_noprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A5291A08E693F3004D958F /* rfsqp_noprint.cpp */; };
+		C01BFEF908E6B2AE00D2B685 /* tmDpptrTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C08A84EC08BC2367008508CD /* tmDpptrTarget.cpp */; };
+		C01BFEFA08E6B2AE00D2B685 /* tmHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0C9A89308BD198900ADCE48 /* tmHeader.cpp */; };
+		C01BFEFB08E6B2AE00D2B685 /* tmNLCO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D905A08CE31B800A52912 /* tmNLCO.cpp */; };
+		C01BFEFC08E6B2AE00D2B685 /* tmNLCO_alm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D905908CE31B800A52912 /* tmNLCO_alm.cpp */; };
+		C01BFEFD08E6B2AE00D2B685 /* tmNLCO_cfsqp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528FD08E6925B004D958F /* tmNLCO_cfsqp.cpp */; };
+		C01BFEFE08E6B2AE00D2B685 /* tmNLCO_rfsqp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528FB08E6925B004D958F /* tmNLCO_rfsqp.cpp */; };
+		C01BFEFF08E6B2AE00D2B685 /* tmNLCO_wnlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528F508E69208004D958F /* tmNLCO_wnlib.cpp */; };
+		C01BFF0008E6B2AE00D2B685 /* tmNLCO_wnlibStub.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A528F308E69208004D958F /* tmNLCO_wnlibStub.c */; };
+		C01BFF0208E6B2AE00D2B685 /* wn1dmin.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293008E69470004D958F /* wn1dmin.c */; };
+		C01BFF0308E6B2AE00D2B685 /* wnasrt.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5294908E69471004D958F /* wnasrt.c */; };
+		C01BFF0408E6B2AE00D2B685 /* wncnjfg.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293208E69470004D958F /* wncnjfg.c */; };
+		C01BFF0508E6B2AE00D2B685 /* wnconjg.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293608E69470004D958F /* wnconjg.c */; };
+		C01BFF0608E6B2AE00D2B685 /* wndcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5292E08E69470004D958F /* wndcmp.c */; };
+		C01BFF0708E6B2AE00D2B685 /* wndot.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297208E69471004D958F /* wndot.c */; };
+		C01BFF0808E6B2AE00D2B685 /* wnmbtr.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295B08E69471004D958F /* wnmbtr.c */; };
+		C01BFF0908E6B2AE00D2B685 /* wnmcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295D08E69471004D958F /* wnmcpy.c */; };
+		C01BFF0A08E6B2AE00D2B685 /* wnmem.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295E08E69471004D958F /* wnmem.c */; };
+		C01BFF0B08E6B2AE00D2B685 /* wnmemb.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296108E69471004D958F /* wnmemb.c */; };
+		C01BFF0C08E6B2AE00D2B685 /* wnmemg.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296408E69471004D958F /* wnmemg.c */; };
+		C01BFF0D08E6B2AE00D2B685 /* wnmemn.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296508E69471004D958F /* wnmemn.c */; };
+		C01BFF0E08E6B2AE00D2B685 /* wnmmk.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295808E69471004D958F /* wnmmk.c */; };
+		C01BFF0F08E6B2AE00D2B685 /* wnnlp.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293708E69470004D958F /* wnnlp.c */; };
+		C01BFF1008E6B2AE00D2B685 /* wnparvect.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293A08E69470004D958F /* wnparvect.c */; };
+		C01BFF1108E6B2AE00D2B685 /* wnpoly.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297408E69471004D958F /* wnpoly.c */; };
+		C01BFF1208E6B2AE00D2B685 /* wnqfit.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293C08E69470004D958F /* wnqfit.c */; };
+		C01BFF1308E6B2AE00D2B685 /* wnrdb.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296708E69471004D958F /* wnrdb.c */; };
+		C01BFF1408E6B2AE00D2B685 /* wnrflt.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296808E69471004D958F /* wnrflt.c */; };
+		C01BFF1508E6B2AE00D2B685 /* wnrnd.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296908E69471004D958F /* wnrnd.c */; };
+		C01BFF1608E6B2AE00D2B685 /* wnrtab.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296E08E69471004D958F /* wnrtab.c */; };
+		C01BFF1708E6B2AE00D2B685 /* wnscnt.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5294208E69470004D958F /* wnscnt.c */; };
+		C01BFF1808E6B2AE00D2B685 /* wnsmk.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5294508E69470004D958F /* wnsmk.c */; };
+		C01BFF1908E6B2AE00D2B685 /* wnvadd3.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297708E69471004D958F /* wnvadd3.c */; };
+		C01BFF1A08E6B2AE00D2B685 /* wnvcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297808E69471004D958F /* wnvcpy.c */; };
+		C01BFF1B08E6B2AE00D2B685 /* wnvgen.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297B08E69471004D958F /* wnvgen.c */; };
+		C01BFF1C08E6B2AE00D2B685 /* wnvmk.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297D08E69471004D958F /* wnvmk.c */; };
+		C01BFF1D08E6B2AE00D2B685 /* wnvnrm.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297F08E69472004D958F /* wnvnrm.c */; };
+		C01BFF1E08E6B2AE00D2B685 /* wnvprn.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5298108E69472004D958F /* wnvprn.c */; };
+		C01BFF2508E6B3E800D2B685 /* tmModelTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C01BFEF108E6B28800D2B685 /* tmModelTester.cpp */; };
+		C01BFF2A08E6D47200D2B685 /* tmTree_IO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FD208CE315400A52912 /* tmTree_IO.cpp */; };
+		C01BFF2B08E6D47200D2B685 /* tmCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D901308CE317B00A52912 /* tmCondition.cpp */; };
+		C01BFF2C08E6D47200D2B685 /* tmConditionNodeOnEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D901D08CE317B00A52912 /* tmConditionNodeOnEdge.cpp */; };
+		C01BFF2D08E6D47200D2B685 /* tmConditionNodesPaired.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902408CE317B00A52912 /* tmConditionNodesPaired.cpp */; };
+		C01BFF2E08E6D47200D2B685 /* tmNodeOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FCA08CE315400A52912 /* tmNodeOwner.cpp */; };
+		C01BFF2F08E6D47200D2B685 /* tmCreaseOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FC308CE315400A52912 /* tmCreaseOwner.cpp */; };
+		C01BFF3008E6D47200D2B685 /* tmPart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FC708CE315400A52912 /* tmPart.cpp */; };
+		C01BFF3108E6D47200D2B685 /* tmTree_FacetOrder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FD308CE315400A52912 /* tmTree_FacetOrder.cpp */; };
+		C01BFF3208E6D47200D2B685 /* tmCrease.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FCD08CE315400A52912 /* tmCrease.cpp */; };
+		C01BFF3308E6D47200D2B685 /* tmPathOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FD108CE315400A52912 /* tmPathOwner.cpp */; };
+		C01BFF3408E6D47200D2B685 /* tmConditionNodeFixed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902008CE317B00A52912 /* tmConditionNodeFixed.cpp */; };
+		C01BFF3508E6D47200D2B685 /* tmPolyOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FDF08CE315400A52912 /* tmPolyOwner.cpp */; };
+		C01BFF3608E6D47200D2B685 /* tmVertexOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FDA08CE315400A52912 /* tmVertexOwner.cpp */; };
+		C01BFF3708E6D47200D2B685 /* tmConditionPathAngleQuant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D901A08CE317B00A52912 /* tmConditionPathAngleQuant.cpp */; };
+		C01BFF3808E6D47200D2B685 /* tmConditionEdgesSameStrain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902C08CE317B00A52912 /* tmConditionEdgesSameStrain.cpp */; };
+		C01BFF3908E6D47200D2B685 /* tmConditionOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902908CE317B00A52912 /* tmConditionOwner.cpp */; };
+		C01BFF3A08E6D47200D2B685 /* tmTreeCleaner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FE808CE315400A52912 /* tmTreeCleaner.cpp */; };
+		C01BFF3B08E6D47200D2B685 /* tmTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FD608CE315400A52912 /* tmTree.cpp */; };
+		C01BFF3C08E6D47200D2B685 /* tmPoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FE508CE315400A52912 /* tmPoly.cpp */; };
+		C01BFF3D08E6D47200D2B685 /* tmNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FC908CE315400A52912 /* tmNode.cpp */; };
+		C01BFF3E08E6D47200D2B685 /* tmFacetOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FE008CE315400A52912 /* tmFacetOwner.cpp */; };
+		C01BFF3F08E6D47200D2B685 /* tmConditionNodeSymmetric.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902808CE317B00A52912 /* tmConditionNodeSymmetric.cpp */; };
+		C01BFF4008E6D47200D2B685 /* tmPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FCC08CE315400A52912 /* tmPath.cpp */; };
+		C01BFF4108E6D47200D2B685 /* tmFacet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FE208CE315400A52912 /* tmFacet.cpp */; };
+		C01BFF4208E6D47200D2B685 /* tmConditionPathActive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902308CE317B00A52912 /* tmConditionPathActive.cpp */; };
+		C01BFF4308E6D47200D2B685 /* tmConditionPathAngleFixed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902B08CE317B00A52912 /* tmConditionPathAngleFixed.cpp */; };
+		C01BFF4408E6D47200D2B685 /* tmVertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FCE08CE315400A52912 /* tmVertex.cpp */; };
+		C01BFF4508E6D47200D2B685 /* tmConditionNodesCollinear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902A08CE317B00A52912 /* tmConditionNodesCollinear.cpp */; };
+		C01BFF4608E6D47200D2B685 /* tmTree_TestTrees.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FC408CE315400A52912 /* tmTree_TestTrees.cpp */; };
+		C01BFF4708E6D47200D2B685 /* tmConditionNodeOnCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902608CE317B00A52912 /* tmConditionNodeOnCorner.cpp */; };
+		C01BFF4808E6D47200D2B685 /* tmConditionNodeCombo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D901C08CE317B00A52912 /* tmConditionNodeCombo.cpp */; };
+		C01BFF4908E6D47200D2B685 /* tmCluster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FBE08CE314000A52912 /* tmCluster.cpp */; };
+		C01BFF4A08E6D47200D2B685 /* tmEdgeOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FD908CE315400A52912 /* tmEdgeOwner.cpp */; };
+		C01BFF4B08E6D47200D2B685 /* tmPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FDE08CE315400A52912 /* tmPoint.cpp */; };
+		C01BFF4C08E6D47200D2B685 /* tmEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FC108CE315400A52912 /* tmEdge.cpp */; };
+		C01BFF4D08E6D47200D2B685 /* tmConditionEdgeLengthFixed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D901708CE317B00A52912 /* tmConditionEdgeLengthFixed.cpp */; };
+		C01BFF7B08E6D5F900D2B685 /* tmOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E9FC3E08D8B6D900103F9F /* tmOptimizer.cpp */; };
+		C01BFF7C08E6D5F900D2B685 /* tmEdgeOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D904E08CE319A00A52912 /* tmEdgeOptimizer.cpp */; };
+		C01BFF7D08E6D5F900D2B685 /* tmScaleOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D904B08CE319900A52912 /* tmScaleOptimizer.cpp */; };
+		C01BFF7E08E6D5F900D2B685 /* tmStrainOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D904A08CE319900A52912 /* tmStrainOptimizer.cpp */; };
+		C01BFF7F08E6D5F900D2B685 /* tmConstraintFns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D905008CE319A00A52912 /* tmConstraintFns.cpp */; };
+		C02AC86E08ECCD9A0045F0A5 /* tmwxOptimizerDialog_msw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C02AC86D08ECCD9A0045F0A5 /* tmwxOptimizerDialog_msw.cpp */; };
+		C047C12808E85FA500C973CE /* tmNLCO_wnlibStub.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A528F308E69208004D958F /* tmNLCO_wnlibStub.c */; };
+		C047C13308E8856A00C973CE /* wnasrt.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5294908E69471004D958F /* wnasrt.c */; };
+		C047C13408E8856A00C973CE /* wnvmk.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297D08E69471004D958F /* wnvmk.c */; };
+		C047C13508E8856A00C973CE /* wnvadd3.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297708E69471004D958F /* wnvadd3.c */; };
+		C047C13608E8856A00C973CE /* wn1dmin.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293008E69470004D958F /* wn1dmin.c */; };
+		C047C13708E8856A00C973CE /* wnrflt.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296808E69471004D958F /* wnrflt.c */; };
+		C047C13808E8856A00C973CE /* wnmemg.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296408E69471004D958F /* wnmemg.c */; };
+		C047C13908E8856A00C973CE /* wnrnd.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296908E69471004D958F /* wnrnd.c */; };
+		C047C13A08E8856A00C973CE /* wnpoly.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297408E69471004D958F /* wnpoly.c */; };
+		C047C13B08E8856A00C973CE /* wnvprn.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5298108E69472004D958F /* wnvprn.c */; };
+		C047C13C08E8856A00C973CE /* wnvnrm.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297F08E69472004D958F /* wnvnrm.c */; };
+		C047C13D08E8856A00C973CE /* wndcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5292E08E69470004D958F /* wndcmp.c */; };
+		C047C13E08E8856A00C973CE /* wnnlp.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293708E69470004D958F /* wnnlp.c */; };
+		C047C13F08E8856A00C973CE /* wnconjg.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293608E69470004D958F /* wnconjg.c */; };
+		C047C14008E8856A00C973CE /* wnvcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297808E69471004D958F /* wnvcpy.c */; };
+		C047C14108E8856A00C973CE /* wnmemb.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296108E69471004D958F /* wnmemb.c */; };
+		C047C14208E8856A00C973CE /* wnmemn.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296508E69471004D958F /* wnmemn.c */; };
+		C047C14308E8856A00C973CE /* wnrtab.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296E08E69471004D958F /* wnrtab.c */; };
+		C047C14408E8856A00C973CE /* wnparvect.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293A08E69470004D958F /* wnparvect.c */; };
+		C047C14508E8856A00C973CE /* wnmbtr.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295B08E69471004D958F /* wnmbtr.c */; };
+		C047C14608E8856A00C973CE /* wndot.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297208E69471004D958F /* wndot.c */; };
+		C047C14708E8856A00C973CE /* wnscnt.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5294208E69470004D958F /* wnscnt.c */; };
+		C047C14808E8856A00C973CE /* wnqfit.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293C08E69470004D958F /* wnqfit.c */; };
+		C047C14908E8856A00C973CE /* wncnjfg.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293208E69470004D958F /* wncnjfg.c */; };
+		C047C14A08E8856A00C973CE /* wnmcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295D08E69471004D958F /* wnmcpy.c */; };
+		C047C14B08E8856A00C973CE /* wnmem.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295E08E69471004D958F /* wnmem.c */; };
+		C047C14C08E8856A00C973CE /* wnmmk.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295808E69471004D958F /* wnmmk.c */; };
+		C047C14D08E8856A00C973CE /* wnrdb.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296708E69471004D958F /* wnrdb.c */; };
+		C047C14E08E8856A00C973CE /* wnsmk.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5294508E69470004D958F /* wnsmk.c */; };
+		C047C14F08E8856A00C973CE /* wnvgen.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297B08E69471004D958F /* wnvgen.c */; };
+		C058AC0E0865FB0300A17C7C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C058AC0D0865FB0300A17C7C /* IOKit.framework */; };
+		C07D8FC008CE314000A52912 /* tmCluster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FBE08CE314000A52912 /* tmCluster.cpp */; };
+		C07D8FE908CE315400A52912 /* tmEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FC108CE315400A52912 /* tmEdge.cpp */; };
+		C07D8FEB08CE315400A52912 /* tmCreaseOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FC308CE315400A52912 /* tmCreaseOwner.cpp */; };
+		C07D8FEC08CE315400A52912 /* tmTree_TestTrees.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FC408CE315400A52912 /* tmTree_TestTrees.cpp */; };
+		C07D8FEF08CE315400A52912 /* tmPart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FC708CE315400A52912 /* tmPart.cpp */; };
+		C07D8FF108CE315400A52912 /* tmNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FC908CE315400A52912 /* tmNode.cpp */; };
+		C07D8FF208CE315400A52912 /* tmNodeOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FCA08CE315400A52912 /* tmNodeOwner.cpp */; };
+		C07D8FF408CE315400A52912 /* tmPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FCC08CE315400A52912 /* tmPath.cpp */; };
+		C07D8FF508CE315400A52912 /* tmCrease.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FCD08CE315400A52912 /* tmCrease.cpp */; };
+		C07D8FF608CE315400A52912 /* tmVertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FCE08CE315400A52912 /* tmVertex.cpp */; };
+		C07D8FF908CE315400A52912 /* tmPathOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FD108CE315400A52912 /* tmPathOwner.cpp */; };
+		C07D8FFA08CE315400A52912 /* tmTree_IO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FD208CE315400A52912 /* tmTree_IO.cpp */; };
+		C07D8FFB08CE315400A52912 /* tmTree_FacetOrder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FD308CE315400A52912 /* tmTree_FacetOrder.cpp */; };
+		C07D8FFE08CE315400A52912 /* tmTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FD608CE315400A52912 /* tmTree.cpp */; };
+		C07D900108CE315400A52912 /* tmEdgeOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FD908CE315400A52912 /* tmEdgeOwner.cpp */; };
+		C07D900208CE315400A52912 /* tmVertexOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FDA08CE315400A52912 /* tmVertexOwner.cpp */; };
+		C07D900608CE315400A52912 /* tmPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FDE08CE315400A52912 /* tmPoint.cpp */; };
+		C07D900708CE315400A52912 /* tmPolyOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FDF08CE315400A52912 /* tmPolyOwner.cpp */; };
+		C07D900808CE315400A52912 /* tmFacetOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FE008CE315400A52912 /* tmFacetOwner.cpp */; };
+		C07D900A08CE315400A52912 /* tmFacet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FE208CE315400A52912 /* tmFacet.cpp */; };
+		C07D900D08CE315400A52912 /* tmPoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FE508CE315400A52912 /* tmPoly.cpp */; };
+		C07D901008CE315400A52912 /* tmTreeCleaner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D8FE808CE315400A52912 /* tmTreeCleaner.cpp */; };
+		C07D902F08CE317B00A52912 /* tmCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D901308CE317B00A52912 /* tmCondition.cpp */; };
+		C07D903308CE317B00A52912 /* tmConditionEdgeLengthFixed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D901708CE317B00A52912 /* tmConditionEdgeLengthFixed.cpp */; };
+		C07D903608CE317B00A52912 /* tmConditionPathAngleQuant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D901A08CE317B00A52912 /* tmConditionPathAngleQuant.cpp */; };
+		C07D903808CE317B00A52912 /* tmConditionNodeCombo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D901C08CE317B00A52912 /* tmConditionNodeCombo.cpp */; };
+		C07D903908CE317B00A52912 /* tmConditionNodeOnEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D901D08CE317B00A52912 /* tmConditionNodeOnEdge.cpp */; };
+		C07D903C08CE317B00A52912 /* tmConditionNodeFixed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902008CE317B00A52912 /* tmConditionNodeFixed.cpp */; };
+		C07D903F08CE317B00A52912 /* tmConditionPathActive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902308CE317B00A52912 /* tmConditionPathActive.cpp */; };
+		C07D904008CE317B00A52912 /* tmConditionNodesPaired.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902408CE317B00A52912 /* tmConditionNodesPaired.cpp */; };
+		C07D904208CE317B00A52912 /* tmConditionNodeOnCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902608CE317B00A52912 /* tmConditionNodeOnCorner.cpp */; };
+		C07D904408CE317B00A52912 /* tmConditionNodeSymmetric.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902808CE317B00A52912 /* tmConditionNodeSymmetric.cpp */; };
+		C07D904508CE317B00A52912 /* tmConditionOwner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902908CE317B00A52912 /* tmConditionOwner.cpp */; };
+		C07D904608CE317B00A52912 /* tmConditionNodesCollinear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902A08CE317B00A52912 /* tmConditionNodesCollinear.cpp */; };
+		C07D904708CE317B00A52912 /* tmConditionPathAngleFixed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902B08CE317B00A52912 /* tmConditionPathAngleFixed.cpp */; };
+		C07D904808CE317B00A52912 /* tmConditionEdgesSameStrain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D902C08CE317B00A52912 /* tmConditionEdgesSameStrain.cpp */; };
+		C07D905208CE319A00A52912 /* tmStrainOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D904A08CE319900A52912 /* tmStrainOptimizer.cpp */; };
+		C07D905308CE319A00A52912 /* tmScaleOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D904B08CE319900A52912 /* tmScaleOptimizer.cpp */; };
+		C07D905608CE319A00A52912 /* tmEdgeOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D904E08CE319A00A52912 /* tmEdgeOptimizer.cpp */; };
+		C07D905808CE319A00A52912 /* tmConstraintFns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D905008CE319A00A52912 /* tmConstraintFns.cpp */; };
+		C07D905D08CE31B800A52912 /* tmNLCO_alm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D905908CE31B800A52912 /* tmNLCO_alm.cpp */; };
+		C07D905E08CE31B800A52912 /* tmNLCO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D905A08CE31B800A52912 /* tmNLCO.cpp */; };
+		C07D906808CE31D300A52912 /* tmStubFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D906408CE31D300A52912 /* tmStubFinder.cpp */; };
+		C07D909508CE321E00A52912 /* tmwxPersistentFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D908808CE321E00A52912 /* tmwxPersistentFrame.cpp */; };
+		C07D909608CE321E00A52912 /* tmwxCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D908908CE321E00A52912 /* tmwxCommand.cpp */; };
+		C07D909D08CE321E00A52912 /* tmwxStr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D909008CE321E00A52912 /* tmwxStr.cpp */; };
+		C07D90AA08CE326700A52912 /* tmwxView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90A008CE326700A52912 /* tmwxView.cpp */; };
+		C07D90AC08CE326700A52912 /* tmwxPrintout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90A208CE326700A52912 /* tmwxPrintout.cpp */; };
+		C07D90AE08CE326700A52912 /* tmwxDoc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90A408CE326700A52912 /* tmwxDoc.cpp */; };
+		C07D90B008CE326700A52912 /* tmwxDesignFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90A608CE326700A52912 /* tmwxDesignFrame.cpp */; };
+		C07D90B208CE326700A52912 /* tmwxDesignCanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90A808CE326700A52912 /* tmwxDesignCanvas.cpp */; };
+		C07D90B508CE327A00A52912 /* tmwxFoldedFormFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90B308CE327A00A52912 /* tmwxFoldedFormFrame.cpp */; };
+		C07D90E508CE328F00A52912 /* tmwxConditionPathAngleFixedPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90B708CE328F00A52912 /* tmwxConditionPathAngleFixedPanel.cpp */; };
+		C07D90E708CE328F00A52912 /* tmwxConditionPathActivePanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90B908CE328F00A52912 /* tmwxConditionPathActivePanel.cpp */; };
+		C07D90E908CE328F00A52912 /* tmwxConditionNodeSymmetricPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90BB08CE328F00A52912 /* tmwxConditionNodeSymmetricPanel.cpp */; };
+		C07D90EB08CE328F00A52912 /* tmwxConditionNodesPairedPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90BD08CE328F00A52912 /* tmwxConditionNodesPairedPanel.cpp */; };
+		C07D90ED08CE328F00A52912 /* tmwxConditionNodeOnEdgePanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90BF08CE328F00A52912 /* tmwxConditionNodeOnEdgePanel.cpp */; };
+		C07D90EF08CE328F00A52912 /* tmwxVertexPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90C108CE328F00A52912 /* tmwxVertexPanel.cpp */; };
+		C07D90F108CE328F00A52912 /* tmwxTreePanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90C308CE328F00A52912 /* tmwxTreePanel.cpp */; };
+		C07D90F308CE328F00A52912 /* tmwxPolyPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90C508CE328F00A52912 /* tmwxPolyPanel.cpp */; };
+		C07D90F508CE328F00A52912 /* tmwxConditionListBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90C708CE328F00A52912 /* tmwxConditionListBox.cpp */; };
+		C07D90F708CE328F00A52912 /* tmwxConditionEdgesSameStrainPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90C908CE328F00A52912 /* tmwxConditionEdgesSameStrainPanel.cpp */; };
+		C07D90FA08CE328F00A52912 /* tmwxEdgePanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90CC08CE328F00A52912 /* tmwxEdgePanel.cpp */; };
+		C07D90FC08CE328F00A52912 /* tmwxCreasePanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90CE08CE328F00A52912 /* tmwxCreasePanel.cpp */; };
+		C07D90FE08CE328F00A52912 /* tmwxConditionNodesCollinearPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90D008CE328F00A52912 /* tmwxConditionNodesCollinearPanel.cpp */; };
+		C07D90FF08CE328F00A52912 /* tmwxConditionEdgeLengthFixedPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90D108CE328F00A52912 /* tmwxConditionEdgeLengthFixedPanel.cpp */; };
+		C07D910008CE328F00A52912 /* tmwxInspectorFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90D208CE328F00A52912 /* tmwxInspectorFrame.cpp */; };
+		C07D910208CE328F00A52912 /* tmwxGroupPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90D408CE328F00A52912 /* tmwxGroupPanel.cpp */; };
+		C07D910408CE328F00A52912 /* tmwxFacetPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90D608CE328F00A52912 /* tmwxFacetPanel.cpp */; };
+		C07D910508CE328F00A52912 /* tmwxConditionNodeOnCornerPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90D708CE328F00A52912 /* tmwxConditionNodeOnCornerPanel.cpp */; };
+		C07D910708CE328F00A52912 /* tmwxConditionNodeFixedPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90D908CE328F00A52912 /* tmwxConditionNodeFixedPanel.cpp */; };
+		C07D910908CE328F00A52912 /* tmwxConditionNodeComboPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90DB08CE328F00A52912 /* tmwxConditionNodeComboPanel.cpp */; };
+		C07D910C08CE328F00A52912 /* tmwxConditionPathAngleQuantPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90DE08CE328F00A52912 /* tmwxConditionPathAngleQuantPanel.cpp */; };
+		C07D910F08CE328F00A52912 /* tmwxPathPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90E108CE328F00A52912 /* tmwxPathPanel.cpp */; };
+		C07D911108CE328F00A52912 /* tmwxNodePanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D90E308CE328F00A52912 /* tmwxNodePanel.cpp */; };
+		C07D911508CE32A500A52912 /* tmwxLogFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D911308CE32A500A52912 /* tmwxLogFrame.cpp */; };
+		C07D912708CE32BB00A52912 /* tmwxStaticText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D911708CE32BB00A52912 /* tmwxStaticText.cpp */; };
+		C07D912808CE32BB00A52912 /* tmwxRadioBoxSmall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D911808CE32BB00A52912 /* tmwxRadioBoxSmall.cpp */; };
+		C07D912908CE32BB00A52912 /* tmwxCheckBoxSmall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D911908CE32BB00A52912 /* tmwxCheckBoxSmall.cpp */; };
+		C07D912C08CE32BB00A52912 /* tmwxPaletteFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D911C08CE32BB00A52912 /* tmwxPaletteFrame.cpp */; };
+		C07D912F08CE32BB00A52912 /* tmwxButtonMini.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D911F08CE32BB00A52912 /* tmwxButtonMini.cpp */; };
+		C07D913008CE32BB00A52912 /* tmwxButtonSmall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D912008CE32BB00A52912 /* tmwxButtonSmall.cpp */; };
+		C07D913108CE32BB00A52912 /* tmwxPalettePanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D912108CE32BB00A52912 /* tmwxPalettePanel.cpp */; };
+		C07D913208CE32BB00A52912 /* tmwxTextCtrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D912208CE32BB00A52912 /* tmwxTextCtrl.cpp */; };
+		C07D913D08CE32CD00A52912 /* tmwxViewSettingsFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D913708CE32CD00A52912 /* tmwxViewSettingsFrame.cpp */; };
+		C07D913E08CE32CD00A52912 /* tmwxViewSettingsPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D913808CE32CD00A52912 /* tmwxViewSettingsPanel.cpp */; };
+		C07D914008CE32CD00A52912 /* tmwxViewSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D913A08CE32CD00A52912 /* tmwxViewSettings.cpp */; };
+		C07D914808CE32E000A52912 /* tmwxOptimizerDialog_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D914308CE32E000A52912 /* tmwxOptimizerDialog_mac.cpp */; };
+		C07D914908CE32E000A52912 /* tmwxOptimizerDialog_gtk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D914408CE32E000A52912 /* tmwxOptimizerDialog_gtk.cpp */; };
+		C07D914A08CE32E000A52912 /* tmwxOptimizerDialog_cmn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D914508CE32E000A52912 /* tmwxOptimizerDialog_cmn.cpp */; };
+		C07D915908CE389100A52912 /* tmwxApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D915808CE389100A52912 /* tmwxApp.cpp */; };
+		C086403908EB07B100EEE5CD /* tmDpptrTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C08A84EC08BC2367008508CD /* tmDpptrTarget.cpp */; };
+		C086403B08EB07CD00EEE5CD /* tmNewtonRaphsonTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C086403A08EB07CD00EEE5CD /* tmNewtonRaphsonTester.cpp */; };
+		C086403C08EB081900EEE5CD /* tmHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0C9A89308BD198900ADCE48 /* tmHeader.cpp */; };
+		C08A84EF08BC2367008508CD /* tmDpptrTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C08A84EC08BC2367008508CD /* tmDpptrTarget.cpp */; };
+		C099402708EF5C21002E8E42 /* SplashScreen.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = C099402608EF5C17002E8E42 /* SplashScreen.png */; };
+		C0A528A208E68E05004D958F /* tmArrayTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528A108E68E05004D958F /* tmArrayTester.cpp */; };
+		C0A528B108E68E8D004D958F /* tmDpptrTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528B008E68E8D004D958F /* tmDpptrTester.cpp */; };
+		C0A528BA08E68EC7004D958F /* tmDpptrTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C08A84EC08BC2367008508CD /* tmDpptrTarget.cpp */; };
+		C0A528C508E68F79004D958F /* tmHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0C9A89308BD198900ADCE48 /* tmHeader.cpp */; };
+		C0A528C608E68F86004D958F /* tmHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0C9A89308BD198900ADCE48 /* tmHeader.cpp */; };
+		C0A528D308E6906C004D958F /* tmHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0C9A89308BD198900ADCE48 /* tmHeader.cpp */; };
+		C0A528D408E69081004D958F /* tmDpptrTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C08A84EC08BC2367008508CD /* tmDpptrTarget.cpp */; };
+		C0A528DA08E690A8004D958F /* tmNLCO_alm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D905908CE31B800A52912 /* tmNLCO_alm.cpp */; };
+		C0A528DB08E690A8004D958F /* tmNLCO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07D905A08CE31B800A52912 /* tmNLCO.cpp */; };
+		C0A528E208E690E7004D958F /* tmNLCOTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528E008E690E7004D958F /* tmNLCOTester.cpp */; };
+		C0A528F608E69208004D958F /* tmNLCO_wnlibStub.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A528F308E69208004D958F /* tmNLCO_wnlibStub.c */; };
+		C0A528F708E69208004D958F /* tmNLCO_wnlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528F508E69208004D958F /* tmNLCO_wnlib.cpp */; };
+		C0A528FE08E6925B004D958F /* tmNLCO_rfsqp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528FB08E6925B004D958F /* tmNLCO_rfsqp.cpp */; };
+		C0A528FF08E6925B004D958F /* tmNLCO_cfsqp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528FD08E6925B004D958F /* tmNLCO_cfsqp.cpp */; };
+		C0A5291208E6939F004D958F /* cfsqp_noprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A5290B08E6937D004D958F /* cfsqp_noprint.cpp */; };
+		C0A5292708E6941C004D958F /* rfsqp_noprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A5291A08E693F3004D958F /* rfsqp_noprint.cpp */; };
+		C0A5298208E694B0004D958F /* wnasrt.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5294908E69471004D958F /* wnasrt.c */; };
+		C0A5298308E694B0004D958F /* wnvmk.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297D08E69471004D958F /* wnvmk.c */; };
+		C0A5298408E694B0004D958F /* wnvadd3.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297708E69471004D958F /* wnvadd3.c */; };
+		C0A5298508E694B0004D958F /* wn1dmin.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293008E69470004D958F /* wn1dmin.c */; };
+		C0A5298608E694B0004D958F /* wnrflt.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296808E69471004D958F /* wnrflt.c */; };
+		C0A5298708E694B0004D958F /* wnmemg.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296408E69471004D958F /* wnmemg.c */; };
+		C0A5298808E694B0004D958F /* wnrnd.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296908E69471004D958F /* wnrnd.c */; };
+		C0A5298908E694B0004D958F /* wnpoly.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297408E69471004D958F /* wnpoly.c */; };
+		C0A5298A08E694B0004D958F /* wnvprn.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5298108E69472004D958F /* wnvprn.c */; };
+		C0A5298B08E694B0004D958F /* wnvnrm.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297F08E69472004D958F /* wnvnrm.c */; };
+		C0A5298C08E694B0004D958F /* wndcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5292E08E69470004D958F /* wndcmp.c */; };
+		C0A5298D08E694B0004D958F /* wnnlp.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293708E69470004D958F /* wnnlp.c */; };
+		C0A5298E08E694B0004D958F /* wnconjg.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293608E69470004D958F /* wnconjg.c */; };
+		C0A5298F08E694B0004D958F /* wnvcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297808E69471004D958F /* wnvcpy.c */; };
+		C0A5299008E694B0004D958F /* wnmemb.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296108E69471004D958F /* wnmemb.c */; };
+		C0A5299108E694B0004D958F /* wnmemn.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296508E69471004D958F /* wnmemn.c */; };
+		C0A5299208E694B0004D958F /* wnrtab.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296E08E69471004D958F /* wnrtab.c */; };
+		C0A5299308E694B0004D958F /* wnparvect.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293A08E69470004D958F /* wnparvect.c */; };
+		C0A5299408E694B0004D958F /* wnmbtr.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295B08E69471004D958F /* wnmbtr.c */; };
+		C0A5299508E694B0004D958F /* wndot.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297208E69471004D958F /* wndot.c */; };
+		C0A5299608E694B0004D958F /* wnscnt.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5294208E69470004D958F /* wnscnt.c */; };
+		C0A5299708E694B0004D958F /* wnqfit.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293C08E69470004D958F /* wnqfit.c */; };
+		C0A5299808E694B0004D958F /* wncnjfg.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5293208E69470004D958F /* wncnjfg.c */; };
+		C0A5299908E694B0004D958F /* wnmcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295D08E69471004D958F /* wnmcpy.c */; };
+		C0A5299A08E694B0004D958F /* wnmem.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295E08E69471004D958F /* wnmem.c */; };
+		C0A5299B08E694B0004D958F /* wnmmk.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5295808E69471004D958F /* wnmmk.c */; };
+		C0A5299C08E694B0004D958F /* wnrdb.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5296708E69471004D958F /* wnrdb.c */; };
+		C0A5299D08E694B0004D958F /* wnsmk.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5294508E69470004D958F /* wnsmk.c */; };
+		C0A5299E08E694B0004D958F /* wnvgen.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A5297B08E69471004D958F /* wnvgen.c */; };
+		C0B0670E0937CD61006C8423 /* about.htm in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0B0670D0937CD61006C8423 /* about.htm */; };
+		C0C9A89408BD198900ADCE48 /* tmHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0C9A89308BD198900ADCE48 /* tmHeader.cpp */; };
+		C0C9A8FA08BD239A00ADCE48 /* Icon_app.icns in Resources */ = {isa = PBXBuildFile; fileRef = C0C9A8F808BD239A00ADCE48 /* Icon_app.icns */; };
+		C0C9A8FB08BD239A00ADCE48 /* Icon_doc.icns in Resources */ = {isa = PBXBuildFile; fileRef = C0C9A8F908BD239A00ADCE48 /* Icon_doc.icns */; };
+		C0D0D0620935746100DC38CA /* tmwxHtmlHelpController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D0D05E0935746100DC38CA /* tmwxHtmlHelpController.cpp */; };
+		C0D0D0640935746100DC38CA /* tmwxHtmlHelpFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D0D0600935746100DC38CA /* tmwxHtmlHelpFrame.cpp */; };
+		C0D24049099E70F900436EFE /* libwx_mac_static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D24048099E70F900436EFE /* libwx_mac_static.a */; };
+		C0DB2C6908E7830600098C3F /* tmNLCO_cfsqp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528FD08E6925B004D958F /* tmNLCO_cfsqp.cpp */; };
+		C0DB2C6A08E786CE00098C3F /* cfsqp_noprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A5290B08E6937D004D958F /* cfsqp_noprint.cpp */; };
+		C0DB2C6B08E7873900098C3F /* tmNLCO_rfsqp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528FB08E6925B004D958F /* tmNLCO_rfsqp.cpp */; };
+		C0DB2C6C08E78AE800098C3F /* rfsqp_noprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A5291A08E693F3004D958F /* rfsqp_noprint.cpp */; };
+		C0DB2C7308E78CBF00098C3F /* tmNLCO_wnlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0A528F508E69208004D958F /* tmNLCO_wnlib.cpp */; };
+		C0DD44800865C42C00AE35AB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0DD447F0865C42C00AE35AB /* Carbon.framework */; };
+		C0DD44850865C45500AE35AB /* System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0DD44840865C45500AE35AB /* System.framework */; };
+		C0E6FDE809390BD400E12748 /* help.zip in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0E6FDE709390BD400E12748 /* help.zip */; };
+		C0E79C15094B88DC00A0CB76 /* tmConditionPathCombo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79C13094B88DC00A0CB76 /* tmConditionPathCombo.cpp */; };
+		C0E79C2E094B8B8500A0CB76 /* tmwxConditionPathComboPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79C2C094B8B8500A0CB76 /* tmwxConditionPathComboPanel.cpp */; };
+		C0E79D04094C91EC00A0CB76 /* tmwxDoc_Edit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79CFE094C91EB00A0CB76 /* tmwxDoc_Edit.cpp */; };
+		C0E79D05094C91EC00A0CB76 /* tmwxDoc_View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79CFF094C91EB00A0CB76 /* tmwxDoc_View.cpp */; };
+		C0E79D06094C91EC00A0CB76 /* tmwxDoc_Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79D00094C91EB00A0CB76 /* tmwxDoc_Action.cpp */; };
+		C0E79D07094C91EC00A0CB76 /* tmwxDoc_Debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79D01094C91EC00A0CB76 /* tmwxDoc_Debug.cpp */; };
+		C0E79D08094C91EC00A0CB76 /* tmwxDoc_Condition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79D02094C91EC00A0CB76 /* tmwxDoc_Condition.cpp */; };
+		C0E79D09094C91EC00A0CB76 /* tmwxDoc_File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79D03094C91EC00A0CB76 /* tmwxDoc_File.cpp */; };
+		C0E79D46094CC7C000A0CB76 /* tmwxGetUserInputDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79D44094CC7C000A0CB76 /* tmwxGetUserInputDialog.cpp */; };
+		C0E79DA1094D2C0300A0CB76 /* tmwxCheckBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79D9F094D2C0300A0CB76 /* tmwxCheckBox.cpp */; };
+		C0E9FC4008D8B6D900103F9F /* tmOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E9FC3E08D8B6D900103F9F /* tmOptimizer.cpp */; };
+		C0F1FD9D093E9DD1004665FB /* help.zip_zip_treemaker.hhp.cached in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0F1FD9C093E9DD1004665FB /* help.zip_zip_treemaker.hhp.cached */; };
+		C0F1FDC3093EB4F9004665FB /* tmwxDocManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0F1FDC1093EB4F8004665FB /* tmwxDocManager.cpp */; };
+		C0F64B41094E2B4400DAB9C8 /* tmConditionPathCombo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E79C13094B88DC00A0CB76 /* tmConditionPathCombo.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		C058AB970865EA2800A17C7C /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Development;
+		};
+		C058AB980865EA2800A17C7C /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0F79E0908BD41980080E944 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 12;
+			files = (
+				C0B0670E0937CD61006C8423 /* about.htm in CopyFiles */,
+				C099402708EF5C21002E8E42 /* SplashScreen.png in CopyFiles */,
+				C0E6FDE809390BD400E12748 /* help.zip in CopyFiles */,
+				C0F1FD9D093E9DD1004665FB /* help.zip_zip_treemaker.hhp.cached in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C01B013C094808F3000C489E /* tmwxInspectorPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxInspectorPanel.cpp; sourceTree = "<group>"; };
+		C01B013D094808F3000C489E /* tmwxInspectorPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxInspectorPanel.h; sourceTree = "<group>"; };
+		C01BFEE508E6B1C000D2B685 /* tmModelTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tmModelTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		C01BFEF108E6B28800D2B685 /* tmModelTester.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmModelTester.cpp; sourceTree = "<group>"; };
+		C02AC86D08ECCD9A0045F0A5 /* tmwxOptimizerDialog_msw.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxOptimizerDialog_msw.cpp; path = tmwxOptimizerDialog/tmwxOptimizerDialog_msw.cpp; sourceTree = "<group>"; };
+		C058AC0D0865FB0300A17C7C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		C07D8FBD08CE314000A52912 /* tmCluster.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmCluster.h; sourceTree = "<group>"; };
+		C07D8FBE08CE314000A52912 /* tmCluster.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmCluster.cpp; sourceTree = "<group>"; };
+		C07D8FC108CE315400A52912 /* tmEdge.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmEdge.cpp; sourceTree = "<group>"; };
+		C07D8FC208CE315400A52912 /* tmCreaseOwner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmCreaseOwner.h; sourceTree = "<group>"; };
+		C07D8FC308CE315400A52912 /* tmCreaseOwner.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmCreaseOwner.cpp; sourceTree = "<group>"; };
+		C07D8FC408CE315400A52912 /* tmTree_TestTrees.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmTree_TestTrees.cpp; sourceTree = "<group>"; };
+		C07D8FC508CE315400A52912 /* tmCrease.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmCrease.h; sourceTree = "<group>"; };
+		C07D8FC608CE315400A52912 /* tmPart.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmPart.h; sourceTree = "<group>"; };
+		C07D8FC708CE315400A52912 /* tmPart.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmPart.cpp; sourceTree = "<group>"; };
+		C07D8FC808CE315400A52912 /* tmTree.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmTree.h; sourceTree = "<group>"; };
+		C07D8FC908CE315400A52912 /* tmNode.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmNode.cpp; sourceTree = "<group>"; };
+		C07D8FCA08CE315400A52912 /* tmNodeOwner.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmNodeOwner.cpp; sourceTree = "<group>"; };
+		C07D8FCB08CE315400A52912 /* tmNode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmNode.h; sourceTree = "<group>"; };
+		C07D8FCC08CE315400A52912 /* tmPath.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmPath.cpp; sourceTree = "<group>"; };
+		C07D8FCD08CE315400A52912 /* tmCrease.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmCrease.cpp; sourceTree = "<group>"; };
+		C07D8FCE08CE315400A52912 /* tmVertex.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmVertex.cpp; sourceTree = "<group>"; };
+		C07D8FCF08CE315400A52912 /* tmPath.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmPath.h; sourceTree = "<group>"; };
+		C07D8FD008CE315400A52912 /* tmPathOwner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmPathOwner.h; sourceTree = "<group>"; };
+		C07D8FD108CE315400A52912 /* tmPathOwner.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmPathOwner.cpp; sourceTree = "<group>"; };
+		C07D8FD208CE315400A52912 /* tmTree_IO.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmTree_IO.cpp; sourceTree = "<group>"; };
+		C07D8FD308CE315400A52912 /* tmTree_FacetOrder.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmTree_FacetOrder.cpp; sourceTree = "<group>"; };
+		C07D8FD408CE315400A52912 /* tmVertexOwner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmVertexOwner.h; sourceTree = "<group>"; };
+		C07D8FD508CE315400A52912 /* tmNodeOwner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmNodeOwner.h; sourceTree = "<group>"; };
+		C07D8FD608CE315400A52912 /* tmTree.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmTree.cpp; sourceTree = "<group>"; };
+		C07D8FD708CE315400A52912 /* tmPolyOwner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmPolyOwner.h; sourceTree = "<group>"; };
+		C07D8FD808CE315400A52912 /* tmEdgeOwner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmEdgeOwner.h; sourceTree = "<group>"; };
+		C07D8FD908CE315400A52912 /* tmEdgeOwner.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmEdgeOwner.cpp; sourceTree = "<group>"; };
+		C07D8FDA08CE315400A52912 /* tmVertexOwner.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmVertexOwner.cpp; sourceTree = "<group>"; };
+		C07D8FDB08CE315400A52912 /* tmVertex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmVertex.h; sourceTree = "<group>"; };
+		C07D8FDC08CE315400A52912 /* tmEdge.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmEdge.h; sourceTree = "<group>"; };
+		C07D8FDD08CE315400A52912 /* tmTreeClasses.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmTreeClasses.h; sourceTree = "<group>"; };
+		C07D8FDE08CE315400A52912 /* tmPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmPoint.cpp; sourceTree = "<group>"; };
+		C07D8FDF08CE315400A52912 /* tmPolyOwner.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmPolyOwner.cpp; sourceTree = "<group>"; };
+		C07D8FE008CE315400A52912 /* tmFacetOwner.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmFacetOwner.cpp; sourceTree = "<group>"; };
+		C07D8FE108CE315400A52912 /* tmFacet.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmFacet.h; sourceTree = "<group>"; };
+		C07D8FE208CE315400A52912 /* tmFacet.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmFacet.cpp; sourceTree = "<group>"; };
+		C07D8FE308CE315400A52912 /* tmFacetOwner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmFacetOwner.h; sourceTree = "<group>"; };
+		C07D8FE408CE315400A52912 /* tmPoly.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmPoly.h; sourceTree = "<group>"; };
+		C07D8FE508CE315400A52912 /* tmPoly.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmPoly.cpp; sourceTree = "<group>"; };
+		C07D8FE608CE315400A52912 /* tmPoint.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmPoint.h; sourceTree = "<group>"; };
+		C07D8FE708CE315400A52912 /* tmTreeCleaner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmTreeCleaner.h; sourceTree = "<group>"; };
+		C07D8FE808CE315400A52912 /* tmTreeCleaner.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmTreeCleaner.cpp; sourceTree = "<group>"; };
+		C07D901108CE317B00A52912 /* tmConditionPathActive.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionPathActive.h; sourceTree = "<group>"; };
+		C07D901208CE317B00A52912 /* tmCondition.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmCondition.h; sourceTree = "<group>"; };
+		C07D901308CE317B00A52912 /* tmCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmCondition.cpp; sourceTree = "<group>"; };
+		C07D901408CE317B00A52912 /* tmConditionNodesPaired.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionNodesPaired.h; sourceTree = "<group>"; };
+		C07D901508CE317B00A52912 /* tmConditionPathAngleQuant.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionPathAngleQuant.h; sourceTree = "<group>"; };
+		C07D901608CE317B00A52912 /* tmConditionEdgeLengthFixed.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionEdgeLengthFixed.h; sourceTree = "<group>"; };
+		C07D901708CE317B00A52912 /* tmConditionEdgeLengthFixed.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionEdgeLengthFixed.cpp; sourceTree = "<group>"; };
+		C07D901808CE317B00A52912 /* tmConditionNodeOnEdge.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionNodeOnEdge.h; sourceTree = "<group>"; };
+		C07D901908CE317B00A52912 /* tmConditionEdgesSameStrain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionEdgesSameStrain.h; sourceTree = "<group>"; };
+		C07D901A08CE317B00A52912 /* tmConditionPathAngleQuant.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionPathAngleQuant.cpp; sourceTree = "<group>"; };
+		C07D901B08CE317B00A52912 /* tmConditionPathAngleFixed.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionPathAngleFixed.h; sourceTree = "<group>"; };
+		C07D901C08CE317B00A52912 /* tmConditionNodeCombo.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionNodeCombo.cpp; sourceTree = "<group>"; };
+		C07D901D08CE317B00A52912 /* tmConditionNodeOnEdge.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionNodeOnEdge.cpp; sourceTree = "<group>"; };
+		C07D901E08CE317B00A52912 /* tmConditionNodeOnCorner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionNodeOnCorner.h; sourceTree = "<group>"; };
+		C07D901F08CE317B00A52912 /* tmConditionNodesCollinear.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionNodesCollinear.h; sourceTree = "<group>"; };
+		C07D902008CE317B00A52912 /* tmConditionNodeFixed.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionNodeFixed.cpp; sourceTree = "<group>"; };
+		C07D902108CE317B00A52912 /* tmConditionNodeCombo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionNodeCombo.h; sourceTree = "<group>"; };
+		C07D902208CE317B00A52912 /* tmConditionNodeFixed.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionNodeFixed.h; sourceTree = "<group>"; };
+		C07D902308CE317B00A52912 /* tmConditionPathActive.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionPathActive.cpp; sourceTree = "<group>"; };
+		C07D902408CE317B00A52912 /* tmConditionNodesPaired.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionNodesPaired.cpp; sourceTree = "<group>"; };
+		C07D902508CE317B00A52912 /* tmConditionOwner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionOwner.h; sourceTree = "<group>"; };
+		C07D902608CE317B00A52912 /* tmConditionNodeOnCorner.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionNodeOnCorner.cpp; sourceTree = "<group>"; };
+		C07D902708CE317B00A52912 /* tmConditionNodeSymmetric.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionNodeSymmetric.h; sourceTree = "<group>"; };
+		C07D902808CE317B00A52912 /* tmConditionNodeSymmetric.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionNodeSymmetric.cpp; sourceTree = "<group>"; };
+		C07D902908CE317B00A52912 /* tmConditionOwner.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionOwner.cpp; sourceTree = "<group>"; };
+		C07D902A08CE317B00A52912 /* tmConditionNodesCollinear.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionNodesCollinear.cpp; sourceTree = "<group>"; };
+		C07D902B08CE317B00A52912 /* tmConditionPathAngleFixed.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionPathAngleFixed.cpp; sourceTree = "<group>"; };
+		C07D902C08CE317B00A52912 /* tmConditionEdgesSameStrain.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionEdgesSameStrain.cpp; sourceTree = "<group>"; };
+		C07D904908CE319900A52912 /* tmScaleOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmScaleOptimizer.h; sourceTree = "<group>"; };
+		C07D904A08CE319900A52912 /* tmStrainOptimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmStrainOptimizer.cpp; sourceTree = "<group>"; };
+		C07D904B08CE319900A52912 /* tmScaleOptimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmScaleOptimizer.cpp; sourceTree = "<group>"; };
+		C07D904C08CE319900A52912 /* tmConstraintFns.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConstraintFns.h; sourceTree = "<group>"; };
+		C07D904D08CE319A00A52912 /* tmEdgeOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmEdgeOptimizer.h; sourceTree = "<group>"; };
+		C07D904E08CE319A00A52912 /* tmEdgeOptimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmEdgeOptimizer.cpp; sourceTree = "<group>"; };
+		C07D904F08CE319A00A52912 /* tmStrainOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmStrainOptimizer.h; sourceTree = "<group>"; };
+		C07D905008CE319A00A52912 /* tmConstraintFns.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConstraintFns.cpp; sourceTree = "<group>"; };
+		C07D905908CE31B800A52912 /* tmNLCO_alm.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmNLCO_alm.cpp; path = tmModel/tmNLCO/tmNLCO_alm.cpp; sourceTree = "<group>"; };
+		C07D905A08CE31B800A52912 /* tmNLCO.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmNLCO.cpp; path = tmModel/tmNLCO/tmNLCO.cpp; sourceTree = "<group>"; };
+		C07D905B08CE31B800A52912 /* tmNLCO_alm.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmNLCO_alm.h; path = tmModel/tmNLCO/tmNLCO_alm.h; sourceTree = "<group>"; };
+		C07D906108CE31C200A52912 /* tmNLCO.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmNLCO.h; path = tmModel/tmNLCO/tmNLCO.h; sourceTree = "<group>"; };
+		C07D906308CE31D300A52912 /* tmNewtonRaphson.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmNewtonRaphson.h; path = tmModel/tmSolvers/tmNewtonRaphson.h; sourceTree = "<group>"; };
+		C07D906408CE31D300A52912 /* tmStubFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmStubFinder.cpp; path = tmModel/tmSolvers/tmStubFinder.cpp; sourceTree = "<group>"; };
+		C07D906508CE31D300A52912 /* tmStubFinder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmStubFinder.h; path = tmModel/tmSolvers/tmStubFinder.h; sourceTree = "<group>"; };
+		C07D906608CE31D300A52912 /* tmMatrix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmMatrix.h; path = tmModel/tmSolvers/tmMatrix.h; sourceTree = "<group>"; };
+		C07D908708CE321E00A52912 /* tmwxPersistentFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmwxPersistentFrame.h; path = tmwxCommon/tmwxPersistentFrame.h; sourceTree = "<group>"; };
+		C07D908808CE321E00A52912 /* tmwxPersistentFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxPersistentFrame.cpp; path = tmwxCommon/tmwxPersistentFrame.cpp; sourceTree = "<group>"; };
+		C07D908908CE321E00A52912 /* tmwxCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxCommand.cpp; path = tmwxCommon/tmwxCommand.cpp; sourceTree = "<group>"; };
+		C07D908B08CE321E00A52912 /* tmwxApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmwxApp.h; path = tmwxCommon/tmwxApp.h; sourceTree = "<group>"; };
+		C07D908E08CE321E00A52912 /* tmwxGUI_fwd.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmwxGUI_fwd.h; path = tmwxCommon/tmwxGUI_fwd.h; sourceTree = "<group>"; };
+		C07D908F08CE321E00A52912 /* tmwxStr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmwxStr.h; path = tmwxCommon/tmwxStr.h; sourceTree = "<group>"; };
+		C07D909008CE321E00A52912 /* tmwxStr.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxStr.cpp; path = tmwxCommon/tmwxStr.cpp; sourceTree = "<group>"; };
+		C07D909108CE321E00A52912 /* tmwxCommand.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmwxCommand.h; path = tmwxCommon/tmwxCommand.h; sourceTree = "<group>"; };
+		C07D909F08CE326700A52912 /* tmwxView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxView.h; sourceTree = "<group>"; };
+		C07D90A008CE326700A52912 /* tmwxView.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxView.cpp; sourceTree = "<group>"; };
+		C07D90A108CE326700A52912 /* tmwxPrintout.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxPrintout.h; sourceTree = "<group>"; };
+		C07D90A208CE326700A52912 /* tmwxPrintout.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxPrintout.cpp; sourceTree = "<group>"; };
+		C07D90A308CE326700A52912 /* tmwxDoc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxDoc.h; sourceTree = "<group>"; };
+		C07D90A408CE326700A52912 /* tmwxDoc.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxDoc.cpp; sourceTree = "<group>"; };
+		C07D90A508CE326700A52912 /* tmwxDesignFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxDesignFrame.h; sourceTree = "<group>"; };
+		C07D90A608CE326700A52912 /* tmwxDesignFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxDesignFrame.cpp; sourceTree = "<group>"; };
+		C07D90A708CE326700A52912 /* tmwxDesignCanvas.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxDesignCanvas.h; sourceTree = "<group>"; };
+		C07D90A808CE326700A52912 /* tmwxDesignCanvas.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxDesignCanvas.cpp; sourceTree = "<group>"; };
+		C07D90B308CE327A00A52912 /* tmwxFoldedFormFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxFoldedFormFrame.cpp; sourceTree = "<group>"; };
+		C07D90B408CE327A00A52912 /* tmwxFoldedFormFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxFoldedFormFrame.h; sourceTree = "<group>"; };
+		C07D90B708CE328F00A52912 /* tmwxConditionPathAngleFixedPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionPathAngleFixedPanel.cpp; sourceTree = "<group>"; };
+		C07D90B808CE328F00A52912 /* tmwxConditionPathActivePanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionPathActivePanel.h; sourceTree = "<group>"; };
+		C07D90B908CE328F00A52912 /* tmwxConditionPathActivePanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionPathActivePanel.cpp; sourceTree = "<group>"; };
+		C07D90BA08CE328F00A52912 /* tmwxConditionNodeSymmetricPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionNodeSymmetricPanel.h; sourceTree = "<group>"; };
+		C07D90BB08CE328F00A52912 /* tmwxConditionNodeSymmetricPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionNodeSymmetricPanel.cpp; sourceTree = "<group>"; };
+		C07D90BC08CE328F00A52912 /* tmwxConditionNodesPairedPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionNodesPairedPanel.h; sourceTree = "<group>"; };
+		C07D90BD08CE328F00A52912 /* tmwxConditionNodesPairedPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionNodesPairedPanel.cpp; sourceTree = "<group>"; };
+		C07D90BE08CE328F00A52912 /* tmwxConditionNodeOnEdgePanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionNodeOnEdgePanel.h; sourceTree = "<group>"; };
+		C07D90BF08CE328F00A52912 /* tmwxConditionNodeOnEdgePanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionNodeOnEdgePanel.cpp; sourceTree = "<group>"; };
+		C07D90C008CE328F00A52912 /* tmwxConditionNodeOnCornerPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionNodeOnCornerPanel.h; sourceTree = "<group>"; };
+		C07D90C108CE328F00A52912 /* tmwxVertexPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxVertexPanel.cpp; sourceTree = "<group>"; };
+		C07D90C208CE328F00A52912 /* tmwxTreePanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxTreePanel.h; sourceTree = "<group>"; };
+		C07D90C308CE328F00A52912 /* tmwxTreePanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxTreePanel.cpp; sourceTree = "<group>"; };
+		C07D90C408CE328F00A52912 /* tmwxPolyPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxPolyPanel.h; sourceTree = "<group>"; };
+		C07D90C508CE328F00A52912 /* tmwxPolyPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxPolyPanel.cpp; sourceTree = "<group>"; };
+		C07D90C608CE328F00A52912 /* tmwxVertexPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxVertexPanel.h; sourceTree = "<group>"; };
+		C07D90C708CE328F00A52912 /* tmwxConditionListBox.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionListBox.cpp; sourceTree = "<group>"; };
+		C07D90C808CE328F00A52912 /* tmwxConditionEdgesSameStrainPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionEdgesSameStrainPanel.h; sourceTree = "<group>"; };
+		C07D90C908CE328F00A52912 /* tmwxConditionEdgesSameStrainPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionEdgesSameStrainPanel.cpp; sourceTree = "<group>"; };
+		C07D90CA08CE328F00A52912 /* tmwxConditionEdgeLengthFixedPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionEdgeLengthFixedPanel.h; sourceTree = "<group>"; };
+		C07D90CB08CE328F00A52912 /* tmwxEdgePanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxEdgePanel.h; sourceTree = "<group>"; };
+		C07D90CC08CE328F00A52912 /* tmwxEdgePanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxEdgePanel.cpp; sourceTree = "<group>"; };
+		C07D90CD08CE328F00A52912 /* tmwxCreasePanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxCreasePanel.h; sourceTree = "<group>"; };
+		C07D90CE08CE328F00A52912 /* tmwxCreasePanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxCreasePanel.cpp; sourceTree = "<group>"; };
+		C07D90CF08CE328F00A52912 /* tmwxConditionNodesCollinearPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionNodesCollinearPanel.h; sourceTree = "<group>"; };
+		C07D90D008CE328F00A52912 /* tmwxConditionNodesCollinearPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionNodesCollinearPanel.cpp; sourceTree = "<group>"; };
+		C07D90D108CE328F00A52912 /* tmwxConditionEdgeLengthFixedPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionEdgeLengthFixedPanel.cpp; sourceTree = "<group>"; };
+		C07D90D208CE328F00A52912 /* tmwxInspectorFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxInspectorFrame.cpp; sourceTree = "<group>"; };
+		C07D90D308CE328F00A52912 /* tmwxGroupPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxGroupPanel.h; sourceTree = "<group>"; };
+		C07D90D408CE328F00A52912 /* tmwxGroupPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxGroupPanel.cpp; sourceTree = "<group>"; };
+		C07D90D508CE328F00A52912 /* tmwxFacetPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxFacetPanel.h; sourceTree = "<group>"; };
+		C07D90D608CE328F00A52912 /* tmwxFacetPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxFacetPanel.cpp; sourceTree = "<group>"; };
+		C07D90D708CE328F00A52912 /* tmwxConditionNodeOnCornerPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionNodeOnCornerPanel.cpp; sourceTree = "<group>"; };
+		C07D90D808CE328F00A52912 /* tmwxConditionNodeFixedPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionNodeFixedPanel.h; sourceTree = "<group>"; };
+		C07D90D908CE328F00A52912 /* tmwxConditionNodeFixedPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionNodeFixedPanel.cpp; sourceTree = "<group>"; };
+		C07D90DA08CE328F00A52912 /* tmwxConditionNodeComboPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionNodeComboPanel.h; sourceTree = "<group>"; };
+		C07D90DB08CE328F00A52912 /* tmwxConditionNodeComboPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionNodeComboPanel.cpp; sourceTree = "<group>"; };
+		C07D90DC08CE328F00A52912 /* tmwxConditionListBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionListBox.h; sourceTree = "<group>"; };
+		C07D90DD08CE328F00A52912 /* tmwxConditionPathAngleQuantPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionPathAngleQuantPanel.h; sourceTree = "<group>"; };
+		C07D90DE08CE328F00A52912 /* tmwxConditionPathAngleQuantPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionPathAngleQuantPanel.cpp; sourceTree = "<group>"; };
+		C07D90DF08CE328F00A52912 /* tmwxConditionPathAngleFixedPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionPathAngleFixedPanel.h; sourceTree = "<group>"; };
+		C07D90E008CE328F00A52912 /* tmwxPathPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxPathPanel.h; sourceTree = "<group>"; };
+		C07D90E108CE328F00A52912 /* tmwxPathPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxPathPanel.cpp; sourceTree = "<group>"; };
+		C07D90E208CE328F00A52912 /* tmwxNodePanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxNodePanel.h; sourceTree = "<group>"; };
+		C07D90E308CE328F00A52912 /* tmwxNodePanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxNodePanel.cpp; sourceTree = "<group>"; };
+		C07D90E408CE328F00A52912 /* tmwxInspectorFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxInspectorFrame.h; sourceTree = "<group>"; };
+		C07D911308CE32A500A52912 /* tmwxLogFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxLogFrame.cpp; sourceTree = "<group>"; };
+		C07D911408CE32A500A52912 /* tmwxLogFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxLogFrame.h; sourceTree = "<group>"; };
+		C07D911708CE32BB00A52912 /* tmwxStaticText.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxStaticText.cpp; sourceTree = "<group>"; };
+		C07D911808CE32BB00A52912 /* tmwxRadioBoxSmall.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxRadioBoxSmall.cpp; sourceTree = "<group>"; };
+		C07D911908CE32BB00A52912 /* tmwxCheckBoxSmall.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxCheckBoxSmall.cpp; sourceTree = "<group>"; };
+		C07D911A08CE32BB00A52912 /* tmwxButtonMini.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxButtonMini.h; sourceTree = "<group>"; };
+		C07D911B08CE32BB00A52912 /* tmwxRadioBoxSmall.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxRadioBoxSmall.h; sourceTree = "<group>"; };
+		C07D911C08CE32BB00A52912 /* tmwxPaletteFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxPaletteFrame.cpp; sourceTree = "<group>"; };
+		C07D911D08CE32BB00A52912 /* tmwxTextCtrl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxTextCtrl.h; sourceTree = "<group>"; };
+		C07D911E08CE32BB00A52912 /* tmwxPalettePanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxPalettePanel.h; sourceTree = "<group>"; };
+		C07D911F08CE32BB00A52912 /* tmwxButtonMini.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxButtonMini.cpp; sourceTree = "<group>"; };
+		C07D912008CE32BB00A52912 /* tmwxButtonSmall.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxButtonSmall.cpp; sourceTree = "<group>"; };
+		C07D912108CE32BB00A52912 /* tmwxPalettePanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxPalettePanel.cpp; sourceTree = "<group>"; };
+		C07D912208CE32BB00A52912 /* tmwxTextCtrl.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxTextCtrl.cpp; sourceTree = "<group>"; };
+		C07D912308CE32BB00A52912 /* tmwxButtonSmall.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxButtonSmall.h; sourceTree = "<group>"; };
+		C07D912408CE32BB00A52912 /* tmwxStaticText.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxStaticText.h; sourceTree = "<group>"; };
+		C07D912508CE32BB00A52912 /* tmwxPaletteFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxPaletteFrame.h; sourceTree = "<group>"; };
+		C07D912608CE32BB00A52912 /* tmwxCheckBoxSmall.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxCheckBoxSmall.h; sourceTree = "<group>"; };
+		C07D913708CE32CD00A52912 /* tmwxViewSettingsFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxViewSettingsFrame.cpp; sourceTree = "<group>"; };
+		C07D913808CE32CD00A52912 /* tmwxViewSettingsPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxViewSettingsPanel.cpp; sourceTree = "<group>"; };
+		C07D913908CE32CD00A52912 /* tmwxViewSettingsPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxViewSettingsPanel.h; sourceTree = "<group>"; };
+		C07D913A08CE32CD00A52912 /* tmwxViewSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxViewSettings.cpp; sourceTree = "<group>"; };
+		C07D913B08CE32CD00A52912 /* tmwxViewSettings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxViewSettings.h; sourceTree = "<group>"; };
+		C07D913C08CE32CD00A52912 /* tmwxViewSettingsFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxViewSettingsFrame.h; sourceTree = "<group>"; };
+		C07D914308CE32E000A52912 /* tmwxOptimizerDialog_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxOptimizerDialog_mac.cpp; path = tmwxOptimizerDialog/tmwxOptimizerDialog_mac.cpp; sourceTree = "<group>"; };
+		C07D914408CE32E000A52912 /* tmwxOptimizerDialog_gtk.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxOptimizerDialog_gtk.cpp; path = tmwxOptimizerDialog/tmwxOptimizerDialog_gtk.cpp; sourceTree = "<group>"; };
+		C07D914508CE32E000A52912 /* tmwxOptimizerDialog_cmn.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxOptimizerDialog_cmn.cpp; path = tmwxOptimizerDialog/tmwxOptimizerDialog_cmn.cpp; sourceTree = "<group>"; };
+		C07D914608CE32E000A52912 /* tmwxOptimizerDialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmwxOptimizerDialog.h; path = tmwxOptimizerDialog/tmwxOptimizerDialog.h; sourceTree = "<group>"; };
+		C07D915808CE389100A52912 /* tmwxApp.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxApp.cpp; path = tmwxCommon/tmwxApp.cpp; sourceTree = "<group>"; };
+		C086403208EB068400EEE5CD /* tmNewtonRaphsonTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tmNewtonRaphsonTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		C086403A08EB07CD00EEE5CD /* tmNewtonRaphsonTester.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmNewtonRaphsonTester.cpp; path = test/tmNewtonRaphsonTester.cpp; sourceTree = "<group>"; };
+		C08A828808BBF008008508CD /* tmHeader.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmHeader.h; sourceTree = "<group>"; };
+		C08A846D08BC22E8008508CD /* tmModel_fwd.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmModel_fwd.h; path = tmModel/tmModel_fwd.h; sourceTree = "<group>"; };
+		C08A846E08BC22E8008508CD /* tmModel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmModel.h; path = tmModel/tmModel.h; sourceTree = "<group>"; };
+		C08A84E708BC2367008508CD /* tmArray.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmArray.h; sourceTree = "<group>"; };
+		C08A84E808BC2367008508CD /* tmArrayIterator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmArrayIterator.h; sourceTree = "<group>"; };
+		C08A84E908BC2367008508CD /* tmDpptr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmDpptr.h; sourceTree = "<group>"; };
+		C08A84EA08BC2367008508CD /* tmDpptrArray.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmDpptrArray.h; sourceTree = "<group>"; };
+		C08A84EB08BC2367008508CD /* tmDpptrSrc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmDpptrSrc.h; sourceTree = "<group>"; };
+		C08A84EC08BC2367008508CD /* tmDpptrTarget.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmDpptrTarget.cpp; sourceTree = "<group>"; };
+		C08A84ED08BC2367008508CD /* tmDpptrTarget.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmDpptrTarget.h; sourceTree = "<group>"; };
+		C08A84EE08BC2367008508CD /* tmPtrClasses.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmPtrClasses.h; sourceTree = "<group>"; };
+		C099402608EF5C17002E8E42 /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
+		C0A5289708E68DAE004D958F /* tmArrayTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tmArrayTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A528A108E68E05004D958F /* tmArrayTester.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmArrayTester.cpp; path = test/tmArrayTester.cpp; sourceTree = "<group>"; };
+		C0A528AC08E68E6F004D958F /* tmDpptrTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tmDpptrTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A528B008E68E8D004D958F /* tmDpptrTester.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmDpptrTester.cpp; path = test/tmDpptrTester.cpp; sourceTree = "<group>"; };
+		C0A528CF08E69046004D958F /* tmNLCOTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tmNLCOTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A528E008E690E7004D958F /* tmNLCOTester.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmNLCOTester.cpp; sourceTree = "<group>"; };
+		C0A528E108E690E7004D958F /* tmNLCOTester.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmNLCOTester.h; sourceTree = "<group>"; };
+		C0A528F308E69208004D958F /* tmNLCO_wnlibStub.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = tmNLCO_wnlibStub.c; path = tmModel/tmNLCO/tmNLCO_wnlibStub.c; sourceTree = "<group>"; };
+		C0A528F408E69208004D958F /* tmNLCO_wnlib.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmNLCO_wnlib.h; path = tmModel/tmNLCO/tmNLCO_wnlib.h; sourceTree = "<group>"; };
+		C0A528F508E69208004D958F /* tmNLCO_wnlib.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmNLCO_wnlib.cpp; path = tmModel/tmNLCO/tmNLCO_wnlib.cpp; sourceTree = "<group>"; };
+		C0A528FA08E6925B004D958F /* tmNLCO_rfsqp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmNLCO_rfsqp.h; path = tmModel/tmNLCO/tmNLCO_rfsqp.h; sourceTree = "<group>"; };
+		C0A528FB08E6925B004D958F /* tmNLCO_rfsqp.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmNLCO_rfsqp.cpp; path = tmModel/tmNLCO/tmNLCO_rfsqp.cpp; sourceTree = "<group>"; };
+		C0A528FC08E6925B004D958F /* tmNLCO_cfsqp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmNLCO_cfsqp.h; path = tmModel/tmNLCO/tmNLCO_cfsqp.h; sourceTree = "<group>"; };
+		C0A528FD08E6925B004D958F /* tmNLCO_cfsqp.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmNLCO_cfsqp.cpp; path = tmModel/tmNLCO/tmNLCO_cfsqp.cpp; sourceTree = "<group>"; };
+		C0A5290B08E6937D004D958F /* cfsqp_noprint.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = cfsqp_noprint.cpp; sourceTree = "<group>"; };
+		C0A5290D08E6937D004D958F /* cfsqpusr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = cfsqpusr.h; sourceTree = "<group>"; };
+		C0A5291008E6937D004D958F /* cfsqp.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = cfsqp.c; sourceTree = "<group>"; };
+		C0A5291108E6937D004D958F /* qld.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = qld.c; sourceTree = "<group>"; };
+		C0A5291608E693F3004D958F /* param.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = param.h; sourceTree = "<group>"; };
+		C0A5291708E693F3004D958F /* rfsqp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rfsqp.h; sourceTree = "<group>"; };
+		C0A5291808E693F3004D958F /* user.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = user.h; sourceTree = "<group>"; };
+		C0A5291A08E693F3004D958F /* rfsqp_noprint.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = rfsqp_noprint.cpp; sourceTree = "<group>"; };
+		C0A5291C08E693F3004D958F /* dir.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = dir.c; sourceTree = "<group>"; };
+		C0A5291D08E693F3004D958F /* estd0.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = estd0.c; sourceTree = "<group>"; };
+		C0A5291E08E693F3004D958F /* grad.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = grad.c; sourceTree = "<group>"; };
+		C0A5291F08E693F3004D958F /* hess.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = hess.c; sourceTree = "<group>"; };
+		C0A5292008E693F3004D958F /* memutils.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = memutils.c; sourceTree = "<group>"; };
+		C0A5292108E693F3004D958F /* output.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = output.c; sourceTree = "<group>"; };
+		C0A5292208E693F3004D958F /* qld.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = qld.c; sourceTree = "<group>"; };
+		C0A5292308E693F3004D958F /* rfsqp.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = rfsqp.c; sourceTree = "<group>"; };
+		C0A5292408E693F3004D958F /* step.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = step.c; sourceTree = "<group>"; };
+		C0A5292508E693F3004D958F /* subrs.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = subrs.c; sourceTree = "<group>"; };
+		C0A5292608E693F3004D958F /* updatesr.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = updatesr.c; sourceTree = "<group>"; };
+		C0A5292C08E69470004D958F /* wncmp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wncmp.h; sourceTree = "<group>"; };
+		C0A5292E08E69470004D958F /* wndcmp.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wndcmp.c; sourceTree = "<group>"; };
+		C0A5293008E69470004D958F /* wn1dmin.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wn1dmin.c; sourceTree = "<group>"; };
+		C0A5293108E69470004D958F /* wncnjdn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wncnjdn.h; sourceTree = "<group>"; };
+		C0A5293208E69470004D958F /* wncnjfg.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wncnjfg.c; sourceTree = "<group>"; };
+		C0A5293308E69470004D958F /* wnconj.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnconj.h; sourceTree = "<group>"; };
+		C0A5293508E69470004D958F /* wnconjd.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnconjd.h; sourceTree = "<group>"; };
+		C0A5293608E69470004D958F /* wnconjg.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnconjg.c; sourceTree = "<group>"; };
+		C0A5293708E69470004D958F /* wnnlp.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnnlp.c; sourceTree = "<group>"; };
+		C0A5293808E69470004D958F /* wnnlp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnnlp.h; sourceTree = "<group>"; };
+		C0A5293A08E69470004D958F /* wnparvect.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnparvect.c; sourceTree = "<group>"; };
+		C0A5293B08E69470004D958F /* wnparvect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnparvect.h; sourceTree = "<group>"; };
+		C0A5293C08E69470004D958F /* wnqfit.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnqfit.c; sourceTree = "<group>"; };
+		C0A5293D08E69470004D958F /* wntol.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wntol.h; sourceTree = "<group>"; };
+		C0A5293F08E69470004D958F /* wncpy.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wncpy.h; sourceTree = "<group>"; };
+		C0A5294208E69470004D958F /* wnscnt.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnscnt.c; sourceTree = "<group>"; };
+		C0A5294308E69470004D958F /* wnsll.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnsll.h; sourceTree = "<group>"; };
+		C0A5294508E69470004D958F /* wnsmk.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnsmk.c; sourceTree = "<group>"; };
+		C0A5294708E69470004D958F /* wnabs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnabs.h; sourceTree = "<group>"; };
+		C0A5294908E69471004D958F /* wnasrt.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnasrt.c; sourceTree = "<group>"; };
+		C0A5294A08E69471004D958F /* wnasrt.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnasrt.h; sourceTree = "<group>"; };
+		C0A5294C08E69471004D958F /* wncons.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wncons.h; sourceTree = "<group>"; };
+		C0A5294D08E69471004D958F /* wnerr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnerr.h; sourceTree = "<group>"; };
+		C0A5294E08E69471004D958F /* wnlib.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnlib.h; sourceTree = "<group>"; };
+		C0A5294F08E69471004D958F /* wnmax.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnmax.h; sourceTree = "<group>"; };
+		C0A5295108E69471004D958F /* wnport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnport.h; sourceTree = "<group>"; };
+		C0A5295208E69471004D958F /* wnsqr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnsqr.h; sourceTree = "<group>"; };
+		C0A5295408E69471004D958F /* wnswap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnswap.h; sourceTree = "<group>"; };
+		C0A5295708E69471004D958F /* wnmat.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnmat.h; sourceTree = "<group>"; };
+		C0A5295808E69471004D958F /* wnmmk.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnmmk.c; sourceTree = "<group>"; };
+		C0A5295B08E69471004D958F /* wnmbtr.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnmbtr.c; sourceTree = "<group>"; };
+		C0A5295C08E69471004D958F /* wnmbtr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnmbtr.h; sourceTree = "<group>"; };
+		C0A5295D08E69471004D958F /* wnmcpy.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnmcpy.c; sourceTree = "<group>"; };
+		C0A5295E08E69471004D958F /* wnmem.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnmem.c; sourceTree = "<group>"; };
+		C0A5295F08E69471004D958F /* wnmem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnmem.h; sourceTree = "<group>"; };
+		C0A5296108E69471004D958F /* wnmemb.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnmemb.c; sourceTree = "<group>"; };
+		C0A5296208E69471004D958F /* wnmemb.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnmemb.h; sourceTree = "<group>"; };
+		C0A5296408E69471004D958F /* wnmemg.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnmemg.c; sourceTree = "<group>"; };
+		C0A5296508E69471004D958F /* wnmemn.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnmemn.c; sourceTree = "<group>"; };
+		C0A5296708E69471004D958F /* wnrdb.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnrdb.c; sourceTree = "<group>"; };
+		C0A5296808E69471004D958F /* wnrflt.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnrflt.c; sourceTree = "<group>"; };
+		C0A5296908E69471004D958F /* wnrnd.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnrnd.c; sourceTree = "<group>"; };
+		C0A5296A08E69471004D958F /* wnrnd.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnrnd.h; sourceTree = "<group>"; };
+		C0A5296C08E69471004D958F /* wnrndd.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnrndd.h; sourceTree = "<group>"; };
+		C0A5296E08E69471004D958F /* wnrtab.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnrtab.c; sourceTree = "<group>"; };
+		C0A5296F08E69471004D958F /* wnrtab.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnrtab.h; sourceTree = "<group>"; };
+		C0A5297208E69471004D958F /* wndot.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wndot.c; sourceTree = "<group>"; };
+		C0A5297408E69471004D958F /* wnpoly.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnpoly.c; sourceTree = "<group>"; };
+		C0A5297508E69471004D958F /* wnpoly.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnpoly.h; sourceTree = "<group>"; };
+		C0A5297708E69471004D958F /* wnvadd3.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnvadd3.c; sourceTree = "<group>"; };
+		C0A5297808E69471004D958F /* wnvcpy.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnvcpy.c; sourceTree = "<group>"; };
+		C0A5297A08E69471004D958F /* wnvect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wnvect.h; sourceTree = "<group>"; };
+		C0A5297B08E69471004D958F /* wnvgen.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnvgen.c; sourceTree = "<group>"; };
+		C0A5297D08E69471004D958F /* wnvmk.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnvmk.c; sourceTree = "<group>"; };
+		C0A5297F08E69472004D958F /* wnvnrm.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnvnrm.c; sourceTree = "<group>"; };
+		C0A5298108E69472004D958F /* wnvprn.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = wnvprn.c; sourceTree = "<group>"; };
+		C0B0670D0937CD61006C8423 /* about.htm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = about.htm; sourceTree = "<group>"; };
+		C0C9A89308BD198900ADCE48 /* tmHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmHeader.cpp; sourceTree = "<group>"; };
+		C0C9A8F808BD239A00ADCE48 /* Icon_app.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon_app.icns; sourceTree = "<group>"; };
+		C0C9A8F908BD239A00ADCE48 /* Icon_doc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon_doc.icns; sourceTree = "<group>"; };
+		C0D0D05E0935746100DC38CA /* tmwxHtmlHelpController.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxHtmlHelpController.cpp; path = tmwxHtmlHelp/tmwxHtmlHelpController.cpp; sourceTree = "<group>"; };
+		C0D0D05F0935746100DC38CA /* tmwxHtmlHelpFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmwxHtmlHelpFrame.h; path = tmwxHtmlHelp/tmwxHtmlHelpFrame.h; sourceTree = "<group>"; };
+		C0D0D0600935746100DC38CA /* tmwxHtmlHelpFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxHtmlHelpFrame.cpp; path = tmwxHtmlHelp/tmwxHtmlHelpFrame.cpp; sourceTree = "<group>"; };
+		C0D0D0610935746100DC38CA /* tmwxHtmlHelpController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmwxHtmlHelpController.h; path = tmwxHtmlHelp/tmwxHtmlHelpController.h; sourceTree = "<group>"; };
+		C0D24035099E6DBB00436EFE /* treemaker.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = treemaker.plist; sourceTree = "<group>"; };
+		C0D24048099E70F900436EFE /* libwx_mac_static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwx_mac_static.a; path = "build/wxMac-2.6/src/build/Deployment/libwx_mac_static.a"; sourceTree = "<group>"; };
+		C0DD440A0865BDEB00AE35AB /* TreeMaker 5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TreeMaker 5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0DD447F0865C42C00AE35AB /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		C0DD44840865C45500AE35AB /* System.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = System.framework; path = /System/Library/Frameworks/System.framework; sourceTree = "<absolute>"; };
+		C0E6FDE709390BD400E12748 /* help.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = help.zip; path = build/TreeMaker.build/help/help.zip; sourceTree = SOURCE_ROOT; };
+		C0E79C12094B88DC00A0CB76 /* tmConditionPathCombo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmConditionPathCombo.h; sourceTree = "<group>"; };
+		C0E79C13094B88DC00A0CB76 /* tmConditionPathCombo.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmConditionPathCombo.cpp; sourceTree = "<group>"; };
+		C0E79C16094B8A2500A0CB76 /* tmwxConditionPathAngleQuantPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionPathAngleQuantPanel.h; sourceTree = "<group>"; };
+		C0E79C17094B8A2500A0CB76 /* tmwxConditionPathAngleQuantPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionPathAngleQuantPanel.cpp; sourceTree = "<group>"; };
+		C0E79C2C094B8B8500A0CB76 /* tmwxConditionPathComboPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxConditionPathComboPanel.cpp; sourceTree = "<group>"; };
+		C0E79C2D094B8B8500A0CB76 /* tmwxConditionPathComboPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxConditionPathComboPanel.h; sourceTree = "<group>"; };
+		C0E79CFE094C91EB00A0CB76 /* tmwxDoc_Edit.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxDoc_Edit.cpp; sourceTree = "<group>"; };
+		C0E79CFF094C91EB00A0CB76 /* tmwxDoc_View.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxDoc_View.cpp; sourceTree = "<group>"; };
+		C0E79D00094C91EB00A0CB76 /* tmwxDoc_Action.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxDoc_Action.cpp; sourceTree = "<group>"; };
+		C0E79D01094C91EC00A0CB76 /* tmwxDoc_Debug.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxDoc_Debug.cpp; sourceTree = "<group>"; };
+		C0E79D02094C91EC00A0CB76 /* tmwxDoc_Condition.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxDoc_Condition.cpp; sourceTree = "<group>"; };
+		C0E79D03094C91EC00A0CB76 /* tmwxDoc_File.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxDoc_File.cpp; sourceTree = "<group>"; };
+		C0E79D43094CC7C000A0CB76 /* tmwxGetUserInputDialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmwxGetUserInputDialog.h; path = tmwxCommon/tmwxGetUserInputDialog.h; sourceTree = "<group>"; };
+		C0E79D44094CC7C000A0CB76 /* tmwxGetUserInputDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxGetUserInputDialog.cpp; path = tmwxCommon/tmwxGetUserInputDialog.cpp; sourceTree = "<group>"; };
+		C0E79D9E094D2C0300A0CB76 /* tmwxCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmwxCheckBox.h; sourceTree = "<group>"; };
+		C0E79D9F094D2C0300A0CB76 /* tmwxCheckBox.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmwxCheckBox.cpp; sourceTree = "<group>"; };
+		C0E9FC3D08D8B6D900103F9F /* tmOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tmOptimizer.h; sourceTree = "<group>"; };
+		C0E9FC3E08D8B6D900103F9F /* tmOptimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tmOptimizer.cpp; sourceTree = "<group>"; };
+		C0F1FD9C093E9DD1004665FB /* help.zip_zip_treemaker.hhp.cached */ = {isa = PBXFileReference; lastKnownFileType = file; name = help.zip_zip_treemaker.hhp.cached; path = build/TreeMaker.build/help/help.zip_zip_treemaker.hhp.cached; sourceTree = SOURCE_ROOT; };
+		C0F1FDC1093EB4F8004665FB /* tmwxDocManager.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = tmwxDocManager.cpp; path = tmwxCommon/tmwxDocManager.cpp; sourceTree = "<group>"; };
+		C0F1FDC2093EB4F9004665FB /* tmwxDocManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tmwxDocManager.h; path = tmwxCommon/tmwxDocManager.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C01BFEE308E6B1C000D2B685 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C086403008EB068400EEE5CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A5289508E68DAE004D958F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A528AA08E68E6F004D958F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A528CD08E69046004D958F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DD44080865BDEB00AE35AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0DD44800865C42C00AE35AB /* Carbon.framework in Frameworks */,
+				C0DD44850865C45500AE35AB /* System.framework in Frameworks */,
+				C058AC0E0865FB0300A17C7C /* IOKit.framework in Frameworks */,
+				C0D24049099E70F900436EFE /* libwx_mac_static.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C01BFEF008E6B28800D2B685 /* tmModelTester */ = {
+			isa = PBXGroup;
+			children = (
+				C01BFEF108E6B28800D2B685 /* tmModelTester.cpp */,
+			);
+			name = tmModelTester;
+			path = test/tmModelTester;
+			sourceTree = "<group>";
+		};
+		C02AC85C08ECC59E0045F0A5 /* help */ = {
+			isa = PBXGroup;
+			children = (
+				C0E6FDE709390BD400E12748 /* help.zip */,
+				C0F1FD9C093E9DD1004665FB /* help.zip_zip_treemaker.hhp.cached */,
+			);
+			name = help;
+			sourceTree = "<group>";
+		};
+		C07D8FAC08CE2F9200A52912 /* tmwxOptimizerDialog */ = {
+			isa = PBXGroup;
+			children = (
+				C07D914508CE32E000A52912 /* tmwxOptimizerDialog_cmn.cpp */,
+				C07D914308CE32E000A52912 /* tmwxOptimizerDialog_mac.cpp */,
+				C07D914408CE32E000A52912 /* tmwxOptimizerDialog_gtk.cpp */,
+				C02AC86D08ECCD9A0045F0A5 /* tmwxOptimizerDialog_msw.cpp */,
+				C07D914608CE32E000A52912 /* tmwxOptimizerDialog.h */,
+			);
+			name = tmwxOptimizerDialog;
+			sourceTree = "<group>";
+		};
+		C07D8FB308CE305D00A52912 /* tmwxCommon */ = {
+			isa = PBXGroup;
+			children = (
+				C07D908B08CE321E00A52912 /* tmwxApp.h */,
+				C07D915808CE389100A52912 /* tmwxApp.cpp */,
+				C07D909108CE321E00A52912 /* tmwxCommand.h */,
+				C07D908908CE321E00A52912 /* tmwxCommand.cpp */,
+				C0F1FDC1093EB4F8004665FB /* tmwxDocManager.cpp */,
+				C0F1FDC2093EB4F9004665FB /* tmwxDocManager.h */,
+				C07D908E08CE321E00A52912 /* tmwxGUI_fwd.h */,
+				C07D908F08CE321E00A52912 /* tmwxStr.h */,
+				C07D909008CE321E00A52912 /* tmwxStr.cpp */,
+				C07D908708CE321E00A52912 /* tmwxPersistentFrame.h */,
+				C07D908808CE321E00A52912 /* tmwxPersistentFrame.cpp */,
+				C0E79D43094CC7C000A0CB76 /* tmwxGetUserInputDialog.h */,
+				C0E79D44094CC7C000A0CB76 /* tmwxGetUserInputDialog.cpp */,
+			);
+			name = tmwxCommon;
+			sourceTree = "<group>";
+		};
+		C08A846C08BC22D0008508CD /* tmModel */ = {
+			isa = PBXGroup;
+			children = (
+				C08A846D08BC22E8008508CD /* tmModel_fwd.h */,
+				C08A846E08BC22E8008508CD /* tmModel.h */,
+				C08A84E608BC2367008508CD /* tmPtrClasses */,
+				C08A84F808BC2415008508CD /* tmTreeClasses */,
+				C08A85EA08BC275E008508CD /* tmSolvers */,
+				C08A857B08BC2493008508CD /* tmOptimizers */,
+				C08A85DB08BC26DF008508CD /* tmNLCO */,
+				C0A5290A08E6937D004D958F /* CFSQP */,
+				C0A5291408E693F3004D958F /* RFSQP */,
+				C0A5292A08E69470004D958F /* wnlib */,
+			);
+			name = tmModel;
+			sourceTree = "<group>";
+		};
+		C08A84E608BC2367008508CD /* tmPtrClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C08A84E708BC2367008508CD /* tmArray.h */,
+				C08A84E808BC2367008508CD /* tmArrayIterator.h */,
+				C08A84E908BC2367008508CD /* tmDpptr.h */,
+				C08A84EA08BC2367008508CD /* tmDpptrArray.h */,
+				C08A84EB08BC2367008508CD /* tmDpptrSrc.h */,
+				C08A84EC08BC2367008508CD /* tmDpptrTarget.cpp */,
+				C08A84ED08BC2367008508CD /* tmDpptrTarget.h */,
+				C08A84EE08BC2367008508CD /* tmPtrClasses.h */,
+			);
+			name = tmPtrClasses;
+			path = tmModel/tmPtrClasses;
+			sourceTree = "<group>";
+		};
+		C08A84F808BC2415008508CD /* tmTreeClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C07D8FC708CE315400A52912 /* tmPart.cpp */,
+				C07D8FC608CE315400A52912 /* tmPart.h */,
+				C07D8FBD08CE314000A52912 /* tmCluster.h */,
+				C07D8FBE08CE314000A52912 /* tmCluster.cpp */,
+				C07D8FC108CE315400A52912 /* tmEdge.cpp */,
+				C07D8FC208CE315400A52912 /* tmCreaseOwner.h */,
+				C07D8FC308CE315400A52912 /* tmCreaseOwner.cpp */,
+				C07D8FD608CE315400A52912 /* tmTree.cpp */,
+				C07D8FC408CE315400A52912 /* tmTree_TestTrees.cpp */,
+				C07D8FD208CE315400A52912 /* tmTree_IO.cpp */,
+				C07D8FC508CE315400A52912 /* tmCrease.h */,
+				C07D8FC808CE315400A52912 /* tmTree.h */,
+				C07D8FC908CE315400A52912 /* tmNode.cpp */,
+				C07D8FCA08CE315400A52912 /* tmNodeOwner.cpp */,
+				C07D8FCB08CE315400A52912 /* tmNode.h */,
+				C07D8FCC08CE315400A52912 /* tmPath.cpp */,
+				C07D8FCD08CE315400A52912 /* tmCrease.cpp */,
+				C07D8FCE08CE315400A52912 /* tmVertex.cpp */,
+				C07D8FCF08CE315400A52912 /* tmPath.h */,
+				C07D8FD008CE315400A52912 /* tmPathOwner.h */,
+				C07D8FD108CE315400A52912 /* tmPathOwner.cpp */,
+				C07D8FD308CE315400A52912 /* tmTree_FacetOrder.cpp */,
+				C07D8FD408CE315400A52912 /* tmVertexOwner.h */,
+				C07D8FD508CE315400A52912 /* tmNodeOwner.h */,
+				C07D8FD708CE315400A52912 /* tmPolyOwner.h */,
+				C07D8FD808CE315400A52912 /* tmEdgeOwner.h */,
+				C07D8FD908CE315400A52912 /* tmEdgeOwner.cpp */,
+				C07D8FDA08CE315400A52912 /* tmVertexOwner.cpp */,
+				C07D8FDB08CE315400A52912 /* tmVertex.h */,
+				C07D8FDC08CE315400A52912 /* tmEdge.h */,
+				C07D8FDD08CE315400A52912 /* tmTreeClasses.h */,
+				C07D8FDE08CE315400A52912 /* tmPoint.cpp */,
+				C07D8FDF08CE315400A52912 /* tmPolyOwner.cpp */,
+				C07D8FE008CE315400A52912 /* tmFacetOwner.cpp */,
+				C07D8FE108CE315400A52912 /* tmFacet.h */,
+				C07D8FE208CE315400A52912 /* tmFacet.cpp */,
+				C07D8FE308CE315400A52912 /* tmFacetOwner.h */,
+				C07D8FE408CE315400A52912 /* tmPoly.h */,
+				C07D8FE508CE315400A52912 /* tmPoly.cpp */,
+				C07D8FE608CE315400A52912 /* tmPoint.h */,
+				C07D8FE708CE315400A52912 /* tmTreeCleaner.h */,
+				C07D8FE808CE315400A52912 /* tmTreeCleaner.cpp */,
+				C07D901108CE317B00A52912 /* tmConditionPathActive.h */,
+				C07D901208CE317B00A52912 /* tmCondition.h */,
+				C07D901308CE317B00A52912 /* tmCondition.cpp */,
+				C07D901C08CE317B00A52912 /* tmConditionNodeCombo.cpp */,
+				C07D901808CE317B00A52912 /* tmConditionNodeOnEdge.h */,
+				C07D901D08CE317B00A52912 /* tmConditionNodeOnEdge.cpp */,
+				C07D901E08CE317B00A52912 /* tmConditionNodeOnCorner.h */,
+				C07D902008CE317B00A52912 /* tmConditionNodeFixed.cpp */,
+				C07D902108CE317B00A52912 /* tmConditionNodeCombo.h */,
+				C07D902208CE317B00A52912 /* tmConditionNodeFixed.h */,
+				C07D901408CE317B00A52912 /* tmConditionNodesPaired.h */,
+				C07D902408CE317B00A52912 /* tmConditionNodesPaired.cpp */,
+				C07D901F08CE317B00A52912 /* tmConditionNodesCollinear.h */,
+				C07D901608CE317B00A52912 /* tmConditionEdgeLengthFixed.h */,
+				C07D901708CE317B00A52912 /* tmConditionEdgeLengthFixed.cpp */,
+				C07D901908CE317B00A52912 /* tmConditionEdgesSameStrain.h */,
+				C07D901508CE317B00A52912 /* tmConditionPathAngleQuant.h */,
+				C07D901A08CE317B00A52912 /* tmConditionPathAngleQuant.cpp */,
+				C07D901B08CE317B00A52912 /* tmConditionPathAngleFixed.h */,
+				C07D902308CE317B00A52912 /* tmConditionPathActive.cpp */,
+				C07D902508CE317B00A52912 /* tmConditionOwner.h */,
+				C07D902608CE317B00A52912 /* tmConditionNodeOnCorner.cpp */,
+				C07D902708CE317B00A52912 /* tmConditionNodeSymmetric.h */,
+				C07D902808CE317B00A52912 /* tmConditionNodeSymmetric.cpp */,
+				C07D902908CE317B00A52912 /* tmConditionOwner.cpp */,
+				C07D902A08CE317B00A52912 /* tmConditionNodesCollinear.cpp */,
+				C07D902B08CE317B00A52912 /* tmConditionPathAngleFixed.cpp */,
+				C07D902C08CE317B00A52912 /* tmConditionEdgesSameStrain.cpp */,
+				C0E79C12094B88DC00A0CB76 /* tmConditionPathCombo.h */,
+				C0E79C13094B88DC00A0CB76 /* tmConditionPathCombo.cpp */,
+			);
+			name = tmTreeClasses;
+			path = tmModel/tmTreeClasses;
+			sourceTree = "<group>";
+		};
+		C08A857B08BC2493008508CD /* tmOptimizers */ = {
+			isa = PBXGroup;
+			children = (
+				C07D904C08CE319900A52912 /* tmConstraintFns.h */,
+				C07D905008CE319A00A52912 /* tmConstraintFns.cpp */,
+				C0E9FC3D08D8B6D900103F9F /* tmOptimizer.h */,
+				C0E9FC3E08D8B6D900103F9F /* tmOptimizer.cpp */,
+				C07D904908CE319900A52912 /* tmScaleOptimizer.h */,
+				C07D904B08CE319900A52912 /* tmScaleOptimizer.cpp */,
+				C07D904D08CE319A00A52912 /* tmEdgeOptimizer.h */,
+				C07D904E08CE319A00A52912 /* tmEdgeOptimizer.cpp */,
+				C07D904F08CE319A00A52912 /* tmStrainOptimizer.h */,
+				C07D904A08CE319900A52912 /* tmStrainOptimizer.cpp */,
+			);
+			name = tmOptimizers;
+			path = tmModel/tmOptimizers;
+			sourceTree = "<group>";
+		};
+		C08A85DB08BC26DF008508CD /* tmNLCO */ = {
+			isa = PBXGroup;
+			children = (
+				C07D906108CE31C200A52912 /* tmNLCO.h */,
+				C07D905A08CE31B800A52912 /* tmNLCO.cpp */,
+				C07D905B08CE31B800A52912 /* tmNLCO_alm.h */,
+				C07D905908CE31B800A52912 /* tmNLCO_alm.cpp */,
+				C0A528FA08E6925B004D958F /* tmNLCO_rfsqp.h */,
+				C0A528FB08E6925B004D958F /* tmNLCO_rfsqp.cpp */,
+				C0A528FC08E6925B004D958F /* tmNLCO_cfsqp.h */,
+				C0A528FD08E6925B004D958F /* tmNLCO_cfsqp.cpp */,
+				C0A528F408E69208004D958F /* tmNLCO_wnlib.h */,
+				C0A528F508E69208004D958F /* tmNLCO_wnlib.cpp */,
+				C0A528F308E69208004D958F /* tmNLCO_wnlibStub.c */,
+			);
+			name = tmNLCO;
+			sourceTree = "<group>";
+		};
+		C08A85EA08BC275E008508CD /* tmSolvers */ = {
+			isa = PBXGroup;
+			children = (
+				C07D906308CE31D300A52912 /* tmNewtonRaphson.h */,
+				C07D906408CE31D300A52912 /* tmStubFinder.cpp */,
+				C07D906508CE31D300A52912 /* tmStubFinder.h */,
+				C07D906608CE31D300A52912 /* tmMatrix.h */,
+			);
+			name = tmSolvers;
+			sourceTree = "<group>";
+		};
+		C0A528A008E68DE3004D958F /* test */ = {
+			isa = PBXGroup;
+			children = (
+				C0A528A108E68E05004D958F /* tmArrayTester.cpp */,
+				C0A528B008E68E8D004D958F /* tmDpptrTester.cpp */,
+				C086403A08EB07CD00EEE5CD /* tmNewtonRaphsonTester.cpp */,
+				C0A528DF08E690E7004D958F /* tmNLCOTester */,
+				C01BFEF008E6B28800D2B685 /* tmModelTester */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
+		C0A528DF08E690E7004D958F /* tmNLCOTester */ = {
+			isa = PBXGroup;
+			children = (
+				C0A528E008E690E7004D958F /* tmNLCOTester.cpp */,
+				C0A528E108E690E7004D958F /* tmNLCOTester.h */,
+			);
+			name = tmNLCOTester;
+			path = test/tmNLCOTester;
+			sourceTree = "<group>";
+		};
+		C0A5290A08E6937D004D958F /* CFSQP */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5290B08E6937D004D958F /* cfsqp_noprint.cpp */,
+				C0A5290C08E6937D004D958F /* include */,
+				C0A5290F08E6937D004D958F /* src */,
+			);
+			name = CFSQP;
+			path = tmModel/CFSQP;
+			sourceTree = "<group>";
+		};
+		C0A5290C08E6937D004D958F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5290D08E6937D004D958F /* cfsqpusr.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C0A5290F08E6937D004D958F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5291008E6937D004D958F /* cfsqp.c */,
+				C0A5291108E6937D004D958F /* qld.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C0A5291408E693F3004D958F /* RFSQP */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5291508E693F3004D958F /* include */,
+				C0A5291A08E693F3004D958F /* rfsqp_noprint.cpp */,
+				C0A5291B08E693F3004D958F /* src */,
+			);
+			name = RFSQP;
+			path = tmModel/RFSQP;
+			sourceTree = "<group>";
+		};
+		C0A5291508E693F3004D958F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5291608E693F3004D958F /* param.h */,
+				C0A5291708E693F3004D958F /* rfsqp.h */,
+				C0A5291808E693F3004D958F /* user.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C0A5291B08E693F3004D958F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5291C08E693F3004D958F /* dir.c */,
+				C0A5291D08E693F3004D958F /* estd0.c */,
+				C0A5291E08E693F3004D958F /* grad.c */,
+				C0A5291F08E693F3004D958F /* hess.c */,
+				C0A5292008E693F3004D958F /* memutils.c */,
+				C0A5292108E693F3004D958F /* output.c */,
+				C0A5292208E693F3004D958F /* qld.c */,
+				C0A5292308E693F3004D958F /* rfsqp.c */,
+				C0A5292408E693F3004D958F /* step.c */,
+				C0A5292508E693F3004D958F /* subrs.c */,
+				C0A5292608E693F3004D958F /* updatesr.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C0A5292A08E69470004D958F /* wnlib */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5292B08E69470004D958F /* cmp */,
+				C0A5292F08E69470004D958F /* conjdir */,
+				C0A5293E08E69470004D958F /* cpy */,
+				C0A5294108E69470004D958F /* list */,
+				C0A5294608E69470004D958F /* low */,
+				C0A5295608E69471004D958F /* mat */,
+				C0A5295A08E69471004D958F /* mem */,
+				C0A5296608E69471004D958F /* random */,
+				C0A5297108E69471004D958F /* vect */,
+			);
+			name = wnlib;
+			path = tmModel/wnlib;
+			sourceTree = "<group>";
+		};
+		C0A5292B08E69470004D958F /* cmp */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5292C08E69470004D958F /* wncmp.h */,
+				C0A5292E08E69470004D958F /* wndcmp.c */,
+			);
+			path = cmp;
+			sourceTree = "<group>";
+		};
+		C0A5292F08E69470004D958F /* conjdir */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5293008E69470004D958F /* wn1dmin.c */,
+				C0A5293108E69470004D958F /* wncnjdn.h */,
+				C0A5293208E69470004D958F /* wncnjfg.c */,
+				C0A5293308E69470004D958F /* wnconj.h */,
+				C0A5293508E69470004D958F /* wnconjd.h */,
+				C0A5293608E69470004D958F /* wnconjg.c */,
+				C0A5293708E69470004D958F /* wnnlp.c */,
+				C0A5293808E69470004D958F /* wnnlp.h */,
+				C0A5293A08E69470004D958F /* wnparvect.c */,
+				C0A5293B08E69470004D958F /* wnparvect.h */,
+				C0A5293C08E69470004D958F /* wnqfit.c */,
+				C0A5293D08E69470004D958F /* wntol.h */,
+			);
+			path = conjdir;
+			sourceTree = "<group>";
+		};
+		C0A5293E08E69470004D958F /* cpy */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5293F08E69470004D958F /* wncpy.h */,
+			);
+			path = cpy;
+			sourceTree = "<group>";
+		};
+		C0A5294108E69470004D958F /* list */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5294208E69470004D958F /* wnscnt.c */,
+				C0A5294308E69470004D958F /* wnsll.h */,
+				C0A5294508E69470004D958F /* wnsmk.c */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		C0A5294608E69470004D958F /* low */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5294708E69470004D958F /* wnabs.h */,
+				C0A5294908E69471004D958F /* wnasrt.c */,
+				C0A5294A08E69471004D958F /* wnasrt.h */,
+				C0A5294C08E69471004D958F /* wncons.h */,
+				C0A5294D08E69471004D958F /* wnerr.h */,
+				C0A5294E08E69471004D958F /* wnlib.h */,
+				C0A5294F08E69471004D958F /* wnmax.h */,
+				C0A5295108E69471004D958F /* wnport.h */,
+				C0A5295208E69471004D958F /* wnsqr.h */,
+				C0A5295408E69471004D958F /* wnswap.h */,
+			);
+			path = low;
+			sourceTree = "<group>";
+		};
+		C0A5295608E69471004D958F /* mat */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5295708E69471004D958F /* wnmat.h */,
+				C0A5295808E69471004D958F /* wnmmk.c */,
+			);
+			path = mat;
+			sourceTree = "<group>";
+		};
+		C0A5295A08E69471004D958F /* mem */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5295B08E69471004D958F /* wnmbtr.c */,
+				C0A5295C08E69471004D958F /* wnmbtr.h */,
+				C0A5295D08E69471004D958F /* wnmcpy.c */,
+				C0A5295E08E69471004D958F /* wnmem.c */,
+				C0A5295F08E69471004D958F /* wnmem.h */,
+				C0A5296108E69471004D958F /* wnmemb.c */,
+				C0A5296208E69471004D958F /* wnmemb.h */,
+				C0A5296408E69471004D958F /* wnmemg.c */,
+				C0A5296508E69471004D958F /* wnmemn.c */,
+			);
+			path = mem;
+			sourceTree = "<group>";
+		};
+		C0A5296608E69471004D958F /* random */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5296708E69471004D958F /* wnrdb.c */,
+				C0A5296808E69471004D958F /* wnrflt.c */,
+				C0A5296908E69471004D958F /* wnrnd.c */,
+				C0A5296A08E69471004D958F /* wnrnd.h */,
+				C0A5296C08E69471004D958F /* wnrndd.h */,
+				C0A5296E08E69471004D958F /* wnrtab.c */,
+				C0A5296F08E69471004D958F /* wnrtab.h */,
+			);
+			path = random;
+			sourceTree = "<group>";
+		};
+		C0A5297108E69471004D958F /* vect */ = {
+			isa = PBXGroup;
+			children = (
+				C0A5297208E69471004D958F /* wndot.c */,
+				C0A5297408E69471004D958F /* wnpoly.c */,
+				C0A5297508E69471004D958F /* wnpoly.h */,
+				C0A5297708E69471004D958F /* wnvadd3.c */,
+				C0A5297808E69471004D958F /* wnvcpy.c */,
+				C0A5297A08E69471004D958F /* wnvect.h */,
+				C0A5297B08E69471004D958F /* wnvgen.c */,
+				C0A5297D08E69471004D958F /* wnvmk.c */,
+				C0A5297F08E69472004D958F /* wnvnrm.c */,
+				C0A5298108E69472004D958F /* wnvprn.c */,
+			);
+			path = vect;
+			sourceTree = "<group>";
+		};
+		C0B0670C0937CD61006C8423 /* about */ = {
+			isa = PBXGroup;
+			children = (
+				C0B0670D0937CD61006C8423 /* about.htm */,
+			);
+			path = about;
+			sourceTree = "<group>";
+		};
+		C0C9A8F508BD238A00ADCE48 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				C0C9A8F808BD239A00ADCE48 /* Icon_app.icns */,
+				C0C9A8F908BD239A00ADCE48 /* Icon_doc.icns */,
+				C0D24035099E6DBB00436EFE /* treemaker.plist */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		C0D0D05D0935741B00DC38CA /* tmwxHtmlHelp */ = {
+			isa = PBXGroup;
+			children = (
+				C0D0D05E0935746100DC38CA /* tmwxHtmlHelpController.cpp */,
+				C0D0D05F0935746100DC38CA /* tmwxHtmlHelpFrame.h */,
+				C0D0D0600935746100DC38CA /* tmwxHtmlHelpFrame.cpp */,
+				C0D0D0610935746100DC38CA /* tmwxHtmlHelpController.h */,
+			);
+			name = tmwxHtmlHelp;
+			sourceTree = "<group>";
+		};
+		C0DD43FC0865BDA900AE35AB = {
+			isa = PBXGroup;
+			children = (
+				C0DD44180865BF8200AE35AB /* Source */,
+				C0C9A8F508BD238A00ADCE48 /* resources */,
+				C0DD447E0865C3E200AE35AB /* Frameworks */,
+				C0F2BF95094A18A800496B77 /* External Libraries */,
+				C0DD440B0865BDEB00AE35AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0DD440B0865BDEB00AE35AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0DD440A0865BDEB00AE35AB /* TreeMaker 5.app */,
+				C0A5289708E68DAE004D958F /* tmArrayTester */,
+				C0A528AC08E68E6F004D958F /* tmDpptrTester */,
+				C0A528CF08E69046004D958F /* tmNLCOTester */,
+				C01BFEE508E6B1C000D2B685 /* tmModelTester */,
+				C086403208EB068400EEE5CD /* tmNewtonRaphsonTester */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0DD44180865BF8200AE35AB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C08A828808BBF008008508CD /* tmHeader.h */,
+				C0C9A89308BD198900ADCE48 /* tmHeader.cpp */,
+				C0B0670C0937CD61006C8423 /* about */,
+				C02AC85C08ECC59E0045F0A5 /* help */,
+				C0F79DE808BD3CA50080E944 /* images */,
+				C08A846C08BC22D0008508CD /* tmModel */,
+				C0FB2E8F08BCE8C800800DA4 /* tmwxGUI */,
+				C0A528A008E68DE3004D958F /* test */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+		C0DD447E0865C3E200AE35AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C058AC0D0865FB0300A17C7C /* IOKit.framework */,
+				C0DD44840865C45500AE35AB /* System.framework */,
+				C0DD447F0865C42C00AE35AB /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0F2BF95094A18A800496B77 /* External Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C0D24048099E70F900436EFE /* libwx_mac_static.a */,
+			);
+			name = "External Libraries";
+			sourceTree = SOURCE_ROOT;
+		};
+		C0F79DE808BD3CA50080E944 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C099402608EF5C17002E8E42 /* SplashScreen.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		C0FB2E8F08BCE8C800800DA4 /* tmwxGUI */ = {
+			isa = PBXGroup;
+			children = (
+				C0D0D05D0935741B00DC38CA /* tmwxHtmlHelp */,
+				C07D8FB308CE305D00A52912 /* tmwxCommon */,
+				C0FB2E9708BCE8C800800DA4 /* tmwxDocView */,
+				C0FB2EA208BCE8C800800DA4 /* tmwxFoldedForm */,
+				C0FB2EA608BCE8C800800DA4 /* tmwxInspector */,
+				C0FB2ED508BCE8C800800DA4 /* tmwxLogFrame */,
+				C0FB2EDF08BCE8C800800DA4 /* tmwxPalette */,
+				C0FB2EF208BCE8C800800DA4 /* tmwxViewSettings */,
+				C07D8FAC08CE2F9200A52912 /* tmwxOptimizerDialog */,
+			);
+			path = tmwxGUI;
+			sourceTree = "<group>";
+		};
+		C0FB2E9708BCE8C800800DA4 /* tmwxDocView */ = {
+			isa = PBXGroup;
+			children = (
+				C07D909F08CE326700A52912 /* tmwxView.h */,
+				C07D90A008CE326700A52912 /* tmwxView.cpp */,
+				C07D90A108CE326700A52912 /* tmwxPrintout.h */,
+				C07D90A208CE326700A52912 /* tmwxPrintout.cpp */,
+				C07D90A308CE326700A52912 /* tmwxDoc.h */,
+				C07D90A408CE326700A52912 /* tmwxDoc.cpp */,
+				C0E79CFE094C91EB00A0CB76 /* tmwxDoc_Edit.cpp */,
+				C0E79CFF094C91EB00A0CB76 /* tmwxDoc_View.cpp */,
+				C0E79D00094C91EB00A0CB76 /* tmwxDoc_Action.cpp */,
+				C0E79D01094C91EC00A0CB76 /* tmwxDoc_Debug.cpp */,
+				C0E79D02094C91EC00A0CB76 /* tmwxDoc_Condition.cpp */,
+				C0E79D03094C91EC00A0CB76 /* tmwxDoc_File.cpp */,
+				C07D90A508CE326700A52912 /* tmwxDesignFrame.h */,
+				C07D90A608CE326700A52912 /* tmwxDesignFrame.cpp */,
+				C07D90A708CE326700A52912 /* tmwxDesignCanvas.h */,
+				C07D90A808CE326700A52912 /* tmwxDesignCanvas.cpp */,
+			);
+			path = tmwxDocView;
+			sourceTree = "<group>";
+		};
+		C0FB2EA208BCE8C800800DA4 /* tmwxFoldedForm */ = {
+			isa = PBXGroup;
+			children = (
+				C07D90B308CE327A00A52912 /* tmwxFoldedFormFrame.cpp */,
+				C07D90B408CE327A00A52912 /* tmwxFoldedFormFrame.h */,
+			);
+			path = tmwxFoldedForm;
+			sourceTree = "<group>";
+		};
+		C0FB2EA608BCE8C800800DA4 /* tmwxInspector */ = {
+			isa = PBXGroup;
+			children = (
+				C01B013C094808F3000C489E /* tmwxInspectorPanel.cpp */,
+				C01B013D094808F3000C489E /* tmwxInspectorPanel.h */,
+				C07D90B708CE328F00A52912 /* tmwxConditionPathAngleFixedPanel.cpp */,
+				C07D90B808CE328F00A52912 /* tmwxConditionPathActivePanel.h */,
+				C07D90B908CE328F00A52912 /* tmwxConditionPathActivePanel.cpp */,
+				C07D90BA08CE328F00A52912 /* tmwxConditionNodeSymmetricPanel.h */,
+				C07D90BB08CE328F00A52912 /* tmwxConditionNodeSymmetricPanel.cpp */,
+				C07D90BC08CE328F00A52912 /* tmwxConditionNodesPairedPanel.h */,
+				C07D90BD08CE328F00A52912 /* tmwxConditionNodesPairedPanel.cpp */,
+				C07D90BE08CE328F00A52912 /* tmwxConditionNodeOnEdgePanel.h */,
+				C07D90BF08CE328F00A52912 /* tmwxConditionNodeOnEdgePanel.cpp */,
+				C07D90C008CE328F00A52912 /* tmwxConditionNodeOnCornerPanel.h */,
+				C07D90C108CE328F00A52912 /* tmwxVertexPanel.cpp */,
+				C07D90C208CE328F00A52912 /* tmwxTreePanel.h */,
+				C07D90C308CE328F00A52912 /* tmwxTreePanel.cpp */,
+				C07D90C408CE328F00A52912 /* tmwxPolyPanel.h */,
+				C07D90C508CE328F00A52912 /* tmwxPolyPanel.cpp */,
+				C07D90C608CE328F00A52912 /* tmwxVertexPanel.h */,
+				C07D90C708CE328F00A52912 /* tmwxConditionListBox.cpp */,
+				C07D90C808CE328F00A52912 /* tmwxConditionEdgesSameStrainPanel.h */,
+				C07D90C908CE328F00A52912 /* tmwxConditionEdgesSameStrainPanel.cpp */,
+				C07D90CA08CE328F00A52912 /* tmwxConditionEdgeLengthFixedPanel.h */,
+				C07D90CB08CE328F00A52912 /* tmwxEdgePanel.h */,
+				C07D90CC08CE328F00A52912 /* tmwxEdgePanel.cpp */,
+				C07D90CD08CE328F00A52912 /* tmwxCreasePanel.h */,
+				C07D90CE08CE328F00A52912 /* tmwxCreasePanel.cpp */,
+				C07D90CF08CE328F00A52912 /* tmwxConditionNodesCollinearPanel.h */,
+				C07D90D008CE328F00A52912 /* tmwxConditionNodesCollinearPanel.cpp */,
+				C07D90D108CE328F00A52912 /* tmwxConditionEdgeLengthFixedPanel.cpp */,
+				C07D90D208CE328F00A52912 /* tmwxInspectorFrame.cpp */,
+				C07D90D308CE328F00A52912 /* tmwxGroupPanel.h */,
+				C07D90D408CE328F00A52912 /* tmwxGroupPanel.cpp */,
+				C07D90D508CE328F00A52912 /* tmwxFacetPanel.h */,
+				C07D90D608CE328F00A52912 /* tmwxFacetPanel.cpp */,
+				C07D90D708CE328F00A52912 /* tmwxConditionNodeOnCornerPanel.cpp */,
+				C07D90D808CE328F00A52912 /* tmwxConditionNodeFixedPanel.h */,
+				C07D90D908CE328F00A52912 /* tmwxConditionNodeFixedPanel.cpp */,
+				C07D90DA08CE328F00A52912 /* tmwxConditionNodeComboPanel.h */,
+				C07D90DB08CE328F00A52912 /* tmwxConditionNodeComboPanel.cpp */,
+				C07D90DC08CE328F00A52912 /* tmwxConditionListBox.h */,
+				C07D90DD08CE328F00A52912 /* tmwxConditionPathAngleQuantPanel.h */,
+				C07D90DE08CE328F00A52912 /* tmwxConditionPathAngleQuantPanel.cpp */,
+				C07D90DF08CE328F00A52912 /* tmwxConditionPathAngleFixedPanel.h */,
+				C07D90E008CE328F00A52912 /* tmwxPathPanel.h */,
+				C07D90E108CE328F00A52912 /* tmwxPathPanel.cpp */,
+				C07D90E208CE328F00A52912 /* tmwxNodePanel.h */,
+				C07D90E308CE328F00A52912 /* tmwxNodePanel.cpp */,
+				C07D90E408CE328F00A52912 /* tmwxInspectorFrame.h */,
+				C0E79C2C094B8B8500A0CB76 /* tmwxConditionPathComboPanel.cpp */,
+				C0E79C2D094B8B8500A0CB76 /* tmwxConditionPathComboPanel.h */,
+				C0E79C16094B8A2500A0CB76 /* tmwxConditionPathAngleQuantPanel.h */,
+				C0E79C17094B8A2500A0CB76 /* tmwxConditionPathAngleQuantPanel.cpp */,
+			);
+			path = tmwxInspector;
+			sourceTree = "<group>";
+		};
+		C0FB2ED508BCE8C800800DA4 /* tmwxLogFrame */ = {
+			isa = PBXGroup;
+			children = (
+				C07D911308CE32A500A52912 /* tmwxLogFrame.cpp */,
+				C07D911408CE32A500A52912 /* tmwxLogFrame.h */,
+			);
+			path = tmwxLogFrame;
+			sourceTree = "<group>";
+		};
+		C0FB2EDF08BCE8C800800DA4 /* tmwxPalette */ = {
+			isa = PBXGroup;
+			children = (
+				C07D911A08CE32BB00A52912 /* tmwxButtonMini.h */,
+				C07D911F08CE32BB00A52912 /* tmwxButtonMini.cpp */,
+				C07D912308CE32BB00A52912 /* tmwxButtonSmall.h */,
+				C07D912008CE32BB00A52912 /* tmwxButtonSmall.cpp */,
+				C07D911B08CE32BB00A52912 /* tmwxRadioBoxSmall.h */,
+				C07D911808CE32BB00A52912 /* tmwxRadioBoxSmall.cpp */,
+				C0E79D9E094D2C0300A0CB76 /* tmwxCheckBox.h */,
+				C0E79D9F094D2C0300A0CB76 /* tmwxCheckBox.cpp */,
+				C07D912608CE32BB00A52912 /* tmwxCheckBoxSmall.h */,
+				C07D911908CE32BB00A52912 /* tmwxCheckBoxSmall.cpp */,
+				C07D911C08CE32BB00A52912 /* tmwxPaletteFrame.cpp */,
+				C07D912408CE32BB00A52912 /* tmwxStaticText.h */,
+				C07D911708CE32BB00A52912 /* tmwxStaticText.cpp */,
+				C07D911D08CE32BB00A52912 /* tmwxTextCtrl.h */,
+				C07D912208CE32BB00A52912 /* tmwxTextCtrl.cpp */,
+				C07D911E08CE32BB00A52912 /* tmwxPalettePanel.h */,
+				C07D912108CE32BB00A52912 /* tmwxPalettePanel.cpp */,
+				C07D912508CE32BB00A52912 /* tmwxPaletteFrame.h */,
+			);
+			path = tmwxPalette;
+			sourceTree = "<group>";
+		};
+		C0FB2EF208BCE8C800800DA4 /* tmwxViewSettings */ = {
+			isa = PBXGroup;
+			children = (
+				C07D913708CE32CD00A52912 /* tmwxViewSettingsFrame.cpp */,
+				C07D913808CE32CD00A52912 /* tmwxViewSettingsPanel.cpp */,
+				C07D913908CE32CD00A52912 /* tmwxViewSettingsPanel.h */,
+				C07D913A08CE32CD00A52912 /* tmwxViewSettings.cpp */,
+				C07D913B08CE32CD00A52912 /* tmwxViewSettings.h */,
+				C07D913C08CE32CD00A52912 /* tmwxViewSettingsFrame.h */,
+			);
+			path = tmwxViewSettings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C01BFEE408E6B1C000D2B685 /* tmModelTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01BFEE908E6B1F800D2B685 /* Build configuration list for PBXNativeTarget "tmModelTester" */;
+			buildPhases = (
+				C01BFEE208E6B1C000D2B685 /* Sources */,
+				C01BFEE308E6B1C000D2B685 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmModelTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = tmModelTester;
+			productName = tmModelTester;
+			productReference = C01BFEE508E6B1C000D2B685 /* tmModelTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		C086403108EB068400EEE5CD /* tmNewtonRaphsonTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C086403408EB06CA00EEE5CD /* Build configuration list for PBXNativeTarget "tmNewtonRaphsonTester" */;
+			buildPhases = (
+				C086402F08EB068400EEE5CD /* Sources */,
+				C086403008EB068400EEE5CD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmNewtonRaphsonTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = tmNewtonRaphsonTester;
+			productName = tmNewtonRaphsonTester;
+			productReference = C086403208EB068400EEE5CD /* tmNewtonRaphsonTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		C0A5289608E68DAE004D958F /* tmArrayTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0A5289908E68DCD004D958F /* Build configuration list for PBXNativeTarget "tmArrayTester" */;
+			buildPhases = (
+				C0A5289408E68DAE004D958F /* Sources */,
+				C0A5289508E68DAE004D958F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INSTALL_PATH = /usr/local/bin;
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmArrayTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = tmArrayTester;
+			productName = tmArrayTester;
+			productReference = C0A5289708E68DAE004D958F /* tmArrayTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		C0A528AB08E68E6F004D958F /* tmDpptrTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0A528B208E68E8E004D958F /* Build configuration list for PBXNativeTarget "tmDpptrTester" */;
+			buildPhases = (
+				C0A528A908E68E6F004D958F /* Sources */,
+				C0A528AA08E68E6F004D958F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INSTALL_PATH = /usr/local/bin;
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmDpptrTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = tmDpptrTester;
+			productName = tmDpptrTester;
+			productReference = C0A528AC08E68E6F004D958F /* tmDpptrTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		C0A528CE08E69046004D958F /* tmNLCOTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0A528D508E69099004D958F /* Build configuration list for PBXNativeTarget "tmNLCOTester" */;
+			buildPhases = (
+				C0A528CC08E69046004D958F /* Sources */,
+				C0A528CD08E69046004D958F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmNLCOTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = tmNLCOTester;
+			productName = tmNLCOTester;
+			productReference = C0A528CF08E69046004D958F /* tmNLCOTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		C0DD44090865BDEB00AE35AB /* TreeMaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0DD440E0865BDEE00AE35AB /* Build configuration list for PBXNativeTarget "TreeMaker" */;
+			buildPhases = (
+				C0DD44070865BDEB00AE35AB /* Sources */,
+				C0DD44060865BDEB00AE35AB /* Resources */,
+				C0F79E0908BD41980080E944 /* CopyFiles */,
+				C0DD44080865BDEB00AE35AB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "VirtualCherry-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = VirtualCherry;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = TreeMaker;
+			productName = VirtualCherry;
+			productReference = C0DD440A0865BDEB00AE35AB /* TreeMaker 5.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>VirtualCherry</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.VirtualCherry</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0DD43FE0865BDAA00AE35AB /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C0DD43FF0865BDAA00AE35AB /* Build configuration list for PBXProject "TreeMaker" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				C058AB970865EA2800A17C7C /* Development */,
+				C058AB980865EA2800A17C7C /* Deployment */,
+			);
+			hasScannedForEncodings = 0;
+			mainGroup = C0DD43FC0865BDA900AE35AB;
+			productRefGroup = C0DD440B0865BDEB00AE35AB /* Products */;
+			projectDirPath = "";
+			targets = (
+				C0A5289608E68DAE004D958F /* tmArrayTester */,
+				C0A528AB08E68E6F004D958F /* tmDpptrTester */,
+				C086403108EB068400EEE5CD /* tmNewtonRaphsonTester */,
+				C0A528CE08E69046004D958F /* tmNLCOTester */,
+				C01BFEE408E6B1C000D2B685 /* tmModelTester */,
+				C0DD44090865BDEB00AE35AB /* TreeMaker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0DD44060865BDEB00AE35AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C9A8FA08BD239A00ADCE48 /* Icon_app.icns in Resources */,
+				C0C9A8FB08BD239A00ADCE48 /* Icon_doc.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C01BFEE208E6B1C000D2B685 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C01BFF2A08E6D47200D2B685 /* tmTree_IO.cpp in Sources */,
+				C01BFF2B08E6D47200D2B685 /* tmCondition.cpp in Sources */,
+				C01BFF2C08E6D47200D2B685 /* tmConditionNodeOnEdge.cpp in Sources */,
+				C01BFF2D08E6D47200D2B685 /* tmConditionNodesPaired.cpp in Sources */,
+				C01BFF2E08E6D47200D2B685 /* tmNodeOwner.cpp in Sources */,
+				C01BFF2F08E6D47200D2B685 /* tmCreaseOwner.cpp in Sources */,
+				C01BFF3008E6D47200D2B685 /* tmPart.cpp in Sources */,
+				C01BFF3108E6D47200D2B685 /* tmTree_FacetOrder.cpp in Sources */,
+				C01BFF3208E6D47200D2B685 /* tmCrease.cpp in Sources */,
+				C01BFF3308E6D47200D2B685 /* tmPathOwner.cpp in Sources */,
+				C01BFF3408E6D47200D2B685 /* tmConditionNodeFixed.cpp in Sources */,
+				C01BFF3508E6D47200D2B685 /* tmPolyOwner.cpp in Sources */,
+				C01BFF3608E6D47200D2B685 /* tmVertexOwner.cpp in Sources */,
+				C01BFF3708E6D47200D2B685 /* tmConditionPathAngleQuant.cpp in Sources */,
+				C01BFF3808E6D47200D2B685 /* tmConditionEdgesSameStrain.cpp in Sources */,
+				C01BFF3908E6D47200D2B685 /* tmConditionOwner.cpp in Sources */,
+				C01BFF3A08E6D47200D2B685 /* tmTreeCleaner.cpp in Sources */,
+				C01BFF3B08E6D47200D2B685 /* tmTree.cpp in Sources */,
+				C01BFF3C08E6D47200D2B685 /* tmPoly.cpp in Sources */,
+				C01BFF3D08E6D47200D2B685 /* tmNode.cpp in Sources */,
+				C01BFF3E08E6D47200D2B685 /* tmFacetOwner.cpp in Sources */,
+				C01BFF3F08E6D47200D2B685 /* tmConditionNodeSymmetric.cpp in Sources */,
+				C01BFF4008E6D47200D2B685 /* tmPath.cpp in Sources */,
+				C01BFF4108E6D47200D2B685 /* tmFacet.cpp in Sources */,
+				C01BFF4208E6D47200D2B685 /* tmConditionPathActive.cpp in Sources */,
+				C01BFF4308E6D47200D2B685 /* tmConditionPathAngleFixed.cpp in Sources */,
+				C01BFF4408E6D47200D2B685 /* tmVertex.cpp in Sources */,
+				C01BFF4508E6D47200D2B685 /* tmConditionNodesCollinear.cpp in Sources */,
+				C01BFF4608E6D47200D2B685 /* tmTree_TestTrees.cpp in Sources */,
+				C01BFF4708E6D47200D2B685 /* tmConditionNodeOnCorner.cpp in Sources */,
+				C01BFF4808E6D47200D2B685 /* tmConditionNodeCombo.cpp in Sources */,
+				C01BFF4908E6D47200D2B685 /* tmCluster.cpp in Sources */,
+				C01BFF4A08E6D47200D2B685 /* tmEdgeOwner.cpp in Sources */,
+				C01BFF4B08E6D47200D2B685 /* tmPoint.cpp in Sources */,
+				C01BFF4C08E6D47200D2B685 /* tmEdge.cpp in Sources */,
+				C01BFF4D08E6D47200D2B685 /* tmConditionEdgeLengthFixed.cpp in Sources */,
+				C0F64B41094E2B4400DAB9C8 /* tmConditionPathCombo.cpp in Sources */,
+				C01BFF7B08E6D5F900D2B685 /* tmOptimizer.cpp in Sources */,
+				C01BFF7C08E6D5F900D2B685 /* tmEdgeOptimizer.cpp in Sources */,
+				C01BFF7D08E6D5F900D2B685 /* tmScaleOptimizer.cpp in Sources */,
+				C01BFF7E08E6D5F900D2B685 /* tmStrainOptimizer.cpp in Sources */,
+				C01BFF7F08E6D5F900D2B685 /* tmConstraintFns.cpp in Sources */,
+				C01BFEF708E6B2AE00D2B685 /* cfsqp_noprint.cpp in Sources */,
+				C01BFEF808E6B2AE00D2B685 /* rfsqp_noprint.cpp in Sources */,
+				C01BFEF908E6B2AE00D2B685 /* tmDpptrTarget.cpp in Sources */,
+				C01BFEFA08E6B2AE00D2B685 /* tmHeader.cpp in Sources */,
+				C01BFEFB08E6B2AE00D2B685 /* tmNLCO.cpp in Sources */,
+				C01BFEFC08E6B2AE00D2B685 /* tmNLCO_alm.cpp in Sources */,
+				C01BFEFD08E6B2AE00D2B685 /* tmNLCO_cfsqp.cpp in Sources */,
+				C01BFEFE08E6B2AE00D2B685 /* tmNLCO_rfsqp.cpp in Sources */,
+				C01BFEFF08E6B2AE00D2B685 /* tmNLCO_wnlib.cpp in Sources */,
+				C01BFF0008E6B2AE00D2B685 /* tmNLCO_wnlibStub.c in Sources */,
+				C01BFF0208E6B2AE00D2B685 /* wn1dmin.c in Sources */,
+				C01BFF0308E6B2AE00D2B685 /* wnasrt.c in Sources */,
+				C01BFF0408E6B2AE00D2B685 /* wncnjfg.c in Sources */,
+				C01BFF0508E6B2AE00D2B685 /* wnconjg.c in Sources */,
+				C01BFF0608E6B2AE00D2B685 /* wndcmp.c in Sources */,
+				C01BFF0708E6B2AE00D2B685 /* wndot.c in Sources */,
+				C01BFF0808E6B2AE00D2B685 /* wnmbtr.c in Sources */,
+				C01BFF0908E6B2AE00D2B685 /* wnmcpy.c in Sources */,
+				C01BFF0A08E6B2AE00D2B685 /* wnmem.c in Sources */,
+				C01BFF0B08E6B2AE00D2B685 /* wnmemb.c in Sources */,
+				C01BFF0C08E6B2AE00D2B685 /* wnmemg.c in Sources */,
+				C01BFF0D08E6B2AE00D2B685 /* wnmemn.c in Sources */,
+				C01BFF0E08E6B2AE00D2B685 /* wnmmk.c in Sources */,
+				C01BFF0F08E6B2AE00D2B685 /* wnnlp.c in Sources */,
+				C01BFF1008E6B2AE00D2B685 /* wnparvect.c in Sources */,
+				C01BFF1108E6B2AE00D2B685 /* wnpoly.c in Sources */,
+				C01BFF1208E6B2AE00D2B685 /* wnqfit.c in Sources */,
+				C01BFF1308E6B2AE00D2B685 /* wnrdb.c in Sources */,
+				C01BFF1408E6B2AE00D2B685 /* wnrflt.c in Sources */,
+				C01BFF1508E6B2AE00D2B685 /* wnrnd.c in Sources */,
+				C01BFF1608E6B2AE00D2B685 /* wnrtab.c in Sources */,
+				C01BFF1708E6B2AE00D2B685 /* wnscnt.c in Sources */,
+				C01BFF1808E6B2AE00D2B685 /* wnsmk.c in Sources */,
+				C01BFF1908E6B2AE00D2B685 /* wnvadd3.c in Sources */,
+				C01BFF1A08E6B2AE00D2B685 /* wnvcpy.c in Sources */,
+				C01BFF1B08E6B2AE00D2B685 /* wnvgen.c in Sources */,
+				C01BFF1C08E6B2AE00D2B685 /* wnvmk.c in Sources */,
+				C01BFF1D08E6B2AE00D2B685 /* wnvnrm.c in Sources */,
+				C01BFF1E08E6B2AE00D2B685 /* wnvprn.c in Sources */,
+				C01BFF2508E6B3E800D2B685 /* tmModelTester.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C086402F08EB068400EEE5CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C086403C08EB081900EEE5CD /* tmHeader.cpp in Sources */,
+				C086403908EB07B100EEE5CD /* tmDpptrTarget.cpp in Sources */,
+				C086403B08EB07CD00EEE5CD /* tmNewtonRaphsonTester.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A5289408E68DAE004D958F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A528C608E68F86004D958F /* tmHeader.cpp in Sources */,
+				C0A528A208E68E05004D958F /* tmArrayTester.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A528A908E68E6F004D958F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A528C508E68F79004D958F /* tmHeader.cpp in Sources */,
+				C0A528BA08E68EC7004D958F /* tmDpptrTarget.cpp in Sources */,
+				C0A528B108E68E8D004D958F /* tmDpptrTester.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A528CC08E69046004D958F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A528D308E6906C004D958F /* tmHeader.cpp in Sources */,
+				C0A528D408E69081004D958F /* tmDpptrTarget.cpp in Sources */,
+				C0A528DB08E690A8004D958F /* tmNLCO.cpp in Sources */,
+				C0A528DA08E690A8004D958F /* tmNLCO_alm.cpp in Sources */,
+				C0A528FF08E6925B004D958F /* tmNLCO_cfsqp.cpp in Sources */,
+				C0A528FE08E6925B004D958F /* tmNLCO_rfsqp.cpp in Sources */,
+				C0A528F708E69208004D958F /* tmNLCO_wnlib.cpp in Sources */,
+				C0A528F608E69208004D958F /* tmNLCO_wnlibStub.c in Sources */,
+				C0A5291208E6939F004D958F /* cfsqp_noprint.cpp in Sources */,
+				C0A5292708E6941C004D958F /* rfsqp_noprint.cpp in Sources */,
+				C0A5298208E694B0004D958F /* wnasrt.c in Sources */,
+				C0A5298308E694B0004D958F /* wnvmk.c in Sources */,
+				C0A5298408E694B0004D958F /* wnvadd3.c in Sources */,
+				C0A5298508E694B0004D958F /* wn1dmin.c in Sources */,
+				C0A5298608E694B0004D958F /* wnrflt.c in Sources */,
+				C0A5298708E694B0004D958F /* wnmemg.c in Sources */,
+				C0A5298808E694B0004D958F /* wnrnd.c in Sources */,
+				C0A5298908E694B0004D958F /* wnpoly.c in Sources */,
+				C0A5298A08E694B0004D958F /* wnvprn.c in Sources */,
+				C0A5298B08E694B0004D958F /* wnvnrm.c in Sources */,
+				C0A5298C08E694B0004D958F /* wndcmp.c in Sources */,
+				C0A5298D08E694B0004D958F /* wnnlp.c in Sources */,
+				C0A5298E08E694B0004D958F /* wnconjg.c in Sources */,
+				C0A5298F08E694B0004D958F /* wnvcpy.c in Sources */,
+				C0A5299008E694B0004D958F /* wnmemb.c in Sources */,
+				C0A5299108E694B0004D958F /* wnmemn.c in Sources */,
+				C0A5299208E694B0004D958F /* wnrtab.c in Sources */,
+				C0A5299308E694B0004D958F /* wnparvect.c in Sources */,
+				C0A5299408E694B0004D958F /* wnmbtr.c in Sources */,
+				C0A5299508E694B0004D958F /* wndot.c in Sources */,
+				C0A5299608E694B0004D958F /* wnscnt.c in Sources */,
+				C0A5299708E694B0004D958F /* wnqfit.c in Sources */,
+				C0A5299808E694B0004D958F /* wncnjfg.c in Sources */,
+				C0A5299908E694B0004D958F /* wnmcpy.c in Sources */,
+				C0A5299A08E694B0004D958F /* wnmem.c in Sources */,
+				C0A5299B08E694B0004D958F /* wnmmk.c in Sources */,
+				C0A5299C08E694B0004D958F /* wnrdb.c in Sources */,
+				C0A5299D08E694B0004D958F /* wnsmk.c in Sources */,
+				C0A5299E08E694B0004D958F /* wnvgen.c in Sources */,
+				C0A528E208E690E7004D958F /* tmNLCOTester.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DD44070865BDEB00AE35AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C9A89408BD198900ADCE48 /* tmHeader.cpp in Sources */,
+				C08A84EF08BC2367008508CD /* tmDpptrTarget.cpp in Sources */,
+				C07D900608CE315400A52912 /* tmPoint.cpp in Sources */,
+				C07D8FEF08CE315400A52912 /* tmPart.cpp in Sources */,
+				C07D8FC008CE314000A52912 /* tmCluster.cpp in Sources */,
+				C07D8FFE08CE315400A52912 /* tmTree.cpp in Sources */,
+				C07D8FFA08CE315400A52912 /* tmTree_IO.cpp in Sources */,
+				C07D8FFB08CE315400A52912 /* tmTree_FacetOrder.cpp in Sources */,
+				C07D8FEC08CE315400A52912 /* tmTree_TestTrees.cpp in Sources */,
+				C07D8FF108CE315400A52912 /* tmNode.cpp in Sources */,
+				C07D8FF208CE315400A52912 /* tmNodeOwner.cpp in Sources */,
+				C07D8FE908CE315400A52912 /* tmEdge.cpp in Sources */,
+				C07D900108CE315400A52912 /* tmEdgeOwner.cpp in Sources */,
+				C07D8FF408CE315400A52912 /* tmPath.cpp in Sources */,
+				C07D8FF908CE315400A52912 /* tmPathOwner.cpp in Sources */,
+				C07D900D08CE315400A52912 /* tmPoly.cpp in Sources */,
+				C07D900708CE315400A52912 /* tmPolyOwner.cpp in Sources */,
+				C07D8FF608CE315400A52912 /* tmVertex.cpp in Sources */,
+				C07D900208CE315400A52912 /* tmVertexOwner.cpp in Sources */,
+				C07D8FF508CE315400A52912 /* tmCrease.cpp in Sources */,
+				C07D8FEB08CE315400A52912 /* tmCreaseOwner.cpp in Sources */,
+				C07D900A08CE315400A52912 /* tmFacet.cpp in Sources */,
+				C07D900808CE315400A52912 /* tmFacetOwner.cpp in Sources */,
+				C07D901008CE315400A52912 /* tmTreeCleaner.cpp in Sources */,
+				C07D902F08CE317B00A52912 /* tmCondition.cpp in Sources */,
+				C07D904508CE317B00A52912 /* tmConditionOwner.cpp in Sources */,
+				C07D903808CE317B00A52912 /* tmConditionNodeCombo.cpp in Sources */,
+				C07D904408CE317B00A52912 /* tmConditionNodeSymmetric.cpp in Sources */,
+				C07D903908CE317B00A52912 /* tmConditionNodeOnEdge.cpp in Sources */,
+				C07D904208CE317B00A52912 /* tmConditionNodeOnCorner.cpp in Sources */,
+				C07D903C08CE317B00A52912 /* tmConditionNodeFixed.cpp in Sources */,
+				C07D904008CE317B00A52912 /* tmConditionNodesPaired.cpp in Sources */,
+				C07D904608CE317B00A52912 /* tmConditionNodesCollinear.cpp in Sources */,
+				C07D903308CE317B00A52912 /* tmConditionEdgeLengthFixed.cpp in Sources */,
+				C07D904808CE317B00A52912 /* tmConditionEdgesSameStrain.cpp in Sources */,
+				C0E79C15094B88DC00A0CB76 /* tmConditionPathCombo.cpp in Sources */,
+				C07D903F08CE317B00A52912 /* tmConditionPathActive.cpp in Sources */,
+				C07D904708CE317B00A52912 /* tmConditionPathAngleFixed.cpp in Sources */,
+				C07D903608CE317B00A52912 /* tmConditionPathAngleQuant.cpp in Sources */,
+				C07D906808CE31D300A52912 /* tmStubFinder.cpp in Sources */,
+				C07D905E08CE31B800A52912 /* tmNLCO.cpp in Sources */,
+				C07D905D08CE31B800A52912 /* tmNLCO_alm.cpp in Sources */,
+				C0DB2C6908E7830600098C3F /* tmNLCO_cfsqp.cpp in Sources */,
+				C0DB2C6A08E786CE00098C3F /* cfsqp_noprint.cpp in Sources */,
+				C0DB2C6B08E7873900098C3F /* tmNLCO_rfsqp.cpp in Sources */,
+				C0DB2C6C08E78AE800098C3F /* rfsqp_noprint.cpp in Sources */,
+				C0DB2C7308E78CBF00098C3F /* tmNLCO_wnlib.cpp in Sources */,
+				C047C12808E85FA500C973CE /* tmNLCO_wnlibStub.c in Sources */,
+				C047C13308E8856A00C973CE /* wnasrt.c in Sources */,
+				C047C13408E8856A00C973CE /* wnvmk.c in Sources */,
+				C047C13508E8856A00C973CE /* wnvadd3.c in Sources */,
+				C047C13608E8856A00C973CE /* wn1dmin.c in Sources */,
+				C047C13708E8856A00C973CE /* wnrflt.c in Sources */,
+				C047C13808E8856A00C973CE /* wnmemg.c in Sources */,
+				C047C13908E8856A00C973CE /* wnrnd.c in Sources */,
+				C047C13A08E8856A00C973CE /* wnpoly.c in Sources */,
+				C047C13B08E8856A00C973CE /* wnvprn.c in Sources */,
+				C047C13C08E8856A00C973CE /* wnvnrm.c in Sources */,
+				C047C13D08E8856A00C973CE /* wndcmp.c in Sources */,
+				C047C13E08E8856A00C973CE /* wnnlp.c in Sources */,
+				C047C13F08E8856A00C973CE /* wnconjg.c in Sources */,
+				C047C14008E8856A00C973CE /* wnvcpy.c in Sources */,
+				C047C14108E8856A00C973CE /* wnmemb.c in Sources */,
+				C047C14208E8856A00C973CE /* wnmemn.c in Sources */,
+				C047C14308E8856A00C973CE /* wnrtab.c in Sources */,
+				C047C14408E8856A00C973CE /* wnparvect.c in Sources */,
+				C047C14508E8856A00C973CE /* wnmbtr.c in Sources */,
+				C047C14608E8856A00C973CE /* wndot.c in Sources */,
+				C047C14708E8856A00C973CE /* wnscnt.c in Sources */,
+				C047C14808E8856A00C973CE /* wnqfit.c in Sources */,
+				C047C14908E8856A00C973CE /* wncnjfg.c in Sources */,
+				C047C14A08E8856A00C973CE /* wnmcpy.c in Sources */,
+				C047C14B08E8856A00C973CE /* wnmem.c in Sources */,
+				C047C14C08E8856A00C973CE /* wnmmk.c in Sources */,
+				C047C14D08E8856A00C973CE /* wnrdb.c in Sources */,
+				C047C14E08E8856A00C973CE /* wnsmk.c in Sources */,
+				C047C14F08E8856A00C973CE /* wnvgen.c in Sources */,
+				C0E9FC4008D8B6D900103F9F /* tmOptimizer.cpp in Sources */,
+				C07D905308CE319A00A52912 /* tmScaleOptimizer.cpp in Sources */,
+				C07D905208CE319A00A52912 /* tmStrainOptimizer.cpp in Sources */,
+				C07D905608CE319A00A52912 /* tmEdgeOptimizer.cpp in Sources */,
+				C07D905808CE319A00A52912 /* tmConstraintFns.cpp in Sources */,
+				C07D909508CE321E00A52912 /* tmwxPersistentFrame.cpp in Sources */,
+				C0E79D46094CC7C000A0CB76 /* tmwxGetUserInputDialog.cpp in Sources */,
+				C07D90AE08CE326700A52912 /* tmwxDoc.cpp in Sources */,
+				C0E79D09094C91EC00A0CB76 /* tmwxDoc_File.cpp in Sources */,
+				C0E79D04094C91EC00A0CB76 /* tmwxDoc_Edit.cpp in Sources */,
+				C0E79D05094C91EC00A0CB76 /* tmwxDoc_View.cpp in Sources */,
+				C0E79D06094C91EC00A0CB76 /* tmwxDoc_Action.cpp in Sources */,
+				C0E79D08094C91EC00A0CB76 /* tmwxDoc_Condition.cpp in Sources */,
+				C0E79D07094C91EC00A0CB76 /* tmwxDoc_Debug.cpp in Sources */,
+				C07D909608CE321E00A52912 /* tmwxCommand.cpp in Sources */,
+				C07D909D08CE321E00A52912 /* tmwxStr.cpp in Sources */,
+				C07D90AA08CE326700A52912 /* tmwxView.cpp in Sources */,
+				C07D90AC08CE326700A52912 /* tmwxPrintout.cpp in Sources */,
+				C07D90B008CE326700A52912 /* tmwxDesignFrame.cpp in Sources */,
+				C07D90B208CE326700A52912 /* tmwxDesignCanvas.cpp in Sources */,
+				C07D90B508CE327A00A52912 /* tmwxFoldedFormFrame.cpp in Sources */,
+				C0E79DA1094D2C0300A0CB76 /* tmwxCheckBox.cpp in Sources */,
+				C07D912908CE32BB00A52912 /* tmwxCheckBoxSmall.cpp in Sources */,
+				C07D912C08CE32BB00A52912 /* tmwxPaletteFrame.cpp in Sources */,
+				C07D912F08CE32BB00A52912 /* tmwxButtonMini.cpp in Sources */,
+				C07D913008CE32BB00A52912 /* tmwxButtonSmall.cpp in Sources */,
+				C07D912808CE32BB00A52912 /* tmwxRadioBoxSmall.cpp in Sources */,
+				C07D913208CE32BB00A52912 /* tmwxTextCtrl.cpp in Sources */,
+				C07D912708CE32BB00A52912 /* tmwxStaticText.cpp in Sources */,
+				C07D90F508CE328F00A52912 /* tmwxConditionListBox.cpp in Sources */,
+				C07D913108CE32BB00A52912 /* tmwxPalettePanel.cpp in Sources */,
+				C01B013E094808F3000C489E /* tmwxInspectorPanel.cpp in Sources */,
+				C07D90F108CE328F00A52912 /* tmwxTreePanel.cpp in Sources */,
+				C07D910208CE328F00A52912 /* tmwxGroupPanel.cpp in Sources */,
+				C07D911108CE328F00A52912 /* tmwxNodePanel.cpp in Sources */,
+				C07D90FA08CE328F00A52912 /* tmwxEdgePanel.cpp in Sources */,
+				C07D910F08CE328F00A52912 /* tmwxPathPanel.cpp in Sources */,
+				C07D90F308CE328F00A52912 /* tmwxPolyPanel.cpp in Sources */,
+				C07D90EF08CE328F00A52912 /* tmwxVertexPanel.cpp in Sources */,
+				C07D90FC08CE328F00A52912 /* tmwxCreasePanel.cpp in Sources */,
+				C07D910408CE328F00A52912 /* tmwxFacetPanel.cpp in Sources */,
+				C07D910908CE328F00A52912 /* tmwxConditionNodeComboPanel.cpp in Sources */,
+				C07D90E908CE328F00A52912 /* tmwxConditionNodeSymmetricPanel.cpp in Sources */,
+				C07D90ED08CE328F00A52912 /* tmwxConditionNodeOnEdgePanel.cpp in Sources */,
+				C07D910508CE328F00A52912 /* tmwxConditionNodeOnCornerPanel.cpp in Sources */,
+				C07D910708CE328F00A52912 /* tmwxConditionNodeFixedPanel.cpp in Sources */,
+				C07D90EB08CE328F00A52912 /* tmwxConditionNodesPairedPanel.cpp in Sources */,
+				C07D90FE08CE328F00A52912 /* tmwxConditionNodesCollinearPanel.cpp in Sources */,
+				C07D90FF08CE328F00A52912 /* tmwxConditionEdgeLengthFixedPanel.cpp in Sources */,
+				C07D90F708CE328F00A52912 /* tmwxConditionEdgesSameStrainPanel.cpp in Sources */,
+				C0E79C2E094B8B8500A0CB76 /* tmwxConditionPathComboPanel.cpp in Sources */,
+				C07D90E708CE328F00A52912 /* tmwxConditionPathActivePanel.cpp in Sources */,
+				C07D90E508CE328F00A52912 /* tmwxConditionPathAngleFixedPanel.cpp in Sources */,
+				C07D910C08CE328F00A52912 /* tmwxConditionPathAngleQuantPanel.cpp in Sources */,
+				C07D910008CE328F00A52912 /* tmwxInspectorFrame.cpp in Sources */,
+				C07D913D08CE32CD00A52912 /* tmwxViewSettingsFrame.cpp in Sources */,
+				C07D913E08CE32CD00A52912 /* tmwxViewSettingsPanel.cpp in Sources */,
+				C07D914008CE32CD00A52912 /* tmwxViewSettings.cpp in Sources */,
+				C07D914A08CE32E000A52912 /* tmwxOptimizerDialog_cmn.cpp in Sources */,
+				C07D914808CE32E000A52912 /* tmwxOptimizerDialog_mac.cpp in Sources */,
+				C07D914908CE32E000A52912 /* tmwxOptimizerDialog_gtk.cpp in Sources */,
+				C02AC86E08ECCD9A0045F0A5 /* tmwxOptimizerDialog_msw.cpp in Sources */,
+				C07D911508CE32A500A52912 /* tmwxLogFrame.cpp in Sources */,
+				C0D0D0620935746100DC38CA /* tmwxHtmlHelpController.cpp in Sources */,
+				C0D0D0640935746100DC38CA /* tmwxHtmlHelpFrame.cpp in Sources */,
+				C0F1FDC3093EB4F9004665FB /* tmwxDocManager.cpp in Sources */,
+				C07D915908CE389100A52912 /* tmwxApp.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01AD0F208B971D600F2EEB3 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../Source/tmHeader.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NO_GCC_PRAGMA,
+					__WXMAC__,
+					"wxUSE_BASE=1",
+					"_FILE_OFFSET_BITS=64",
+					_LARGE_FILES,
+					"__WXMAC_XCODE__=1",
+					"WX_PRECOMP=1",
+					MACOS_CLASSIC,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/resources/treemaker.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/../Source/tmVersion.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/build/wxMac-2.6/src/build/Deployment";
+				MAC_OSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MAC_OSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OTHER_CFLAGS = (
+					"-DTMWX",
+					"-DTMPROFILE",
+				);
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lz",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "TreeMaker 5";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				USER_HEADER_SEARCH_PATHS = "$(SYMROOT)/wxMac-2.6/include $(SYMROOT)/wxMac-2.6/src/build/include $(SRCROOT)/../Source/** $(SDKROOT)/usr/include/malloc";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Profile;
+		};
+		C01AD0F308B971D600F2EEB3 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				MAC_OSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MAC_OSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Profile;
+		};
+		C01BFEEA08E6B1F800D2B685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../Source/tmHeader.h";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Source/**",
+					/usr/include/malloc,
+				);
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMDEBUG";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmModelTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		C01BFEEB08E6B1F800D2B685 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../Source/tmHeader.h";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Source/**",
+					/usr/include/malloc,
+				);
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMDEBUG";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmModelTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Development;
+		};
+		C01BFEEC08E6B1F800D2B685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../Source/tmHeader.h";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Source/**",
+					/usr/include/malloc,
+				);
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmModelTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		C01BFEED08E6B1F800D2B685 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../Source/tmHeader.h";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Source/**",
+					/usr/include/malloc,
+				);
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMPROFILE";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmModelTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Profile;
+		};
+		C086403508EB06CA00EEE5CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Source/**";
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMDEBUG";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmNewtonRaphsonTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		C086403608EB06CA00EEE5CD /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Source/**";
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMDEBUG";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmNewtonRaphsonTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Development;
+		};
+		C086403708EB06CA00EEE5CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Source/**";
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmNewtonRaphsonTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		C086403808EB06CA00EEE5CD /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Source/**";
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMPROFILE";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmNewtonRaphsonTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Profile;
+		};
+		C0A5289A08E68DCD004D958F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PREFIX_HEADER)";
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INSTALL_PATH = /usr/local/bin;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMDEBUG";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmArrayTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		C0A5289B08E68DCD004D958F /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PREFIX_HEADER)";
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INSTALL_PATH = /usr/local/bin;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMDEBUG";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmArrayTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Development;
+		};
+		C0A5289C08E68DCD004D958F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PREFIX_HEADER)";
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INSTALL_PATH = /usr/local/bin;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmArrayTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		C0A5289D08E68DCD004D958F /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEAD_CODE_STRIPPING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PREFIX_HEADER)";
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INSTALL_PATH = /usr/local/bin;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMPROFILE";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmArrayTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Profile;
+		};
+		C0A528B308E68E8E004D958F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PREFIX_HEADER)";
+				INSTALL_PATH = /usr/local/bin;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMDEBUG";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmDpptrTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		C0A528B408E68E8E004D958F /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PREFIX_HEADER)";
+				INSTALL_PATH = /usr/local/bin;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMDEBUG";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmDpptrTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Development;
+		};
+		C0A528B508E68E8E004D958F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PREFIX_HEADER)";
+				INSTALL_PATH = /usr/local/bin;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmDpptrTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		C0A528B608E68E8E004D958F /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PREFIX_HEADER)";
+				INSTALL_PATH = /usr/local/bin;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMPROFILE";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmDpptrTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Profile;
+		};
+		C0A528D608E69099004D958F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Source/**",
+					/usr/include/malloc,
+				);
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMDEBUG";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmNLCOTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		C0A528D708E69099004D958F /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Source/**",
+					/usr/include/malloc,
+				);
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMDEBUG";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmNLCOTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Development;
+		};
+		C0A528D808E69099004D958F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Source/**",
+					/usr/include/malloc,
+				);
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmNLCOTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		C0A528D908E69099004D958F /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Source/**",
+					/usr/include/malloc,
+				);
+				INSTALL_PATH = "$(HOME)/bin";
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DTMPROFILE";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = tmNLCOTester;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Profile;
+		};
+		C0DD44000865BDAA00AE35AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				MAC_OSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MAC_OSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C0DD44010865BDAA00AE35AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				MAC_OSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MAC_OSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		C0DD440F0865BDEE00AE35AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../Source/tmHeader.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NO_GCC_PRAGMA,
+					__WXMAC__,
+					"wxUSE_BASE=1",
+					"_FILE_OFFSET_BITS=64",
+					_LARGE_FILES,
+					"__WXMAC_XCODE__=1",
+					"WX_PRECOMP=1",
+					MACOS_CLASSIC,
+					"__WXDEBUG__=1",
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/resources/treemaker.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/../Source/tmVersion.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/build/wxMac-2.6/src/build/Development",
+					"$(SRCROOT)/build/wxMac-2.6/src/build/Deployment",
+				);
+				MAC_OSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MAC_OSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OTHER_CFLAGS = "-DTMWX";
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lz",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "TreeMaker 5";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				USER_HEADER_SEARCH_PATHS = "$(SYMROOT)/wxMac-2.6/include $(SYMROOT)/wxMac-2.6/src/build/include $(SRCROOT)/../Source/** $(SDKROOT)/usr/include/malloc";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		C0DD44100865BDEE00AE35AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../Source/tmHeader.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NO_GCC_PRAGMA,
+					__WXMAC__,
+					"wxUSE_BASE=1",
+					"_FILE_OFFSET_BITS=64",
+					_LARGE_FILES,
+					"__WXMAC_XCODE__=1",
+					"WX_PRECOMP=1",
+					MACOS_CLASSIC,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/resources/treemaker.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/../Source/tmVersion.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/build/wxMac-2.6/src/build/Deployment";
+				MAC_OSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MAC_OSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OTHER_CFLAGS = "-DTMWX";
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lz",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "TreeMaker 5";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				USER_HEADER_SEARCH_PATHS = "$(SYMROOT)/wxMac-2.6/include $(SYMROOT)/wxMac-2.6/src/build/include $(SRCROOT)/../Source/** $(SDKROOT)/usr/include/malloc";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		C0DD44110865BE2E00AE35AB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../Source/tmHeader.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NO_GCC_PRAGMA,
+					__WXMAC__,
+					"wxUSE_BASE=1",
+					"_FILE_OFFSET_BITS=64",
+					_LARGE_FILES,
+					"__WXMAC_XCODE__=1",
+					"WX_PRECOMP=1",
+					MACOS_CLASSIC,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/resources/treemaker.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/../Source/tmVersion.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/build/wxMac-2.6/src/build/Deployment";
+				MAC_OSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MAC_OSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OTHER_CFLAGS = (
+					"-DTMWX",
+					"-DTMDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lz",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "TreeMaker 5";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				USER_HEADER_SEARCH_PATHS = "$(SYMROOT)/wxMac-2.6/include $(SYMROOT)/wxMac-2.6/src/build/include $(SRCROOT)/../Source/** $(SDKROOT)/usr/include/malloc";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		C0DD44120865BE2E00AE35AB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				MAC_OSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MAC_OSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01BFEE908E6B1F800D2B685 /* Build configuration list for PBXNativeTarget "tmModelTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01BFEEA08E6B1F800D2B685 /* Debug */,
+				C01BFEEB08E6B1F800D2B685 /* Development */,
+				C01BFEEC08E6B1F800D2B685 /* Release */,
+				C01BFEED08E6B1F800D2B685 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C086403408EB06CA00EEE5CD /* Build configuration list for PBXNativeTarget "tmNewtonRaphsonTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C086403508EB06CA00EEE5CD /* Debug */,
+				C086403608EB06CA00EEE5CD /* Development */,
+				C086403708EB06CA00EEE5CD /* Release */,
+				C086403808EB06CA00EEE5CD /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0A5289908E68DCD004D958F /* Build configuration list for PBXNativeTarget "tmArrayTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0A5289A08E68DCD004D958F /* Debug */,
+				C0A5289B08E68DCD004D958F /* Development */,
+				C0A5289C08E68DCD004D958F /* Release */,
+				C0A5289D08E68DCD004D958F /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0A528B208E68E8E004D958F /* Build configuration list for PBXNativeTarget "tmDpptrTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0A528B308E68E8E004D958F /* Debug */,
+				C0A528B408E68E8E004D958F /* Development */,
+				C0A528B508E68E8E004D958F /* Release */,
+				C0A528B608E68E8E004D958F /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0A528D508E69099004D958F /* Build configuration list for PBXNativeTarget "tmNLCOTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0A528D608E69099004D958F /* Debug */,
+				C0A528D708E69099004D958F /* Development */,
+				C0A528D808E69099004D958F /* Release */,
+				C0A528D908E69099004D958F /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0DD43FF0865BDAA00AE35AB /* Build configuration list for PBXProject "TreeMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0DD44000865BDAA00AE35AB /* Debug */,
+				C0DD44120865BE2E00AE35AB /* Development */,
+				C0DD44010865BDAA00AE35AB /* Release */,
+				C01AD0F308B971D600F2EEB3 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0DD440E0865BDEE00AE35AB /* Build configuration list for PBXNativeTarget "TreeMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0DD440F0865BDEE00AE35AB /* Debug */,
+				C0DD44110865BE2E00AE35AB /* Development */,
+				C0DD44100865BDEE00AE35AB /* Release */,
+				C01AD0F208B971D600F2EEB3 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0DD43FE0865BDAA00AE35AB /* Project object */;
+}

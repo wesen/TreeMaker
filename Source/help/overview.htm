@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TreeMaker 5 - Overview</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="treemaker.css" type="text/css">
+</head>
+<body>
+
+<h1 align="center"><em>Overview</em></h1>
+
+<p>
+This page gives a brief overview of <em>TreeMaker</em>: the bare minimum to (I
+hope) get you started.
+</p>
+<p>
+At the highest level, you draw a stick figure, called a <em>tree</em>, that
+represents the shape you wish to fold. Once you have defined the tree,
+<em>TreeMaker</em> will perform a series of calculations that leads to the
+construction of a crease pattern that, when folded, has a flap of paper for
+every line in the stick figure, and the lengths and connections between flaps
+mirror the lengths and connections of the edges of the tree. So, for example,
+if you want to fold a spider, you would draw a tree with 8 long edges (for the
+eight legs) and two short ones (for the head and abdomen). <em>TreeMaker</em>
+will construct the crease pattern that folds into a shape that will have eight
+long flaps and two short ones.
+</p>
+<p>
+Here's the process you go through. When you create a new <em>TreeMaker</em>
+document (by selecting the <b>File->New</b> menu command), you will be
+presented with a window containing a square of paper. This square serves two
+purposes: you will draw your tree on the square and assign attributes to the
+nodes and edges of the tree. <em>TreeMaker</em> will also construct the crease
+pattern within this square.
+</p>
+<p align="center">
+  <img src="overview_1.png" alt=""><br>
+  <b>Figure O-1.</b> A new, untitled <em>TreeMaker</em> document shows a blank
+  square. These images show the Mac version of <em>TreeMaker</em>, but other
+  platforms should look similar.
+</p>
+<p>
+The first step is to draw the tree. When you click on the square, you create a
+<em>node</em>. Clicking on an existing node selects it; clicking somewhere else
+adds a new node and an <em>edge</em> that runs from the selected node to the
+new node. By sequentially adding nodes and edges, you build up the stick
+figure. Each edge of the stick figure represents a flap in the desired base.
+The nodes represent the points where flaps come together. Nodes at the end of a
+stick --- called <em>leaf nodes</em> --- represent the tips of flaps.
+</p>
+<p align="center">
+  <img src="overview_2.png" alt=""><br>
+  <b>Figure O-2.</b> A stick figure with 5 leaf nodes. This defines a base with
+  five flaps and a "body" between two of the flaps and the other three.
+</p>
+<p>
+Leaf nodes are shown with circles drawn around them. The circle represents the
+minimum amount of paper needed to fold the flap.
+</p>
+<p>
+You will need to specify the desired lengths of the flaps of your base. You do
+this by selecting its corresponding edge (by clicking on it) and entering a
+length value (in dimensionless units) in the small window called the
+"Inspector." In general, whenever you have selected an element of the
+<em>TreeMaker</em> model, its attributes are shown in the inspector; some of
+those attributes may be changed by you; others are computed by
+<em>TreeMaker</em>.
+</p>
+<p align="center">
+  <img src="overview_3.png" alt=""><br>
+  <b>Figure O-3.</b> The Inspector window for a selected edge.
+</p>
+<p>
+I should emphasize that the length of each flap is determined by the length
+value assigned to its corresponding tree edge. It has <em>nothing</em> to do
+with the apparent length of the edge as drawn on the screen. In fact, during
+the process of design, your stick figure will get stretched and moved around on
+the square, but this does not in any way alter the desired length of any flap.
+The reason it's done this way is that there is a one-to-one correspondence
+between each leaf node of the tree and some vertex of the crease pattern
+(namely, the vertex that's at the tip of the flap). To make this correspondence
+clear, the leaf nodes are (after optimization) always drawn at the positions of
+their corresponding vertices. For <em>branch nodes</em> (nodes with two or more
+incident edges), there is no such correspondence, and the branch nodes'
+position is irrelevant. <em>TreeMaker</em> will never move branch nodes; you
+can position them as you like to make the tree easy to visualize.
+</p>
+<p>
+There is an Inspector panel for every type of object in
+<em>TreeMaker</em>. Within the Inspector you can edit (or at least inspect) the
+attributes of any object. Nodes can be clicked and dragged within the design
+window to change their position, but most other objects and their attributes
+are accessed (and, if allowed, altered) through the Inspector window.
+</p>
+<p>
+Once you have constructed the tree, you can apply conditions to nodes and/or
+edges, for example, to enforce various types of symmetry; you do this by
+selecting nodes and/or edges and making choices from the <b>Condition</b>
+menu. The most obvious conditions are those that enforce mirror-symmetry, but
+you can also fix nodes' position in various ways and/or force certain pairs of
+nodes to have creases between them (or rather, creases between their
+corresponding vertices). In the example below, I have turned on diagonal
+symmetry in the tree and have set three symmetry conditions on the leaf nodes,
+forcing two pairs to be mirror-symmetric and the remaining leaf node to lie
+upon the line of symmetry.
+</p>
+<p align="center">
+  <img src="overview_4.png" alt=""><br>
+  <b>Figure O-4.</b> The Design window for a five-flap base with mirror
+  symmetry imposed.
+</p>
+<p>
+Once you have fully defined the tree and any symmetry conditions, you're ready
+to compute the crease pattern, which happens in two steps. The first step finds
+the positions of the vertices that correspond to all of the leaf nodes; the
+second step fills in the creases.
+</p>
+<p>
+Positioning the leaf nodes is a process called <em>optimization</em>, and it is
+carried out by the <b>Action->Optimize Scale</b> command. The <em>scale</em> is
+the relationship between the characteristic size of the tree (and therefore the
+size of the base) and the size of the square. The scale defines how long one
+tree unit is compared to the square: if the scale is 0.5, then a flap that is
+one tree unit long is half the length of the side of the square. In
+optimization, we maximize the scale, which has the effect of maximizing the
+size of the base. This makes the base as large and efficient as possible, which
+is nice in and of itself, but optimization is also necessary to be able to
+unambiguously compute the positions of many of the creases. When you select
+this command, a small box will pop up showing that the calculation is going on,
+and you will see the positions of the leaf nodes start to move around on the
+square. (What's really happening is you're watching the positions of the
+<em>vertices</em> that correspond to the leaf nodes move around, but since we
+draw the nodes at the positions of their corresponding vertices, that's what
+you see move.) Eventually the optimization will terminate, leaving the leaf
+nodes (and their vertices) in their final positions.
+</p>
+<p align="center">
+  <img src="overview_5.png" alt=""><br>
+  <b>Figure O-5.</b> The stick figure after optimization of the scale. Active
+  paths are shown in green.
+</p>
+<p>
+If the optimization was successful, you will see the circles expand until many
+of them touch and a network of green lines appear connecting pairs of leaf
+nodes. These new lines are <em>paths</em>, which are relationships between
+pairs of leaf nodes that are represented by lines on the square. Paths are 
+visible signs of the inequality constraints that force vertices to lie a minimum
+distance from one another. There are in fact many, many paths --- there's one
+between each pair of leaf nodes --- but most of them are invisible most of the
+time. (You can control the visibility of paths --- as well as many other
+objects --- in the View Settings window.) 
+</p>
+<p>
+A path is said to be <em>feasible</em> if the distance between its two nodes on
+the paper is greater than or equal to the scaled separation between the two
+nodes as measured along the tree. An arrangement of nodes is said to be
+<em>feasible</em> when all possible paths are feasible. If the distance between
+the two nodes on the paper is exactly equal to the scaled separation along the
+tree, then the path is said to be <em>active</em>. The color and visibility of
+paths depends on their status. Most paths are not shown by default, but you can
+turn on their visibility if you like. When they are shown, active paths are
+shown in green; infeasible paths are shown in red; and paths that are feasible
+but not active are shown in amber. Active and border paths are the only paths
+shown in the default view settings.
+</p>
+<p>
+Since the scale sets the ratio between tree size and paper size, the larger the
+scale is, the harder it is to find an arrangement of nodes that satisfies all
+path conditions. Scale optimization searches for the positions of all the nodes
+that permits the largest possible scale. At the point when the scale is
+maximized, all paths will be feasible and (usually) some of the paths will be
+active. 
+</p>
+<p>
+If the tree is feasible, then you can attempt to build the creases, which you
+do by selecting the <b>Action->Build Crease Pattern</b> command. This
+constructs the creases of the base for the given set of leaf node vertex
+positions. If all goes well, the tree will be overlaid with the full crease
+pattern with fold lines shown in various colors. 
+</p>
+<p align="center">
+  <img src="overview_6.png" alt=""><br>
+  <b>Figure O-6.</b> The design after construction of the crease pattern.
+</p>
+<p>
+Each crease can be characterized by its structural role, as an axial, gusset,
+ridge, hinge, or pseudohinge crease. Each of these crease types is shown in a
+distinct color, respectively: black, gray, red, blue, and cyan. This color
+scheme is called AGRH coloring.
+</p>
+<p>
+At this point, the window can be pretty busy, since you are seeing the tree, circles,
+conditions, and crease pattern all overlaid on one another. You can view just
+the creases by selecting <b>View->Creases View</b>. (You can go back to the
+default view by selecting <b>View->Design View</b>.) In Creases View, we use a
+different color scheme to show the more familiar mountain/valley fold assignment,
+in which mountain creases are black, valley creases are magenta dashed, and
+flat, or unfolded creases, are light gray. This color scheme is called MVF
+coloring, and the assignment of creases into mountain, valley, or flat, is
+called the MVF assignment.
+</p>
+<p align="center">
+  <img src="overview_7.png" alt=""><br>
+  <b>Figure O-7.</b> Creases view shows standard mountain and valley folds for
+  the crease pattern by itself.
+</p>
+<p>
+There are many settings that affect what objects are shown and how they are
+represented; all are accessed through the View Settings window, which you can
+bring up by choosing the <b>View->View Settings</b> command. For example, there
+is an ordering relationship between the facets in the folded form, which,
+when any two facets overlap, specifies which one lies on top. These
+relationships can be described by a <em>facet ordering graph</em>. One of the
+settings you can turn on overlays the facet ordering graph on top of the
+crease pattern. Another setting shows whether each facet is color up or color
+down in the folded form. The figure below has these two settings turned on,
+displaying both the facet ordering graph and the color orientation of each
+facet.
+</p>
+<p align="center">
+  <img src="overview_8.png" alt=""><br>
+  <b>Figure O-8.</b> The facet ordering graph and color status.
+</p>
+<p>
+You might also notice that there are regions of the square that are not colored
+at all. In a <em>TreeMaker</em> base, the minimum paper needed to fold the base
+is the convex hull of the leaf nodes. Any paper that lies outside the convex
+hull (like three of the corners in the image above) is unused in the base. It
+could effectively be cut off, but in practice, it is usually just folded over
+and the resulting polygon folded as if it were a single sheet.
+</p>
+<p>
+Once you have a crease pattern, you can print it out and fold on the dotted
+lines; or if you want to transfer the pattern to another sheet of paper, you
+can print the crease pattern out with coordinates of important points shown
+(using <b>View->Plan View</b>) in order to measure and mark the pattern on
+another sheet.
+</p>
+<p>
+While this was a fairly simple, straightforward example, there are many
+situations where it is not possible to compute the crease pattern without
+further refinement by you of the leaf node positions by placing conditions,
+adding more nodes to the tree, and/or repeated (and different types of)
+optimization. You should read through the tutorials and command documentation
+later in these pages to learn how and why these exceptions arise and what to do
+about them.
+</p>
+<p>
+It is also possible to see what the folded form of the base looks like.
+Selecting <b>View->Folded Form</b> toggles a window that displays the
+silhouette of the folded base. This is an "x-ray" view; all of the creases are
+shown (using AGRH coloring). If you click on any vertex, crease, or facet in
+the main window, it will be highlighted in the folded form. If you click on any
+tree edge in the design window, the facets that comprise its corresponding flap
+will be highlighted in the folded form. 
+</p>
+<p align="center">
+  <img src="overview_9.png" alt=""><br>
+  <b>Figure O-9.</b> The folded form of the origami base.
+</p>
+<p>
+The crease pattern and folded form are not unique for a given tree and
+configuration of nodes; the flaps can usually be arranged in several different
+ways. <em>TreeMaker</em> calculates a particular flap arrangement, which is
+called <em>rooted</em>. The tree nodes are numbered with an index, starting at
+1. The tree node with index 1 is called the <em>root node</em>, and this node
+is chosen as the highest node in the folded form. The rooted arrangement of
+flaps has the property that the path from the root node to any other leaf node
+is unidirectional and downward. If the flaps were loosely hinged, this
+arrangement of flaps is the arrangement you would get by picking up the base
+from the root node and letting everything dangle; for this reason, this is also
+called the "dangle" algorithm. Any tree node (leaf or branch) can be the root
+node. If you make a different choice of root node, you will get a different
+folded form and a different MVF crease assignment.
+</p>
+<p>
+That should be enough for you to start exploring <em>TreeMaker</em> if you want
+to jump right in. However, there are many more capabilities within
+<em>TreeMaker</em> that should help with designing your origami figures. I
+would recommend reading and working your way through the Tutorials to learn
+some of these additional capabilities. At any point, you can refer to the Help
+pages for explanations of menu commands, windows, and possible actions.
+</p>
+
+<p align="center">
+<b>Previous: <a href="background.htm">Background</a>&nbsp;&nbsp;&nbsp; 
+Next: <a href="windows.htm">Windows</a></b>
+</p>
+
+</body>
+</html>
